@@ -8,6 +8,7 @@
 - 输出层：JSON / Markdown
 
 当前默认使用 **mock provider**，不需要 API Key，就能直接跑通整条链路。
+同时也预留了 **HTTP provider**，你后面只要填入真实接口地址和 key，就能切到真实数据源。
 
 ## 目录结构
 
@@ -19,7 +20,9 @@ src/
   core/normalize.ts       # 热榜标准化
   output/render.ts        # JSON / Markdown 输出
   providers/mockProvider.ts   # 模拟热榜数据源
+  providers/httpProvider.ts   # 通用 HTTP API 适配器
   translation/mockTranslator.ts # 模拟翻译器
+  translation/passthroughTranslator.ts # 透传翻译器
 output/
   trends.json
   trends.md
@@ -30,6 +33,12 @@ output/
 ```bash
 npm install
 npm run dev
+```
+
+如果你要切到真实接口，先复制环境变量模板：
+
+```bash
+copy .env.example .env
 ```
 
 运行后会生成：
@@ -47,7 +56,8 @@ npm run dev
 
 ## 怎么接入真实数据源
 
-你后面只需要新增一个 provider，比如：
+你现在已经可以直接用内置的 `httpProvider` 去接通用 JSON API。
+如果后面你想做更细的字段适配，也可以继续新增 provider，比如：
 
 - `src/providers/rapidapiProvider.ts`
 - `src/providers/customScraperProvider.ts`
@@ -97,8 +107,45 @@ export interface Translator {
 
 可选：
 
-- `X_TRENDS_PROVIDER=mock`
+- `X_TRENDS_PROVIDER=mock | http`
 - `X_TRENDS_LIMIT=10`
+- `X_TRENDS_TRANSLATOR=mock | passthrough`
+- `X_TRENDS_HTTP_ENDPOINT=...`
+- `X_TRENDS_HTTP_API_KEY=...`
+- `X_TRENDS_HTTP_API_HOST=...`
+
+### HTTP provider 期望的响应格式
+
+它默认会尝试读取下面这些字段之一：
+
+- 顶层数组：`data` / `trends` / `items`
+- 标题字段：`title` / `name` / `keyword`
+- 热度字段：`score` / `heat` / `volume`
+- 帖子数组：`posts`
+
+也就是说，只要你的 API 大致长这样，就能先跑起来：
+
+```json
+{
+  "data": [
+    {
+      "id": "1",
+      "title": "OpenAI",
+      "description": "OpenAI is trending globally",
+      "score": 98,
+      "url": "https://x.com/search?q=OpenAI",
+      "tags": ["AI", "Global"],
+      "posts": [
+        {
+          "author": "user1",
+          "text": "OpenAI is everywhere today",
+          "url": "https://x.com/..."
+        }
+      ]
+    }
+  ]
+}
+```
 
 ## 备注
 
