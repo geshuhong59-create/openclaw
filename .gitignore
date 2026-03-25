@@ -1,3 +1,8 @@
 node_modules/
 dist/
-.openclaw/
+dist-radar/
+.openclaw/*
+!.openclaw/extensions/
+.openclaw/extensions/*
+!.openclaw/extensions/github-architecture-radar/
+!.openclaw/extensions/github-architecture-radar/**

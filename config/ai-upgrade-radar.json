@@ -1,0 +1,91 @@
+{
+  "watch_repos": [
+    "openai/openai-agents-python",
+    "browser-use/browser-use",
+    "microsoft/autogen",
+    "langchain-ai/langgraph",
+    "vllm-project/vllm"
+  ],
+  "watch_topics": [
+    "llm-inference",
+    "model-serving",
+    "agent-framework",
+    "mcp",
+    "browser-automation",
+    "tool-use",
+    "benchmark",
+    "evals",
+    "multi-agent",
+    "workflow-automation"
+  ],
+  "topics_search_limit": 8,
+  "score_threshold": 72,
+  "minimum_qualifying_signals": 4,
+  "compatibility_floor": 70,
+  "performance_gain_floor_pct": 15,
+  "cost_reduction_floor_pct": 10,
+  "approved_paths": [
+    ".openclaw/extensions",
+    ".github/workflows",
+    "config",
+    "reports",
+    "scripts",
+    "state"
+  ],
+  "allowed_licenses": [
+    "Apache-2.0",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "MIT",
+    "MPL-2.0"
+  ],
+  "github": {
+    "apiBaseUrl": "https://api.github.com",
+    "restVersion": "2022-11-28",
+    "tokenEnv": "GITHUB_TOKEN"
+  },
+  "score_weights": {
+    "maturity": 0.22,
+    "compatibility": 0.26,
+    "performancePotential": 0.18,
+    "maintenanceRisk": 0.16,
+    "adoptionSignal": 0.18
+  },
+  "current_architecture": {
+    "runtime": [
+      "typescript",
+      "nodejs",
+      "github-actions",
+      "openclaw"
+    ],
+    "deliveryTargets": [
+      "staging",
+      "canary"
+    ],
+    "guardrails": [
+      "no-production-auto-deploy",
+      "no-direct-main-merge",
+      "secrets-externalized"
+    ]
+  },
+  "execution": {
+    "branchPrefix": "upgrade",
+    "targetBranch": "staging",
+    "allowDeployTargets": [
+      "staging",
+      "canary"
+    ],
+    "denyProduction": true,
+    "autoCreateBranch": true,
+    "autoCommit": true,
+    "autoPush": true,
+    "autoCreatePr": true,
+    "gitRemote": "origin",
+    "repository": "geshuhong59-create/openclaw"
+  },
+  "reporting": {
+    "topN": 5,
+    "reportFilenamePrefix": "ai-radar"
+  }
+}

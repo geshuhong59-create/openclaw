@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-03-25T07:30:00.000Z",
+  "repos": [
+    {
+      "fullName": "openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "description": "Python toolkit for building structured agents with tracing and tool orchestration.",
+      "topics": ["agent-framework", "automation", "tool-use", "workflow-automation"],
+      "stars": 9200,
+      "forks": 1100,
+      "defaultBranch": "main",
+      "updatedAt": "2026-03-24T18:11:00Z",
+      "pushedAt": "2026-03-24T18:10:00Z",
+      "license": "Apache-2.0",
+      "readme": "## Quickstart\nInstall the package, define tools, and run an agent loop with traces. The project ships setup instructions, benchmark notes, release guidance, and examples for tool use, agent orchestration, and model provider switching.\n\n## Benchmark\nThe examples describe latency, reliability, and tracing impact in reproducible local runs.\n\n## Release\nStable releases are published with changelog notes and migration guidance.",
+      "recentCommitCount30d": 24,
+      "latestRelease": {
+        "tagName": "v0.4.1",
+        "name": "v0.4.1",
+        "htmlUrl": "https://github.com/openai/openai-agents-python/releases/tag/v0.4.1",
+        "publishedAt": "2026-03-20T10:00:00Z",
+        "prerelease": false,
+        "draft": false,
+        "body": "Performance improvements for tracing, benchmark updates, and more stable tool execution."
+      },
+      "source": []
+    },
+    {
+      "fullName": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "description": "Browser automation agent framework for web tasks.",
+      "topics": ["browser-automation", "agent-framework", "tool-use"],
+      "stars": 15000,
+      "forks": 1600,
+      "defaultBranch": "main",
+      "updatedAt": "2026-03-23T13:40:00Z",
+      "pushedAt": "2026-03-23T13:39:00Z",
+      "license": "MIT",
+      "readme": "## Quickstart\nInstall and launch browser tasks with reproducible examples. Usage, configuration, troubleshooting, and benchmark sections are included. The docs describe latency improvements and safety boundaries for browser control.\n\n## Benchmark\nThe project shows benchmark comparisons for task completion and browsing latency.\n\n## Roadmap\nRelease notes and examples are updated regularly.",
+      "recentCommitCount30d": 31,
+      "latestRelease": {
+        "tagName": "v1.9.0",
+        "name": "v1.9.0",
+        "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/v1.9.0",
+        "publishedAt": "2026-03-18T09:30:00Z",
+        "prerelease": false,
+        "draft": false,
+        "body": "Adds more efficient browser sessions, lower latency task execution, and benchmark dashboards."
+      },
+      "source": []
+    },
+    {
+      "fullName": "microsoft/autogen",
+      "url": "https://github.com/microsoft/autogen",
+      "description": "Multi-agent orchestration framework.",
+      "topics": ["multi-agent", "agent-framework", "automation"],
+      "stars": 39000,
+      "forks": 5400,
+      "defaultBranch": "main",
+      "updatedAt": "2026-03-22T21:00:00Z",
+      "pushedAt": "2026-03-22T20:58:00Z",
+      "license": "MIT",
+      "readme": "## Quickstart\nAutoGen provides multi-agent orchestration, examples, installation instructions, and migration notes.\n\n## Benchmark\nThe repository publishes evaluation notes and performance discussions.\n\n## Release\nReleases include changelog entries and upgrade instructions.",
+      "recentCommitCount30d": 12,
+      "latestRelease": {
+        "tagName": "v0.6.3",
+        "name": "v0.6.3",
+        "htmlUrl": "https://github.com/microsoft/autogen/releases/tag/v0.6.3",
+        "publishedAt": "2026-03-17T07:45:00Z",
+        "prerelease": false,
+        "draft": false,
+        "body": "Improves automation reliability and benchmark coverage."
+      },
+      "source": []
+    },
+    {
+      "fullName": "langchain-ai/langgraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "description": "Graph-based workflow engine for stateful agents.",
+      "topics": ["workflow-automation", "agent-framework", "multi-agent"],
+      "stars": 21000,
+      "forks": 2400,
+      "defaultBranch": "main",
+      "updatedAt": "2026-03-21T16:05:00Z",
+      "pushedAt": "2026-03-21T16:01:00Z",
+      "license": "MIT",
+      "readme": "## Quickstart\nLangGraph provides workflow orchestration for stateful agents, examples, setup, and production guidance.\n\n## Benchmark\nExamples include latency and reliability measurements for graph execution.\n\n## Release\nStable release notes include migration and compatibility details.",
+      "recentCommitCount30d": 18,
+      "latestRelease": {
+        "tagName": "v0.3.5",
+        "name": "v0.3.5",
+        "htmlUrl": "https://github.com/langchain-ai/langgraph/releases/tag/v0.3.5",
+        "publishedAt": "2026-03-14T12:15:00Z",
+        "prerelease": false,
+        "draft": false,
+        "body": "Better workflow checkpoints and evaluation improvements."
+      },
+      "source": []
+    },
+    {
+      "fullName": "vllm-project/vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "description": "High-throughput and memory-efficient inference engine for LLM serving.",
+      "topics": ["llm-inference", "model-serving", "benchmark"],
+      "stars": 42000,
+      "forks": 6200,
+      "defaultBranch": "main",
+      "updatedAt": "2026-03-24T08:20:00Z",
+      "pushedAt": "2026-03-24T08:19:00Z",
+      "license": "Apache-2.0",
+      "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
+      "recentCommitCount30d": 27,
+      "latestRelease": {
+        "tagName": "v0.8.2",
+        "name": "v0.8.2",
+        "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
+        "publishedAt": "2026-03-19T05:20:00Z",
+        "prerelease": false,
+        "draft": false,
+        "body": "Higher throughput, lower latency, and better benchmark reproducibility."
+      },
+      "source": []
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "github-architecture-radar",
+  "name": "GitHub Architecture Radar",
+  "description": "Daily AI architecture radar that scans GitHub, scores upgrade candidates, and prepares staging-only validation plans.",
+  "version": "0.1.0",
+  "skills": ["skills"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "configPath": {
+        "type": "string",
+        "description": "Optional override for the ai-upgrade-radar workspace config file."
+      },
+      "useFixturesByDefault": {
+        "type": "boolean",
+        "description": "When true, the plugin prefers local fixture data over live GitHub API calls."
+      }
+    }
+  }
+}
