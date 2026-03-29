@@ -51,9 +51,29 @@ type FixtureSnapshot = {
 };
 
 const MAX_RETRIES = 4;
+const FETCH_TIMEOUT_MS = 30_000;
+const MAX_RETRY_WAIT_MS = 15_000;
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function shouldRetry(status: number, bodyText: string, retryAfter: string | null): boolean {
+  if (status >= 500 || status === 429) {
+    return true;
+  }
+
+  if (status !== 403) {
+    return false;
+  }
+
+  const normalized = bodyText.toLowerCase();
+  return (
+    retryAfter !== null ||
+    normalized.includes("secondary rate limit") ||
+    normalized.includes("rate limit exceeded") ||
+    normalized.includes("abuse detection")
+  );
 }
 
 function buildHeaders(config: RadarConfig): HeadersInit {
@@ -78,6 +98,7 @@ async function fetchJson<T>(url: string, config: RadarConfig, init?: RequestInit
     attempt += 1;
     const response = await fetch(url, {
       ...init,
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
       headers: {
         ...buildHeaders(config),
         ...(init?.headers ?? {}),
@@ -88,16 +109,17 @@ async function fetchJson<T>(url: string, config: RadarConfig, init?: RequestInit
       return (await response.json()) as T;
     }
 
+    const text = await response.text();
+    const retryAfter = response.headers.get("retry-after");
+    const resetAt = response.headers.get("x-ratelimit-reset");
+
     if (response.status === 404) {
       throw new Error(`GitHub resource not found: ${url}`);
     }
 
-    const retryAfter = response.headers.get("retry-after");
-    const resetAt = response.headers.get("x-ratelimit-reset");
-    const isRetryable = response.status >= 500 || response.status === 403 || response.status === 429;
+    const isRetryable = shouldRetry(response.status, text, retryAfter);
 
     if (!isRetryable || attempt >= MAX_RETRIES) {
-      const text = await response.text();
       throw new Error(`GitHub API ${response.status} ${response.statusText}: ${text || url}`);
     }
 
@@ -107,6 +129,10 @@ async function fetchJson<T>(url: string, config: RadarConfig, init?: RequestInit
     } else if (resetAt) {
       waitMs = Math.max(Number(resetAt) * 1000 - Date.now(), waitMs);
     }
+    waitMs = Math.min(waitMs, MAX_RETRY_WAIT_MS);
+    console.warn(
+      `[ai-radar][github-api] retrying ${response.status} ${response.statusText} for ${url} in ${waitMs}ms (attempt ${attempt}/${MAX_RETRIES})`,
+    );
     await sleep(waitMs);
   }
 }
