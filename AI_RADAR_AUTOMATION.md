@@ -61,14 +61,23 @@ Successful deploys update:
 - `state/last_deploy_receipt.json`
 - `state/last_branch_promotion.json`
 - `state/deployment_smoke.json`
+- `state/branch_cleanup.json`
 
 Daily scans and deploy workflows also try to commit `config/`, `output/`, `reports/`, and `state/` changes back to the current branch automatically.
+
+Daily automation also trims old `upgrade/*` branches automatically:
+
+- branches with an open PR are preserved
+- the newest 2 closed upgrade branches are kept by default
+- older closed upgrade branches are deleted after the daily run
+- you can override the keep count with the repository variable `AI_RADAR_BRANCH_RETENTION_COUNT`
 
 ## Local commands
 
 ```bash
 npm run radar:run
 npm run radar:auto-upgrade
+npm run radar:cleanup-branches
 npm run test:upgrade:ps1
 ```
 
