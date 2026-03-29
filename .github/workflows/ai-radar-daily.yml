@@ -1,0 +1,58 @@
+name: AI Radar Daily
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  scan-upgrade:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ai-radar-daily
+      cancel-in-progress: false
+    env:
+      PERSIST_BRANCH: ${{ github.ref_name }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Daily AI Radar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AI_RADAR_APPLY_COMMAND: ${{ vars.AI_RADAR_APPLY_COMMAND }}
+          AI_RADAR_DEPLOY_COMMAND: ${{ vars.AI_RADAR_DEPLOY_COMMAND }}
+          AI_RADAR_HEALTHCHECK_URL: ${{ vars.AI_RADAR_HEALTHCHECK_URL }}
+          AI_RADAR_HEALTHCHECK_ATTEMPTS: ${{ vars.AI_RADAR_HEALTHCHECK_ATTEMPTS }}
+          AI_RADAR_HEALTHCHECK_INTERVAL_MS: ${{ vars.AI_RADAR_HEALTHCHECK_INTERVAL_MS }}
+        run: npm run radar:auto-upgrade
+
+      - name: Persist Radar Artifacts
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config output reports state
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(radar): persist daily automation artifacts"
+            CURRENT_BRANCH="$(git branch --show-current)"
+            TARGET_BRANCH="${CURRENT_BRANCH:-${PERSIST_BRANCH}}"
+            git push origin "HEAD:${TARGET_BRANCH}"
+          else
+            echo "No radar artifacts to persist"
+          fi

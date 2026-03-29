@@ -1,0 +1,99 @@
+name: AI Radar Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy_target:
+        description: "Non-production target"
+        required: true
+        default: "staging"
+        type: choice
+        options:
+          - staging
+          - canary
+  workflow_call:
+    inputs:
+      deploy_target:
+        required: false
+        type: string
+        default: "staging"
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ai-radar-deploy-${{ inputs.deploy_target || 'staging' }}
+      cancel-in-progress: false
+    environment: ${{ inputs.deploy_target || 'staging' }}
+    env:
+      DEPLOY_TARGET: ${{ inputs.deploy_target || 'staging' }}
+      PERSIST_BRANCH: ${{ github.head_ref || github.ref_name }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Validate Upgrade Path
+        run: bash scripts/test-upgrade.sh
+
+      - name: Deploy Candidate
+        env:
+          AI_RADAR_CANDIDATE_KEY: ${{ vars.AI_RADAR_CANDIDATE_KEY }}
+          AI_RADAR_CANDIDATE_REPO: ${{ vars.AI_RADAR_CANDIDATE_REPO }}
+          AI_RADAR_CANDIDATE_RELEASE: ${{ vars.AI_RADAR_CANDIDATE_RELEASE }}
+          AI_RADAR_BRANCH_NAME: ${{ env.PERSIST_BRANCH }}
+          AI_RADAR_DEPLOY_TARGET: ${{ env.DEPLOY_TARGET }}
+          AI_RADAR_DEPLOY_COMMAND: ${{ vars.AI_RADAR_DEPLOY_COMMAND }}
+          AI_RADAR_HEALTHCHECK_URL: ${{ vars.AI_RADAR_HEALTHCHECK_URL }}
+          AI_RADAR_HEALTHCHECK_ATTEMPTS: ${{ vars.AI_RADAR_HEALTHCHECK_ATTEMPTS }}
+          AI_RADAR_HEALTHCHECK_INTERVAL_MS: ${{ vars.AI_RADAR_HEALTHCHECK_INTERVAL_MS }}
+        run: bash scripts/ai-radar-deploy.sh
+
+      - name: Persist Deploy State
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output reports state
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(radar): record ${DEPLOY_TARGET} deploy result"
+            CURRENT_BRANCH="$(git branch --show-current)"
+            TARGET_BRANCH="${CURRENT_BRANCH:-${PERSIST_BRANCH}}"
+            git push origin "HEAD:${TARGET_BRANCH}"
+          else
+            echo "No deploy state changes to persist"
+          fi
+
+      - name: Promote Deploy Target
+        env:
+          AI_RADAR_DEPLOY_TARGET: ${{ env.DEPLOY_TARGET }}
+          AI_RADAR_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+        run: npx tsx scripts/promote-radar-deploy.ts
+
+      - name: Persist Promotion Receipt
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(radar): persist ${DEPLOY_TARGET} promotion receipt"
+            CURRENT_BRANCH="$(git branch --show-current)"
+            TARGET_BRANCH="${CURRENT_BRANCH:-${PERSIST_BRANCH}}"
+            git push origin "HEAD:${TARGET_BRANCH}"
+          else
+            echo "No promotion receipt changes to persist"
+          fi

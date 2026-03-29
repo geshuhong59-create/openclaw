@@ -1,0 +1,35 @@
+name: AI Radar PR Validate
+
+on:
+  pull_request:
+    branches:
+      - staging
+    paths:
+      - ".github/workflows/**"
+      - ".openclaw/extensions/github-architecture-radar/**"
+      - "config/ai-upgrade-radar.json"
+      - "scripts/**"
+      - "reports/upgrades/**"
+      - "state/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Validate Upgrade Candidate
+        run: bash scripts/test-upgrade.sh
