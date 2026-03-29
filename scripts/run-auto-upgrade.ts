@@ -16,6 +16,70 @@ type CandidateSelection = {
   reportPath: string;
 };
 
+function asRecord(value: unknown): Record<string, unknown> | undefined {
+  return typeof value === "object" && value !== null && !Array.isArray(value)
+    ? (value as Record<string, unknown>)
+    : undefined;
+}
+
+function stringValue(value: unknown): string | undefined {
+  return typeof value === "string" && value.trim() ? value : undefined;
+}
+
+function booleanValue(value: unknown): boolean | undefined {
+  return typeof value === "boolean" ? value : undefined;
+}
+
+function stepStatusLabel(step: Record<string, unknown> | undefined, fallback = "not-run"): string {
+  if (!step) return fallback;
+  if (booleanValue(step.enabled) === false) return "disabled";
+  return stringValue(step.status) ?? fallback;
+}
+
+function renderAutomationSummary(payload: unknown): string {
+  const summary = asRecord(payload) ?? {};
+  const validation = asRecord(summary.validation);
+  const applyUpgrade = asRecord(summary.applyUpgrade);
+  const deploy = asRecord(summary.deploy);
+  const commit = asRecord(summary.commit);
+  const planExecution = asRecord(summary.planExecution);
+
+  const lines = [
+    "# AI Radar Automation Summary",
+    "",
+    "## Run Snapshot",
+    `- Executed at: ${stringValue(summary.executedAt) ?? "unknown"}`,
+    `- Candidate: ${stringValue(summary.candidateKey) ?? "unknown"}`,
+    `- Repository: ${stringValue(summary.repo) ?? "unknown"}`,
+    `- Release: ${stringValue(summary.releaseTag) ?? "unknown"}`,
+    `- Dry run: ${booleanValue(summary.dryRun) ? "yes" : "no"}`,
+    "",
+    "## Step Status",
+    `- Plan execution: ${stepStatusLabel(planExecution, "unknown")}`,
+    `- Validation: ${stepStatusLabel(validation)}`,
+    `- Apply upgrade: ${stepStatusLabel(applyUpgrade)}`,
+    `- Deploy smoke: ${stepStatusLabel(deploy)}`,
+    `- Promotion: ${booleanValue(deploy?.promoted) ? "completed" : "not-run"}`,
+    "",
+    "## Planning Output",
+    `- Branch: ${stringValue(planExecution?.branchName) ?? stringValue(summary.branchName) ?? "unknown"}`,
+    `- PR URL: ${stringValue(planExecution?.prUrl) ?? "none"}`,
+    `- Planning note: ${stringValue(planExecution?.message) ?? "n/a"}`,
+    "",
+    "## Deployment Output",
+    `- Target: ${stringValue(deploy?.target) ?? "n/a"}`,
+    `- Promotion synced: ${booleanValue(deploy?.promoted) ? "yes" : "no"}`,
+    `- Final commit: ${stringValue(commit?.commitSha) ?? "n/a"}`,
+    "",
+    "## Notes",
+    `- Validation script: ${stringValue(validation?.script) ?? "n/a"}`,
+    `- Apply script: ${stringValue(applyUpgrade?.script) ?? "n/a"}`,
+    `- Deploy script: ${stringValue(deploy?.script) ?? "n/a"}`,
+  ];
+
+  return `${lines.join("\n")}\n`;
+}
+
 function hasFlag(flag: string): boolean {
   return process.argv.includes(flag);
 }
@@ -247,8 +311,11 @@ async function writeAutomationArtifacts(
     : path.join(runtime.paths.reportsDir, "upgrades", runtime.now.toISOString().slice(0, 10));
 
   await mkdir(baseDir, { recursive: true });
+  const summaryMarkdown = renderAutomationSummary(payload);
   await writeJsonFile(path.join(baseDir, "automation-result.json"), payload);
-  await writeFile(path.join(baseDir, "automation-result.md"), `# Auto Upgrade Result\n\n\`\`\`json\n${JSON.stringify(payload, null, 2)}\n\`\`\`\n`, "utf8");
+  await writeFile(path.join(baseDir, "automation-result.md"), summaryMarkdown, "utf8");
+  await writeJsonFile(path.join(runtime.paths.reportsDir, "latest-ai-radar-summary.json"), payload);
+  await writeFile(path.join(runtime.paths.reportsDir, "latest-ai-radar-summary.md"), summaryMarkdown, "utf8");
 }
 
 async function main(): Promise<void> {
@@ -314,6 +381,16 @@ async function main(): Promise<void> {
       target: runtime.config.execution.deployTarget ?? "staging",
     },
   };
+  const initialExecutionRecord = result.executionRecords[0];
+  if (initialExecutionRecord) {
+    payload.planExecution = {
+      status: initialExecutionRecord.status,
+      branchName: initialExecutionRecord.branchName,
+      commitSha: initialExecutionRecord.commitSha,
+      prUrl: initialExecutionRecord.prUrl,
+      message: initialExecutionRecord.message,
+    };
+  }
 
   logStage("selected-candidate", {
     candidateKey: selection.candidateKey,
@@ -401,11 +478,15 @@ async function main(): Promise<void> {
 
   await writeAutomationArtifacts(runtime, result.executionRecords[0], payload);
 
-  logStage("automation-result:commit:start");
-  const finalCommit = await commitAutomationChanges(runtime, selection.candidateKey, "record automation result");
-  logStage("automation-result:commit:complete", finalCommit);
-  if (finalCommit.committed) {
-    payload.commit = finalCommit;
+  if (!dryRun) {
+    logStage("automation-result:commit:start");
+    const finalCommit = await commitAutomationChanges(runtime, selection.candidateKey, "record automation result");
+    logStage("automation-result:commit:complete", finalCommit);
+    if (finalCommit.committed) {
+      payload.commit = finalCommit;
+    }
+  } else {
+    logStage("automation-result:commit:skipped", { reason: "dry-run" });
   }
 
   if (!dryRun && runtime.config.execution.autoDeploy) {
