@@ -9,11 +9,6 @@ import { ExecutionRecord, RadarRuntime, ScoredCandidate, UpgradePlan } from "./t
 
 const execFileAsync = promisify(execFile);
 
-function toRepoPath(workspaceRoot: string, targetPath: string): string {
-  const relative = path.relative(workspaceRoot, targetPath);
-  return (relative || ".").replace(/\\/g, "/");
-}
-
 function sanitizeBranchComponent(value: string): string {
   return value
     .toLowerCase()
@@ -27,10 +22,11 @@ function buildGitEnv(): NodeJS.ProcessEnv {
   const env: NodeJS.ProcessEnv = { ...process.env, GIT_TERMINAL_PROMPT: "0" };
   const token = process.env.GITHUB_TOKEN;
 
-  if (!token) {
-    env.GIT_CONFIG_COUNT = "1";
-    env.GIT_CONFIG_KEY_0 = "http.proxy";
-    env.GIT_CONFIG_VALUE_0 = "";
+  env.GIT_CONFIG_COUNT = "1";
+  env.GIT_CONFIG_KEY_0 = "http.proxy";
+  env.GIT_CONFIG_VALUE_0 = "";
+
+  if (!token || process.env.GITHUB_ACTIONS === "true") {
     return env;
   }
 
@@ -85,6 +81,28 @@ function buildBranchName(runtime: RadarRuntime, candidate: ScoredCandidate): str
   return `${runtime.config.execution.branchPrefix}/${datePart}-${targetPart}`;
 }
 
+async function remoteBranchExists(runtime: RadarRuntime, branchName: string): Promise<boolean> {
+  try {
+    await runGitCommand(
+      ["ls-remote", "--exit-code", "--heads", runtime.config.execution.gitRemote, branchName],
+      runtime.paths.workspaceRoot,
+    );
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function resolveBranchName(runtime: RadarRuntime, candidate: ScoredCandidate): Promise<string> {
+  const baseBranchName = buildBranchName(runtime, candidate);
+  if (!(await remoteBranchExists(runtime, baseBranchName))) {
+    return baseBranchName;
+  }
+
+  const retrySuffix = runtime.now.toISOString().slice(11, 19).replace(/:/g, "");
+  return `${baseBranchName}-${retrySuffix}`;
+}
+
 function buildReportDirectory(runtime: RadarRuntime, branchName: string): string {
   const safeName = sanitizeBranchComponent(branchName);
   return path.join(runtime.paths.reportsDir, "upgrades", safeName);
@@ -129,10 +147,7 @@ async function writePrArtifacts(
     createdAt: runtime.now.toISOString(),
   });
 
-  return {
-    bodyPath: toRepoPath(runtime.paths.workspaceRoot, bodyPath),
-    metadataPath: toRepoPath(runtime.paths.workspaceRoot, metadataPath),
-  };
+  return { bodyPath, metadataPath };
 }
 
 export async function executeUpgradePlan(
@@ -142,17 +157,14 @@ export async function executeUpgradePlan(
 ): Promise<{ plan: UpgradePlan; record: ExecutionRecord }> {
   const plan = createUpgradePlan(candidate, runtime.config);
   const candidateKey = `${candidate.repo.fullName}@${candidate.repo.latestRelease?.tagName ?? "no-release"}`;
-  const branchName = buildBranchName(runtime, candidate);
+  const branchName = await resolveBranchName(runtime, candidate);
   const reportDir = buildReportDirectory(runtime, branchName);
-  const reportPathAbsolute = path.join(reportDir, "UPGRADE_REPORT.md");
-  const reportPath = toRepoPath(runtime.paths.workspaceRoot, reportPathAbsolute);
-  const candidatePathAbsolute = path.join(reportDir, "candidate.json");
-  const candidatePath = toRepoPath(runtime.paths.workspaceRoot, candidatePathAbsolute);
+  const reportPath = path.join(reportDir, "UPGRADE_REPORT.md");
   const dryRun = options?.dryRun ?? false;
 
   await mkdir(reportDir, { recursive: true });
-  await writeFile(reportPathAbsolute, renderUpgradePlanMarkdown(candidate, plan), "utf8");
-  await writeJsonFile(candidatePathAbsolute, candidate);
+  await writeFile(reportPath, renderUpgradePlanMarkdown(candidate, plan), "utf8");
+  await writeJsonFile(path.join(reportDir, "candidate.json"), candidate);
   const prArtifacts = await writePrArtifacts(runtime, candidate, plan, branchName, reportDir);
 
   if (hasPriorAttempt(runtime, candidateKey)) {
@@ -199,7 +211,7 @@ export async function executeUpgradePlan(
     }
 
     if (runtime.config.execution.autoCommit) {
-      await runGitCommand(["add", reportPath, candidatePath], runtime.paths.workspaceRoot);
+      await runGitCommand(["add", reportPath, path.join(reportDir, "candidate.json")], runtime.paths.workspaceRoot);
       await runGitCommand(
         ["commit", "-m", `chore(radar): evaluate ${candidate.repo.fullName}`],
         runtime.paths.workspaceRoot,
