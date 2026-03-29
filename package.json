@@ -12,6 +12,7 @@
     "radar:dry-run": "tsx scripts/run-radar.ts --dry-run --fixtures",
     "radar:run": "tsx scripts/run-radar.ts",
     "radar:auto-upgrade": "tsx scripts/run-auto-upgrade.ts",
+    "radar:cleanup-branches": "tsx scripts/cleanup-radar-branches.ts",
     "test:upgrade:ps1": "powershell -ExecutionPolicy Bypass -File scripts/test-upgrade.ps1",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts"
