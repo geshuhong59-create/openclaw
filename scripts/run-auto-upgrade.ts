@@ -420,8 +420,25 @@ async function main(): Promise<void> {
     };
     await writeAutomationArtifacts(runtime, result.executionRecords[0], payload);
     logStage("promotion-result:commit:start");
-    await commitAutomationChanges(runtime, selection.candidateKey, "record deploy promotion");
-    logStage("promotion-result:commit:complete");
+    const promotionCommit = await commitAutomationChanges(runtime, selection.candidateKey, "record deploy promotion");
+    logStage("promotion-result:commit:complete", promotionCommit);
+    if (promotionCommit.committed) {
+      const deployTarget = runtime.config.execution.deployTarget ?? "staging";
+      logStage("promotion-sync:start", {
+        target: deployTarget,
+        branchName: promotionCommit.branchName,
+        commitSha: promotionCommit.commitSha,
+      });
+      await runGitCommand(
+        ["push", runtime.config.execution.gitRemote, `HEAD:${deployTarget}`],
+        runtime.paths.workspaceRoot,
+      );
+      logStage("promotion-sync:complete", {
+        target: deployTarget,
+        branchName: promotionCommit.branchName,
+        commitSha: promotionCommit.commitSha,
+      });
+    }
   }
 
   console.log(JSON.stringify(payload, null, 2));
