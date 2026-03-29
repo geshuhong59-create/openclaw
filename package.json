@@ -2,7 +2,7 @@
   "name": "x-trends-mvp",
   "version": "0.1.0",
   "private": true,
-  "description": "X/Twitter 热榜监控与翻译输出 MVP 骨架",
+  "description": "X/Twitter 鐑鐩戞帶涓庣炕璇戣緭鍑?MVP 楠ㄦ灦",
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -10,7 +10,8 @@
     "radar:bootstrap": "tsx scripts/bootstrap-radar.ts",
     "radar:connect": "tsx scripts/connect-github-radar.ts",
     "radar:dry-run": "tsx scripts/run-radar.ts --dry-run --fixtures",
-    "radar:run": "tsx scripts/run-radar.ts",`r`n    "radar:auto-upgrade": "tsx scripts/run-auto-upgrade.ts",
+    "radar:run": "tsx scripts/run-radar.ts",
+    "radar:auto-upgrade": "tsx scripts/run-auto-upgrade.ts",
     "test:upgrade:ps1": "powershell -ExecutionPolicy Bypass -File scripts/test-upgrade.ps1",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts"
