@@ -45,7 +45,7 @@ jobs:
       - name: Cleanup Old Upgrade Branches
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          AI_RADAR_BRANCH_RETENTION_COUNT: ${{ vars.AI_RADAR_BRANCH_RETENTION_COUNT }}
+          AI_RADAR_BRANCH_RETENTION_COUNT: ${{ vars.AI_RADAR_BRANCH_RETENTION_COUNT || '2' }}
         run: npx tsx scripts/cleanup-radar-branches.ts
 
       - name: Persist Radar Artifacts

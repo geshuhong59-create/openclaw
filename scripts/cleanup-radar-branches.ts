@@ -42,6 +42,10 @@ function hasFlag(flag: string): boolean {
 }
 
 function parseKeepCount(value: string | undefined): number {
+  if (!value?.trim()) {
+    return DEFAULT_KEEP_COUNT;
+  }
+
   const parsed = Number(value);
   if (!Number.isFinite(parsed) || parsed < 0) {
     return DEFAULT_KEEP_COUNT;

@@ -401,6 +401,19 @@ async function main(): Promise<void> {
     dryRun,
   });
 
+  if (!dryRun && initialExecutionRecord?.status === "skipped") {
+    payload.status = "no-op";
+    payload.reason = initialExecutionRecord.message;
+    logStage("existing-attempt:skip", {
+      candidateKey: selection.candidateKey,
+      branchName: initialExecutionRecord.branchName,
+      reason: initialExecutionRecord.message,
+    });
+    await writeAutomationArtifacts(runtime, result.executionRecords[0], payload);
+    console.log(JSON.stringify(payload, null, 2));
+    return;
+  }
+
   if (!dryRun && runtime.config.execution.autoValidate) {
     const validationScript = chooseScriptPath(runtime, runtime.config.execution.validationScript, process.platform === "win32" ? "scripts/test-upgrade.ps1" : "scripts/test-upgrade.sh");
     if (!validationScript) {
