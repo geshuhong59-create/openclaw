@@ -5,6 +5,11 @@ type HookContext = {
   workspaceDir?: string;
 };
 
+function toRepoPath(workspaceRoot: string, targetPath: string): string {
+  const relative = path.relative(workspaceRoot, targetPath);
+  return (relative || ".").replace(/\\/g, "/");
+}
+
 export default async function handle(_payload: unknown, ctx?: HookContext): Promise<void> {
   const workspaceRoot = ctx?.workspaceDir ? path.resolve(ctx.workspaceDir) : process.cwd();
   const latestReportPath = path.join(workspaceRoot, "reports", "latest-ai-radar.json");
@@ -16,7 +21,7 @@ export default async function handle(_payload: unknown, ctx?: HookContext): Prom
       pointerPath,
       `${JSON.stringify(
         {
-          reportPath: report.reportPath ?? latestReportPath,
+          reportPath: report.reportPath ?? toRepoPath(workspaceRoot, latestReportPath),
           executedAt: report.executedAt ?? null,
         },
         null,

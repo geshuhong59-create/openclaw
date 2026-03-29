@@ -7,6 +7,7 @@ export interface RawTrendItem {
   score?: number;
   tags?: string[];
   source?: string;
+  publishedAt?: string;
 }
 
 export interface RawPost {
@@ -32,6 +33,7 @@ export interface TrendRecord {
   tags: string[];
   samplePosts: TrendPost[];
   fetchedAt: string;
+  publishedAt?: string;
 }
 
 export interface TrendPost {

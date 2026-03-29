@@ -1,0 +1,73 @@
+{
+  "appliedAt": "2026-03-29T13:06:20.571Z",
+  "candidate": {
+    "repo": "vllm-project/vllm",
+    "releaseTag": "v0.8.2",
+    "changeType": "inference-framework-replacement",
+    "appliedAt": "2026-03-29T13:06:20.571Z",
+    "reportPath": "reports/upgrades/upgrade-2026-03-29-vllm/UPGRADE_REPORT.md",
+    "score": 76
+  },
+  "runtime": {
+    "provider": "aggregate",
+    "limit": 18,
+    "requestTimeoutMs": 30000,
+    "xBrowserEnabled": true,
+    "xBrowserWaitMs": 9000,
+    "xSearchMode": "top",
+    "xSearchQuery": "(\"vllm-project\" OR \"vllm\" OR \"llm-inference\" OR \"model-serving\" OR \"benchmark\" OR \"model serving\" OR \"llm inference\" OR \"throughput\" OR \"latency\") min_faves:20 lang:en -is:retweet -is:reply",
+    "xFallbackFeeds": [],
+    "aiArticleFeeds": [
+      {
+        "label": "github-release-vllm-project-vllm",
+        "url": "https://github.com/vllm-project/vllm/releases.atom",
+        "tags": [
+          "AI",
+          "GitHub",
+          "Release",
+          "llm-inference",
+          "model-serving",
+          "benchmark"
+        ]
+      },
+      {
+        "label": "openai-news",
+        "url": "https://openai.com/news/rss.xml",
+        "tags": [
+          "AI",
+          "Article",
+          "OpenAI"
+        ]
+      },
+      {
+        "label": "deepmind-blog",
+        "url": "https://deepmind.google/blog/rss.xml",
+        "tags": [
+          "AI",
+          "Article",
+          "DeepMind"
+        ]
+      },
+      {
+        "label": "microsoft-research-blog",
+        "url": "https://www.microsoft.com/en-us/research/blog/feed/",
+        "tags": [
+          "AI",
+          "Article",
+          "Research",
+          "Microsoft Research"
+        ]
+      }
+    ],
+    "hnStoryType": "beststories"
+  },
+  "notes": [
+    "Applied candidate vllm-project/vllm@v0.8.2",
+    "Change type: inference-framework-replacement",
+    "Active commits in last 30 days: 27",
+    "Latest release: v0.8.2",
+    "License: Apache-2.0",
+    "Projected performance gain: 37%",
+    "Projected cost reduction: 19%"
+  ]
+}

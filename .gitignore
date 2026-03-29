@@ -1,8 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.idea/
+.vscode/
+*.db
+*.sqlite
+
+# Project specific
+data/
+scraper.log
 node_modules/
 dist/
 dist-radar/
-.openclaw/*
-!.openclaw/extensions/
-.openclaw/extensions/*
-!.openclaw/extensions/github-architecture-radar/
-!.openclaw/extensions/github-architecture-radar/**
+*.json
+*.csv
+!config/ai-upgrade-radar.json
+!config/runtime-architecture.json
+!state/*.json
+!reports/**/*.json
+
+# OS
+.DS_Store
+Thumbs.db

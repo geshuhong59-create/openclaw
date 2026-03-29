@@ -1,7 +1,12 @@
 import { RawTrendItem, TrendPost, TrendRecord, Translator } from "../types.js";
 
-function guessCategory(tags: string[]): string {
-  const joined = tags.join(" ").toLowerCase();
+function guessCategory(item: RawTrendItem): string {
+  const source = (item.source ?? "").toLowerCase();
+  const joined = `${source} ${(item.tags ?? []).join(" ")}`.toLowerCase();
+
+  if (source.startsWith("x-ai")) return "X AI 热榜";
+  if (source.startsWith("ai-article")) return "AI 技术文章";
+  if (source.startsWith("hacker-news")) return "Hacker News 热榜";
   if (joined.includes("ai")) return "AI";
   if (joined.includes("market")) return "市场";
   if (joined.includes("hardware")) return "硬件";
@@ -27,19 +32,20 @@ export async function normalizeTrends(items: RawTrendItem[], translator: Transla
 
   return Promise.all(
     items.map(async (item, index) => {
-      const summaryEn = item.description ?? item.title;
+      const summaryEn = item.description ?? item.posts?.[0]?.text ?? item.title;
       return {
         rank: index + 1,
         topic: item.title,
         summaryEn,
         summaryZh: await translator.translate(summaryEn),
         heatScore: item.score ?? 0,
-        category: guessCategory(item.tags ?? []),
+        category: guessCategory(item),
         source: item.source ?? "unknown",
         url: item.url,
         tags: item.tags ?? [],
         samplePosts: await normalizePosts(item.posts, translator),
-        fetchedAt
+        fetchedAt,
+        publishedAt: item.publishedAt
       } satisfies TrendRecord;
     })
   );
