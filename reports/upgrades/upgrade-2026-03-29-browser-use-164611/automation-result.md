@@ -30,7 +30,15 @@
     "target": "staging",
     "status": "passed",
     "stdout": "[deploy] executing configured deployment command\n{\n  \"deployedAt\": \"2026-03-29T16:46:34.253Z\",\n  \"candidateKey\": \"browser-use/browser-use@0.12.5\",\n  \"branchName\": \"upgrade/2026-03-29-browser-use-164611\",\n  \"deployTarget\": \"staging\",\n  \"smokeProvider\": \"mock\",\n  \"trendCount\": 3,\n  \"outputFiles\": [\n    \"/home/runner/work/openclaw/openclaw/output/trends.json\",\n    \"/home/runner/work/openclaw/openclaw/output/trends.md\"\n  ]\n}\n{\n  \"updated\": true,\n  \"target\": \"staging\",\n  \"stateFile\": \"/home/runner/work/openclaw/openclaw/state/last_successful_version.json\"\n}",
-    "stderr": ""
+    "stderr": "",
+    "promoted": true,
+    "promotionStdout": "{\n  \"promoted\": true,\n  \"promotedAt\": \"2026-03-29T16:46:36.723Z\",\n  \"branchName\": \"upgrade/2026-03-29-browser-use-164611\",\n  \"deployTarget\": \"staging\",\n  \"commitSha\": \"76794b2ab6971705f9abc0da74b80e311442849d\",\n  \"remote\": \"origin\"\n}",
+    "promotionStderr": ""
+  },
+  "commit": {
+    "committed": true,
+    "branchName": "upgrade/2026-03-29-browser-use-164611",
+    "commitSha": "76794b2ab6971705f9abc0da74b80e311442849d"
   }
 }
 ```
