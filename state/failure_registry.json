@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-29T16:41:20.668Z",
+  "updatedAt": "2026-03-29T16:46:11.586Z",
   "failures": [
     {
       "stage": "executor",
@@ -8,6 +8,13 @@
       "retriable": true,
       "candidateKey": "browser-use/browser-use@0.12.5",
       "occurredAt": "2026-03-29T16:41:20.668Z"
+    },
+    {
+      "stage": "executor",
+      "message": "GitHub API 403 Forbidden: {\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}",
+      "retriable": true,
+      "candidateKey": "browser-use/browser-use@0.12.5",
+      "occurredAt": "2026-03-29T16:46:11.586Z"
     }
   ]
 }

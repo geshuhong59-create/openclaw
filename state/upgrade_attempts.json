@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-29T16:41:47.067Z",
+  "updatedAt": "2026-03-29T16:46:29.213Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -26,6 +26,23 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-03-29-vllm/UPGRADE_REPORT.md",
       "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-03-29-vllm/PR_BODY.md).",
       "executedAt": "2026-03-29T16:41:47.067Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.12.5",
+      "status": "failed",
+      "branchName": "upgrade/2026-03-29-browser-use-164611",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-03-29-browser-use-164611/UPGRADE_REPORT.md",
+      "commitSha": "9bab23456fedbb22e26d8d66c12ce34a37883dc8",
+      "message": "GitHub API 403 Forbidden: {\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}",
+      "executedAt": "2026-03-29T16:46:11.586Z"
+    },
+    {
+      "candidateKey": "vllm-project/vllm@v0.8.2",
+      "status": "dry-run",
+      "branchName": "upgrade/2026-03-29-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-03-29-vllm/UPGRADE_REPORT.md",
+      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-03-29-vllm/PR_BODY.md).",
+      "executedAt": "2026-03-29T16:46:29.213Z"
     }
   ]
 }
