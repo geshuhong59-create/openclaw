@@ -181,6 +181,14 @@ async function ensureScriptExists(scriptPath: string): Promise<void> {
   await access(scriptPath);
 }
 
+function logStage(stage: string, detail?: Record<string, unknown>): void {
+  const timestamp = new Date().toISOString();
+  console.log(`[auto-upgrade][${timestamp}] ${stage}`);
+  if (detail) {
+    console.log(JSON.stringify(detail, null, 2));
+  }
+}
+
 async function runConfiguredScript(
   scriptPath: string,
   runtime: RadarRuntime,
@@ -294,6 +302,15 @@ async function main(): Promise<void> {
     },
   };
 
+  logStage("selected-candidate", {
+    candidateKey: selection.candidateKey,
+    repo: selection.repoFullName,
+    releaseTag: selection.releaseTag,
+    branchName: selection.branchName,
+    reportPath: selection.reportPath,
+    dryRun,
+  });
+
   if (!dryRun && runtime.config.execution.autoValidate) {
     const validationScript = chooseScriptPath(runtime, runtime.config.execution.validationScript, process.platform === "win32" ? "scripts/test-upgrade.ps1" : "scripts/test-upgrade.sh");
     if (!validationScript) {
@@ -301,7 +318,9 @@ async function main(): Promise<void> {
     }
     await ensureScriptExists(validationScript);
 
+    logStage("validation:start", { script: validationScript });
     const validationResult = await runConfiguredScript(validationScript, runtime, extraEnv);
+    logStage("validation:complete", { script: validationScript });
     payload.validation = {
       enabled: true,
       script: validationScript,
@@ -318,7 +337,9 @@ async function main(): Promise<void> {
     }
     await ensureScriptExists(applyScript);
 
+    logStage("apply:start", { script: applyScript });
     const applyResult = await runConfiguredScript(applyScript, runtime, extraEnv);
+    logStage("apply:complete", { script: applyScript });
     const applyUpgradePayload: Record<string, unknown> = {
       enabled: true,
       script: applyScript,
@@ -328,7 +349,9 @@ async function main(): Promise<void> {
     };
     payload.applyUpgrade = applyUpgradePayload;
 
+    logStage("apply:commit:start");
     const applyCommit = await commitAutomationChanges(runtime, selection.candidateKey, "apply");
+    logStage("apply:commit:complete", applyCommit);
     payload.applyUpgrade = {
       ...applyUpgradePayload,
       committed: applyCommit.committed,
@@ -349,7 +372,9 @@ async function main(): Promise<void> {
     }
     await ensureScriptExists(deployScript);
 
+    logStage("deploy:start", { script: deployScript, target: deployTarget });
     const deployResult = await runConfiguredScript(deployScript, runtime, extraEnv);
+    logStage("deploy:complete", { script: deployScript, target: deployTarget });
     const deployPayload: Record<string, unknown> = {
       enabled: true,
       script: deployScript,
@@ -363,13 +388,17 @@ async function main(): Promise<void> {
 
   await writeAutomationArtifacts(runtime, result.executionRecords[0], payload);
 
+  logStage("automation-result:commit:start");
   const finalCommit = await commitAutomationChanges(runtime, selection.candidateKey, "record automation result");
+  logStage("automation-result:commit:complete", finalCommit);
   if (finalCommit.committed) {
     payload.commit = finalCommit;
   }
 
   if (!dryRun && runtime.config.execution.autoDeploy) {
+    logStage("promote:start", { target: runtime.config.execution.deployTarget ?? "staging" });
     const promoteResult = await promoteDeployTarget(runtime, extraEnv);
+    logStage("promote:complete", { target: runtime.config.execution.deployTarget ?? "staging" });
     payload.deploy = {
       ...(payload.deploy as Record<string, unknown>),
       promoted: true,
@@ -377,7 +406,9 @@ async function main(): Promise<void> {
       promotionStderr: promoteResult.stderr.trim(),
     };
     await writeAutomationArtifacts(runtime, result.executionRecords[0], payload);
+    logStage("promotion-result:commit:start");
     await commitAutomationChanges(runtime, selection.candidateKey, "record deploy promotion");
+    logStage("promotion-result:commit:complete");
   }
 
   console.log(JSON.stringify(payload, null, 2));
