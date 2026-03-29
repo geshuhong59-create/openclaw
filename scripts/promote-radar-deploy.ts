@@ -9,10 +9,11 @@ function buildGitEnv(): NodeJS.ProcessEnv {
   const env: NodeJS.ProcessEnv = { ...process.env, GIT_TERMINAL_PROMPT: "0" };
   const token = process.env.GITHUB_TOKEN;
 
-  if (!token) {
-    env.GIT_CONFIG_COUNT = "1";
-    env.GIT_CONFIG_KEY_0 = "http.proxy";
-    env.GIT_CONFIG_VALUE_0 = "";
+  env.GIT_CONFIG_COUNT = "1";
+  env.GIT_CONFIG_KEY_0 = "http.proxy";
+  env.GIT_CONFIG_VALUE_0 = "";
+
+  if (!token || process.env.GITHUB_ACTIONS === "true") {
     return env;
   }
 
