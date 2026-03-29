@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-03-29T13:04:37.286Z",
+  "executedAt": "2026-03-29T16:41:47.067Z",
   "reportPath": "reports/2026-03-25-ai-radar.md",
   "discoveredCount": 5,
   "topCandidates": [
@@ -502,12 +502,20 @@
       "candidateKey": "vllm-project/vllm@v0.8.2",
       "status": "dry-run",
       "branchName": "upgrade/2026-03-29-vllm",
-      "reportPath": "reports/upgrades/upgrade-2026-03-29-vllm/UPGRADE_REPORT.md",
-      "message": "Prepared branch, report, and PR artifacts in dry-run mode (reports/upgrades/upgrade-2026-03-29-vllm/PR_BODY.md).",
-      "executedAt": "2026-03-29T13:04:37.286Z"
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-03-29-vllm/UPGRADE_REPORT.md",
+      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-03-29-vllm/PR_BODY.md).",
+      "executedAt": "2026-03-29T16:41:47.067Z"
     }
   ],
-  "failures": [],
+  "failures": [
+    {
+      "stage": "executor",
+      "message": "GitHub API 403 Forbidden: {\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}",
+      "retriable": true,
+      "candidateKey": "browser-use/browser-use@0.12.5",
+      "occurredAt": "2026-03-29T16:41:20.668Z"
+    }
+  ],
   "recommendations": [
     "No failed upgrade attempts require immediate action.",
     "No PR was opened automatically in this run.",

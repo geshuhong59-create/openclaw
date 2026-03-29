@@ -1,18 +1,21 @@
 {
   "watch_repos": [
+    "browser-use/browser-use",
     "vllm-project/vllm",
     "openai/openai-agents-python",
-    "browser-use/browser-use",
     "microsoft/autogen",
     "langchain-ai/langgraph"
   ],
   "watch_topics": [
+    "ai-agents",
+    "ai-tools",
+    "browser-automation",
+    "browser-use",
     "llm-inference",
     "model-serving",
     "benchmark",
     "agent-framework",
     "mcp",
-    "browser-automation",
     "tool-use",
     "evals",
     "multi-agent",
