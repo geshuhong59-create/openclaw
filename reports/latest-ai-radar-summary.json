@@ -27,11 +27,19 @@
     "target": "staging",
     "status": "passed",
     "stdout": "[deploy] executing configured deployment command\n{\n  \"deployedAt\": \"2026-03-29T17:12:16.026Z\",\n  \"candidateKey\": \"browser-use/browser-use@0.12.5\",\n  \"branchName\": \"upgrade/2026-03-29-browser-use\",\n  \"deployTarget\": \"staging\",\n  \"smokeProvider\": \"mock\",\n  \"trendCount\": 3,\n  \"outputFiles\": [\n    \"/home/runner/work/openclaw/openclaw/output/trends.json\",\n    \"/home/runner/work/openclaw/openclaw/output/trends.md\"\n  ]\n}\n{\n  \"updated\": true,\n  \"target\": \"staging\",\n  \"stateFile\": \"/home/runner/work/openclaw/openclaw/state/last_successful_version.json\"\n}",
-    "stderr": ""
+    "stderr": "",
+    "promoted": true,
+    "promotionStdout": "{\n  \"promoted\": true,\n  \"promotedAt\": \"2026-03-29T17:12:18.323Z\",\n  \"branchName\": \"staging\",\n  \"deployTarget\": \"staging\",\n  \"commitSha\": \"41a94daf4481ea3c547770135ae1224dd4f160dd\",\n  \"remote\": \"origin\"\n}",
+    "promotionStderr": ""
   },
   "planExecution": {
     "status": "skipped",
     "branchName": "upgrade/2026-03-29-browser-use",
     "message": "Skipped because this candidate version already has an upgrade attempt recorded."
+  },
+  "commit": {
+    "committed": true,
+    "branchName": "staging",
+    "commitSha": "41a94daf4481ea3c547770135ae1224dd4f160dd"
   }
 }
