@@ -7,11 +7,6 @@ import { scoreCandidates } from "./scorer.js";
 import { scanRepositories } from "./scanner.js";
 import { DailyRadarResult, RadarRuntime, RunRadarOptions, ScoredCandidate } from "./types.js";
 
-function toRepoPath(workspaceRoot: string, targetPath: string): string {
-  const relative = path.relative(workspaceRoot, targetPath);
-  return (relative || ".").replace(/\\/g, "/");
-}
-
 function reportDate(runtime: RadarRuntime, override?: string): string {
   return override ?? runtime.now.toISOString().slice(0, 10);
 }
@@ -29,24 +24,70 @@ function topCandidatesSection(candidates: ScoredCandidate[]): string {
     .join("\n");
 }
 
+function executiveSummarySection(result: DailyRadarResult): string {
+  const winner = result.topCandidates[0];
+  const eligibleCount = result.topCandidates.filter((candidate) => candidate.score.eligibleForValidation).length;
+  const failedCount = result.executionRecords.filter((record) => record.status === "failed").length;
+  const prCreatedCount = result.executionRecords.filter((record) => record.status === "pr-created").length;
+
+  return [
+    `- Winner: ${winner ? `${winner.repo.fullName}@${winner.repo.latestRelease?.tagName ?? "none"} (score ${winner.score.finalUpgradeScore})` : "none"}`,
+    `- Eligible candidates in today's shortlist: ${eligibleCount}/${result.topCandidates.length}`,
+    `- Planned upgrade executions: ${result.executionRecords.length}`,
+    `- Failed execution records: ${failedCount}`,
+    `- Auto-created upgrade PRs during planning: ${prCreatedCount}`,
+  ].join("\n");
+}
+
+function topCandidatesTable(candidates: ScoredCandidate[]): string {
+  if (candidates.length === 0) {
+    return "| Rank | Repo | Score | Release | Perf Gain | Cost Down | Eligible | Vetoes |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| - | - | - | - | - | - | - | - |";
+  }
+
+  const rows = candidates.map((candidate, index) => {
+    const vetoes = candidate.score.hardVetoReasons.length ? candidate.score.hardVetoReasons.join(", ") : "none";
+    return `| ${index + 1} | ${candidate.repo.fullName} | ${candidate.score.finalUpgradeScore} | ${candidate.repo.latestRelease?.tagName ?? "none"} | ${candidate.score.estimatedPerformanceGainPct}% | ${candidate.score.estimatedCostReductionPct}% | ${candidate.score.eligibleForValidation ? "yes" : "no"} | ${vetoes} |`;
+  });
+
+  return [
+    "| Rank | Repo | Score | Release | Perf Gain | Cost Down | Eligible | Vetoes |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...rows,
+  ].join("\n");
+}
+
+function executionSection(result: DailyRadarResult): string {
+  if (result.executionRecords.length === 0) {
+    return "- No upgrade plans crossed the execution threshold.";
+  }
+
+  return result.executionRecords
+    .map((record) => {
+      const details = [
+        `status=${record.status}`,
+        `branch=${record.branchName}`,
+        record.prUrl ? `pr=${record.prUrl}` : undefined,
+        record.commitSha ? `commit=${record.commitSha}` : undefined,
+      ]
+        .filter(Boolean)
+        .join(" | ");
+
+      return `- ${record.candidateKey} | ${details}\n  note: ${record.message}`;
+    })
+    .join("\n");
+}
+
 export function renderDailyReport(result: DailyRadarResult): string {
   const discoveryLines = result.topCandidates
     .map((candidate) => `- ${candidate.repo.fullName}: ${candidate.score.summary.join("; ")}`)
     .join("\n");
-  const executionLines = result.executionRecords.length
-    ? result.executionRecords
-        .map(
-          (record) =>
-            `- ${record.candidateKey}: ${record.status} | branch=${record.branchName} | report=${record.reportPath}`,
-        )
-        .join("\n")
-    : "- No upgrade plans crossed the execution threshold.";
+  const executionLines = executionSection(result);
   const failureLines = result.failures.length
     ? result.failures.map((failure) => `- ${failure.stage}: ${failure.message}`).join("\n")
     : "- No failures recorded.";
   const recommendationLines = result.recommendations.map((item) => `- ${item}`).join("\n");
 
-  return `# AI Architecture Radar Daily Report\n\n- Executed at: ${result.executedAt}\n- Discovered candidates: ${result.discoveredCount}\n- Report path: ${result.reportPath}\n\n## Top Candidates\n${topCandidatesSection(result.topCandidates)}\n\n## Discovery Notes\n${discoveryLines || "- No discovery notes."}\n\n## Auto Validation\n${executionLines}\n\n## Failures\n${failureLines}\n\n## Recommendations\n${recommendationLines}\n`;
+  return `# AI Architecture Radar Daily Report\n\n- Executed at: ${result.executedAt}\n- Discovered candidates: ${result.discoveredCount}\n- Report path: ${result.reportPath}\n\n## Executive Summary\n${executiveSummarySection(result)}\n\n## Top Candidate Scoreboard\n${topCandidatesTable(result.topCandidates)}\n\n## Top Candidates\n${topCandidatesSection(result.topCandidates)}\n\n## Discovery Notes\n${discoveryLines || "- No discovery notes."}\n\n## Planned Execution\n${executionLines}\n\n## Failures\n${failureLines}\n\n## Recommendations\n${recommendationLines}\n`;
 }
 
 export async function runDailyRadarCycle(
@@ -77,13 +118,10 @@ export async function runDailyRadarCycle(
     "Production remains gated and must keep environment protection rules enabled.",
   ];
 
-  const reportPathAbsolute = path.join(
+  const reportPath = path.join(
     runtime.paths.reportsDir,
     `${reportDate(runtime, options?.reportDate)}-${runtime.config.reporting.reportFilenamePrefix}.md`,
   );
-  const reportPath = toRepoPath(runtime.paths.workspaceRoot, reportPathAbsolute);
-  const latestMarkdownPath = path.join(runtime.paths.reportsDir, "latest-ai-radar.md");
-  const latestJsonPath = path.join(runtime.paths.reportsDir, "latest-ai-radar.json");
 
   runtime.state.seenRepos.updatedAt = runtime.now.toISOString();
   runtime.state.releaseHistory.updatedAt = runtime.now.toISOString();
@@ -126,9 +164,9 @@ export async function runDailyRadarCycle(
   };
 
   await mkdir(runtime.paths.reportsDir, { recursive: true });
-  await writeFile(reportPathAbsolute, renderDailyReport(result), "utf8");
-  await writeFile(latestMarkdownPath, renderDailyReport(result), "utf8");
-  await writeJsonFile(latestJsonPath, result);
+  await writeFile(reportPath, renderDailyReport(result), "utf8");
+  await writeFile(path.join(runtime.paths.reportsDir, "latest-ai-radar.md"), renderDailyReport(result), "utf8");
+  await writeJsonFile(path.join(runtime.paths.reportsDir, "latest-ai-radar.json"), result);
   await persistState(runtime.paths, runtime.state);
 
   return result;
