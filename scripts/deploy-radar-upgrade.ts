@@ -5,15 +5,6 @@ import { promisify } from "node:util";
 
 const execFileAsync = promisify(execFile);
 
-function toRepoPath(workspaceRoot: string, targetPath: string): string {
-  const relative = path.relative(workspaceRoot, targetPath);
-  return (relative || ".").replace(/\\/g, "/");
-}
-
-function resolveWorkspacePath(workspaceRoot: string, targetPath: string): string {
-  return path.isAbsolute(targetPath) ? targetPath : path.join(workspaceRoot, targetPath);
-}
-
 function sanitizedEnv(extraEnv?: NodeJS.ProcessEnv): NodeJS.ProcessEnv {
   return Object.fromEntries(
     Object.entries({ ...process.env, ...extraEnv }).filter(([, value]) => value !== undefined),
@@ -24,8 +15,8 @@ function executable(name: string): string {
   return process.platform === "win32" ? `${name}.cmd` : name;
 }
 
-async function runCommand(command: string, args: string[], cwd: string): Promise<string> {
-  const env = sanitizedEnv();
+async function runCommand(command: string, args: string[], cwd: string, extraEnv?: NodeJS.ProcessEnv): Promise<string> {
+  const env = sanitizedEnv(extraEnv);
   const result =
     process.platform === "win32" && command.toLowerCase().endsWith(".cmd")
       ? await execFileAsync(
@@ -37,6 +28,16 @@ async function runCommand(command: string, args: string[], cwd: string): Promise
   return `${result.stdout}`.trim();
 }
 
+function buildSmokeEnv(): NodeJS.ProcessEnv {
+  return {
+    X_TRENDS_PROVIDER: process.env.X_TRENDS_PROVIDER ?? "mock",
+    X_TRENDS_TRANSLATOR: process.env.X_TRENDS_TRANSLATOR ?? "passthrough",
+    X_TRENDS_LIMIT: process.env.X_TRENDS_LIMIT ?? "5",
+    X_TRENDS_X_BROWSER_ENABLED: process.env.X_TRENDS_X_BROWSER_ENABLED ?? "0",
+    X_TRENDS_REQUEST_TIMEOUT_MS: process.env.X_TRENDS_REQUEST_TIMEOUT_MS ?? "5000",
+  };
+}
+
 async function writeJson(filePath: string, payload: unknown): Promise<void> {
   await mkdir(path.dirname(filePath), { recursive: true });
   await writeFile(filePath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
@@ -44,13 +45,13 @@ async function writeJson(filePath: string, payload: unknown): Promise<void> {
 
 async function main(): Promise<void> {
   const workspaceRoot = path.resolve(process.cwd());
-  const reportPathInput = process.env.AI_RADAR_REPORT_PATH ?? "";
-  const reportPath = reportPathInput ? resolveWorkspacePath(workspaceRoot, reportPathInput) : "";
+  const reportPath = process.env.AI_RADAR_REPORT_PATH ?? "";
   const reportDir = reportPath ? path.dirname(reportPath) : path.join(workspaceRoot, "reports", "upgrades", "unknown");
+  const smokeEnv = buildSmokeEnv();
 
   await runCommand(executable("npm"), ["run", "build"], workspaceRoot);
   await runCommand(executable("npm"), ["run", "build:radar"], workspaceRoot);
-  await runCommand("node", ["dist/index.js"], workspaceRoot);
+  await runCommand("node", ["dist/index.js"], workspaceRoot, smokeEnv);
 
   const trendsJsonPath = path.join(workspaceRoot, "output", "trends.json");
   const trendsMarkdownPath = path.join(workspaceRoot, "output", "trends.md");
@@ -70,8 +71,9 @@ async function main(): Promise<void> {
     candidateKey: process.env.AI_RADAR_CANDIDATE_KEY ?? "unknown",
     branchName: process.env.AI_RADAR_BRANCH_NAME ?? "unknown",
     deployTarget: process.env.AI_RADAR_DEPLOY_TARGET ?? "staging",
+    smokeProvider: smokeEnv.X_TRENDS_PROVIDER,
     trendCount: trends.length,
-    outputFiles: [trendsJsonPath, trendsMarkdownPath].map((filePath) => toRepoPath(workspaceRoot, filePath)),
+    outputFiles: [trendsJsonPath, trendsMarkdownPath],
   };
 
   await writeJson(path.join(workspaceRoot, "state", "deployment_smoke.json"), payload);
