@@ -16,15 +16,6 @@ type CandidateSelection = {
   reportPath: string;
 };
 
-function toRepoPath(workspaceRoot: string, targetPath: string): string {
-  const relative = path.relative(workspaceRoot, targetPath);
-  return (relative || ".").replace(/\\/g, "/");
-}
-
-function resolveWorkspacePath(workspaceRoot: string, targetPath: string): string {
-  return path.isAbsolute(targetPath) ? targetPath : path.join(workspaceRoot, targetPath);
-}
-
 function hasFlag(flag: string): boolean {
   return process.argv.includes(flag);
 }
@@ -81,6 +72,43 @@ function buildGitEnv(): NodeJS.ProcessEnv {
 async function runGitCommand(args: string[], cwd: string): Promise<string> {
   const result = await execFileAsync("git", args, { cwd, env: buildGitEnv() });
   return `${result.stdout}`.trim();
+}
+
+function envValue(...candidates: Array<string | undefined>): string | undefined {
+  for (const candidate of candidates) {
+    const trimmed = candidate?.trim();
+    if (trimmed) {
+      return trimmed;
+    }
+  }
+
+  return undefined;
+}
+
+async function ensureGitIdentity(runtime: RadarRuntime): Promise<void> {
+  const cwd = runtime.paths.workspaceRoot;
+
+  const existingName = await runGitCommand(["config", "user.name"], cwd).catch(() => "");
+  const existingEmail = await runGitCommand(["config", "user.email"], cwd).catch(() => "");
+
+  const fallbackName = envValue(
+    process.env.GIT_AUTHOR_NAME,
+    process.env.GIT_COMMITTER_NAME,
+    process.env.GITHUB_ACTIONS === "true" ? "github-actions[bot]" : undefined,
+  ) ?? "OpenClaw Radar";
+  const fallbackEmail = envValue(
+    process.env.GIT_AUTHOR_EMAIL,
+    process.env.GIT_COMMITTER_EMAIL,
+    process.env.GITHUB_ACTIONS === "true" ? "41898282+github-actions[bot]@users.noreply.github.com" : undefined,
+  ) ?? "openclaw-radar@users.noreply.github.com";
+
+  if (!existingName) {
+    await runGitCommand(["config", "user.name", fallbackName], cwd);
+  }
+
+  if (!existingEmail) {
+    await runGitCommand(["config", "user.email", fallbackEmail], cwd);
+  }
 }
 
 function executable(name: string): string {
@@ -206,7 +234,7 @@ async function writeAutomationArtifacts(
   payload: unknown,
 ): Promise<void> {
   const baseDir = executionRecord
-    ? path.dirname(resolveWorkspacePath(runtime.paths.workspaceRoot, executionRecord.reportPath))
+    ? path.dirname(executionRecord.reportPath)
     : path.join(runtime.paths.reportsDir, "upgrades", runtime.now.toISOString().slice(0, 10));
 
   await mkdir(baseDir, { recursive: true });
@@ -219,6 +247,8 @@ async function main(): Promise<void> {
     workspaceRoot: path.resolve(process.cwd()),
     useFixtures: hasFlag("--fixtures") || process.env.AI_RADAR_USE_FIXTURES === "1",
   });
+
+  await ensureGitIdentity(runtime);
 
   const dryRun = hasFlag("--dry-run");
   const result = await runDailyRadarCycle(runtime, {
@@ -273,7 +303,7 @@ async function main(): Promise<void> {
     const validationResult = await runConfiguredScript(validationScript, runtime, extraEnv);
     payload.validation = {
       enabled: true,
-      script: toRepoPath(runtime.paths.workspaceRoot, validationScript),
+      script: validationScript,
       status: "passed",
       stdout: validationResult.stdout.trim(),
       stderr: validationResult.stderr.trim(),
@@ -290,7 +320,7 @@ async function main(): Promise<void> {
     const applyResult = await runConfiguredScript(applyScript, runtime, extraEnv);
     const applyUpgradePayload: Record<string, unknown> = {
       enabled: true,
-      script: toRepoPath(runtime.paths.workspaceRoot, applyScript),
+      script: applyScript,
       status: "passed",
       stdout: applyResult.stdout.trim(),
       stderr: applyResult.stderr.trim(),
@@ -321,7 +351,7 @@ async function main(): Promise<void> {
     const deployResult = await runConfiguredScript(deployScript, runtime, extraEnv);
     const deployPayload: Record<string, unknown> = {
       enabled: true,
-      script: toRepoPath(runtime.paths.workspaceRoot, deployScript),
+      script: deployScript,
       target: deployTarget,
       status: "passed",
       stdout: deployResult.stdout.trim(),
