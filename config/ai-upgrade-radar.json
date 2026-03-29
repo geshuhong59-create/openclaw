@@ -1,19 +1,19 @@
 {
   "watch_repos": [
+    "vllm-project/vllm",
     "openai/openai-agents-python",
     "browser-use/browser-use",
     "microsoft/autogen",
-    "langchain-ai/langgraph",
-    "vllm-project/vllm"
+    "langchain-ai/langgraph"
   ],
   "watch_topics": [
     "llm-inference",
     "model-serving",
+    "benchmark",
     "agent-framework",
     "mcp",
     "browser-automation",
     "tool-use",
-    "benchmark",
     "evals",
     "multi-agent",
     "workflow-automation"
@@ -28,6 +28,7 @@
     ".openclaw/extensions",
     ".github/workflows",
     "config",
+    "output",
     "reports",
     "scripts",
     "state"
@@ -81,6 +82,13 @@
     "autoCommit": true,
     "autoPush": true,
     "autoCreatePr": true,
+    "autoValidate": true,
+    "autoApplyUpgrade": true,
+    "autoDeploy": true,
+    "validationScript": "scripts/test-upgrade.sh",
+    "applyUpgradeScript": "scripts/ai-radar-apply-upgrade.sh",
+    "deployScript": "scripts/ai-radar-deploy.sh",
+    "deployTarget": "staging",
     "gitRemote": "origin",
     "repository": "geshuhong59-create/openclaw"
   },

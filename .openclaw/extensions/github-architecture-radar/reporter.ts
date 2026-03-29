@@ -7,6 +7,11 @@ import { scoreCandidates } from "./scorer.js";
 import { scanRepositories } from "./scanner.js";
 import { DailyRadarResult, RadarRuntime, RunRadarOptions, ScoredCandidate } from "./types.js";
 
+function toRepoPath(workspaceRoot: string, targetPath: string): string {
+  const relative = path.relative(workspaceRoot, targetPath);
+  return (relative || ".").replace(/\\/g, "/");
+}
+
 function reportDate(runtime: RadarRuntime, override?: string): string {
   return override ?? runtime.now.toISOString().slice(0, 10);
 }
@@ -72,10 +77,13 @@ export async function runDailyRadarCycle(
     "Production remains gated and must keep environment protection rules enabled.",
   ];
 
-  const reportPath = path.join(
+  const reportPathAbsolute = path.join(
     runtime.paths.reportsDir,
     `${reportDate(runtime, options?.reportDate)}-${runtime.config.reporting.reportFilenamePrefix}.md`,
   );
+  const reportPath = toRepoPath(runtime.paths.workspaceRoot, reportPathAbsolute);
+  const latestMarkdownPath = path.join(runtime.paths.reportsDir, "latest-ai-radar.md");
+  const latestJsonPath = path.join(runtime.paths.reportsDir, "latest-ai-radar.json");
 
   runtime.state.seenRepos.updatedAt = runtime.now.toISOString();
   runtime.state.releaseHistory.updatedAt = runtime.now.toISOString();
@@ -118,9 +126,9 @@ export async function runDailyRadarCycle(
   };
 
   await mkdir(runtime.paths.reportsDir, { recursive: true });
-  await writeFile(reportPath, renderDailyReport(result), "utf8");
-  await writeFile(path.join(runtime.paths.reportsDir, "latest-ai-radar.md"), renderDailyReport(result), "utf8");
-  await writeJsonFile(path.join(runtime.paths.reportsDir, "latest-ai-radar.json"), result);
+  await writeFile(reportPathAbsolute, renderDailyReport(result), "utf8");
+  await writeFile(latestMarkdownPath, renderDailyReport(result), "utf8");
+  await writeJsonFile(latestJsonPath, result);
   await persistState(runtime.paths, runtime.state);
 
   return result;

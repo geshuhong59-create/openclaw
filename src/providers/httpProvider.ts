@@ -1,9 +1,11 @@
 import { RawTrendItem, TrendsProvider } from "../types.js";
+import { toIsoDate, toNumber } from "../utils/http.js";
 
 interface HttpProviderOptions {
   endpoint: string;
   apiKey?: string;
   apiHost?: string;
+  timeoutMs?: number;
 }
 
 interface GenericApiResponse {
@@ -16,18 +18,19 @@ function pickArray(payload: GenericApiResponse): Array<Record<string, unknown>> 
   return payload.data ?? payload.trends ?? payload.items ?? [];
 }
 
-function toNumber(value: unknown): number | undefined {
-  if (typeof value === "number") return value;
-  if (typeof value === "string" && value.trim() !== "") {
-    const parsed = Number(value);
-    return Number.isFinite(parsed) ? parsed : undefined;
-  }
-  return undefined;
-}
-
 function toStringArray(value: unknown): string[] {
-  if (!Array.isArray(value)) return [];
-  return value.filter((item): item is string => typeof item === "string");
+  if (Array.isArray(value)) {
+    return value.filter((item): item is string => typeof item === "string");
+  }
+
+  if (typeof value === "string") {
+    return value
+      .split(/[|,]/)
+      .map((item) => item.trim())
+      .filter(Boolean);
+  }
+
+  return [];
 }
 
 export class HttpProvider implements TrendsProvider {
@@ -52,7 +55,11 @@ export class HttpProvider implements TrendsProvider {
     const url = new URL(this.options.endpoint);
     url.searchParams.set("limit", String(limit));
 
-    const response = await fetch(url, { headers });
+    const response = await fetch(url, {
+      headers,
+      signal: AbortSignal.timeout(this.options.timeoutMs ?? 20_000)
+    });
+
     if (!response.ok) {
       throw new Error(`HTTP provider request failed: ${response.status} ${response.statusText}`);
     }
@@ -68,6 +75,13 @@ export class HttpProvider implements TrendsProvider {
       score: toNumber(row.score ?? row.heat ?? row.volume),
       tags: toStringArray(row.tags),
       source: typeof row.source === "string" ? row.source : "http-provider",
+      publishedAt: toIsoDate(
+        typeof row.publishedAt === "string"
+          ? row.publishedAt
+          : typeof row.published_at === "string"
+            ? row.published_at
+            : undefined
+      ),
       posts: Array.isArray(row.posts)
         ? row.posts
             .filter((item): item is Record<string, unknown> => typeof item === "object" && item !== null)
@@ -78,7 +92,7 @@ export class HttpProvider implements TrendsProvider {
               url: typeof post.url === "string" ? post.url : undefined,
               engagement: {
                 likes: toNumber(post.likes),
-                reposts: toNumber(post.reposts),
+                reposts: toNumber(post.reposts ?? post.retweets),
                 replies: toNumber(post.replies)
               }
             }))

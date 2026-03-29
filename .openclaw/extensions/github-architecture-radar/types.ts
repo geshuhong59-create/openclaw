@@ -43,6 +43,13 @@ export type RadarConfig = {
     autoCommit: boolean;
     autoPush: boolean;
     autoCreatePr: boolean;
+    autoValidate: boolean;
+    autoApplyUpgrade: boolean;
+    autoDeploy: boolean;
+    validationScript?: string;
+    applyUpgradeScript?: string;
+    deployScript?: string;
+    deployTarget?: "staging" | "canary";
     repository?: string;
     gitRemote: string;
   };
