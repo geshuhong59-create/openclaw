@@ -260,10 +260,23 @@ async function main(): Promise<void> {
   await ensureGitIdentity(runtime);
 
   const dryRun = hasFlag("--dry-run");
+  const reportDate = readArgValue("--report-date");
+  const candidateLimit = readArgValue("--topN") ? Number(readArgValue("--topN")) : undefined;
+  logStage("daily-cycle:start", {
+    dryRun,
+    reportDate,
+    candidateLimit,
+  });
   const result = await runDailyRadarCycle(runtime, {
     dryRun,
-    reportDate: readArgValue("--report-date"),
-    candidateLimit: readArgValue("--topN") ? Number(readArgValue("--topN")) : undefined,
+    reportDate,
+    candidateLimit,
+  });
+  logStage("daily-cycle:complete", {
+    discoveredCount: result.discoveredCount,
+    plannedCandidates: result.plannedCandidates.length,
+    executionRecords: result.executionRecords.length,
+    reportPath: result.reportPath,
   });
 
   const selection = selectCandidate(result);
