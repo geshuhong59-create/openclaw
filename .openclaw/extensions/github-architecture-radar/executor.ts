@@ -9,6 +9,14 @@ import { ExecutionRecord, RadarRuntime, ScoredCandidate, UpgradePlan } from "./t
 
 const execFileAsync = promisify(execFile);
 
+function logExecutionStage(stage: string, detail?: Record<string, unknown>): void {
+  const timestamp = new Date().toISOString();
+  console.log(`[ai-radar][executor][${timestamp}] ${stage}`);
+  if (detail) {
+    console.log(JSON.stringify(detail, null, 2));
+  }
+}
+
 function sanitizeBranchComponent(value: string): string {
   return value
     .toLowerCase()
@@ -162,6 +170,12 @@ export async function executeUpgradePlan(
   const reportPath = path.join(reportDir, "UPGRADE_REPORT.md");
   const dryRun = options?.dryRun ?? false;
 
+  logExecutionStage("candidate:start", {
+    candidateKey,
+    branchName,
+    dryRun,
+  });
+
   await mkdir(reportDir, { recursive: true });
   await writeFile(reportPath, renderUpgradePlanMarkdown(candidate, plan), "utf8");
   await writeJsonFile(path.join(reportDir, "candidate.json"), candidate);
@@ -205,32 +219,44 @@ export async function executeUpgradePlan(
   try {
     if (runtime.config.execution.autoCreateBranch) {
       const baseRef = await resolveBaseRef(runtime);
+      logExecutionStage("branch:create:start", { candidateKey, branchName, baseRef });
       await runGitCommand(["checkout", "-b", branchName, baseRef], runtime.paths.workspaceRoot);
+      logExecutionStage("branch:create:complete", { candidateKey, branchName, baseRef });
       status = "branch-created";
       message = `Created ${branchName} from ${baseRef}.`;
     }
 
     if (runtime.config.execution.autoCommit) {
+      logExecutionStage("commit:start", { candidateKey, branchName, reportPath });
       await runGitCommand(["add", reportPath, path.join(reportDir, "candidate.json")], runtime.paths.workspaceRoot);
       await runGitCommand(
         ["commit", "-m", `chore(radar): evaluate ${candidate.repo.fullName}`],
         runtime.paths.workspaceRoot,
       );
       commitSha = await runGitCommand(["rev-parse", "HEAD"], runtime.paths.workspaceRoot);
+      logExecutionStage("commit:complete", { candidateKey, branchName, commitSha });
       status = "committed";
       message = `Committed upgrade artifacts on ${branchName}.`;
     }
 
     if (runtime.config.execution.autoPush) {
+      logExecutionStage("push:start", { candidateKey, branchName, remote: runtime.config.execution.gitRemote });
       await runGitCommand(
         ["push", "-u", runtime.config.execution.gitRemote, branchName],
         runtime.paths.workspaceRoot,
       );
+      logExecutionStage("push:complete", { candidateKey, branchName, remote: runtime.config.execution.gitRemote });
       status = "pushed";
       message = `Pushed ${branchName} to ${runtime.config.execution.gitRemote}.`;
     }
 
     if (runtime.config.execution.autoCreatePr && runtime.config.execution.repository) {
+      logExecutionStage("pr:create:start", {
+        candidateKey,
+        repository: runtime.config.execution.repository,
+        head: branchName,
+        base: runtime.config.execution.targetBranch,
+      });
       const client = new GitHubApiClient(runtime.config, runtime.paths, false);
       prUrl = await client.createPullRequest({
         repository: runtime.config.execution.repository,
@@ -239,6 +265,7 @@ export async function executeUpgradePlan(
         title: `AI Radar upgrade experiment: ${candidate.repo.fullName}`,
         body: buildPrBody(candidate, plan),
       });
+      logExecutionStage("pr:create:complete", { candidateKey, prUrl });
       status = "pr-created";
       message = `Created PR targeting ${runtime.config.execution.targetBranch}.`;
     } else if (runtime.config.execution.autoCreatePr && !runtime.config.execution.repository) {
@@ -249,6 +276,7 @@ export async function executeUpgradePlan(
   } catch (error) {
     status = "failed";
     message = error instanceof Error ? error.message : String(error);
+    logExecutionStage("candidate:failed", { candidateKey, message });
     runtime.state.failureRegistry.failures.push({
       stage: "executor",
       message,
@@ -273,6 +301,13 @@ export async function executeUpgradePlan(
   runtime.state.upgradeAttempts.attempts.push(record);
   runtime.state.upgradeAttempts.updatedAt = runtime.now.toISOString();
   await persistState(runtime.paths, runtime.state);
+  logExecutionStage("candidate:complete", {
+    candidateKey,
+    status,
+    branchName,
+    commitSha,
+    prUrl,
+  });
 
   return { plan, record };
 }
