@@ -1,8 +1,24 @@
 # AI Architecture Radar Daily Report
 
-- Executed at: 2026-03-29T16:50:35.369Z
+- Executed at: 2026-03-29T17:12:10.763Z
 - Discovered candidates: 5
-- Report path: reports/2026-03-25-ai-radar.md
+- Report path: /home/runner/work/openclaw/openclaw/reports/2026-03-25-ai-radar.md
+
+## Executive Summary
+- Winner: vllm-project/vllm@v0.8.2 (score 76)
+- Eligible candidates in today's shortlist: 1/5
+- Planned upgrade executions: 1
+- Failed execution records: 0
+- Auto-created upgrade PRs during planning: 0
+
+## Top Candidate Scoreboard
+| Rank | Repo | Score | Release | Perf Gain | Cost Down | Eligible | Vetoes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | vllm-project/vllm | 76 | v0.8.2 | 37% | 19% | yes | none |
+| 2 | langchain-ai/langgraph | 71 | v0.3.5 | 27% | 4% | no | none |
+| 3 | browser-use/browser-use | 69 | v1.9.0 | 27% | 4% | no | none |
+| 4 | microsoft/autogen | 66 | v0.6.3 | 27% | 4% | no | none |
+| 5 | openai/openai-agents-python | 65 | v0.4.1 | 27% | 4% | no | none |
 
 ## Top Candidates
 1. vllm-project/vllm | score=76 | release=v0.8.2 | vetoes=none
@@ -18,8 +34,9 @@
 - microsoft/autogen: Active commits in last 30 days: 12; Latest release: v0.6.3; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
 - openai/openai-agents-python: Active commits in last 30 days: 24; Latest release: v0.4.1; License: Apache-2.0; Projected performance gain: 27%; Projected cost reduction: 4%
 
-## Auto Validation
-- vllm-project/vllm@v0.8.2: dry-run | branch=upgrade/2026-03-29-vllm | report=/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-03-29-vllm/UPGRADE_REPORT.md
+## Planned Execution
+- vllm-project/vllm@v0.8.2 | status=dry-run | branch=upgrade/2026-03-29-vllm
+  note: Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-03-29-vllm/PR_BODY.md).
 
 ## Failures
 - executor: GitHub API 403 Forbidden: {"message":"GitHub Actions is not permitted to create or approve pull requests.","documentation_url":"https://docs.github.com/rest/pulls/pulls#create-a-pull-request","status":"403"}
