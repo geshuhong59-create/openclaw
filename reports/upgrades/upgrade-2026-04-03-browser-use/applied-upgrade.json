@@ -1,6 +1,5 @@
 {
-  "version": 1,
-  "updatedAt": "2026-04-03T01:23:34.471Z",
+  "appliedAt": "2026-04-03T01:23:34.471Z",
   "candidate": {
     "repo": "browser-use/browser-use",
     "releaseTag": "0.12.6",
@@ -9,10 +8,6 @@
     "reportPath": "reports/upgrades/upgrade-2026-04-03-browser-use/UPGRADE_REPORT.md",
     "score": null
   },
-  "notes": [
-    "Applied candidate browser-use/browser-use@0.12.6",
-    "Change type: dependency-upgrade"
-  ],
   "runtime": {
     "provider": "aggregate",
     "limit": 15,
@@ -78,5 +73,9 @@
       }
     ],
     "hnStoryType": "topstories"
-  }
+  },
+  "notes": [
+    "Applied candidate browser-use/browser-use@0.12.6",
+    "Change type: dependency-upgrade"
+  ]
 }
