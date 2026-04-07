@@ -1,34 +1,120 @@
 {
-  "executedAt": "2026-04-03T01:23:33.575Z",
-  "reportPath": "/home/runner/work/openclaw/openclaw/reports/2026-03-25-ai-radar.md",
-  "discoveredCount": 5,
+  "executedAt": "2026-04-07T01:24:59.362Z",
+  "reportPath": "/home/runner/work/openclaw/openclaw/reports/2026-04-07-ai-radar.md",
+  "discoveredCount": 103,
   "topCandidates": [
+    {
+      "repo": {
+        "fullName": "browser-use/browser-use",
+        "url": "https://github.com/browser-use/browser-use",
+        "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+        "topics": [
+          "ai-agents",
+          "ai-tools",
+          "browser-automation",
+          "browser-use",
+          "llm",
+          "playwright",
+          "python"
+        ],
+        "stars": 86267,
+        "forks": 9983,
+        "defaultBranch": "main",
+        "updatedAt": "2026-04-07T01:17:07Z",
+        "pushedAt": "2026-04-06T02:01:38Z",
+        "license": "MIT",
+        "readme": "<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/774a46d5-27a0-490c-b7d0-e65fcbbfa358\">\n  <img alt=\"Shows a black Browser Use Logo in light color mode and a white one in dark color mode.\" src=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"  width=\"full\">\n</picture>\n\n<div align=\"center\">\n    <picture>\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"\">\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6797d09b-8ac3-4cb9-ba07-b289e080765a\">\n    <img alt=\"The AI browser agent.\" src=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"  width=\"400\">\n    </picture>\n</div>\n\n<div align=\"center\">\n<a href=\"https://cloud.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/package\" height=\"48\" alt=\"Browser-Use Package Download Statistics\"></a>\n</div>\n\n---\n\n<div align=\"center\">\n<a href=\"#demos\"><img src=\"https://media.browser-use.tools/badges/demos\" alt=\"Demos\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://docs.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/docs\" alt=\"Docs\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browser-use.com/posts\"><img src=\"https://media.browser-use.tools/badges/blog\" alt=\"Blog\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browsermerch.com\"><img src=\"https://media.browser-use.tools/badges/merch\" alt=\"Merch\"></a>\n<img width=\"100\" height=\"1\" alt=\"\">\n<a href=\"https://github.com/browser-use/browser-use\"><img src=\"https://media.browser-use.tools/badges/github\" alt=\"Github Stars\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://x.com/intent/user?screen_name=browser_use\"><img src=\"https://media.browser-use.tools/badges/twitter\" alt=\"Twitter\"></a>\n<img width=\"4 height=\"1\" alt=\"\">\n<a href=\"https://link.browser-use.com/discord\"><img src=\"https://media.browser-use.tools/badges/discord\" alt=\"Discord\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://cloud.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/cloud\" height=\"48\" alt=\"Browser-Use Cloud\"></a>\n</div>\n\n</br>\n\n🌤️ Want to skip the setup? Use our <b>[cloud](https://cloud.browser-use.com)</b> for faster, scalable, stealth-enabled browser automation!\n\n# 🤖 LLM Quickstart\n\n1. Direct your favorite coding agent (Cursor, Claude Code, etc) to [Agents.md](https://docs.browser-use.com/llms-full.txt)\n2. Prompt away!\n\n<br/>\n\n# 👋 Human Quickstart\n\n**1. Create environment and install Browser-Use with [uv](https://docs.astral.sh/uv/) (Python>=3.11):**\n```bash\nuv init && uv add browser-use && uv sync\n# uvx browser-use install  # Run if you don't have Chromium installed\n```\n\n**2. [Optional] Get your API key from [Browser Use Cloud](https://cloud.browser-use.com/new-api-key):**\n```\n# .env\nBROWSER_USE_API_KEY=your-key\n# GOOGLE_API_KEY=your-key\n# ANTHROPIC_API_KEY=your-key\n```\n\n**3. Run your first agent:**\n```python\nfrom browser_use import Agent, Browser, ChatBrowserUse\n# from browser_use import ChatGoogle  # ChatGoogle(model='gemini-3-flash-preview')\n# from browser_use import ChatAnthropic  # ChatAnthropic(model='claude-sonnet-4-6')\nimport asyncio\n\nasync def main():\n    browser = Browser(\n        # use_cloud=True,  # Use a stealth browser on Browser Use Cloud\n    )\n\n    agent = Agent(\n        task=\"Find the number of stars of the browser-use repo\",\n        llm=ChatBrowserUse(),\n        # llm=ChatGoogle(model='gemini-3-flash-preview'),\n        # llm=ChatAnthropic(model='claude-sonnet-4-6'),\n        browser=browser,\n    )\n    await agent.run()\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nCheck out the [library docs](https://docs.browser-use.com/open-source/introduction) and the [cloud docs](https://docs.cloud.browser-use.com) for more!\n\n<br/>\n\n# Open Source vs Cloud\n\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"static/accuracy_by_model_light.png\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/accuracy_by_model_dark.png\">\n  <img alt=\"BU Bench V1 - LLM Success Rates\" src=\"static/accuracy_by_model_light.png\" width=\"100%\">\n</picture>\n\nWe benchmark Browser Use across 100 real-world browser tasks. Full benchmark is open source: **[browser-use/benchmark](https://github.com/browser-use/benchmark)**.\n\n**Use Open Source**\n- You need [custom tools](https://docs.browser-use.com/customize/tools/basics) or deep code-level integration\n- You want to self-host and deploy browser agents on your own machines\n\n**Use [Cloud](https://cloud.browser-use.com) (recommended)**\n- Much better agent for complex tasks (see plot above)\n- Easiest way to start and scale\n- Best stealth with proxy rotation and captcha solving\n- 1000+ integrations (Gmail, Slack, Notion, and more)\n- Persistent filesystem and memory\n\n**Use Both**\n- Use the open-source library with your [custom tools](https://docs.browser-use.com/customize/tools/basics) while running our [cloud browsers](https://docs.browser-use.com/open-source/customize/browser/remote) and [ChatBrowserUse model](https://docs.browser-use.com/open-source/supported-models)\n\n<br/>\n\n# Demos\n\n\n### 📋 Form-Filling\n#### Task = \"Fill in this job application with my resume and information.\"\n![Job Application Demo](https://github.com/user-attachments/assets/57865ee6-6004-49d5-b2c2-6dff39ec2ba9)\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/apply_to_job.py)\n\n\n### 🍎 Grocery-Shopping\n#### Task = \"Put this list of items into my instacart.\"\n\nhttps://github.com/user-attachments/assets/a6813fa7-4a7c-40a6-b4aa-382bf88b1850\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/buy_groceries.py)\n\n\n### 💻 Personal-Assistant.\n#### Task = \"Help me find parts for a custom PC.\"\n\nhttps://github.com/user-attachments/assets/ac34f75c-057a-43ef-ad06-5b2c9d42bf06\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/pcpartpicker.py)\n\n\n### 💡See [more examples here ↗](https://docs.browser-use.com/examples) and give us a star!\n\n<br/>\n\n# 🚀 Template Quickstart\n\n**Want to get started even faster?** Generate a ready-to-run template:\n\n```bash\nuvx browser-use init --template default\n```\n\nThis creates a `browser_use_default.py` file with a working example. Available templates:\n- `default` - Minimal setup to get started quickly\n- `advanced` - All configuration options with detailed comments\n- `tools` - Examples of custom tools and extending the agent\n\nYou can also specify a custom output path:\n```bash\nuvx browser-use init --template default --output my_agent.py\n```\n\n<br/>\n\n# 💻 CLI\n\nFast, persistent browser automation from the command line:\n\n```bash\nbrowser-use open https://example.com    # Navigate to URL\nbrowser-use state                       # See clickable elements\nbrowser-use click 5                     # Click element by index\nbrowser-use type \"Hello\"                # Type text\nbrowser-use screenshot page.png         # Take screenshot\nbrowser-use close                       # Close browser\n```\n\nThe CLI keeps the browser running between commands for fast iteration. See [CLI docs](browser_use/skill_cli/README.md) for all commands.\n\n### Claude Code Skill\n\nFor [Claude Code](https://claude.ai/code), install the skill to enable AI-assisted browser automation:\n\n```bash\nmkdir -p ~/.claude/skills/browser-use\ncurl -o ~/.claude/skills/browser-use/SKILL.md \\\n  https://raw.githubusercontent.com/browser-use/browser-use/main/skills/browser-use/SKILL.md\n```\n\n<br/>\n\n## Integrations, hosting, custom tools, MCP, and more on our [Docs ↗](https://docs.browser-use.com)\n\n<br/>\n\n# FAQ\n\n<details>\n<summary><b>What's the best model to use?</b></summary>\n\nWe optimized **ChatBrowserUse()** specifically for browser automation tasks. On avg it completes tasks 3-5x faster than other models with SOTA accuracy.\n\n**Pricing (per 1M tokens):**\n- Input tokens: $0.20\n- Cached input tokens: $0.02\n- Output tokens: $2.00\n\nFor other LLM providers, see our [supported models documentation](https://docs.browser-use.com/supported-models).\n</details>\n\n<details>\n<summary><b>Should I use the Browser Use system prompt with the open-source preview model?</b></summary>\n\nYes. If you use `ChatBrowserUse(model='browser-use/bu-30b-a3b-preview')` with a normal `Agent(...)`, Browser Use still sends its default agent system prompt for you.\n\nYou do **not** need to add a separate custom \"Browser Use system message\" just because you switched to the open-source preview model. Only use `extend_system_message` or `override_system_message` when you intentionally want to customize the default behavior for your task.\n\nIf you want the best default speed/accuracy, we still recommend the newer hosted `bu-*` models. If you want the open-source preview model, the setup stays the same apart from the `model=` value.\n</details>\n\n<details>\n<summary><b>Can I use custom tools with the agent?</b></summary>\n\nYes! You can add custom tools to extend the agent's capabilities:\n\n```python\nfrom browser_use import Tools\n\ntools = Tools()\n\n@tools.action(description='Description of what this tool does.')\ndef custom_tool(param: str) -> str:\n    return f\"Result: {param}\"\n\nagent = Agent(\n    task=\"Your task\",\n    llm=llm,\n    browser=browser,\n    tools=tools,\n)\n```\n\n</details>\n\n<details>\n<summary><b>Can I use this for free?</b></summary>\n\nYes! Browser-Use is open source and free to use. You only need to choose an LLM provider (like OpenAI, Google, ChatBrowserUse, or run local models with Ollama).\n</details>\n\n<details>\n<summary><b>Terms of Service</b></summary>\n\nThis open-source library is licensed under the MIT License. For Browser Use services & data policy, see our [Terms of Service](https://browser-use.com/legal/terms-of-service) and [Privacy Policy](https://browser-use.com/privacy/).\n</details>\n\n<details>\n<summary><b>How do I handle authentication?</b></summary>\n\nCheck out our authentication examples:\n- [Using real browser profiles](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py) - Reuse your existing Chrome profile with saved logins\n- If you want to use temporary accounts with inbox, choose AgentMail\n- To sync your auth profile with the remote browser, run `curl -fsSL https://browser-use.com/profile.sh | BROWSER_USE_API_KEY=XXXX sh` (replace XXXX with your API key)\n\nThese examples show how to maintain sessions and handle authentication seamlessly.\n</details>\n\n<details>\n<summary><b>How do I solve CAPTCHAs?</b></summary>\n\nFor CAPTCHA handling, you need better browser fingerprinting and proxies. Use [Browser Use Cloud](https://cloud.browser-use.com) which provides stealth browsers designed to avoid detection and CAPTCHA challenges.\n</details>\n\n<details>\n<summary><b>How do I go into production?</b></summary>\n\nChrome can consume a lot of memory, and running many agents in parallel can be tricky to manage.\n\nFor production use cases, use our [Browser Use Cloud API](https://cloud.browser-use.com) which handles:\n- Scalable browser infrastructure\n- Memory management\n- Proxy rotation\n- Stealth browser fingerprinting\n- High-performance parallel execution\n</details>\n\n<br/>\n\n<div align=\"center\">\n\n**Tell your computer what to do, and it gets it done.**\n\n<img src=\"https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f\" width=\"400\"/>\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)\n&emsp;&emsp;&emsp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)\n\n</div>\n\n<div align=\"center\"> Made with ❤️ in Zurich and San Francisco </div>\n",
+        "recentCommitCount30d": 100,
+        "latestRelease": {
+          "tagName": "0.12.6",
+          "name": "0.12.6",
+          "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/0.12.6",
+          "publishedAt": "2026-04-02T07:54:28Z",
+          "prerelease": false,
+          "draft": false,
+          "body": "## What's Changed\r\n<img width=\"1661\" height=\"278\" alt=\"image\" src=\"https://github.com/user-attachments/assets/151c26e2-b7d8-47e6-b628-1121677527ee\" />\r\n\r\n* fix: set default temperature to 1.0 for gemini-3 models by @markmcd in https://github.com/browser-use/browser-use/pull/4489\r\n* fix bedrock structured output w SchemaOptimizer to flatten schema by @laithrw in https://github.com/browser-use/browser-use/pull/4524\r\n* fix: use login shell for PATH configuration in install script by @techiro in https://github.com/browser-use/browser-use/pull/4457\r\n* fix(utils): add option to disable SignalHandler for host app signal control by @BillionClaw in https://github.com/browser-use/browser-use/pull/4387\r\n* rm pass by @laithrw in https://github.com/browser-use/browser-use/pull/4525\r\n* fix daemon orphaning when external browser dies on --connect/--cdp-url by @laithrw in https://github.com/browser-use/browser-use/pull/4526\r\n* Feature/cdp navigation timeout by @laithrw in https://github.com/browser-use/browser-use/pull/4527\r\n* feat(tokens): allow overriding model pricing URL by @laithrw in https://github.com/browser-use/browser-use/pull/4528\r\n* fix anthropic action field double-serialization by @laithrw in https://github.com/browser-use/browser-use/pull/4529\r\n* fix(agent): prevent stale history and stuck step counter on timeout by @warren618 in https://github.com/browser-use/browser-use/pull/4481\r\n* fix tunnel process kill and daemon spawn on windows by @laithrw in https://github.com/browser-use/browser-use/pull/4530\r\n* fix: stop cloud sessions when reconnecting via cdp_url by @iafisch in https://github.com/browser-use/browser-use/pull/4096\r\n* fix(mcp): remove oneOf from browser_click schema that breaks Claude API clients by @gabros20 in https://github.com/browser-use/browser-use/pull/4212\r\n* feat(cli): add install-lite.sh script for the CLI by @ShawnPana in https://github.com/browser-use/browser-use/pull/4534\r\n* fix: close httpx client pool on session stop to prevent OOM on Lambda by @LarsenCundric in https://github.com/browser-use/browser-use/pull/4577\r\n* perf: fix O(n²) bottlenecks in DOM capture for heavy pages by @MagMueller in https://github.com/browser-use/browser-use/pull/4587\r\n\r\n## New Contributors\r\n* @markmcd made their first contribution in https://github.com/browser-use/browser-use/pull/4489\r\n* @techiro made their first contribution in https://github.com/browser-use/browser-use/pull/4457\r\n* @BillionClaw made their first contribution in https://github.com/browser-use/browser-use/pull/4387\r\n* @warren618 made their first contribution in https://github.com/browser-use/browser-use/pull/4481\r\n* @iafisch made their first contribution in https://github.com/browser-use/browser-use/pull/4096\r\n* @gabros20 made their first contribution in https://github.com/browser-use/browser-use/pull/4212\r\n\r\n**Full Changelog**: https://github.com/browser-use/browser-use/compare/0.12.5...0.12.6"
+        },
+        "source": [
+          {
+            "kind": "watch_repo",
+            "value": "browser-use/browser-use"
+          }
+        ]
+      },
+      "score": {
+        "maturityScore": 95,
+        "compatibilityScore": 85,
+        "performancePotentialScore": 32,
+        "maintenanceRiskScore": 20,
+        "adoptionSignalScore": 100,
+        "finalUpgradeScore": 80,
+        "estimatedPerformanceGainPct": 27,
+        "estimatedCostReductionPct": 4,
+        "hardVetoReasons": [],
+        "qualifyingSignals": {
+          "activeLast30Days": true,
+          "hasStableRelease": true,
+          "commercialLicense": true,
+          "documentationComplete": true,
+          "compatibilityAtLeast70": true,
+          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedCostReductionAtLeast10Pct": false,
+          "avoidsProductionSecurityBoundary": true
+        },
+        "qualifyingSignalCount": 7,
+        "eligibleForValidation": true,
+        "summary": [
+          "Active commits in last 30 days: 100",
+          "Latest release: 0.12.6",
+          "License: MIT",
+          "Projected performance gain: 27%",
+          "Projected cost reduction: 4%"
+        ]
+      }
+    },
     {
       "repo": {
         "fullName": "vllm-project/vllm",
         "url": "https://github.com/vllm-project/vllm",
-        "description": "High-throughput and memory-efficient inference engine for LLM serving.",
+        "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
         "topics": [
-          "llm-inference",
+          "amd",
+          "blackwell",
+          "cuda",
+          "deepseek",
+          "deepseek-v3",
+          "gpt",
+          "gpt-oss",
+          "inference",
+          "kimi",
+          "llama",
+          "llm",
+          "llm-serving",
           "model-serving",
-          "benchmark"
+          "moe",
+          "openai",
+          "pytorch",
+          "qwen",
+          "qwen3",
+          "tpu",
+          "transformer"
         ],
-        "stars": 42000,
-        "forks": 6200,
+        "stars": 75498,
+        "forks": 15240,
         "defaultBranch": "main",
-        "updatedAt": "2026-03-24T08:20:00Z",
-        "pushedAt": "2026-03-24T08:19:00Z",
+        "updatedAt": "2026-04-07T01:02:16Z",
+        "pushedAt": "2026-04-07T00:21:09Z",
         "license": "Apache-2.0",
-        "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
-        "recentCommitCount30d": 27,
+        "readme": "<!-- markdownlint-disable MD001 MD041 -->\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png\">\n    <img alt=\"vLLM\" src=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-light.png\" width=55%>\n  </picture>\n</p>\n\n<h3 align=\"center\">\nEasy, fast, and cheap LLM serving for everyone\n</h3>\n\n<p align=\"center\">\n| <a href=\"https://docs.vllm.ai\"><b>Documentation</b></a> | <a href=\"https://blog.vllm.ai/\"><b>Blog</b></a> | <a href=\"https://arxiv.org/abs/2309.06180\"><b>Paper</b></a> | <a href=\"https://x.com/vllm_project\"><b>Twitter/X</b></a> | <a href=\"https://discuss.vllm.ai\"><b>User Forum</b></a> | <a href=\"https://slack.vllm.ai\"><b>Developer Slack</b></a> |\n</p>\n\n🔥 We have built a vllm website to help you get started with vllm. Please visit [vllm.ai](https://vllm.ai) to learn more.\nFor events, please visit [vllm.ai/events](https://vllm.ai/events) to join us.\n\n---\n\n## About\n\nvLLM is a fast and easy-to-use library for LLM inference and serving.\n\nOriginally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley, vLLM has evolved into a community-driven project with contributions from both academia and industry.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)\n- Continuous batching of incoming requests\n- Fast model execution with CUDA/HIP graph\n- Quantizations: [GPTQ](https://arxiv.org/abs/2210.17323), [AWQ](https://arxiv.org/abs/2306.00978), [AutoRound](https://arxiv.org/abs/2309.05516), INT4, INT8, and FP8\n- Optimized CUDA kernels, including integration with FlashAttention and FlashInfer\n- Speculative decoding\n- Chunked prefill\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor, pipeline, data and expert parallelism support for distributed inference\n- Streaming outputs\n- OpenAI-compatible API server\n- Support for NVIDIA GPUs, AMD CPUs and GPUs, Intel CPUs and GPUs, PowerPC CPUs, Arm CPUs, and TPU. Additionally, support for diverse hardware plugins such as Intel Gaudi, IBM Spyre and Huawei Ascend.\n- Prefix caching support\n- Multi-LoRA support\n\nvLLM seamlessly supports most popular open-source models on HuggingFace, including:\n\n- Transformer-like LLMs (e.g., Llama)\n- Mixture-of-Expert LLMs (e.g., Mixtral, Deepseek-V2 and V3)\n- Embedding Models (e.g., E5-Mistral)\n- Multi-modal LLMs (e.g., LLaVA)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n\n## Getting Started\n\nInstall vLLM with `pip` or [from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source):\n\n```bash\npip install vllm\n```\n\nVisit our [documentation](https://docs.vllm.ai/en/latest/) to learn more.\n\n- [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)\n- [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)\n- [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)\n\n## Contributing\n\nWe welcome and value any contributions and collaborations.\nPlease check out [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) for how to get involved.\n\n## Citation\n\nIf you use vLLM for your research, please cite our [paper](https://arxiv.org/abs/2309.06180):\n\n```bibtex\n@inproceedings{kwon2023efficient,\n  title={Efficient Memory Management for Large Language Model Serving with PagedAttention},\n  author={Woosuk Kwon and Zhuohan Li and Siyuan Zhuang and Ying Sheng and Lianmin Zheng and Cody Hao Yu and Joseph E. Gonzalez and Hao Zhang and Ion Stoica},\n  booktitle={Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles},\n  year={2023}\n}\n```\n\n## Contact Us\n\n<!-- --8<-- [start:contact-us] -->\n- For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues)\n- For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)\n- For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)\n- For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature\n- For collaborations and partnerships, please contact us at [collaboration@vllm.ai](mailto:collaboration@vllm.ai)\n<!-- --8<-- [end:contact-us] -->\n\n## Media Kit\n\n- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)\n",
+        "recentCommitCount30d": 100,
         "latestRelease": {
-          "tagName": "v0.8.2",
-          "name": "v0.8.2",
-          "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
-          "publishedAt": "2026-03-19T05:20:00Z",
+          "tagName": "v0.19.0",
+          "name": "v0.19.0",
+          "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.19.0",
+          "publishedAt": "2026-04-03T02:19:12Z",
           "prerelease": false,
           "draft": false,
-          "body": "Higher throughput, lower latency, and better benchmark reproducibility."
+          "body": "# vLLM v0.19.0\r\n\r\n## Highlights\r\nThis release features 448 commits from 197 contributors (54 new)!\r\n\r\n* **Gemma 4 support**: Full Google Gemma 4 architecture support including MoE, multimodal, reasoning, and tool-use capabilities (#38826, #38847). Requires `transformers>=5.5.0`. We recommend using pre-built docker image `vllm/vllm-openai:gemma4` for out of box usage.\r\n* **Zero-bubble async scheduling + speculative decoding**: Async scheduling now supports speculative decoding with zero-bubble overlap, significantly improving throughput (#32951).\r\n* **Model Runner V2 maturation**: MRV2 gains piecewise CUDA graphs for pipeline parallelism (#35162), spec decode rejection sampler with greedy/logprobs support (#37238, #37237), multi-modal embeddings for spec decode (#36097), streaming inputs (#37028), and EPLB support (#37488).\r\n* **ViT Full CUDA Graphs**: Vision encoders (ViT) now support full CUDA graph capture for reduced overhead (#35963).\r\n* **General CPU KV cache offloading**: A simple yet general CPU KV cache offloading mechanism for V1, with pluggable cache policy and block-level preemption handling (#37160, #37874, #34805, #36642, #37853).\r\n* **DBO (Dual-Batch Overlap) generalization**: The microbatch optimization (DBO) now works with general models, not just specific architectures (#37926).\r\n* **NVIDIA B300/GB300 (SM 10.3) support**: Allreduce fusion enabled by default with tuned all-reduce communicator (#37755, #37756).\r\n* **Transformers v5 compatibility**: Broad compatibility fixes across many models for HuggingFace Transformers v5 (#37681, #38127, #38090, #38247, #38410).\r\n\r\n### Model Support\r\n* New architectures: Gemma 4 (#38826), Cohere ASR (#35809), Cohere Transcribe (#38120), ColQwen3.5 4.5B (#36887), LFM2-ColBERT-350M (#37528), Granite 4.0 1B Speech (#38019), Qwen3-ForcedAligner (#35367).\r\n* Speculative decoding: Eagle3 for Pixtral (#37182), EagleMistralLarge3 fix (#37232).\r\n* LoRA expansion: H2OVL tower/connector LoRA (#31696), `--lora-target-modules` to restrict LoRA to specific modules (#34984), `language_model_only` respected (#37375), Mistral3 fix (#36928), Qwen3.5 fix (#36976), out-of-tree ops replacement (#37181).\r\n* Model fixes: NemotronH MTP + Chunked Prefill (#35447), Qwen3-VL video timestamps (#37439), Qwen3.5 GDN quantized models (#37448), Qwen3Next A_log FP32 (#37810), JAIS ALiBi (#37820), RoBERTa CUDA graph position IDs (#37873), AudioFlamingo3/MusicFlamingo (#37643), Music Flamingo loading (#35535), bge-m3 task selection (#37632), Nemotron Parse loading (#37407), GLM OCR patch merger (#37962), PaddleOCR checkpoint compat (#38232), DeepSeek v3.2 params (#33703), MiniMax NVFP4 weight loading (#37214), gated model HF token (#37920), Parakeet OOM on long audio (#36671).\r\n* Features: Temporal compression for Nemotron-3-VL videos (#36808), NemotronH Puzzle + MTP (#37803), torch.compile for InternVL vision encoder (#38049), multiple embedding types in single call (#35829).\r\n* Performance: GLM-4.xv ViT optimization (#37779).\r\n\r\n### Engine Core\r\n* **Zero-bubble async scheduling + speculative decoding** (#32951).\r\n* **Model Runner V2**: PP CUDA graphs (#35162), spec decode rejection sampler greedy (#37238) + logprobs (#37237), multimodal embeddings for spec decode (#36097), streaming inputs (#37028), configurable acceptance rate (#38045), FP32 draft logits (#37526), FP64 Gumbel noise (#37798), warmup with spec decode (#37812).\r\n* **ViT Full CUDA Graph** capture (#35963).\r\n* **General CPU KV cache offloading** with pluggable CachePolicy (#37160, #37874), block-level preemption (#34805), multiple KV groups (#36642), hybrid model support (#37853).\r\n* **DBO for general models**: Microbatch optimization generalized beyond specific architectures (#37926).\r\n* **Compilation**: Mega AOT artifact for torch 2.12+ (#37198), lazy graph module to defer recompile (#37609), remove model tag requirement for compile cache (#37345), Triton autotuning disk cache enabled by default (#37188), inductor runtime asserts disabled by default (#37485).\r\n* **FlexAttention**: Custom mask modification support (#37692).\r\n* **Attention**: Distinguish short extends vs decodes (#37303), allow qk_nope_head_dim=192 in FlashInfer MLA (#37475), skip sliding window attention layers with FP8 KV cache (#33695).\r\n* **Scheduling**: Schedule requests based on full input sequence length (#37307).\r\n* **Spec decode**: Per-draft-model MoE backend via `--speculative-config` (#37880), Eagle3 drafter quant_config propagation (#37280), Eagle3 norm_before_fc propagation (#38111).\r\n* **Extensibility**: PluggableLayer for CustomQwen2Decoder (#37293), tensor IPC transfer for multimodal data (#32104).\r\n* **Performance**: Optimize top-k in Triton sampler (#37225), optimize token_embed for pooling models with 1% improvement (#37347), fix slow hasattr in CUDAGraphWrapper (#37425), NFS prefetch auto-enabled with RAM guard (#37673), pybase64 replacement (#37290), optimize swap_states for hybrid models (#34733).\r\n* **Bugfixes**: Fix gibberish from FP8 MLA KV scale inconsistency (#37054), Mamba state corruption (#37728), deadlock with pause/resume (#37024), FlashInfer MNNVL socket collisions (#36674), multimodal prefix cache key collisions (#36708), DP coordinator ZMQ TOCTOU (#37452), CUDA graph memory double-counting (#37426), pooling non-determinism (#37775), AllReduce Fusion shutdown crash (#36955), FlashInfer allreduce workspace (#37461), async spec decoding with hybrid models (#38556), MLA sparse indexer prefill chunking (#36178), KV offloading + MLA (#37536), async scheduling extra CUDA context (#37449), DP MTP dummy run (#35243), offloading+prefetch for GLM-4.7-FP8 (#37178), max memory for multiple KV-cache groups (#36030).\r\n\r\n### Hardware & Performance\r\n* **NVIDIA**:\r\n  * B300/GB300 (SM 10.3): Allreduce fusion enabled by default (#37755), tuned all-reduce communicator (#37756).\r\n  * Blackwell: Optimized SM120 CUTLASS blockwise FP8 GEMM (#37970), fix NVFP4 NaN on desktop Blackwell (#37725), fix DeepGEMM E8M0 accuracy for Qwen3.5 FP8 (#38083), restore FP8 FlashMLA CUDA graph persistent buffers (#35175), DGX Spark fix (#38126).\r\n  * FlashInfer sparse MLA as default for FP8 KV cache (#37252).\r\n  * Tuned prefill configs for FP8 FA3 (#36265), tuned Triton MoE config for Qwen3.5 on H200 with 9.9% E2E improvement (#37340), H800 MoE configs (#31201).\r\n  * GPT-OSS: Router GEMM kernel (#37205), eliminate padding with FlashInfer MXFP4/MXFP8 MoE (#30647), reduce redundant SparseMatrix creation (#37683).\r\n  * NVFP4 CUTLASS MoE non-gated support (#37320), fuse pack topk in TRTLLM MoE via torch.compile (#37695).\r\n  * Non-contiguous KV cache in TRTLLM FP8 dequant kernel (#36867), Qwen3 dual stream input projection (#36795).\r\n* **AMD ROCm**:\r\n  * ROCm 7.2.1, torch 2.10, triton 3.6 (#38252).\r\n  * DeepEP as all2all backend (#34692).\r\n  * Persistent MLA kernel from AITER (#36574), FP8xFP8 attention in AITER (#36927).\r\n  * AWQ Marlin support (#36505), wvSplitK skinny GEMM for RDNA4/gfx1x (#34709).\r\n  * Nightly Docker image and wheel releases (#37283).\r\n  * Bugfixes: Sleep mode memory leak (#37533), hybrid model stride (#37228), qwen3_next crash (#36795).\r\n* **Intel XPU**: MLA model support (#37143), CompressedTensor W4A8 (#37207), auto-detect XPU build platform (#37634).\r\n* **TPU**: Async scheduling interface (#36924), Qwen3.5 FP8 weight loading fix (#37348).\r\n* **CPU**: Enable tcmalloc by default (#37607), graceful degradation without tcmalloc/libiomp (#37561), 48.9% throughput improvement for pooling models (#38139), OpenMP thread fix for torch.compile (#37538), structured output crash fix (#37706), KV cache block zeroing crash fix (#37550), slot mapping kernel (#37987), W4A16 compressed tensors (#38219).\r\n* **Performance fixes**: FP8 DeepGEMM batch invariance (#37718), Triton autotuning for Qwen3.5 (#37338), TRTLLM NVFP4 routing precision (#36725).\r\n\r\n### Large Scale Serving\r\n* **Disaggregated serving**: PD kv_transfer_params for Anthropic Messages (#37535) and Responses API (#37424), Mooncake heterogeneous TP (#36869), Mamba N-1 prefill for P/D (#37310).\r\n* **EPLB**: MRV2 support (#37488), improved responsiveness (#36271), EP weight filter fix (#37322).\r\n* **Elastic EP**: Fix repeated scale up/down cycles (#37131), fix stateless group port races (#36330).\r\n* **DBO**: Generalized to work with all models (#37926).\r\n* **Multi-node**: Fix allreduce fusion (#38136).\r\n* **KV connector**: Plugin-overridable metadata build (#37336).\r\n* **Constraints**: Cap API servers to 1 with Elastic EP (#37466).\r\n\r\n### Quantization\r\n* **Online MXFP8** quantization for MoE and dense models (#35448).\r\n* **FP8**: WoQ kernel abstraction (#32929), Marlin FP8 for compressed tensors fix (#38092).\r\n* **NVFP4**: Rescale weight scales to fix BF16 dequant underflow (#34577), fix Marlin NaN/Inf with float16 (#33972).\r\n* **QeRL**: Online quantization composed with quantized reloading for RLHF (#38032).\r\n* **CPU**: W4A16 compressed tensors (#38219).\r\n* **XPU**: CompressedTensor W4A8 (#37207).\r\n* **ROCm**: AWQ Marlin support (#36505).\r\n* **MXFP8 + DeepGEMM**: Fix crash when both are active (#37358).\r\n* **Removals**: Per-tensor-per-channel FP8 removed (#32700), Sparse24 integration and kernels removed (#36799).\r\n\r\n### API & Frontend\r\n* **New endpoints**: `/v1/chat/completions/batch` for batched chat completions (#38011).\r\n* **Features**: Limit thinking tokens (hard limit) (#20859), multiple embedding types in single call (#35829), numpy array embeddings for multimodal (#38119), `--lora-target-modules` (#34984), `-sc` shorthand for `--speculative-config` (#38380).\r\n* **Tool parsing**: GigaChat 3.1 parser (#36664), Kimi-K2.5 reasoning/tool parser (#37438), Gemma 4 tool parser (#38847), tools passed to parser constructor (#38029), fix Mistral parser (#37209), fix DeepSeek v3.2 streaming (#36056), fix GLM-4.7 parsing (#37386), fix Hermes streaming (#38168), fix OpenAI tool parser IndexError (#37958), fix Anthropic streaming (#37510).\r\n* **Responses API**: Fix crash with tool_choice=required exceeding max_output_tokens (#37258), fix TTFT recording (#37498), fix Anthropic serving template kwargs (#37899).\r\n* **Performance**: Offload blocking tokenizer ops to thread pool (#34789).\r\n* **Deprecations**: `--calculate-kv-scales` (#37201), `score` task (#37537), pooling multi-task support (#37956), `reasoning_content` message field removed (#37480).\r\n* **Bugfixes**: Embed/classify task routing (#37573), Cohere embed task instruction (#38362), renderer workers restricted to 1 with MM cache (#38418).\r\n* **UX**: Log once per node by default (#37568), torch profiler with stack enabled (#37571).\r\n\r\n### Security\r\n* Add `VLLM_MAX_N_SEQUENCES` environment variable to enforce sequence limits (#37952).\r\n* Enforce frame limit in VideoMediaIO to prevent resource exhaustion (#38636).\r\n\r\n### Dependencies\r\n* Transformers v5 compatibility across many models (#37681, #38127, #38247, #38410, #38090).\r\n* ROCm 7.2.1, torch 2.10, triton 3.6 for ROCm builds (#38252).\r\n* compressed-tensors bumped to 0.14.0.1 (#36988).\r\n* Python OpenAI package bumped (#32316).\r\n* flashinfer-cubin added as default CUDA dependency (#37233).\r\n* librosa removed from audio dependencies (#37058).\r\n\r\n### V0 Deprecation\r\n* Deprecate virtual engine (#37195).\r\n* Deprecate `--disable-frontend-multiprocessing` (#37612).\r\n* Refactor KV cache from list to element (#37487).\r\n\r\n### New Contributors\r\n* @aaab8b made their first contribution in #37533\r\n* @aasgaonkar made their first contribution in #35386\r\n* @allgather made their first contribution in #38410\r\n* @avinashsingh77 made their first contribution in #37100\r\n* @b-mu made their first contribution in #35963\r\n* @bongwoobak made their first contribution in #37424\r\n* @brandonpelfrey made their first contribution in #32104\r\n* @ccrhx4 made their first contribution in #37634\r\n* @cdpath made their first contribution in #37510\r\n* @cemigo114 made their first contribution in #37064\r\n* @cnyvfang made their first contribution in #37439\r\n* @DanBlanaru made their first contribution in #37307\r\n* @DorBernsohn made their first contribution in #37438\r\n* @dsingal0 made their first contribution in #37923\r\n* @fxdawnn made their first contribution in #36038\r\n* @grYe99 made their first contribution in #38074\r\n* @guillaumeguy made their first contribution in #38119\r\n* @gxd3 made their first contribution in #36924\r\n* @he-yufeng made their first contribution in #37301\r\n* @javierdejesusda made their first contribution in #37920\r\n* @jetxa made their first contribution in #37899\r\n* @jhsmith409 made their first contribution in #37448\r\n* @jrplatin made their first contribution in #37348\r\n* @kjiang249 made their first contribution in #37475\r\n* @laudney made their first contribution in #34709\r\n* @lcskrishna made their first contribution in #34692\r\n* @li-liwen made their first contribution in #38108\r\n* @Liangyx2 made their first contribution in #37523\r\n* @MatejRojec made their first contribution in #38011\r\n* @Nekofish-L made their first contribution in #37970\r\n* @pjo256 made their first contribution in #34733\r\n* @r266-tech made their first contribution in #37820\r\n* @RobTand made their first contribution in #37725\r\n* @scyyh11 made their first contribution in #34789\r\n* @SherryC41 made their first contribution in #37519\r\n* @shwetha-s-poojary made their first contribution in #31696\r\n* @siewcapital made their first contribution in #36955\r\n* @SKPsanjeevi made their first contribution in #36574\r\n* @thillai-c made their first contribution in #37231\r\n* @tianrengao made their first contribution in #34389\r\n* @tmm77 made their first contribution in #37694\r\n* @utsumi-fj made their first contribution in #38328\r\n* @vineetatiwari27 made their first contribution in #37998\r\n* @Wangbei25 made their first contribution in #37293\r\n* @WindChimeRan made their first contribution in #35007\r\n* @wjhrdy made their first contribution in #37706\r\n* @XLiu-2000 made their first contribution in #37371\r\n* @xueliangyang-oeuler made their first contribution in #37536\r\n* @yanghui1-arch made their first contribution in #37873\r\n* @yassha made their first contribution in #37369\r\n* @yeahdongcn made their first contribution in #37840\r\n* @Young-Leo made their first contribution in #37565\r\n* @ZeldaHuang made their first contribution in #37425\r\n* @zhejiangxiaomai made their first contribution in #37259\r\n\r\n"
         },
         "source": [
           {
@@ -37,25 +123,17 @@
           },
           {
             "kind": "topic",
-            "value": "llm-inference"
-          },
-          {
-            "kind": "topic",
             "value": "model-serving"
-          },
-          {
-            "kind": "topic",
-            "value": "benchmark"
           }
         ]
       },
       "score": {
-        "maturityScore": 80,
-        "compatibilityScore": 77,
+        "maturityScore": 95,
+        "compatibilityScore": 61,
         "performancePotentialScore": 42,
         "maintenanceRiskScore": 20,
         "adoptionSignalScore": 100,
-        "finalUpgradeScore": 76,
+        "finalUpgradeScore": 75,
         "estimatedPerformanceGainPct": 37,
         "estimatedCostReductionPct": 19,
         "hardVetoReasons": [],
@@ -63,8 +141,8 @@
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": false,
-          "compatibilityAtLeast70": true,
+          "documentationComplete": true,
+          "compatibilityAtLeast70": false,
           "projectedPerformanceGainAtLeast15Pct": true,
           "projectedCostReductionAtLeast10Pct": true,
           "avoidsProductionSecurityBoundary": true
@@ -72,9 +150,87 @@
         "qualifyingSignalCount": 7,
         "eligibleForValidation": true,
         "summary": [
-          "Active commits in last 30 days: 27",
-          "Latest release: v0.8.2",
+          "Active commits in last 30 days: 100",
+          "Latest release: v0.19.0",
           "License: Apache-2.0",
+          "Projected performance gain: 37%",
+          "Projected cost reduction: 19%"
+        ]
+      }
+    },
+    {
+      "repo": {
+        "fullName": "mastra-ai/mastra",
+        "url": "https://github.com/mastra-ai/mastra",
+        "description": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+        "topics": [
+          "agents",
+          "ai",
+          "chatbots",
+          "evals",
+          "javascript",
+          "llm",
+          "mcp",
+          "nextjs",
+          "nodejs",
+          "reactjs",
+          "tts",
+          "typescript",
+          "workflows"
+        ],
+        "stars": 22739,
+        "forks": 1851,
+        "defaultBranch": "main",
+        "updatedAt": "2026-04-07T01:23:14Z",
+        "pushedAt": "2026-04-07T01:24:59Z",
+        "license": "NOASSERTION",
+        "readme": "# Mastra\n\n[![npm version](https://badge.fury.io/js/@mastra%2Fcore.svg)](https://www.npmjs.com/package/@mastra/core)\n[![CodeQl](https://github.com/mastra-ai/mastra/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mastra-ai/mastra/actions/workflows/github-code-scanning/codeql)\n[![GitHub Repo stars](https://img.shields.io/github/stars/mastra-ai/mastra)](https://github.com/mastra-ai/mastra/stargazers)\n[![Discord](https://img.shields.io/discord/1309558646228779139?logo=discord&label=Discord&labelColor=white&color=7289DA)](https://discord.gg/BTYqqHKUrf)\n[![Twitter Follow](https://img.shields.io/twitter/follow/mastra?style=social)](https://x.com/mastra)\n[![NPM Downloads](https://img.shields.io/npm/dm/%40mastra%252Fcore)](https://www.npmjs.com/package/@mastra/core)\n[![Static Badge](https://img.shields.io/badge/Y%20Combinator-W25-orange)](https://www.ycombinator.com/companies?batch=W25)\n\nMastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.\n\nIt includes everything you need to go from early prototypes to production-ready applications. Mastra integrates with frontend and backend frameworks like React, Next.js, and Node, or you can deploy it anywhere as a standalone server. It's the easiest way to build, tune, and scale reliable AI products.\n\n## Why Mastra?\n\nPurpose-built for TypeScript and designed around established AI patterns, Mastra gives you everything you need to build great AI applications out-of-the-box.\n\nSome highlights include:\n\n- [**Model routing**](https://mastra.ai/models) - Connect to 40+ providers through one standard interface. Use models from OpenAI, Anthropic, Gemini, and more.\n\n- [**Agents**](https://mastra.ai/docs/agents/overview) - Build autonomous agents that use LLMs and tools to solve open-ended tasks. Agents reason about goals, decide which tools to use, and iterate internally until the model emits a final answer or an optional stopping condition is met.\n\n- [**Workflows**](https://mastra.ai/docs/workflows/overview) - When you need explicit control over execution, use Mastra's graph-based workflow engine to orchestrate complex multi-step processes. Mastra workflows use an intuitive syntax for control flow (`.then()`, `.branch()`, `.parallel()`).\n\n- [**Human-in-the-loop**](https://mastra.ai/docs/workflows/suspend-and-resume) - Suspend an agent or workflow and await user input or approval before resuming. Mastra uses [storage](https://mastra.ai/docs/server-db/storage) to remember execution state, so you can pause indefinitely and resume where you left off.\n\n- **Context management** - Give your agents the right context at the right time. Provide [conversation history](https://mastra.ai/docs/memory/conversation-history), [retrieve](https://mastra.ai/docs/rag/overview) data from your sources (APIs, databases, files), and add human-like [working](https://mastra.ai/docs/memory/working-memory) and [semantic](https://mastra.ai/docs/memory/semantic-recall) memory so your agents behave coherently.\n\n- **Integrations** - Bundle agents and workflows into existing React, Next.js, or Node.js apps, or ship them as standalone endpoints. When building UIs, integrate with agentic libraries like Vercel's AI SDK UI and CopilotKit to bring your AI assistant to life on the web.\n\n- [**MCP servers**](https://mastra.ai/docs/tools-mcp/mcp-overview) - Author Model Context Protocol servers, exposing agents, tools, and other structured resources via the MCP interface. These can then be accessed by any system or agent that supports the protocol.\n\n- **Production essentials** - Shipping reliable agents takes ongoing insight, evaluation, and iteration. With built-in [evals](https://mastra.ai/docs/evals/overview) and [observability](https://mastra.ai/docs/observability/overview), Mastra gives you the tools to observe, measure, and refine continuously.\n\n## Get started\n\nThe **recommended** way to get started with Mastra is by running the command below:\n\n```shell\nnpm create mastra@latest\n```\n\nFollow the [Installation guide](https://mastra.ai/docs/getting-started/installation) for step-by-step setup with the CLI or a manual install.\n\nIf you're new to AI agents, check out our [templates](https://mastra.ai/docs/getting-started/templates), [course](https://mastra.ai/course), and [YouTube videos](https://youtube.com/@mastra-ai) to start building with Mastra today.\n\n## Documentation\n\nVisit our [official documentation](https://mastra.ai/docs).\n\n## Build with AI\n\nLearn how to make your agent a Mastra expert by following the [Build with AI guide](https://mastra.ai/docs/getting-started/build-with-ai).\n\n## Contributing\n\nLooking to contribute? All types of help are appreciated, from coding to testing and feature specification. Read [CONTRIBUTING.md](./CONTRIBUTING.md) for more details on how to get involved.\n\nIf you are a developer and would like to contribute with code, please open an issue to discuss before opening a Pull Request.\n\nInformation about the project setup can be found in the [development documentation](./DEVELOPMENT.md)\n\n## Support\n\nWe have an [open community Discord](https://discord.gg/BTYqqHKUrf). Come and say hello and let us know if you have any questions or need any help getting things running.\n\nIt's also super helpful if you leave the project a star here at the [top of the page](https://github.com/mastra-ai/mastra)\n\n## Licensing\n\nThis repository uses a dual-license model:\n\n- **Apache License 2.0** — The core framework and the vast majority of this codebase is open source under Apache-2.0.\n- **Mastra Enterprise License** — Code in any directory named `ee/` (e.g., `packages/core/src/auth/ee/`) is source-available under the Mastra Enterprise License. These features require a valid enterprise license for production use but can be freely used for development and testing.\n\nSee [LICENSE.md](./LICENSE.md) for the full license mapping and [ee/LICENSE](./ee/LICENSE) for the enterprise license terms.\n\n## Security\n\nWe are committed to maintaining the security of this repo and of Mastra as a whole. If you discover a security finding we ask you to please responsibly disclose this to us at [security@mastra.ai](mailto:security@mastra.ai) and we will get back to you.\n",
+        "recentCommitCount30d": 100,
+        "latestRelease": {
+          "tagName": "@mastra/core@1.16.0",
+          "name": "Mar 25, 2026",
+          "htmlUrl": "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.16.0",
+          "publishedAt": "2026-03-26T10:19:34Z",
+          "prerelease": false,
+          "draft": false,
+          "body": "## Highlights\r\n\r\n### Smarter Model Selection for Observational Memory\r\n\r\n`@mastra/memory` now lets you route observer and reflector calls to different models based on input size using `ModelByInputTokens`. Short inputs can go to a fast, cheap model while longer ones get sent to a more capable one -- all configured declaratively with token thresholds. Tracing shows which model was selected and why.\r\n\r\n### MongoDB Support for Datasets and Experiments\r\n\r\n`@mastra/mongodb` now stores versioned datasets with full item history and time-travel queries, plus experiment results and CRUD. If you're already using `MongoDBStore`, this works automatically with no extra setup.\r\n\r\n### Okta Auth and RBAC\r\n\r\nNew `@mastra/auth-okta` package brings SSO authentication and role-based access control via Okta. Map Okta groups to Mastra permissions, verify JWTs against Okta's JWKS endpoint, and manage sessions -- or pair Okta RBAC with a different auth provider like Auth0 or Clerk.\r\n\r\n### Breaking Changes\r\n\r\n- None called out in this changelog.\r\n\r\n## Changelog\r\n\r\n### [@mastra/core@1.16.0](https://github.com/mastra-ai/mastra/blob/@mastra/core@1.16.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/packages/core/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added dataset-agent association and experiment status tracking for the Evaluate workflow. ([#14470](https://github.com/mastra-ai/mastra/pull/14470))\r\n  - **Dataset targeting**: Added `targetType` and `targetIds` fields to datasets, enabling association with agents, scorers, or workflows. Datasets can now be linked to multiple entities.\r\n  - **Experiment status**: Added `status` field to experiment results (`'needs-review'`, `'reviewed'`, `'complete'`) for review queue workflow.\r\n  - **Dataset experiment routes**: Added API endpoints for triggering experiments from a dataset with configurable target type and target ID.\r\n  - **LLM data generation**: Added endpoint for generating dataset items using an LLM with configurable count and prompt.\r\n  - **Failure analysis**: Added endpoint for clustering experiment failures and proposing tags using LLM analysis.\r\n\r\n- Added agent version support for experiments. When triggering an experiment, you can now pass an `agentVersion` parameter to pin which agent version to use. The agent version is stored with the experiment and returned in experiment responses. ([#14562](https://github.com/mastra-ai/mastra/pull/14562))\r\n\r\n  ```ts\r\n  const client = new MastraClient();\r\n\r\n  await client.triggerDatasetExperiment({\r\n    datasetId: \"my-dataset\",\r\n    targetType: \"agent\",\r\n    targetId: \"my-agent\",\r\n    version: 3, // pin to dataset version 3\r\n    agentVersion: \"ver_abc123\" // pin to a specific agent version\r\n  });\r\n  ```\r\n\r\n- Added tool suspension handling to the Harness. ([#14611](https://github.com/mastra-ai/mastra/pull/14611))\r\n\r\n  When a tool calls `suspend()` during execution, the harness now emits a `tool_suspended` event, reports `agent_end` with reason `'suspended'`, and exposes `respondToToolSuspension()` to resume execution with user-provided data.\r\n\r\n  ```ts\r\n  harness.subscribe((event) => {\r\n    if (event.type === \"tool_suspended\") {\r\n      // event.toolName, event.suspendPayload, event.resumeSchema\r\n    }\r\n  });\r\n\r\n  // Resume after collecting user input\r\n  await harness.respondToToolSuspension({ resumeData: { confirmed: true } });\r\n  ```\r\n\r\n- Added `agentId` to the agent tool execution context. Tools executed by an agent can now access `context.agent.agentId` to identify which agent is calling them. This enables tools to look up agent metadata, share workspace configuration with sub-agents, or customize behavior per agent. ([#14502](https://github.com/mastra-ai/mastra/pull/14502))\r\n\r\n- Improved observability metrics and logs storage support. ([#14607](https://github.com/mastra-ai/mastra/pull/14607))\r\n  - Added typed observability storage fields for shared correlation context and cost data.\r\n  - Added storage-layer metric listing and richer metric aggregations that can return estimated cost alongside values.\r\n  - Improved observability filter parity across log and metric storage APIs.\r\n\r\n- Add optional `?path=` query param to workspace skill routes for disambiguating same-named skills. ([#14430](https://github.com/mastra-ai/mastra/pull/14430))\r\n\r\n  Skill routes continue to use `:skillName` in the URL path (no breaking change). When two skills share the same name (e.g. from different directories), pass the optional `?path=` query parameter to select the exact skill:\r\n\r\n  ```\r\n  GET /workspaces/:workspaceId/skills/:skillName?path=skills/brand-guidelines\r\n  ```\r\n\r\n  `SkillMetadata` now includes a `path` field, and the `list()` method returns all same-named skills for disambiguation. The client SDK's `getSkill()` accepts an optional `skillPath` parameter for disambiguation.\r\n\r\n- Added `ModelByInputTokens` in `@mastra/memory` for token-threshold-based model selection in Observational Memory. ([#14614](https://github.com/mastra-ai/mastra/pull/14614))\r\n\r\n  When configured, OM automatically selects different observer or reflector models based on the actual input token count at the time the OM call runs.\r\n\r\n  Example usage:\r\n\r\n  ```ts\r\n  import { Memory, ModelByInputTokens } from \"@mastra/memory\";\r\n\r\n  const memory = new Memory({\r\n    options: {\r\n      observationalMemory: {\r\n        model: new ModelByInputTokens({\r\n          upTo: {\r\n            10_000: \"google/gemini-2.5-flash\",\r\n            40_000: \"openai/gpt-4o\",\r\n            1_000_000: \"openai/gpt-4.5\"\r\n          }\r\n        })\r\n      }\r\n    }\r\n  });\r\n  ```\r\n\r\n  The `upTo` keys are inclusive upper bounds. OM resolves the matching tier directly at the observer or reflector call site. If the input exceeds the largest configured threshold, OM throws an error.\r\n\r\n  Improved Observational Memory tracing so traces show the observer and reflector spans and make it easier to see which resolved model was used at runtime.\r\n\r\n#### Patch Changes\r\n\r\n- Update provider registry and model documentation with latest models and providers ([`68ed4e9`](https://github.com/mastra-ai/mastra/commit/68ed4e9f118e8646b60a6112dabe854d0ef53902))\r\n\r\n- Fixed `Harness.destroy()` to properly clean up heartbeats and workspace on teardown. ([#14568](https://github.com/mastra-ai/mastra/pull/14568))\r\n\r\n- Fixed null detection in tool input validation to check actual values at failing paths instead of relying on error message string matching. This ensures null values from LLMs are correctly handled even when validators produce error messages that don't contain the word \"null\" (e.g., \"must be string\"). Fixes #14476. ([#14496](https://github.com/mastra-ai/mastra/pull/14496))\r\n\r\n- Fixed missing tool lists in agent traces for streaming runs. Exporters like Datadog LLM Observability now receive the tools available to the agent. ([#14550](https://github.com/mastra-ai/mastra/pull/14550))\r\n\r\n- Fix consecutive tool-only loop iterations being merged into a single assistant message block. When the agentic loop runs multiple iterations that each produce only tool calls, the LLM would misinterpret them as parallel calls from a single turn. A `step-start` boundary is now inserted between iterations to ensure they are treated as sequential steps. ([#14652](https://github.com/mastra-ai/mastra/pull/14652))\r\n\r\n- Improved custom OpenAI-compatible model configuration guidance in the models docs. ([#14594](https://github.com/mastra-ai/mastra/pull/14594))\r\n\r\n- Added client/server body schemas for feedback and scores that omit the timestamp field, allowing it to be set server-side ([#14470](https://github.com/mastra-ai/mastra/pull/14470))\r\n\r\n- **Workspace skills now surface all same-named skills for disambiguation.** ([#14430](https://github.com/mastra-ai/mastra/pull/14430))\r\n\r\n  When multiple skills share the same name (e.g., a local `brand-guidelines` skill and one from `node_modules`), `list()` now returns all of them instead of only the tie-break winner. This lets agents and UIs see every available skill, along with its path and source type.\r\n\r\n  **Tie-breaking behavior:**\r\n  - `get(name)` still returns a single skill using source-type priority: local > managed > external\r\n  - If two skills share the same name _and_ source type, `get(name)` throws an error — rename one or move it to a different source type\r\n  - `get(path)` bypasses tie-breaking entirely and returns the exact skill\r\n\r\n  Agents and UIs now receive all same-named skills with their paths, which improves disambiguation in prompts and tool calls.\r\n\r\n  ```ts\r\n  const skills = await workspace.skills.list();\r\n  // Returns both local and external \"brand-guidelines\" skills\r\n\r\n  const exact = await workspace.skills.get(\"node_modules/@myorg/skills/brand-guidelines\");\r\n  // Fetches the external copy directly by path\r\n  ```\r\n\r\n- Fixed Anthropic 'tool_use ids were found without tool_result blocks immediately after' error. When client tools (e.g. execute_command) and provider tools (e.g. web_search) are called in parallel, the tool ordering in message history could cause Anthropic to reject subsequent requests, making the thread unrecoverable. Tool blocks are now correctly split to satisfy Anthropic's ordering requirements. ([#14648](https://github.com/mastra-ai/mastra/pull/14648))\r\n\r\n- Fix Zod v3 and Zod v4 compatibility across public structured-output APIs. ([#14464](https://github.com/mastra-ai/mastra/pull/14464))\r\n\r\n  Mastra agent and client APIs accept schemas from either `zod/v3` or `zod/v4`, matching the documented peer dependency range and preserving TypeScript compatibility for both Zod versions.\r\n\r\n### [@mastra/ai-sdk@1.2.1](https://github.com/mastra-ai/mastra/blob/@mastra/ai-sdk@1.2.1//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/client-sdks/ai-sdk/CHANGELOG.md)\r\n\r\n#### Patch Changes\r\n\r\n- Fix Zod v3 and Zod v4 compatibility across public structured-output APIs. ([#14464](https://github.com/mastra-ai/mastra/pull/14464))\r\n\r\n  Mastra agent and client APIs accept schemas from either `zod/v3` or `zod/v4`, matching the documented peer dependency range and preserving TypeScript compatibility for both Zod versions.\r\n\r\n### [@mastra/auth-okta@0.0.2](https://github.com/mastra-ai/mastra/blob/@mastra/auth-okta@0.0.2//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/auth/okta/CHANGELOG.md)\r\n\r\n#### Patch Changes\r\n\r\n- fix(auth-okta): harden security defaults and address code review feedback ([#14553](https://github.com/mastra-ai/mastra/pull/14553))\r\n  - Fix cache poisoning: errors in `fetchGroupsFromOkta` now propagate so the outer `.catch` evicts the entry and retries on next request\r\n  - Reduce cookie size: only store user claims, id_token (for logout), and expiry — access/refresh tokens are no longer stored, keeping cookies under the 4KB browser limit\r\n  - Add `id_token_hint` to logout URL (required by Okta)\r\n  - Add console.warn for auto-generated cookie password and in-memory state store in production\r\n  - Document missing env vars (`OKTA_CLIENT_SECRET`, `OKTA_REDIRECT_URI`, `OKTA_COOKIE_PASSWORD`) in README and examples\r\n  - Expand `MastraAuthOktaOptions` docs to include all fields (session config, scopes, etc.)\r\n  - Fix test to actually exercise `getUserId` cross-provider lookup path\r\n\r\n### [@mastra/client-js@1.10.0](https://github.com/mastra-ai/mastra/blob/@mastra/client-js@1.10.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/client-sdks/client-js/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added new observability API endpoints and client methods for logs, scores, feedback, metrics (aggregate, breakdown, time series, percentiles), and discovery (metric names, label keys/values, entity types/names, service names, environments, tags) ([#14470](https://github.com/mastra-ai/mastra/pull/14470))\r\n\r\n#### Patch Changes\r\n\r\n- Added client SDK methods for dataset experiments and item generation. ([#14470](https://github.com/mastra-ai/mastra/pull/14470))\r\n  - Added `triggerExperiment()` method to dataset resources for running experiments with configurable target type and ID\r\n  - Added `generateItems()` method for LLM-powered test data generation\r\n  - Added `clusterFailures()` method for analyzing experiment failures\r\n  - Added TypeScript types for new dataset and experiment API payloads\r\n\r\n- Added agent version support for experiments. When triggering an experiment, you can now pass an `agentVersion` parameter to pin which agent version to use. The agent version is stored with the experiment and returned in experiment responses. ([#14562](https://github.com/mastra-ai/mastra/pull/14562))\r\n\r\n  ```ts\r\n  const client = new MastraClient();\r\n\r\n  await client.triggerDatasetExperiment({\r\n    datasetId: \"my-dataset\",\r\n    targetType: \"agent\",\r\n    targetId: \"my-agent\",\r\n    version: 3, // pin to dataset version 3\r\n    agentVersion: \"ver_abc123\" // pin to a specific agent version\r\n  });\r\n  ```\r\n\r\n- Add optional `?path=` query param to workspace skill routes for disambiguating same-named skills. ([#14430](https://github.com/mastra-ai/mastra/pull/14430))\r\n\r\n  Skill routes continue to use `:skillName` in the URL path (no breaking change). When two skills share the same name (e.g. from different directories), pass the optional `?path=` query parameter to select the exact skill:\r\n\r\n  ```\r\n  GET /workspaces/:workspaceId/skills/:skillName?path=skills/brand-guidelines\r\n  ```\r\n\r\n  `SkillMetadata` now includes a `path` field, and the `list()` method returns all same-named skills for disambiguation. The client SDK's `getSkill()` accepts an optional `skillPath` parameter for disambiguation.\r\n\r\n- Updated skill search result types and query parameters to use `skillName`/`skillNames` instead of `skillPath`/`skillPaths` for consistency with the name-based public API. ([#14430](https://github.com/mastra-ai/mastra/pull/14430))\r\n\r\n- Added storage type detection to the Metrics Dashboard. The `/system/packages` endpoint now returns `observabilityStorageType`, identifying the observability storage backend. The dashboard shows an empty state when the storage does not support metrics (e.g. PostgreSQL, LibSQL), and displays a warning when using in-memory storage since metrics are not persisted across server restarts. Also added a docs link button to the Metrics page header. ([#14620](https://github.com/mastra-ai/mastra/pull/14620))\r\n\r\n  ```ts\r\n  import { MastraClient } from \"@mastra/client-js\";\r\n\r\n  const client = new MastraClient();\r\n  const system = await client.getSystemPackages();\r\n\r\n  // system.observabilityStorageType contains the class name of the observability store:\r\n  // - 'ObservabilityInMemory' → metrics work but are not persisted across restarts\r\n  // - 'ObservabilityPG', 'ObservabilityLibSQL', etc. → metrics not supported\r\n\r\n  if (system.observabilityStorageType === \"ObservabilityInMemory\") {\r\n    console.warn(\"Metrics are not persisted — data will be lost on server restart.\");\r\n  }\r\n\r\n  const SUPPORTED = new Set([\"ObservabilityInMemory\"]);\r\n  if (!SUPPORTED.has(system.observabilityStorageType ?? \"\")) {\r\n    console.error(\"Metrics require in-memory observability storage.\");\r\n  }\r\n  ```\r\n\r\n- Fix Zod v3 and Zod v4 compatibility across public structured-output APIs. ([#14464](https://github.com/mastra-ai/mastra/pull/14464))\r\n\r\n  Mastra agent and client APIs accept schemas from either `zod/v3` or `zod/v4`, matching the documented peer dependency range and preserving TypeScript compatibility for both Zod versions.\r\n\r\n### [@mastra/datadog@1.0.9](https://github.com/mastra-ai/mastra/blob/@mastra/datadog@1.0.9//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/observability/datadog/CHANGELOG.md)\r\n\r\n#### Patch Changes\r\n\r\n- Fixed error info tags being recorded as [object Object] in Datadog. Error details (message, id, domain, category) are now stored as separate flattened tags (error.message, error.id, error.domain, error.category) instead of a nested object, making error information properly visible in Datadog LLM Observability. ([#14570](https://github.com/mastra-ai/mastra/pull/14570))\r\n\r\n### [@mastra/deployer@1.16.0](https://github.com/mastra-ai/mastra/blob/@mastra/deployer@1.16.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/packages/deployer/CHANGELOG.md)\r\n\r\n#### Patch Changes\r\n\r\n- Inject MASTRA_EXPERIMENTAL_UI environment variable into the studio HTML shell during build and deploy. ([#14547](https://github.com/mastra-ai/mastra/pull/14547))\r\n\r\n### [@mastra/deployer-vercel@1.1.8](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-vercel@1.1.8//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/deployers/vercel/CHANGELOG.md)\r\n\r\n#### Patch Changes\r\n\r\n- Inject MASTRA_EXPERIMENTAL_UI environment variable into the studio HTML shell during build and deploy. ([#14547](https://github.com/mastra-ai/mastra/pull/14547))\r\n\r\n### [@mastra/express@1.3.0](https://github.com/mastra-ai/mastra/blob/@mastra/express@1.3.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/server-adapters/express/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added adapter auth middleware helpers for raw framework routes. ([#14458](https://github.com/mastra-ai/mastra/pull/14458))\r\n\r\n  Use `createAuthMiddleware({ mastra })` when you mount routes directly on a Hono, Express, Fastify, or Koa app and still want Mastra auth to run. Set `requiresAuth: false` when you need to reuse the same helper chain on a public route.\r\n\r\n  ```ts\r\n  app.get(\"/custom/protected\", createAuthMiddleware({ mastra }), handler);\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n### [@mastra/fastify@1.3.0](https://github.com/mastra-ai/mastra/blob/@mastra/fastify@1.3.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/server-adapters/fastify/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added adapter auth middleware helpers for raw framework routes. ([#14458](https://github.com/mastra-ai/mastra/pull/14458))\r\n\r\n  Use `createAuthMiddleware({ mastra })` when you mount routes directly on a Hono, Express, Fastify, or Koa app and still want Mastra auth to run. Set `requiresAuth: false` when you need to reuse the same helper chain on a public route.\r\n\r\n  ```ts\r\n  app.get(\"/custom/protected\", createAuthMiddleware({ mastra }), handler);\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n### [@mastra/hono@1.3.0](https://github.com/mastra-ai/mastra/blob/@mastra/hono@1.3.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/server-adapters/hono/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added adapter auth middleware helpers for raw framework routes. ([#14458](https://github.com/mastra-ai/mastra/pull/14458))\r\n\r\n  Use `createAuthMiddleware({ mastra })` when you mount routes directly on a Hono, Express, Fastify, or Koa app and still want Mastra auth to run. Set `requiresAuth: false` when you need to reuse the same helper chain on a public route.\r\n\r\n  ```ts\r\n  app.get(\"/custom/protected\", createAuthMiddleware({ mastra }), handler);\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n### [@mastra/koa@1.4.0](https://github.com/mastra-ai/mastra/blob/@mastra/koa@1.4.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/server-adapters/koa/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added adapter auth middleware helpers for raw framework routes. ([#14458](https://github.com/mastra-ai/mastra/pull/14458))\r\n\r\n  Use `createAuthMiddleware({ mastra })` when you mount routes directly on a Hono, Express, Fastify, or Koa app and still want Mastra auth to run. Set `requiresAuth: false` when you need to reuse the same helper chain on a public route.\r\n\r\n  ```ts\r\n  app.get(\"/custom/protected\", createAuthMiddleware({ mastra }), handler);\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n### [@mastra/libsql@1.7.2](https://github.com/mastra-ai/mastra/blob/@mastra/libsql@1.7.2//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/stores/libsql/CHANGELOG.md)\r\n\r\n#### Patch Changes\r\n\r\n- Added storage support for dataset targeting and experiment status fields. ([#14470](https://github.com/mastra-ai/mastra/pull/14470))\r\n  - Added `targetType` (text) and `targetIds` (jsonb) columns to datasets table for entity association\r\n  - Added `tags` (jsonb) column to datasets table for tag vocabulary\r\n  - Added `status` column to experiment results for review workflow tracking\r\n  - Added migration logic to add new columns to existing tables\r\n\r\n- Added agent version support for experiments. When triggering an experiment, you can now pass an `agentVersion` parameter to pin which agent version to use. The agent version is stored with the experiment and returned in experiment responses. ([#14562](https://github.com/mastra-ai/mastra/pull/14562))\r\n\r\n  ```ts\r\n  const client = new MastraClient();\r\n\r\n  await client.triggerDatasetExperiment({\r\n    datasetId: \"my-dataset\",\r\n    targetType: \"agent\",\r\n    targetId: \"my-agent\",\r\n    version: 3, // pin to dataset version 3\r\n    agentVersion: \"ver_abc123\" // pin to a specific agent version\r\n  });\r\n  ```\r\n\r\n### [@mastra/memory@1.10.0](https://github.com/mastra-ai/mastra/blob/@mastra/memory@1.10.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/packages/memory/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added `ModelByInputTokens` in `@mastra/memory` for token-threshold-based model selection in Observational Memory. ([#14614](https://github.com/mastra-ai/mastra/pull/14614))\r\n\r\n  When configured, OM automatically selects different observer or reflector models based on the actual input token count at the time the OM call runs.\r\n\r\n  Example usage:\r\n\r\n  ```ts\r\n  import { Memory, ModelByInputTokens } from \"@mastra/memory\";\r\n\r\n  const memory = new Memory({\r\n    options: {\r\n      observationalMemory: {\r\n        model: new ModelByInputTokens({\r\n          upTo: {\r\n            10_000: \"google/gemini-2.5-flash\",\r\n            40_000: \"openai/gpt-4o\",\r\n            1_000_000: \"openai/gpt-4.5\"\r\n          }\r\n        })\r\n      }\r\n    }\r\n  });\r\n  ```\r\n\r\n  The `upTo` keys are inclusive upper bounds. OM resolves the matching tier directly at the observer or reflector call site. If the input exceeds the largest configured threshold, OM throws an error.\r\n\r\n  Improved Observational Memory tracing so traces show the observer and reflector spans and make it easier to see which resolved model was used at runtime.\r\n\r\n#### Patch Changes\r\n\r\n- Fixed observational memory reflection compression for `google/gemini-2.5-flash` by using stronger compression guidance and starting it at a higher compression level during reflection. `google/gemini-2.5-flash` is unusually good at generating long, faithful outputs. That made reflection retries more likely to preserve too much detail and miss the compression target, wasting tokens in the process. ([#14612](https://github.com/mastra-ai/mastra/pull/14612))\r\n\r\n### [@mastra/mongodb@1.6.0](https://github.com/mastra-ai/mastra/blob/@mastra/mongodb@1.6.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/stores/mongodb/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added datasets and experiments storage support to the MongoDB store. ([#14556](https://github.com/mastra-ai/mastra/pull/14556))\r\n\r\n  **Datasets** — Full dataset management with versioned items. Create, update, and delete datasets and their items with automatic version tracking. Supports batch insert/delete operations, time-travel queries to retrieve items at any past version, and item history tracking.\r\n\r\n  **Experiments** — Run and track experiments against datasets. Full CRUD for experiments and per-item experiment results, with pagination, filtering, and cascade deletion.\r\n\r\n  Both domains are automatically available when using `MongoDBStore` — no additional configuration needed.\r\n\r\n  ```ts\r\n  const store = new MongoDBStore({ uri: \"mongodb://localhost:27017\", dbName: \"my-app\" });\r\n\r\n  // Datasets\r\n  const dataset = await store.getStorage(\"datasets\").createDataset({ name: \"my-dataset\" });\r\n  await store.getStorage(\"datasets\").addItem({ datasetId: dataset.id, input: { prompt: \"hello\" } });\r\n\r\n  // Experiments\r\n  const experiment = await store.getStorage(\"experiments\").createExperiment({ name: \"run-1\", datasetId: dataset.id });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n### [@mastra/pg@1.8.3](https://github.com/mastra-ai/mastra/blob/@mastra/pg@1.8.3//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/stores/pg/CHANGELOG.md)\r\n\r\n#### Patch Changes\r\n\r\n- Added storage support for dataset targeting and experiment status fields. ([#14470](https://github.com/mastra-ai/mastra/pull/14470))\r\n  - Added `targetType` (text) and `targetIds` (jsonb) columns to datasets table for entity association\r\n  - Added `tags` (jsonb) column to datasets table for tag vocabulary\r\n  - Added `status` column to experiment results for review workflow tracking\r\n  - Added migration logic to add new columns to existing tables\r\n\r\n- Added agent version support for experiments. When triggering an experiment, you can now pass an `agentVersion` parameter to pin which agent version to use. The agent version is stored with the experiment and returned in experiment responses. ([#14562](https://github.com/mastra-ai/mastra/pull/14562))\r\n\r\n  ```ts\r\n  const client = new MastraClient();\r\n\r\n  await client.triggerDatasetExperiment({\r\n    datasetId: \"my-dataset\",\r\n    targetType: \"agent\",\r\n    targetId: \"my-agent\",\r\n    version: 3, // pin to dataset version 3\r\n    agentVersion: \"ver_abc123\" // pin to a specific agent version\r\n  });\r\n  ```\r\n\r\n### [@mastra/playground-ui@19.0.0](https://github.com/mastra-ai/mastra/blob/@mastra/playground-ui@19.0.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/packages/playground-ui/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added Evaluate tab to the agent playground with full dataset management, scorer editing, experiment execution, and review workflow. ([#14470](https://github.com/mastra-ai/mastra/pull/14470))\r\n\r\n  **Evaluate tab** — A new sidebar-driven tab for managing datasets, scorers, and experiments within the agent playground. Key features:\r\n  - **Dataset management**: Create, attach/detach, and browse datasets. Inline item editing and deletion. Background LLM-powered test data generation with review-before-add flow.\r\n  - **Scorer editor**: Create and edit scorers with test items, linked test datasets, configurable score ranges, and model selection. Run scorer experiments directly from the editor.\r\n  - **Experiment runner**: Trigger experiments from dataset or scorer views with correct target routing (agent, scorer, or workflow). Past runs displayed with pass/fail counts and auto-polling for status updates.\r\n  - **Collapsible sidebar sections**: Datasets, Scorers, and Experiments sections are collapsible with search-enabled attach dialogs.\r\n\r\n  **Review tab** — A dedicated review workflow for experiment results:\r\n  - Tag-based organization with dataset-level tag vocabulary and bulk tagging\r\n  - LLM-powered analysis (\"Analyze untagged/selected\") that proposes tags with reasons, using existing tags when applicable\r\n  - Thumbs up/down ratings and comments persisted via feedback API\r\n  - Mark items as complete for audit trail\r\n  - Completed items section with read-only display\r\n\r\n- Added dataset and agent version selectors to the experiment evaluate tab. You can now choose which dataset version and agent version to use when running an experiment. Version information is displayed in the experiment sidebar, results panel header, and Past Runs list. Added a copy button next to the agent version selector to easily copy version IDs. ([#14562](https://github.com/mastra-ai/mastra/pull/14562))\r\n\r\n#### Patch Changes\r\n\r\n- Added EntityList.NoMatch component that displays a message when search filtering returns no results. Applied to all entity list pages: Agents, Workflows, Tools, Scorers, Processors, Prompts, Datasets, and MCP Servers. ([#14621](https://github.com/mastra-ai/mastra/pull/14621))\r\n\r\n- Added agent version support for experiments. When triggering an experiment, you can now pass an `agentVersion` parameter to pin which agent version to use. The agent version is stored with the experiment and returned in experiment responses. ([#14562](https://github.com/mastra-ai/mastra/pull/14562))\r\n\r\n  ```ts\r\n  const client = new MastraClient();\r\n\r\n  await client.triggerDatasetExperiment({\r\n    datasetId: \"my-dataset\",\r\n    targetType: \"agent\",\r\n    targetId: \"my-agent\",\r\n    version: 3, // pin to dataset version 3\r\n    agentVersion: \"ver_abc123\" // pin to a specific agent version\r\n  });\r\n  ```\r\n\r\n- Removed 'Create an Agent' button from agent list page and table empty state. Removed 'Create Scorer' button from top-level scorers page. Removed stored/code source icons (AgentSourceIcon) from agent headers, combobox, and table. Renamed 'Versions' tab to 'Editor' in agent page tabs. Added GaugeIcon to the 'Create Scorer' button in the review tab. ([#14555](https://github.com/mastra-ai/mastra/pull/14555))\r\n\r\n- Added metrics dashboard with KPI cards, trace volume, latency, model usage, and scores visualizations. Includes filtering by date range, agents, models, and providers. Added HorizontalBars, MetricsCard, MetricsKpiCard, MetricsLineChart, MetricsFlexGrid, and MetricsDataTable design system components. ([#14491](https://github.com/mastra-ai/mastra/pull/14491))\r\n\r\n- Internal cleanup and linting fixes ([#14497](https://github.com/mastra-ai/mastra/pull/14497))\r\n\r\n- Add optional `?path=` query param to workspace skill routes for disambiguating same-named skills. ([#14430](https://github.com/mastra-ai/mastra/pull/14430))\r\n\r\n  Skill routes continue to use `:skillName` in the URL path (no breaking change). When two skills share the same name (e.g. from different directories), pass the optional `?path=` query parameter to select the exact skill:\r\n\r\n  ```\r\n  GET /workspaces/:workspaceId/skills/:skillName?path=skills/brand-guidelines\r\n  ```\r\n\r\n  `SkillMetadata` now includes a `path` field, and the `list()` method returns all same-named skills for disambiguation. The client SDK's `getSkill()` accepts an optional `skillPath` parameter for disambiguation.\r\n\r\n- Updated skill search result types and query parameters to use `skillName`/`skillNames` instead of `skillPath`/`skillPaths` for consistency with the name-based public API. ([#14430](https://github.com/mastra-ai/mastra/pull/14430))\r\n\r\n- Added experimental entity list components with skeleton loading states, error handling, and dedicated empty state components for all list pages. Gated behind MASTRA_EXPERIMENTAL_UI environment variable. ([#14547](https://github.com/mastra-ai/mastra/pull/14547))\r\n\r\n- Added storage type detection to the Metrics Dashboard. The `/system/packages` endpoint now returns `observabilityStorageType`, identifying the observability storage backend. The dashboard shows an empty state when the storage does not support metrics (e.g. PostgreSQL, LibSQL), and displays a warning when using in-memory storage since metrics are not persisted across server restarts. Also added a docs link button to the Metrics page header. ([#14620](https://github.com/mastra-ai/mastra/pull/14620))\r\n\r\n  ```ts\r\n  import { MastraClient } from \"@mastra/client-js\";\r\n\r\n  const client = new MastraClient();\r\n  const system = await client.getSystemPackages();\r\n\r\n  // system.observabilityStorageType contains the class name of the observability store:\r\n  // - 'ObservabilityInMemory' → metrics work but are not persisted across restarts\r\n  // - 'ObservabilityPG', 'ObservabilityLibSQL', etc. → metrics not supported\r\n\r\n  if (system.observabilityStorageType === \"ObservabilityInMemory\") {\r\n    console.warn(\"Metrics are not persisted — data will be lost on server restart.\");\r\n  }\r\n\r\n  const SUPPORTED = new Set([\"ObservabilityInMemory\"]);\r\n  if (!SUPPORTED.has(system.observabilityStorageType ?? \"\")) {\r\n    console.error(\"Metrics require in-memory observability storage.\");\r\n  }\r\n  ```\r\n\r\n- Added `ModelByInputTokens` in `@mastra/memory` for token-threshold-based model selection in Observational Memory. ([#14614](https://github.com/mastra-ai/mastra/pull/14614))\r\n\r\n  When configured, OM automatically selects different observer or reflector models based on the actual input token count at the time the OM call runs.\r\n\r\n  Example usage:\r\n\r\n  ```ts\r\n  import { Memory, ModelByInputTokens } from \"@mastra/memory\";\r\n\r\n  const memory = new Memory({\r\n    options: {\r\n      observationalMemory: {\r\n        model: new ModelByInputTokens({\r\n          upTo: {\r\n            10_000: \"google/gemini-2.5-flash\",\r\n            40_000: \"openai/gpt-4o\",\r\n            1_000_000: \"openai/gpt-4.5\"\r\n          }\r\n        })\r\n      }\r\n    }\r\n  });\r\n  ```\r\n\r\n  The `upTo` keys are inclusive upper bounds. OM resolves the matching tier directly at the observer or reflector call site. If the input exceeds the largest configured threshold, OM throws an error.\r\n\r\n  Improved Observational Memory tracing so traces show the observer and reflector spans and make it easier to see which resolved model was used at runtime.\r\n\r\n- Redesigned the agent instruction blocks editor with a Notion-like document feel. Blocks no longer show line numbers or block numbers, have tighter spacing, and display a subtle hover highlight. Reference blocks now show a sync-block header with a popover for block details, \"Open original\", \"De-reference block\", and \"Used by\" agents. Inline blocks can be converted to saved prompt blocks via a new \"Save as prompt block\" action in the hover toolbar. The prompt block edit sidebar now shows a \"Used by\" section listing which agents reference the block. Added a `lineNumbers` prop to `CodeEditor` to optionally hide line numbers. ([#14563](https://github.com/mastra-ai/mastra/pull/14563))\r\n\r\n  ```tsx\r\n  <CodeEditor language=\"markdown\" lineNumbers={false} />\r\n  ```\r\n\r\n### [@mastra/react@0.2.17](https://github.com/mastra-ai/mastra/blob/@mastra/react@0.2.17//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/client-sdks/react/CHANGELOG.md)\r\n\r\n#### Patch Changes\r\n\r\n- Fix Zod v3 and Zod v4 compatibility across public structured-output APIs. ([#14464](https://github.com/mastra-ai/mastra/pull/14464))\r\n\r\n  Mastra agent and client APIs accept schemas from either `zod/v3` or `zod/v4`, matching the documented peer dependency range and preserving TypeScript compatibility for both Zod versions.\r\n\r\n### [@mastra/schema-compat@1.2.7](https://github.com/mastra-ai/mastra/blob/@mastra/schema-compat@1.2.7//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/packages/schema-compat/CHANGELOG.md)\r\n\r\n#### Patch Changes\r\n\r\n- Fixed schema-compat ESM imports for Zod JSON Schema helpers. ([#14617](https://github.com/mastra-ai/mastra/pull/14617))\r\n\r\n  @mastra/schema-compat no longer uses createRequire in its Zod v4 adapter or runtime eval tests, which avoids createRequire-related ESM issues while preserving support for zod/v3 and zod/v4.\r\n\r\n- Fix Zod v3 and Zod v4 compatibility across public structured-output APIs. ([#14464](https://github.com/mastra-ai/mastra/pull/14464))\r\n\r\n  Mastra agent and client APIs accept schemas from either `zod/v3` or `zod/v4`, matching the documented peer dependency range and preserving TypeScript compatibility for both Zod versions.\r\n\r\n### [@mastra/server@1.16.0](https://github.com/mastra-ai/mastra/blob/@mastra/server@1.16.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/packages/server/CHANGELOG.md)\r\n\r\n#### Minor Changes\r\n\r\n- Added dataset-agent association and experiment status tracking for the Evaluate workflow. ([#14470](https://github.com/mastra-ai/mastra/pull/14470))\r\n  - **Dataset targeting**: Added `targetType` and `targetIds` fields to datasets, enabling association with agents, scorers, or workflows. Datasets can now be linked to multiple entities.\r\n  - **Experiment status**: Added `status` field to experiment results (`'needs-review'`, `'reviewed'`, `'complete'`) for review queue workflow.\r\n  - **Dataset experiment routes**: Added API endpoints for triggering experiments from a dataset with configurable target type and target ID.\r\n  - **LLM data generation**: Added endpoint for generating dataset items using an LLM with configurable count and prompt.\r\n  - **Failure analysis**: Added endpoint for clustering experiment failures and proposing tags using LLM analysis.\r\n\r\n- Added `getAuthenticatedUser()` to `@mastra/server/auth` so server middleware can resolve the configured auth user without changing route auth behavior. ([#14458](https://github.com/mastra-ai/mastra/pull/14458))\r\n\r\n  **Example**\r\n\r\n  ```ts\r\n  import { getAuthenticatedUser } from \"@mastra/server/auth\";\r\n\r\n  const user = await getAuthenticatedUser({\r\n    mastra,\r\n    token,\r\n    request: c.req.raw\r\n  });\r\n  ```\r\n\r\n- Added new observability API endpoints and client methods for logs, scores, feedback, metrics (aggregate, breakdown, time series, percentiles), and discovery (metric names, label keys/values, entity types/names, service names, environments, tags) ([#14470](https://github.com/mastra-ai/mastra/pull/14470))\r\n\r\n#### Patch Changes\r\n\r\n- Added agent version support for experiments. When triggering an experiment, you can now pass an `agentVersion` parameter to pin which agent version to use. The agent version is stored with the experiment and returned in experiment responses. ([#14562](https://github.com/mastra-ai/mastra/pull/14562))\r\n\r\n  ```ts\r\n  const client = new MastraClient();\r\n\r\n  await client.triggerDatasetExperiment({\r\n    datasetId: \"my-dataset\",\r\n    targetType: \"agent\",\r\n    targetId: \"my-agent\",\r\n    version: 3, // pin to dataset version 3\r\n    agentVersion: \"ver_abc123\" // pin to a specific agent version\r\n  });\r\n  ```\r\n\r\n- Add optional `?path=` query param to workspace skill routes for disambiguating same-named skills. ([#14430](https://github.com/mastra-ai/mastra/pull/14430))\r\n\r\n  Skill routes continue to use `:skillName` in the URL path (no breaking change). When two skills share the same name (e.g. from different directories), pass the optional `?path=` query parameter to select the exact skill:\r\n\r\n  ```\r\n  GET /workspaces/:workspaceId/skills/:skillName?path=skills/brand-guidelines\r\n  ```\r\n\r\n  `SkillMetadata` now includes a `path` field, and the `list()` method returns all same-named skills for disambiguation. The client SDK's `getSkill()` accepts an optional `skillPath` parameter for disambiguation.\r\n\r\n- Updated skill search result types and query parameters to use `skillName`/`skillNames` instead of `skillPath`/`skillPaths` for consistency with the name-based public API. ([#14430](https://github.com/mastra-ai/mastra/pull/14430))\r\n\r\n- Added storage type detection to the Metrics Dashboard. The `/system/packages` endpoint now returns `observabilityStorageType`, identifying the observability storage backend. The dashboard shows an empty state when the storage does not support metrics (e.g. PostgreSQL, LibSQL), and displays a warning when using in-memory storage since metrics are not persisted across server restarts. Also added a docs link button to the Metrics page header. ([#14620](https://github.com/mastra-ai/mastra/pull/14620))\r\n\r\n  ```ts\r\n  import { MastraClient } from \"@mastra/client-js\";\r\n\r\n  const client = new MastraClient();\r\n  const system = await client.getSystemPackages();\r\n\r\n  // system.observabilityStorageType contains the class name of the observability store:\r\n  // - 'ObservabilityInMemory' → metrics work but are not persisted across restarts\r\n  // - 'ObservabilityPG', 'ObservabilityLibSQL', etc. → metrics not supported\r\n\r\n  if (system.observabilityStorageType === \"ObservabilityInMemory\") {\r\n    console.warn(\"Metrics are not persisted — data will be lost on server restart.\");\r\n  }\r\n\r\n  const SUPPORTED = new Set([\"ObservabilityInMemory\"]);\r\n  if (!SUPPORTED.has(system.observabilityStorageType ?? \"\")) {\r\n    console.error(\"Metrics require in-memory observability storage.\");\r\n  }\r\n  ```\r\n\r\n- Fix Zod v3 and Zod v4 compatibility across public structured-output APIs. ([#14464](https://github.com/mastra-ai/mastra/pull/14464))\r\n\r\n  Mastra agent and client APIs accept schemas from either `zod/v3` or `zod/v4`, matching the documented peer dependency range and preserving TypeScript compatibility for both Zod versions.\r\n\r\n- Added `ModelByInputTokens` in `@mastra/memory` for token-threshold-based model selection in Observational Memory. ([#14614](https://github.com/mastra-ai/mastra/pull/14614))\r\n\r\n  When configured, OM automatically selects different observer or reflector models based on the actual input token count at the time the OM call runs.\r\n\r\n  Example usage:\r\n\r\n  ```ts\r\n  import { Memory, ModelByInputTokens } from \"@mastra/memory\";\r\n\r\n  const memory = new Memory({\r\n    options: {\r\n      observationalMemory: {\r\n        model: new ModelByInputTokens({\r\n          upTo: {\r\n            10_000: \"google/gemini-2.5-flash\",\r\n            40_000: \"openai/gpt-4o\",\r\n            1_000_000: \"openai/gpt-4.5\"\r\n          }\r\n        })\r\n      }\r\n    }\r\n  });\r\n  ```\r\n\r\n  The `upTo` keys are inclusive upper bounds. OM resolves the matching tier directly at the observer or reflector call site. If the input exceeds the largest configured threshold, OM throws an error.\r\n\r\n  Improved Observational Memory tracing so traces show the observer and reflector spans and make it easier to see which resolved model was used at runtime.\r\n\r\n### Other updated packages\r\n\r\nThe following packages were updated with dependency changes only:\r\n\r\n- [@mastra/agent-builder@1.0.18](https://github.com/mastra-ai/mastra/blob/@mastra/agent-builder@1.0.18//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/packages/agent-builder/CHANGELOG.md)\r\n- [@mastra/deployer-cloud@1.16.0](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-cloud@1.16.0//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/deployers/cloud/CHANGELOG.md)\r\n- [@mastra/deployer-cloudflare@1.1.14](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-cloudflare@1.1.14//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/deployers/cloudflare/CHANGELOG.md)\r\n- [@mastra/deployer-netlify@1.0.18](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-netlify@1.0.18//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/deployers/netlify/CHANGELOG.md)\r\n- [@mastra/longmemeval@1.0.19](https://github.com/mastra-ai/mastra/blob/@mastra/longmemeval@1.0.19//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/explorations/longmemeval/CHANGELOG.md)\r\n- [@mastra/mcp-docs-server@1.1.16](https://github.com/mastra-ai/mastra/blob/@mastra/mcp-docs-server@1.1.16//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/packages/mcp-docs-server/CHANGELOG.md)\r\n- [@mastra/opencode@0.0.16](https://github.com/mastra-ai/mastra/blob/@mastra/opencode@0.0.16//private/var/folders/d4/mn8gvlx91cz80s_9c4gjr12r0000gn/T/mastra-mastra-ai-mastra-_mastra_core_1.16.0/integrations/opencode/CHANGELOG.md)\r\n"
+        },
+        "source": [
+          {
+            "kind": "topic",
+            "value": "evals"
+          }
+        ]
+      },
+      "score": {
+        "maturityScore": 95,
+        "compatibilityScore": 75,
+        "performancePotentialScore": 42,
+        "maintenanceRiskScore": 40,
+        "adoptionSignalScore": 89,
+        "finalUpgradeScore": 74,
+        "estimatedPerformanceGainPct": 37,
+        "estimatedCostReductionPct": 19,
+        "hardVetoReasons": [
+          "license_unknown",
+          "breaking_change_high_risk"
+        ],
+        "qualifyingSignals": {
+          "activeLast30Days": true,
+          "hasStableRelease": true,
+          "commercialLicense": false,
+          "documentationComplete": true,
+          "compatibilityAtLeast70": true,
+          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedCostReductionAtLeast10Pct": true,
+          "avoidsProductionSecurityBoundary": true
+        },
+        "qualifyingSignalCount": 7,
+        "eligibleForValidation": false,
+        "summary": [
+          "Active commits in last 30 days: 100",
+          "Latest release: @mastra/core@1.16.0",
+          "License: NOASSERTION",
           "Projected performance gain: 37%",
           "Projected cost reduction: 19%"
         ]
@@ -84,225 +240,78 @@
       "repo": {
         "fullName": "langchain-ai/langgraph",
         "url": "https://github.com/langchain-ai/langgraph",
-        "description": "Graph-based workflow engine for stateful agents.",
+        "description": "Build resilient language agents as graphs.",
         "topics": [
-          "workflow-automation",
-          "agent-framework",
-          "multi-agent"
+          "agents",
+          "ai",
+          "ai-agents",
+          "chatgpt",
+          "deepagents",
+          "enterprise",
+          "framework",
+          "gemini",
+          "generative-ai",
+          "langchain",
+          "langgraph",
+          "llm",
+          "multiagent",
+          "open-source",
+          "openai",
+          "pydantic",
+          "python",
+          "rag"
         ],
-        "stars": 21000,
-        "forks": 2400,
+        "stars": 28544,
+        "forks": 4884,
         "defaultBranch": "main",
-        "updatedAt": "2026-03-21T16:05:00Z",
-        "pushedAt": "2026-03-21T16:01:00Z",
+        "updatedAt": "2026-04-07T01:05:07Z",
+        "pushedAt": "2026-04-06T23:50:34Z",
         "license": "MIT",
-        "readme": "## Quickstart\nLangGraph provides workflow orchestration for stateful agents, examples, setup, and production guidance.\n\n## Benchmark\nExamples include latency and reliability measurements for graph execution.\n\n## Release\nStable release notes include migration and compatibility details.",
-        "recentCommitCount30d": 18,
+        "readme": "<div align=\"center\">\n  <a href=\"https://www.langchain.com/langgraph\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/images/logo-dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\".github/images/logo-light.svg\">\n      <img alt=\"LangGraph Logo\" src=\".github/images/logo-dark.svg\" width=\"50%\">\n    </picture>\n  </a>\n</div>\n\n<div align=\"center\">\n  <h3>Low-level orchestration framework for building stateful agents.</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://opensource.org/licenses/MIT\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/l/langgraph\" alt=\"PyPI - License\"></a>\n  <a href=\"https://pypistats.org/packages/langgraph\" target=\"_blank\"><img src=\"https://img.shields.io/pepy/dt/langgraph\" alt=\"PyPI - Downloads\"></a>\n  <a href=\"https://pypi.org/project/langgraph/\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/v/langgraph.svg?label=%20\" alt=\"Version\"></a>\n  <a href=\"https://x.com/langchain\" target=\"_blank\"><img src=\"https://img.shields.io/twitter/url/https/twitter.com/langchain.svg?style=social&label=Follow%20%40LangChain\" alt=\"Twitter / X\"></a>\n</div>\n\n<br>\n\nTrusted by companies shaping the future of agents – including Klarna, Replit, Elastic, and more – LangGraph is a low-level orchestration framework for building, managing, and deploying long-running, stateful agents.\n\n```bash\npip install -U langgraph\n```\n\nIf you're looking to quickly build agents with LangChain's `create_agent` (built on LangGraph), check out the [LangChain Agents documentation](https://docs.langchain.com/oss/python/langchain/agents).\n\n> [!NOTE]\n> Looking for the JS/TS library? Check out [LangGraph.js](https://github.com/langchain-ai/langgraphjs) and the [JS docs](https://docs.langchain.com/oss/javascript/langgraph/overview).\n\n## Why use LangGraph?\n\nLangGraph provides low-level supporting infrastructure for *any* long-running, stateful workflow or agent:\n\n- **[Durable execution](https://docs.langchain.com/oss/python/langgraph/durable-execution)** — Build agents that persist through failures and can run for extended periods, automatically resuming from exactly where they left off.\n- **[Human-in-the-loop](https://docs.langchain.com/oss/python/langgraph/interrupts)** — Seamlessly incorporate human oversight by inspecting and modifying agent state at any point during execution.\n- **[Comprehensive memory](https://docs.langchain.com/oss/python/langgraph/memory)** — Create truly stateful agents with both short-term working memory for ongoing reasoning and long-term persistent memory across sessions.\n- **[Debugging with LangSmith](https://www.langchain.com/langsmith)** — Gain deep visibility into complex agent behavior with visualization tools that trace execution paths, capture state transitions, and provide detailed runtime metrics.\n- **[Production-ready deployment](https://docs.langchain.com/langsmith/deployments)** — Deploy sophisticated agent systems confidently with scalable infrastructure designed to handle the unique challenges of stateful, long-running workflows.\n\n> [!TIP]\n> For developing, debugging, and deploying AI agents and LLM applications, see [LangSmith](https://docs.langchain.com/langsmith/home).\n\n## LangGraph ecosystem\n\nWhile LangGraph can be used standalone, it also integrates seamlessly with any LangChain product, giving developers a full suite of tools for building agents.\n\nTo improve your LLM application development, pair LangGraph with:\n\n- [Deep Agents](https://github.com/langchain-ai/deepagents) *(new!)* – Build agents that can plan, use subagents, and leverage file systems for complex tasks.\n- [LangChain](https://docs.langchain.com/oss/python/langchain/overview) – Provides integrations and composable components to streamline LLM application development.\n- [LangSmith](https://www.langchain.com/langsmith) – Helpful for agent evals and observability. Debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and improve performance over time.\n- [LangSmith Deployment](https://docs.langchain.com/langsmith/deployments) – Deploy and scale agents effortlessly with a purpose-built deployment platform for long-running, stateful workflows. Discover, reuse, configure, and share agents across teams – and iterate quickly with visual prototyping in [LangSmith Studio](https://docs.langchain.com/langsmith/studio).\n\n---\n\n## Documentation\n\n- [docs.langchain.com](https://docs.langchain.com/oss/python/langgraph/overview) – Comprehensive documentation, including conceptual overviews and guides\n- [reference.langchain.com/python/langgraph](https://reference.langchain.com/python/langgraph) – API reference docs for LangGraph packages\n- [LangGraph Quickstart](https://docs.langchain.com/oss/python/langgraph/quickstart) – Get started building with LangGraph\n- [Chat LangChain](https://chat.langchain.com/) – Chat with the LangChain documentation and get answers to your questions\n\n**Discussions**: Visit the [LangChain Forum](https://forum.langchain.com) to connect with the community and share all of your technical questions, ideas, and feedback.\n\n## Additional resources\n\n- **[Guides](https://docs.langchain.com/oss/python/learn)** – Quick, actionable code snippets for topics such as streaming, adding memory & persistence, and design patterns (e.g. branching, subgraphs, etc.).\n- **[LangChain Academy](https://academy.langchain.com/courses/intro-to-langgraph)** – Learn the basics of LangGraph in our free, structured course.\n- **[Case studies](https://www.langchain.com/built-with-langgraph)** – Hear how industry leaders use LangGraph to ship AI applications at scale.\n- [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview) – Learn how to contribute to LangChain projects and find good first issues.\n- [Code of Conduct](https://github.com/langchain-ai/langchain/?tab=coc-ov-file) – Our community guidelines and standards for participation.\n\n---\n\n## Acknowledgements\n\nLangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.\n",
+        "recentCommitCount30d": 100,
         "latestRelease": {
-          "tagName": "v0.3.5",
-          "name": "v0.3.5",
-          "htmlUrl": "https://github.com/langchain-ai/langgraph/releases/tag/v0.3.5",
-          "publishedAt": "2026-03-14T12:15:00Z",
+          "tagName": "1.1.6",
+          "name": "langgraph==1.1.6",
+          "htmlUrl": "https://github.com/langchain-ai/langgraph/releases/tag/1.1.6",
+          "publishedAt": "2026-04-03T19:01:48Z",
           "prerelease": false,
           "draft": false,
-          "body": "Better workflow checkpoints and evaluation improvements."
+          "body": "Changes since 1.1.5\n\n* release: langgraph 1.1.6 (#7407)\n* fix: execution info patching (#7406)"
         },
         "source": [
           {
             "kind": "watch_repo",
             "value": "langchain-ai/langgraph"
-          },
-          {
-            "kind": "topic",
-            "value": "agent-framework"
-          },
-          {
-            "kind": "topic",
-            "value": "multi-agent"
-          },
-          {
-            "kind": "topic",
-            "value": "workflow-automation"
           }
         ]
       },
       "score": {
-        "maturityScore": 77,
-        "compatibilityScore": 77,
-        "performancePotentialScore": 32,
-        "maintenanceRiskScore": 23,
-        "adoptionSignalScore": 91,
-        "finalUpgradeScore": 71,
-        "estimatedPerformanceGainPct": 27,
-        "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [],
-        "qualifyingSignals": {
-          "activeLast30Days": true,
-          "hasStableRelease": true,
-          "commercialLicense": true,
-          "documentationComplete": false,
-          "compatibilityAtLeast70": true,
-          "projectedPerformanceGainAtLeast15Pct": true,
-          "projectedCostReductionAtLeast10Pct": false,
-          "avoidsProductionSecurityBoundary": true
-        },
-        "qualifyingSignalCount": 6,
-        "eligibleForValidation": false,
-        "summary": [
-          "Active commits in last 30 days: 18",
-          "Latest release: v0.3.5",
-          "License: MIT",
-          "Projected performance gain: 27%",
-          "Projected cost reduction: 4%"
-        ]
-      }
-    },
-    {
-      "repo": {
-        "fullName": "browser-use/browser-use",
-        "url": "https://github.com/browser-use/browser-use",
-        "description": "Browser automation agent framework for web tasks.",
-        "topics": [
-          "browser-automation",
-          "agent-framework",
-          "tool-use"
-        ],
-        "stars": 15000,
-        "forks": 1600,
-        "defaultBranch": "main",
-        "updatedAt": "2026-03-23T13:40:00Z",
-        "pushedAt": "2026-03-23T13:39:00Z",
-        "license": "MIT",
-        "readme": "## Quickstart\nInstall and launch browser tasks with reproducible examples. Usage, configuration, troubleshooting, and benchmark sections are included. The docs describe latency improvements and safety boundaries for browser control.\n\n## Benchmark\nThe project shows benchmark comparisons for task completion and browsing latency.\n\n## Roadmap\nRelease notes and examples are updated regularly.",
-        "recentCommitCount30d": 31,
-        "latestRelease": {
-          "tagName": "v1.9.0",
-          "name": "v1.9.0",
-          "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/v1.9.0",
-          "publishedAt": "2026-03-18T09:30:00Z",
-          "prerelease": false,
-          "draft": false,
-          "body": "Adds more efficient browser sessions, lower latency task execution, and benchmark dashboards."
-        },
-        "source": [
-          {
-            "kind": "watch_repo",
-            "value": "browser-use/browser-use"
-          },
-          {
-            "kind": "topic",
-            "value": "browser-automation"
-          },
-          {
-            "kind": "topic",
-            "value": "agent-framework"
-          },
-          {
-            "kind": "topic",
-            "value": "tool-use"
-          }
-        ]
-      },
-      "score": {
-        "maturityScore": 80,
-        "compatibilityScore": 77,
-        "performancePotentialScore": 32,
+        "maturityScore": 95,
+        "compatibilityScore": 61,
+        "performancePotentialScore": 14,
         "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 72,
-        "finalUpgradeScore": 69,
-        "estimatedPerformanceGainPct": 27,
+        "adoptionSignalScore": 100,
+        "finalUpgradeScore": 70,
+        "estimatedPerformanceGainPct": 9,
         "estimatedCostReductionPct": 4,
         "hardVetoReasons": [],
         "qualifyingSignals": {
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": false,
-          "compatibilityAtLeast70": true,
-          "projectedPerformanceGainAtLeast15Pct": true,
-          "projectedCostReductionAtLeast10Pct": false,
-          "avoidsProductionSecurityBoundary": true
-        },
-        "qualifyingSignalCount": 6,
-        "eligibleForValidation": false,
-        "summary": [
-          "Active commits in last 30 days: 31",
-          "Latest release: v1.9.0",
-          "License: MIT",
-          "Projected performance gain: 27%",
-          "Projected cost reduction: 4%"
-        ]
-      }
-    },
-    {
-      "repo": {
-        "fullName": "microsoft/autogen",
-        "url": "https://github.com/microsoft/autogen",
-        "description": "Multi-agent orchestration framework.",
-        "topics": [
-          "multi-agent",
-          "agent-framework",
-          "automation"
-        ],
-        "stars": 39000,
-        "forks": 5400,
-        "defaultBranch": "main",
-        "updatedAt": "2026-03-22T21:00:00Z",
-        "pushedAt": "2026-03-22T20:58:00Z",
-        "license": "MIT",
-        "readme": "## Quickstart\nAutoGen provides multi-agent orchestration, examples, installation instructions, and migration notes.\n\n## Benchmark\nThe repository publishes evaluation notes and performance discussions.\n\n## Release\nReleases include changelog entries and upgrade instructions.",
-        "recentCommitCount30d": 12,
-        "latestRelease": {
-          "tagName": "v0.6.3",
-          "name": "v0.6.3",
-          "htmlUrl": "https://github.com/microsoft/autogen/releases/tag/v0.6.3",
-          "publishedAt": "2026-03-17T07:45:00Z",
-          "prerelease": false,
-          "draft": false,
-          "body": "Improves automation reliability and benchmark coverage."
-        },
-        "source": [
-          {
-            "kind": "watch_repo",
-            "value": "microsoft/autogen"
-          },
-          {
-            "kind": "topic",
-            "value": "agent-framework"
-          },
-          {
-            "kind": "topic",
-            "value": "multi-agent"
-          }
-        ]
-      },
-      "score": {
-        "maturityScore": 66,
-        "compatibilityScore": 69,
-        "performancePotentialScore": 32,
-        "maintenanceRiskScore": 32,
-        "adoptionSignalScore": 94,
-        "finalUpgradeScore": 66,
-        "estimatedPerformanceGainPct": 27,
-        "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [],
-        "qualifyingSignals": {
-          "activeLast30Days": true,
-          "hasStableRelease": true,
-          "commercialLicense": true,
-          "documentationComplete": false,
+          "documentationComplete": true,
           "compatibilityAtLeast70": false,
-          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedPerformanceGainAtLeast15Pct": false,
           "projectedCostReductionAtLeast10Pct": false,
           "avoidsProductionSecurityBoundary": true
         },
         "qualifyingSignalCount": 5,
         "eligibleForValidation": false,
         "summary": [
-          "Active commits in last 30 days: 12",
-          "Latest release: v0.6.3",
+          "Active commits in last 30 days: 100",
+          "Latest release: 1.1.6",
           "License: MIT",
-          "Projected performance gain: 27%",
+          "Projected performance gain: 9%",
           "Projected cost reduction: 4%"
         ]
       }
@@ -311,65 +320,57 @@
       "repo": {
         "fullName": "openai/openai-agents-python",
         "url": "https://github.com/openai/openai-agents-python",
-        "description": "Python toolkit for building structured agents with tracing and tool orchestration.",
+        "description": "A lightweight, powerful framework for multi-agent workflows",
         "topics": [
-          "agent-framework",
-          "automation",
-          "tool-use",
-          "workflow-automation"
+          "agents",
+          "ai",
+          "framework",
+          "llm",
+          "openai",
+          "python"
         ],
-        "stars": 9200,
-        "forks": 1100,
+        "stars": 20615,
+        "forks": 3379,
         "defaultBranch": "main",
-        "updatedAt": "2026-03-24T18:11:00Z",
-        "pushedAt": "2026-03-24T18:10:00Z",
-        "license": "Apache-2.0",
-        "readme": "## Quickstart\nInstall the package, define tools, and run an agent loop with traces. The project ships setup instructions, benchmark notes, release guidance, and examples for tool use, agent orchestration, and model provider switching.\n\n## Benchmark\nThe examples describe latency, reliability, and tracing impact in reproducible local runs.\n\n## Release\nStable releases are published with changelog notes and migration guidance.",
-        "recentCommitCount30d": 24,
+        "updatedAt": "2026-04-07T01:05:53Z",
+        "pushedAt": "2026-04-06T04:34:42Z",
+        "license": "MIT",
+        "readme": "# OpenAI Agents SDK [![PyPI](https://img.shields.io/pypi/v/openai-agents?label=pypi%20package)](https://pypi.org/project/openai-agents/)\n\nThe OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows. It is provider-agnostic, supporting the OpenAI Responses and Chat Completions APIs, as well as 100+ other LLMs.\n\n<img src=\"https://cdn.openai.com/API/docs/images/orchestration.png\" alt=\"Image of the Agents Tracing UI\" style=\"max-height: 803px;\">\n\n> [!NOTE]\n> Looking for the JavaScript/TypeScript version? Check out [Agents SDK JS/TS](https://github.com/openai/openai-agents-js).\n\n### Core concepts:\n\n1. [**Agents**](https://openai.github.io/openai-agents-python/agents): LLMs configured with instructions, tools, guardrails, and handoffs\n1. **[Agents as tools](https://openai.github.io/openai-agents-python/tools/#agents-as-tools) / [Handoffs](https://openai.github.io/openai-agents-python/handoffs/)**: Delegating to other agents for specific tasks\n1. [**Tools**](https://openai.github.io/openai-agents-python/tools/): Various Tools let agents take actions (functions, MCP, hosted tools)\n1. [**Guardrails**](https://openai.github.io/openai-agents-python/guardrails/): Configurable safety checks for input and output validation\n1. [**Human in the loop**](https://openai.github.io/openai-agents-python/human_in_the_loop/): Built-in mechanisms for involving humans across agent runs\n1. [**Sessions**](https://openai.github.io/openai-agents-python/sessions/): Automatic conversation history management across agent runs\n1. [**Tracing**](https://openai.github.io/openai-agents-python/tracing/): Built-in tracking of agent runs, allowing you to view, debug and optimize your workflows\n1. [**Realtime Agents**](https://openai.github.io/openai-agents-python/realtime/quickstart/): Build powerful voice agents with `gpt-realtime-1.5` and full agent features\n\nExplore the [examples](https://github.com/openai/openai-agents-python/tree/main/examples) directory to see the SDK in action, and read our [documentation](https://openai.github.io/openai-agents-python/) for more details.\n\n## Get started\n\nTo get started, set up your Python environment (Python 3.10 or newer required), and then install OpenAI Agents SDK package.\n\n### venv\n\n```bash\npython -m venv .venv\nsource .venv/bin/activate  # On Windows: .venv\\Scripts\\activate\npip install openai-agents\n```\n\nFor voice support, install with the optional `voice` group: `pip install 'openai-agents[voice]'`. For Redis session support, install with the optional `redis` group: `pip install 'openai-agents[redis]'`.\n\n### uv\n\nIf you're familiar with [uv](https://docs.astral.sh/uv/), installing the package would be even easier:\n\n```bash\nuv init\nuv add openai-agents\n```\n\nFor voice support, install with the optional `voice` group: `uv add 'openai-agents[voice]'`. For Redis session support, install with the optional `redis` group: `uv add 'openai-agents[redis]'`.\n\n## Run your first agent\n\n```python\nfrom agents import Agent, Runner\n\nagent = Agent(name=\"Assistant\", instructions=\"You are a helpful assistant\")\n\nresult = Runner.run_sync(agent, \"Write a haiku about recursion in programming.\")\nprint(result.final_output)\n\n# Code within the code,\n# Functions calling themselves,\n# Infinite loop's dance.\n```\n\n(_If running this, ensure you set the `OPENAI_API_KEY` environment variable_)\n\n(_For Jupyter notebook users, see [hello_world_jupyter.ipynb](https://github.com/openai/openai-agents-python/blob/main/examples/basic/hello_world_jupyter.ipynb)_)\n\nExplore the [examples](https://github.com/openai/openai-agents-python/tree/main/examples) directory to see the SDK in action, and read our [documentation](https://openai.github.io/openai-agents-python/) for more details.\n\n## Acknowledgements\n\nWe'd like to acknowledge the excellent work of the open-source community, especially:\n\n- [Pydantic](https://docs.pydantic.dev/latest/)\n- [Requests](https://github.com/psf/requests)\n- [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)\n- [Griffe](https://github.com/mkdocstrings/griffe)\n\nThis library has these optional dependencies:\n\n- [websockets](https://github.com/python-websockets/websockets)\n- [SQLAlchemy](https://github.com/sqlalchemy/sqlalchemy)\n- [any-llm](https://github.com/mozilla-ai/any-llm) and [LiteLLM](https://github.com/BerriAI/litellm)\n\nWe also rely on the following tools to manage the project:\n\n- [uv](https://github.com/astral-sh/uv) and [ruff](https://github.com/astral-sh/ruff)\n- [mypy](https://github.com/python/mypy) and [Pyright](https://github.com/microsoft/pyright)\n- [pytest](https://github.com/pytest-dev/pytest) and [Coverage.py](https://github.com/coveragepy/coveragepy)\n- [MkDocs](https://github.com/squidfunk/mkdocs-material)\n\nWe're committed to continuing to build the Agents SDK as an open source framework so others in the community can expand on our approach.",
+        "recentCommitCount30d": 100,
         "latestRelease": {
-          "tagName": "v0.4.1",
-          "name": "v0.4.1",
-          "htmlUrl": "https://github.com/openai/openai-agents-python/releases/tag/v0.4.1",
-          "publishedAt": "2026-03-20T10:00:00Z",
+          "tagName": "v0.13.5",
+          "name": "v0.13.5",
+          "htmlUrl": "https://github.com/openai/openai-agents-python/releases/tag/v0.13.5",
+          "publishedAt": "2026-04-06T04:11:19Z",
           "prerelease": false,
           "draft": false,
-          "body": "Performance improvements for tracing, benchmark updates, and more stable tool execution."
+          "body": "## What's Changed\r\n\r\n* feat: #2807 support callable approval policies for local MCP servers by @seratch in https://github.com/openai/openai-agents-python/pull/2818\r\n* feat: #2135 add public flush_traces API by @seratch in https://github.com/openai/openai-agents-python/pull/2844\r\n* fix: #2823 AnyLLM reasoning extraction for iterable vLLM/any-llm Reasoning objects by @ziqi-cn in https://github.com/openai/openai-agents-python/pull/2822\r\n* fix: serialize SQLite session writes with shared file locks by @seratch in https://github.com/openai/openai-agents-python/pull/2843\r\n\r\n### Documentation & Other Changes\r\n\r\n* chore(deps): bump openai/codex-action from 1.4 to 1.6 by @dependabot[bot] in https://github.com/openai/openai-agents-python/pull/2819\r\n* chore(deps): bump astral-sh/setup-uv from 7.3.1 to 8.0.0 by @dependabot[bot] in https://github.com/openai/openai-agents-python/pull/2820\r\n* docs: sync examples.md with current examples directory by @AbdullahBapra in https://github.com/openai/openai-agents-python/pull/2827\r\n* docs: update translated document pages by @github-actions[bot] in https://github.com/openai/openai-agents-python/pull/2828\r\n* Release 0.13.5 by @github-actions[bot] in https://github.com/openai/openai-agents-python/pull/2821\r\n\r\n## New Contributors\r\n* @AbdullahBapra made their first contribution in https://github.com/openai/openai-agents-python/pull/2827\r\n* @ziqi-cn made their first contribution in https://github.com/openai/openai-agents-python/pull/2822\r\n\r\n**Full Changelog**: https://github.com/openai/openai-agents-python/compare/v0.13.4...v0.13.5"
         },
         "source": [
           {
             "kind": "watch_repo",
             "value": "openai/openai-agents-python"
-          },
-          {
-            "kind": "topic",
-            "value": "agent-framework"
-          },
-          {
-            "kind": "topic",
-            "value": "tool-use"
-          },
-          {
-            "kind": "topic",
-            "value": "workflow-automation"
           }
         ]
       },
       "score": {
-        "maturityScore": 80,
-        "compatibilityScore": 77,
-        "performancePotentialScore": 32,
+        "maturityScore": 95,
+        "compatibilityScore": 53,
+        "performancePotentialScore": 24,
         "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 51,
-        "finalUpgradeScore": 65,
-        "estimatedPerformanceGainPct": 27,
+        "adoptionSignalScore": 97,
+        "finalUpgradeScore": 69,
+        "estimatedPerformanceGainPct": 19,
         "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [],
+        "hardVetoReasons": [
+          "benchmark_unverifiable"
+        ],
         "qualifyingSignals": {
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": false,
-          "compatibilityAtLeast70": true,
+          "documentationComplete": true,
+          "compatibilityAtLeast70": false,
           "projectedPerformanceGainAtLeast15Pct": true,
           "projectedCostReductionAtLeast10Pct": false,
           "avoidsProductionSecurityBoundary": true
@@ -377,10 +378,10 @@
         "qualifyingSignalCount": 6,
         "eligibleForValidation": false,
         "summary": [
-          "Active commits in last 30 days: 24",
-          "Latest release: v0.4.1",
-          "License: Apache-2.0",
-          "Projected performance gain: 27%",
+          "Active commits in last 30 days: 100",
+          "Latest release: v0.13.5",
+          "License: MIT",
+          "Projected performance gain: 19%",
           "Projected cost reduction: 4%"
         ]
       }
@@ -390,30 +391,146 @@
     {
       "candidate": {
         "repo": {
-          "fullName": "vllm-project/vllm",
-          "url": "https://github.com/vllm-project/vllm",
-          "description": "High-throughput and memory-efficient inference engine for LLM serving.",
+          "fullName": "browser-use/browser-use",
+          "url": "https://github.com/browser-use/browser-use",
+          "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
           "topics": [
-            "llm-inference",
-            "model-serving",
-            "benchmark"
+            "ai-agents",
+            "ai-tools",
+            "browser-automation",
+            "browser-use",
+            "llm",
+            "playwright",
+            "python"
           ],
-          "stars": 42000,
-          "forks": 6200,
+          "stars": 86267,
+          "forks": 9983,
           "defaultBranch": "main",
-          "updatedAt": "2026-03-24T08:20:00Z",
-          "pushedAt": "2026-03-24T08:19:00Z",
-          "license": "Apache-2.0",
-          "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
-          "recentCommitCount30d": 27,
+          "updatedAt": "2026-04-07T01:17:07Z",
+          "pushedAt": "2026-04-06T02:01:38Z",
+          "license": "MIT",
+          "readme": "<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/774a46d5-27a0-490c-b7d0-e65fcbbfa358\">\n  <img alt=\"Shows a black Browser Use Logo in light color mode and a white one in dark color mode.\" src=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"  width=\"full\">\n</picture>\n\n<div align=\"center\">\n    <picture>\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"\">\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6797d09b-8ac3-4cb9-ba07-b289e080765a\">\n    <img alt=\"The AI browser agent.\" src=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"  width=\"400\">\n    </picture>\n</div>\n\n<div align=\"center\">\n<a href=\"https://cloud.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/package\" height=\"48\" alt=\"Browser-Use Package Download Statistics\"></a>\n</div>\n\n---\n\n<div align=\"center\">\n<a href=\"#demos\"><img src=\"https://media.browser-use.tools/badges/demos\" alt=\"Demos\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://docs.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/docs\" alt=\"Docs\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browser-use.com/posts\"><img src=\"https://media.browser-use.tools/badges/blog\" alt=\"Blog\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browsermerch.com\"><img src=\"https://media.browser-use.tools/badges/merch\" alt=\"Merch\"></a>\n<img width=\"100\" height=\"1\" alt=\"\">\n<a href=\"https://github.com/browser-use/browser-use\"><img src=\"https://media.browser-use.tools/badges/github\" alt=\"Github Stars\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://x.com/intent/user?screen_name=browser_use\"><img src=\"https://media.browser-use.tools/badges/twitter\" alt=\"Twitter\"></a>\n<img width=\"4 height=\"1\" alt=\"\">\n<a href=\"https://link.browser-use.com/discord\"><img src=\"https://media.browser-use.tools/badges/discord\" alt=\"Discord\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://cloud.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/cloud\" height=\"48\" alt=\"Browser-Use Cloud\"></a>\n</div>\n\n</br>\n\n🌤️ Want to skip the setup? Use our <b>[cloud](https://cloud.browser-use.com)</b> for faster, scalable, stealth-enabled browser automation!\n\n# 🤖 LLM Quickstart\n\n1. Direct your favorite coding agent (Cursor, Claude Code, etc) to [Agents.md](https://docs.browser-use.com/llms-full.txt)\n2. Prompt away!\n\n<br/>\n\n# 👋 Human Quickstart\n\n**1. Create environment and install Browser-Use with [uv](https://docs.astral.sh/uv/) (Python>=3.11):**\n```bash\nuv init && uv add browser-use && uv sync\n# uvx browser-use install  # Run if you don't have Chromium installed\n```\n\n**2. [Optional] Get your API key from [Browser Use Cloud](https://cloud.browser-use.com/new-api-key):**\n```\n# .env\nBROWSER_USE_API_KEY=your-key\n# GOOGLE_API_KEY=your-key\n# ANTHROPIC_API_KEY=your-key\n```\n\n**3. Run your first agent:**\n```python\nfrom browser_use import Agent, Browser, ChatBrowserUse\n# from browser_use import ChatGoogle  # ChatGoogle(model='gemini-3-flash-preview')\n# from browser_use import ChatAnthropic  # ChatAnthropic(model='claude-sonnet-4-6')\nimport asyncio\n\nasync def main():\n    browser = Browser(\n        # use_cloud=True,  # Use a stealth browser on Browser Use Cloud\n    )\n\n    agent = Agent(\n        task=\"Find the number of stars of the browser-use repo\",\n        llm=ChatBrowserUse(),\n        # llm=ChatGoogle(model='gemini-3-flash-preview'),\n        # llm=ChatAnthropic(model='claude-sonnet-4-6'),\n        browser=browser,\n    )\n    await agent.run()\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nCheck out the [library docs](https://docs.browser-use.com/open-source/introduction) and the [cloud docs](https://docs.cloud.browser-use.com) for more!\n\n<br/>\n\n# Open Source vs Cloud\n\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"static/accuracy_by_model_light.png\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/accuracy_by_model_dark.png\">\n  <img alt=\"BU Bench V1 - LLM Success Rates\" src=\"static/accuracy_by_model_light.png\" width=\"100%\">\n</picture>\n\nWe benchmark Browser Use across 100 real-world browser tasks. Full benchmark is open source: **[browser-use/benchmark](https://github.com/browser-use/benchmark)**.\n\n**Use Open Source**\n- You need [custom tools](https://docs.browser-use.com/customize/tools/basics) or deep code-level integration\n- You want to self-host and deploy browser agents on your own machines\n\n**Use [Cloud](https://cloud.browser-use.com) (recommended)**\n- Much better agent for complex tasks (see plot above)\n- Easiest way to start and scale\n- Best stealth with proxy rotation and captcha solving\n- 1000+ integrations (Gmail, Slack, Notion, and more)\n- Persistent filesystem and memory\n\n**Use Both**\n- Use the open-source library with your [custom tools](https://docs.browser-use.com/customize/tools/basics) while running our [cloud browsers](https://docs.browser-use.com/open-source/customize/browser/remote) and [ChatBrowserUse model](https://docs.browser-use.com/open-source/supported-models)\n\n<br/>\n\n# Demos\n\n\n### 📋 Form-Filling\n#### Task = \"Fill in this job application with my resume and information.\"\n![Job Application Demo](https://github.com/user-attachments/assets/57865ee6-6004-49d5-b2c2-6dff39ec2ba9)\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/apply_to_job.py)\n\n\n### 🍎 Grocery-Shopping\n#### Task = \"Put this list of items into my instacart.\"\n\nhttps://github.com/user-attachments/assets/a6813fa7-4a7c-40a6-b4aa-382bf88b1850\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/buy_groceries.py)\n\n\n### 💻 Personal-Assistant.\n#### Task = \"Help me find parts for a custom PC.\"\n\nhttps://github.com/user-attachments/assets/ac34f75c-057a-43ef-ad06-5b2c9d42bf06\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/pcpartpicker.py)\n\n\n### 💡See [more examples here ↗](https://docs.browser-use.com/examples) and give us a star!\n\n<br/>\n\n# 🚀 Template Quickstart\n\n**Want to get started even faster?** Generate a ready-to-run template:\n\n```bash\nuvx browser-use init --template default\n```\n\nThis creates a `browser_use_default.py` file with a working example. Available templates:\n- `default` - Minimal setup to get started quickly\n- `advanced` - All configuration options with detailed comments\n- `tools` - Examples of custom tools and extending the agent\n\nYou can also specify a custom output path:\n```bash\nuvx browser-use init --template default --output my_agent.py\n```\n\n<br/>\n\n# 💻 CLI\n\nFast, persistent browser automation from the command line:\n\n```bash\nbrowser-use open https://example.com    # Navigate to URL\nbrowser-use state                       # See clickable elements\nbrowser-use click 5                     # Click element by index\nbrowser-use type \"Hello\"                # Type text\nbrowser-use screenshot page.png         # Take screenshot\nbrowser-use close                       # Close browser\n```\n\nThe CLI keeps the browser running between commands for fast iteration. See [CLI docs](browser_use/skill_cli/README.md) for all commands.\n\n### Claude Code Skill\n\nFor [Claude Code](https://claude.ai/code), install the skill to enable AI-assisted browser automation:\n\n```bash\nmkdir -p ~/.claude/skills/browser-use\ncurl -o ~/.claude/skills/browser-use/SKILL.md \\\n  https://raw.githubusercontent.com/browser-use/browser-use/main/skills/browser-use/SKILL.md\n```\n\n<br/>\n\n## Integrations, hosting, custom tools, MCP, and more on our [Docs ↗](https://docs.browser-use.com)\n\n<br/>\n\n# FAQ\n\n<details>\n<summary><b>What's the best model to use?</b></summary>\n\nWe optimized **ChatBrowserUse()** specifically for browser automation tasks. On avg it completes tasks 3-5x faster than other models with SOTA accuracy.\n\n**Pricing (per 1M tokens):**\n- Input tokens: $0.20\n- Cached input tokens: $0.02\n- Output tokens: $2.00\n\nFor other LLM providers, see our [supported models documentation](https://docs.browser-use.com/supported-models).\n</details>\n\n<details>\n<summary><b>Should I use the Browser Use system prompt with the open-source preview model?</b></summary>\n\nYes. If you use `ChatBrowserUse(model='browser-use/bu-30b-a3b-preview')` with a normal `Agent(...)`, Browser Use still sends its default agent system prompt for you.\n\nYou do **not** need to add a separate custom \"Browser Use system message\" just because you switched to the open-source preview model. Only use `extend_system_message` or `override_system_message` when you intentionally want to customize the default behavior for your task.\n\nIf you want the best default speed/accuracy, we still recommend the newer hosted `bu-*` models. If you want the open-source preview model, the setup stays the same apart from the `model=` value.\n</details>\n\n<details>\n<summary><b>Can I use custom tools with the agent?</b></summary>\n\nYes! You can add custom tools to extend the agent's capabilities:\n\n```python\nfrom browser_use import Tools\n\ntools = Tools()\n\n@tools.action(description='Description of what this tool does.')\ndef custom_tool(param: str) -> str:\n    return f\"Result: {param}\"\n\nagent = Agent(\n    task=\"Your task\",\n    llm=llm,\n    browser=browser,\n    tools=tools,\n)\n```\n\n</details>\n\n<details>\n<summary><b>Can I use this for free?</b></summary>\n\nYes! Browser-Use is open source and free to use. You only need to choose an LLM provider (like OpenAI, Google, ChatBrowserUse, or run local models with Ollama).\n</details>\n\n<details>\n<summary><b>Terms of Service</b></summary>\n\nThis open-source library is licensed under the MIT License. For Browser Use services & data policy, see our [Terms of Service](https://browser-use.com/legal/terms-of-service) and [Privacy Policy](https://browser-use.com/privacy/).\n</details>\n\n<details>\n<summary><b>How do I handle authentication?</b></summary>\n\nCheck out our authentication examples:\n- [Using real browser profiles](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py) - Reuse your existing Chrome profile with saved logins\n- If you want to use temporary accounts with inbox, choose AgentMail\n- To sync your auth profile with the remote browser, run `curl -fsSL https://browser-use.com/profile.sh | BROWSER_USE_API_KEY=XXXX sh` (replace XXXX with your API key)\n\nThese examples show how to maintain sessions and handle authentication seamlessly.\n</details>\n\n<details>\n<summary><b>How do I solve CAPTCHAs?</b></summary>\n\nFor CAPTCHA handling, you need better browser fingerprinting and proxies. Use [Browser Use Cloud](https://cloud.browser-use.com) which provides stealth browsers designed to avoid detection and CAPTCHA challenges.\n</details>\n\n<details>\n<summary><b>How do I go into production?</b></summary>\n\nChrome can consume a lot of memory, and running many agents in parallel can be tricky to manage.\n\nFor production use cases, use our [Browser Use Cloud API](https://cloud.browser-use.com) which handles:\n- Scalable browser infrastructure\n- Memory management\n- Proxy rotation\n- Stealth browser fingerprinting\n- High-performance parallel execution\n</details>\n\n<br/>\n\n<div align=\"center\">\n\n**Tell your computer what to do, and it gets it done.**\n\n<img src=\"https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f\" width=\"400\"/>\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)\n&emsp;&emsp;&emsp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)\n\n</div>\n\n<div align=\"center\"> Made with ❤️ in Zurich and San Francisco </div>\n",
+          "recentCommitCount30d": 100,
           "latestRelease": {
-            "tagName": "v0.8.2",
-            "name": "v0.8.2",
-            "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
-            "publishedAt": "2026-03-19T05:20:00Z",
+            "tagName": "0.12.6",
+            "name": "0.12.6",
+            "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/0.12.6",
+            "publishedAt": "2026-04-02T07:54:28Z",
             "prerelease": false,
             "draft": false,
-            "body": "Higher throughput, lower latency, and better benchmark reproducibility."
+            "body": "## What's Changed\r\n<img width=\"1661\" height=\"278\" alt=\"image\" src=\"https://github.com/user-attachments/assets/151c26e2-b7d8-47e6-b628-1121677527ee\" />\r\n\r\n* fix: set default temperature to 1.0 for gemini-3 models by @markmcd in https://github.com/browser-use/browser-use/pull/4489\r\n* fix bedrock structured output w SchemaOptimizer to flatten schema by @laithrw in https://github.com/browser-use/browser-use/pull/4524\r\n* fix: use login shell for PATH configuration in install script by @techiro in https://github.com/browser-use/browser-use/pull/4457\r\n* fix(utils): add option to disable SignalHandler for host app signal control by @BillionClaw in https://github.com/browser-use/browser-use/pull/4387\r\n* rm pass by @laithrw in https://github.com/browser-use/browser-use/pull/4525\r\n* fix daemon orphaning when external browser dies on --connect/--cdp-url by @laithrw in https://github.com/browser-use/browser-use/pull/4526\r\n* Feature/cdp navigation timeout by @laithrw in https://github.com/browser-use/browser-use/pull/4527\r\n* feat(tokens): allow overriding model pricing URL by @laithrw in https://github.com/browser-use/browser-use/pull/4528\r\n* fix anthropic action field double-serialization by @laithrw in https://github.com/browser-use/browser-use/pull/4529\r\n* fix(agent): prevent stale history and stuck step counter on timeout by @warren618 in https://github.com/browser-use/browser-use/pull/4481\r\n* fix tunnel process kill and daemon spawn on windows by @laithrw in https://github.com/browser-use/browser-use/pull/4530\r\n* fix: stop cloud sessions when reconnecting via cdp_url by @iafisch in https://github.com/browser-use/browser-use/pull/4096\r\n* fix(mcp): remove oneOf from browser_click schema that breaks Claude API clients by @gabros20 in https://github.com/browser-use/browser-use/pull/4212\r\n* feat(cli): add install-lite.sh script for the CLI by @ShawnPana in https://github.com/browser-use/browser-use/pull/4534\r\n* fix: close httpx client pool on session stop to prevent OOM on Lambda by @LarsenCundric in https://github.com/browser-use/browser-use/pull/4577\r\n* perf: fix O(n²) bottlenecks in DOM capture for heavy pages by @MagMueller in https://github.com/browser-use/browser-use/pull/4587\r\n\r\n## New Contributors\r\n* @markmcd made their first contribution in https://github.com/browser-use/browser-use/pull/4489\r\n* @techiro made their first contribution in https://github.com/browser-use/browser-use/pull/4457\r\n* @BillionClaw made their first contribution in https://github.com/browser-use/browser-use/pull/4387\r\n* @warren618 made their first contribution in https://github.com/browser-use/browser-use/pull/4481\r\n* @iafisch made their first contribution in https://github.com/browser-use/browser-use/pull/4096\r\n* @gabros20 made their first contribution in https://github.com/browser-use/browser-use/pull/4212\r\n\r\n**Full Changelog**: https://github.com/browser-use/browser-use/compare/0.12.5...0.12.6"
+          },
+          "source": [
+            {
+              "kind": "watch_repo",
+              "value": "browser-use/browser-use"
+            }
+          ]
+        },
+        "score": {
+          "maturityScore": 95,
+          "compatibilityScore": 85,
+          "performancePotentialScore": 32,
+          "maintenanceRiskScore": 20,
+          "adoptionSignalScore": 100,
+          "finalUpgradeScore": 80,
+          "estimatedPerformanceGainPct": 27,
+          "estimatedCostReductionPct": 4,
+          "hardVetoReasons": [],
+          "qualifyingSignals": {
+            "activeLast30Days": true,
+            "hasStableRelease": true,
+            "commercialLicense": true,
+            "documentationComplete": true,
+            "compatibilityAtLeast70": true,
+            "projectedPerformanceGainAtLeast15Pct": true,
+            "projectedCostReductionAtLeast10Pct": false,
+            "avoidsProductionSecurityBoundary": true
+          },
+          "qualifyingSignalCount": 7,
+          "eligibleForValidation": true,
+          "summary": [
+            "Active commits in last 30 days: 100",
+            "Latest release: 0.12.6",
+            "License: MIT",
+            "Projected performance gain: 27%",
+            "Projected cost reduction: 4%"
+          ]
+        }
+      },
+      "plan": {
+        "target": "browser-use/browser-use",
+        "changeType": "tool-plugin-integration",
+        "riskLevel": "medium",
+        "filesToChange": [
+          ".openclaw/extensions/github-architecture-radar/index.ts",
+          ".github/workflows/ai-radar-daily.yml"
+        ],
+        "summary": "Evaluate browser-use/browser-use as a tool-plugin-integration candidate on an isolated branch with staging-only validation.",
+        "rollbackPlan": [
+          "Reset the experiment branch to the last successful staging commit.",
+          "Restore the candidate version recorded in state/last_successful_version.json.",
+          "Re-run smoke, regression, and rollback simulation before reopening the PR."
+        ],
+        "validationChecklist": [
+          "Smoke test passes on the isolated branch.",
+          "Integration test passes against the staging profile.",
+          "Regression suite shows no critical diff.",
+          "Benchmark smoke confirms the projected improvement is directionally true.",
+          "Rollback simulation restores the last successful staging version."
+        ],
+        "humanEscalations": [
+          "Escalate if production deployment is requested.",
+          "Escalate if the release notes imply a breaking API migration.",
+          "Escalate if license status is unknown or incompatible.",
+          "Escalate if benchmark outcomes are ambiguous."
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "repo": {
+          "fullName": "vllm-project/vllm",
+          "url": "https://github.com/vllm-project/vllm",
+          "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+          "topics": [
+            "amd",
+            "blackwell",
+            "cuda",
+            "deepseek",
+            "deepseek-v3",
+            "gpt",
+            "gpt-oss",
+            "inference",
+            "kimi",
+            "llama",
+            "llm",
+            "llm-serving",
+            "model-serving",
+            "moe",
+            "openai",
+            "pytorch",
+            "qwen",
+            "qwen3",
+            "tpu",
+            "transformer"
+          ],
+          "stars": 75498,
+          "forks": 15240,
+          "defaultBranch": "main",
+          "updatedAt": "2026-04-07T01:02:16Z",
+          "pushedAt": "2026-04-07T00:21:09Z",
+          "license": "Apache-2.0",
+          "readme": "<!-- markdownlint-disable MD001 MD041 -->\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png\">\n    <img alt=\"vLLM\" src=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-light.png\" width=55%>\n  </picture>\n</p>\n\n<h3 align=\"center\">\nEasy, fast, and cheap LLM serving for everyone\n</h3>\n\n<p align=\"center\">\n| <a href=\"https://docs.vllm.ai\"><b>Documentation</b></a> | <a href=\"https://blog.vllm.ai/\"><b>Blog</b></a> | <a href=\"https://arxiv.org/abs/2309.06180\"><b>Paper</b></a> | <a href=\"https://x.com/vllm_project\"><b>Twitter/X</b></a> | <a href=\"https://discuss.vllm.ai\"><b>User Forum</b></a> | <a href=\"https://slack.vllm.ai\"><b>Developer Slack</b></a> |\n</p>\n\n🔥 We have built a vllm website to help you get started with vllm. Please visit [vllm.ai](https://vllm.ai) to learn more.\nFor events, please visit [vllm.ai/events](https://vllm.ai/events) to join us.\n\n---\n\n## About\n\nvLLM is a fast and easy-to-use library for LLM inference and serving.\n\nOriginally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley, vLLM has evolved into a community-driven project with contributions from both academia and industry.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)\n- Continuous batching of incoming requests\n- Fast model execution with CUDA/HIP graph\n- Quantizations: [GPTQ](https://arxiv.org/abs/2210.17323), [AWQ](https://arxiv.org/abs/2306.00978), [AutoRound](https://arxiv.org/abs/2309.05516), INT4, INT8, and FP8\n- Optimized CUDA kernels, including integration with FlashAttention and FlashInfer\n- Speculative decoding\n- Chunked prefill\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor, pipeline, data and expert parallelism support for distributed inference\n- Streaming outputs\n- OpenAI-compatible API server\n- Support for NVIDIA GPUs, AMD CPUs and GPUs, Intel CPUs and GPUs, PowerPC CPUs, Arm CPUs, and TPU. Additionally, support for diverse hardware plugins such as Intel Gaudi, IBM Spyre and Huawei Ascend.\n- Prefix caching support\n- Multi-LoRA support\n\nvLLM seamlessly supports most popular open-source models on HuggingFace, including:\n\n- Transformer-like LLMs (e.g., Llama)\n- Mixture-of-Expert LLMs (e.g., Mixtral, Deepseek-V2 and V3)\n- Embedding Models (e.g., E5-Mistral)\n- Multi-modal LLMs (e.g., LLaVA)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n\n## Getting Started\n\nInstall vLLM with `pip` or [from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source):\n\n```bash\npip install vllm\n```\n\nVisit our [documentation](https://docs.vllm.ai/en/latest/) to learn more.\n\n- [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)\n- [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)\n- [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)\n\n## Contributing\n\nWe welcome and value any contributions and collaborations.\nPlease check out [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) for how to get involved.\n\n## Citation\n\nIf you use vLLM for your research, please cite our [paper](https://arxiv.org/abs/2309.06180):\n\n```bibtex\n@inproceedings{kwon2023efficient,\n  title={Efficient Memory Management for Large Language Model Serving with PagedAttention},\n  author={Woosuk Kwon and Zhuohan Li and Siyuan Zhuang and Ying Sheng and Lianmin Zheng and Cody Hao Yu and Joseph E. Gonzalez and Hao Zhang and Ion Stoica},\n  booktitle={Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles},\n  year={2023}\n}\n```\n\n## Contact Us\n\n<!-- --8<-- [start:contact-us] -->\n- For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues)\n- For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)\n- For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)\n- For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature\n- For collaborations and partnerships, please contact us at [collaboration@vllm.ai](mailto:collaboration@vllm.ai)\n<!-- --8<-- [end:contact-us] -->\n\n## Media Kit\n\n- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)\n",
+          "recentCommitCount30d": 100,
+          "latestRelease": {
+            "tagName": "v0.19.0",
+            "name": "v0.19.0",
+            "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.19.0",
+            "publishedAt": "2026-04-03T02:19:12Z",
+            "prerelease": false,
+            "draft": false,
+            "body": "# vLLM v0.19.0\r\n\r\n## Highlights\r\nThis release features 448 commits from 197 contributors (54 new)!\r\n\r\n* **Gemma 4 support**: Full Google Gemma 4 architecture support including MoE, multimodal, reasoning, and tool-use capabilities (#38826, #38847). Requires `transformers>=5.5.0`. We recommend using pre-built docker image `vllm/vllm-openai:gemma4` for out of box usage.\r\n* **Zero-bubble async scheduling + speculative decoding**: Async scheduling now supports speculative decoding with zero-bubble overlap, significantly improving throughput (#32951).\r\n* **Model Runner V2 maturation**: MRV2 gains piecewise CUDA graphs for pipeline parallelism (#35162), spec decode rejection sampler with greedy/logprobs support (#37238, #37237), multi-modal embeddings for spec decode (#36097), streaming inputs (#37028), and EPLB support (#37488).\r\n* **ViT Full CUDA Graphs**: Vision encoders (ViT) now support full CUDA graph capture for reduced overhead (#35963).\r\n* **General CPU KV cache offloading**: A simple yet general CPU KV cache offloading mechanism for V1, with pluggable cache policy and block-level preemption handling (#37160, #37874, #34805, #36642, #37853).\r\n* **DBO (Dual-Batch Overlap) generalization**: The microbatch optimization (DBO) now works with general models, not just specific architectures (#37926).\r\n* **NVIDIA B300/GB300 (SM 10.3) support**: Allreduce fusion enabled by default with tuned all-reduce communicator (#37755, #37756).\r\n* **Transformers v5 compatibility**: Broad compatibility fixes across many models for HuggingFace Transformers v5 (#37681, #38127, #38090, #38247, #38410).\r\n\r\n### Model Support\r\n* New architectures: Gemma 4 (#38826), Cohere ASR (#35809), Cohere Transcribe (#38120), ColQwen3.5 4.5B (#36887), LFM2-ColBERT-350M (#37528), Granite 4.0 1B Speech (#38019), Qwen3-ForcedAligner (#35367).\r\n* Speculative decoding: Eagle3 for Pixtral (#37182), EagleMistralLarge3 fix (#37232).\r\n* LoRA expansion: H2OVL tower/connector LoRA (#31696), `--lora-target-modules` to restrict LoRA to specific modules (#34984), `language_model_only` respected (#37375), Mistral3 fix (#36928), Qwen3.5 fix (#36976), out-of-tree ops replacement (#37181).\r\n* Model fixes: NemotronH MTP + Chunked Prefill (#35447), Qwen3-VL video timestamps (#37439), Qwen3.5 GDN quantized models (#37448), Qwen3Next A_log FP32 (#37810), JAIS ALiBi (#37820), RoBERTa CUDA graph position IDs (#37873), AudioFlamingo3/MusicFlamingo (#37643), Music Flamingo loading (#35535), bge-m3 task selection (#37632), Nemotron Parse loading (#37407), GLM OCR patch merger (#37962), PaddleOCR checkpoint compat (#38232), DeepSeek v3.2 params (#33703), MiniMax NVFP4 weight loading (#37214), gated model HF token (#37920), Parakeet OOM on long audio (#36671).\r\n* Features: Temporal compression for Nemotron-3-VL videos (#36808), NemotronH Puzzle + MTP (#37803), torch.compile for InternVL vision encoder (#38049), multiple embedding types in single call (#35829).\r\n* Performance: GLM-4.xv ViT optimization (#37779).\r\n\r\n### Engine Core\r\n* **Zero-bubble async scheduling + speculative decoding** (#32951).\r\n* **Model Runner V2**: PP CUDA graphs (#35162), spec decode rejection sampler greedy (#37238) + logprobs (#37237), multimodal embeddings for spec decode (#36097), streaming inputs (#37028), configurable acceptance rate (#38045), FP32 draft logits (#37526), FP64 Gumbel noise (#37798), warmup with spec decode (#37812).\r\n* **ViT Full CUDA Graph** capture (#35963).\r\n* **General CPU KV cache offloading** with pluggable CachePolicy (#37160, #37874), block-level preemption (#34805), multiple KV groups (#36642), hybrid model support (#37853).\r\n* **DBO for general models**: Microbatch optimization generalized beyond specific architectures (#37926).\r\n* **Compilation**: Mega AOT artifact for torch 2.12+ (#37198), lazy graph module to defer recompile (#37609), remove model tag requirement for compile cache (#37345), Triton autotuning disk cache enabled by default (#37188), inductor runtime asserts disabled by default (#37485).\r\n* **FlexAttention**: Custom mask modification support (#37692).\r\n* **Attention**: Distinguish short extends vs decodes (#37303), allow qk_nope_head_dim=192 in FlashInfer MLA (#37475), skip sliding window attention layers with FP8 KV cache (#33695).\r\n* **Scheduling**: Schedule requests based on full input sequence length (#37307).\r\n* **Spec decode**: Per-draft-model MoE backend via `--speculative-config` (#37880), Eagle3 drafter quant_config propagation (#37280), Eagle3 norm_before_fc propagation (#38111).\r\n* **Extensibility**: PluggableLayer for CustomQwen2Decoder (#37293), tensor IPC transfer for multimodal data (#32104).\r\n* **Performance**: Optimize top-k in Triton sampler (#37225), optimize token_embed for pooling models with 1% improvement (#37347), fix slow hasattr in CUDAGraphWrapper (#37425), NFS prefetch auto-enabled with RAM guard (#37673), pybase64 replacement (#37290), optimize swap_states for hybrid models (#34733).\r\n* **Bugfixes**: Fix gibberish from FP8 MLA KV scale inconsistency (#37054), Mamba state corruption (#37728), deadlock with pause/resume (#37024), FlashInfer MNNVL socket collisions (#36674), multimodal prefix cache key collisions (#36708), DP coordinator ZMQ TOCTOU (#37452), CUDA graph memory double-counting (#37426), pooling non-determinism (#37775), AllReduce Fusion shutdown crash (#36955), FlashInfer allreduce workspace (#37461), async spec decoding with hybrid models (#38556), MLA sparse indexer prefill chunking (#36178), KV offloading + MLA (#37536), async scheduling extra CUDA context (#37449), DP MTP dummy run (#35243), offloading+prefetch for GLM-4.7-FP8 (#37178), max memory for multiple KV-cache groups (#36030).\r\n\r\n### Hardware & Performance\r\n* **NVIDIA**:\r\n  * B300/GB300 (SM 10.3): Allreduce fusion enabled by default (#37755), tuned all-reduce communicator (#37756).\r\n  * Blackwell: Optimized SM120 CUTLASS blockwise FP8 GEMM (#37970), fix NVFP4 NaN on desktop Blackwell (#37725), fix DeepGEMM E8M0 accuracy for Qwen3.5 FP8 (#38083), restore FP8 FlashMLA CUDA graph persistent buffers (#35175), DGX Spark fix (#38126).\r\n  * FlashInfer sparse MLA as default for FP8 KV cache (#37252).\r\n  * Tuned prefill configs for FP8 FA3 (#36265), tuned Triton MoE config for Qwen3.5 on H200 with 9.9% E2E improvement (#37340), H800 MoE configs (#31201).\r\n  * GPT-OSS: Router GEMM kernel (#37205), eliminate padding with FlashInfer MXFP4/MXFP8 MoE (#30647), reduce redundant SparseMatrix creation (#37683).\r\n  * NVFP4 CUTLASS MoE non-gated support (#37320), fuse pack topk in TRTLLM MoE via torch.compile (#37695).\r\n  * Non-contiguous KV cache in TRTLLM FP8 dequant kernel (#36867), Qwen3 dual stream input projection (#36795).\r\n* **AMD ROCm**:\r\n  * ROCm 7.2.1, torch 2.10, triton 3.6 (#38252).\r\n  * DeepEP as all2all backend (#34692).\r\n  * Persistent MLA kernel from AITER (#36574), FP8xFP8 attention in AITER (#36927).\r\n  * AWQ Marlin support (#36505), wvSplitK skinny GEMM for RDNA4/gfx1x (#34709).\r\n  * Nightly Docker image and wheel releases (#37283).\r\n  * Bugfixes: Sleep mode memory leak (#37533), hybrid model stride (#37228), qwen3_next crash (#36795).\r\n* **Intel XPU**: MLA model support (#37143), CompressedTensor W4A8 (#37207), auto-detect XPU build platform (#37634).\r\n* **TPU**: Async scheduling interface (#36924), Qwen3.5 FP8 weight loading fix (#37348).\r\n* **CPU**: Enable tcmalloc by default (#37607), graceful degradation without tcmalloc/libiomp (#37561), 48.9% throughput improvement for pooling models (#38139), OpenMP thread fix for torch.compile (#37538), structured output crash fix (#37706), KV cache block zeroing crash fix (#37550), slot mapping kernel (#37987), W4A16 compressed tensors (#38219).\r\n* **Performance fixes**: FP8 DeepGEMM batch invariance (#37718), Triton autotuning for Qwen3.5 (#37338), TRTLLM NVFP4 routing precision (#36725).\r\n\r\n### Large Scale Serving\r\n* **Disaggregated serving**: PD kv_transfer_params for Anthropic Messages (#37535) and Responses API (#37424), Mooncake heterogeneous TP (#36869), Mamba N-1 prefill for P/D (#37310).\r\n* **EPLB**: MRV2 support (#37488), improved responsiveness (#36271), EP weight filter fix (#37322).\r\n* **Elastic EP**: Fix repeated scale up/down cycles (#37131), fix stateless group port races (#36330).\r\n* **DBO**: Generalized to work with all models (#37926).\r\n* **Multi-node**: Fix allreduce fusion (#38136).\r\n* **KV connector**: Plugin-overridable metadata build (#37336).\r\n* **Constraints**: Cap API servers to 1 with Elastic EP (#37466).\r\n\r\n### Quantization\r\n* **Online MXFP8** quantization for MoE and dense models (#35448).\r\n* **FP8**: WoQ kernel abstraction (#32929), Marlin FP8 for compressed tensors fix (#38092).\r\n* **NVFP4**: Rescale weight scales to fix BF16 dequant underflow (#34577), fix Marlin NaN/Inf with float16 (#33972).\r\n* **QeRL**: Online quantization composed with quantized reloading for RLHF (#38032).\r\n* **CPU**: W4A16 compressed tensors (#38219).\r\n* **XPU**: CompressedTensor W4A8 (#37207).\r\n* **ROCm**: AWQ Marlin support (#36505).\r\n* **MXFP8 + DeepGEMM**: Fix crash when both are active (#37358).\r\n* **Removals**: Per-tensor-per-channel FP8 removed (#32700), Sparse24 integration and kernels removed (#36799).\r\n\r\n### API & Frontend\r\n* **New endpoints**: `/v1/chat/completions/batch` for batched chat completions (#38011).\r\n* **Features**: Limit thinking tokens (hard limit) (#20859), multiple embedding types in single call (#35829), numpy array embeddings for multimodal (#38119), `--lora-target-modules` (#34984), `-sc` shorthand for `--speculative-config` (#38380).\r\n* **Tool parsing**: GigaChat 3.1 parser (#36664), Kimi-K2.5 reasoning/tool parser (#37438), Gemma 4 tool parser (#38847), tools passed to parser constructor (#38029), fix Mistral parser (#37209), fix DeepSeek v3.2 streaming (#36056), fix GLM-4.7 parsing (#37386), fix Hermes streaming (#38168), fix OpenAI tool parser IndexError (#37958), fix Anthropic streaming (#37510).\r\n* **Responses API**: Fix crash with tool_choice=required exceeding max_output_tokens (#37258), fix TTFT recording (#37498), fix Anthropic serving template kwargs (#37899).\r\n* **Performance**: Offload blocking tokenizer ops to thread pool (#34789).\r\n* **Deprecations**: `--calculate-kv-scales` (#37201), `score` task (#37537), pooling multi-task support (#37956), `reasoning_content` message field removed (#37480).\r\n* **Bugfixes**: Embed/classify task routing (#37573), Cohere embed task instruction (#38362), renderer workers restricted to 1 with MM cache (#38418).\r\n* **UX**: Log once per node by default (#37568), torch profiler with stack enabled (#37571).\r\n\r\n### Security\r\n* Add `VLLM_MAX_N_SEQUENCES` environment variable to enforce sequence limits (#37952).\r\n* Enforce frame limit in VideoMediaIO to prevent resource exhaustion (#38636).\r\n\r\n### Dependencies\r\n* Transformers v5 compatibility across many models (#37681, #38127, #38247, #38410, #38090).\r\n* ROCm 7.2.1, torch 2.10, triton 3.6 for ROCm builds (#38252).\r\n* compressed-tensors bumped to 0.14.0.1 (#36988).\r\n* Python OpenAI package bumped (#32316).\r\n* flashinfer-cubin added as default CUDA dependency (#37233).\r\n* librosa removed from audio dependencies (#37058).\r\n\r\n### V0 Deprecation\r\n* Deprecate virtual engine (#37195).\r\n* Deprecate `--disable-frontend-multiprocessing` (#37612).\r\n* Refactor KV cache from list to element (#37487).\r\n\r\n### New Contributors\r\n* @aaab8b made their first contribution in #37533\r\n* @aasgaonkar made their first contribution in #35386\r\n* @allgather made their first contribution in #38410\r\n* @avinashsingh77 made their first contribution in #37100\r\n* @b-mu made their first contribution in #35963\r\n* @bongwoobak made their first contribution in #37424\r\n* @brandonpelfrey made their first contribution in #32104\r\n* @ccrhx4 made their first contribution in #37634\r\n* @cdpath made their first contribution in #37510\r\n* @cemigo114 made their first contribution in #37064\r\n* @cnyvfang made their first contribution in #37439\r\n* @DanBlanaru made their first contribution in #37307\r\n* @DorBernsohn made their first contribution in #37438\r\n* @dsingal0 made their first contribution in #37923\r\n* @fxdawnn made their first contribution in #36038\r\n* @grYe99 made their first contribution in #38074\r\n* @guillaumeguy made their first contribution in #38119\r\n* @gxd3 made their first contribution in #36924\r\n* @he-yufeng made their first contribution in #37301\r\n* @javierdejesusda made their first contribution in #37920\r\n* @jetxa made their first contribution in #37899\r\n* @jhsmith409 made their first contribution in #37448\r\n* @jrplatin made their first contribution in #37348\r\n* @kjiang249 made their first contribution in #37475\r\n* @laudney made their first contribution in #34709\r\n* @lcskrishna made their first contribution in #34692\r\n* @li-liwen made their first contribution in #38108\r\n* @Liangyx2 made their first contribution in #37523\r\n* @MatejRojec made their first contribution in #38011\r\n* @Nekofish-L made their first contribution in #37970\r\n* @pjo256 made their first contribution in #34733\r\n* @r266-tech made their first contribution in #37820\r\n* @RobTand made their first contribution in #37725\r\n* @scyyh11 made their first contribution in #34789\r\n* @SherryC41 made their first contribution in #37519\r\n* @shwetha-s-poojary made their first contribution in #31696\r\n* @siewcapital made their first contribution in #36955\r\n* @SKPsanjeevi made their first contribution in #36574\r\n* @thillai-c made their first contribution in #37231\r\n* @tianrengao made their first contribution in #34389\r\n* @tmm77 made their first contribution in #37694\r\n* @utsumi-fj made their first contribution in #38328\r\n* @vineetatiwari27 made their first contribution in #37998\r\n* @Wangbei25 made their first contribution in #37293\r\n* @WindChimeRan made their first contribution in #35007\r\n* @wjhrdy made their first contribution in #37706\r\n* @XLiu-2000 made their first contribution in #37371\r\n* @xueliangyang-oeuler made their first contribution in #37536\r\n* @yanghui1-arch made their first contribution in #37873\r\n* @yassha made their first contribution in #37369\r\n* @yeahdongcn made their first contribution in #37840\r\n* @Young-Leo made their first contribution in #37565\r\n* @ZeldaHuang made their first contribution in #37425\r\n* @zhejiangxiaomai made their first contribution in #37259\r\n\r\n"
           },
           "source": [
             {
@@ -422,25 +539,17 @@
             },
             {
               "kind": "topic",
-              "value": "llm-inference"
-            },
-            {
-              "kind": "topic",
               "value": "model-serving"
-            },
-            {
-              "kind": "topic",
-              "value": "benchmark"
             }
           ]
         },
         "score": {
-          "maturityScore": 80,
-          "compatibilityScore": 77,
+          "maturityScore": 95,
+          "compatibilityScore": 61,
           "performancePotentialScore": 42,
           "maintenanceRiskScore": 20,
           "adoptionSignalScore": 100,
-          "finalUpgradeScore": 76,
+          "finalUpgradeScore": 75,
           "estimatedPerformanceGainPct": 37,
           "estimatedCostReductionPct": 19,
           "hardVetoReasons": [],
@@ -448,8 +557,8 @@
             "activeLast30Days": true,
             "hasStableRelease": true,
             "commercialLicense": true,
-            "documentationComplete": false,
-            "compatibilityAtLeast70": true,
+            "documentationComplete": true,
+            "compatibilityAtLeast70": false,
             "projectedPerformanceGainAtLeast15Pct": true,
             "projectedCostReductionAtLeast10Pct": true,
             "avoidsProductionSecurityBoundary": true
@@ -457,8 +566,8 @@
           "qualifyingSignalCount": 7,
           "eligibleForValidation": true,
           "summary": [
-            "Active commits in last 30 days: 27",
-            "Latest release: v0.8.2",
+            "Active commits in last 30 days: 100",
+            "Latest release: v0.19.0",
             "License: Apache-2.0",
             "Projected performance gain: 37%",
             "Projected cost reduction: 19%"
@@ -499,18 +608,28 @@
   ],
   "executionRecords": [
     {
-      "candidateKey": "vllm-project/vllm@v0.8.2",
-      "status": "dry-run",
-      "branchName": "upgrade/2026-04-03-vllm-012333",
-      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-04-03-vllm-012333/UPGRADE_REPORT.md",
-      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-04-03-vllm-012333/PR_BODY.md).",
-      "executedAt": "2026-04-03T01:23:33.575Z"
+      "candidateKey": "browser-use/browser-use@0.12.6",
+      "status": "skipped",
+      "branchName": "upgrade/2026-04-07-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-04-07-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-04-07T01:24:59.362Z"
+    },
+    {
+      "candidateKey": "vllm-project/vllm@v0.19.0",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-04-07-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-04-07-vllm/UPGRADE_REPORT.md",
+      "commitSha": "e303fff8d327dbcc7c4e507da919237cf5d8f0f1",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/22",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-04-07T01:24:59.362Z"
     }
   ],
   "failures": [],
   "recommendations": [
     "No failed upgrade attempts require immediate action.",
-    "No PR was opened automatically in this run.",
+    "Review newly opened staging PRs and decide whether to promote to canary.",
     "Production remains gated and must keep environment protection rules enabled."
   ]
 }
