@@ -1,44 +1,42 @@
 # AI Architecture Radar Daily Report
 
-- Executed at: 2026-05-23T02:05:58.598Z
-- Discovered candidates: 103
-- Report path: /home/runner/work/openclaw/openclaw/reports/2026-05-23-ai-radar.md
+- Executed at: 2026-05-24T02:14:42.124Z
+- Discovered candidates: 5
+- Report path: /home/runner/work/openclaw/openclaw/reports/2026-03-25-ai-radar.md
 
 ## Executive Summary
-- Winner: browser-use/browser-use@0.12.7 (score 80)
-- Eligible candidates in today's shortlist: 2/5
-- Planned upgrade executions: 2
+- Winner: vllm-project/vllm@v0.8.2 (score 76)
+- Eligible candidates in today's shortlist: 1/5
+- Planned upgrade executions: 1
 - Failed execution records: 0
 - Auto-created upgrade PRs during planning: 0
 
 ## Top Candidate Scoreboard
 | Rank | Repo | Score | Release | Perf Gain | Cost Down | Eligible | Vetoes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | browser-use/browser-use | 80 | 0.12.7 | 27% | 4% | yes | none |
-| 2 | vllm-project/vllm | 75 | v0.21.0 | 37% | 19% | yes | none |
-| 3 | langchain-ai/langgraph | 70 | sdk==0.3.15 | 9% | 4% | no | none |
-| 4 | lobehub/lobehub | 69 | v2.2.0 | 27% | 14% | no | license_unknown |
-| 5 | openai/openai-agents-python | 68 | v0.17.3 | 9% | 4% | no | benchmark_unverifiable |
+| 1 | vllm-project/vllm | 76 | v0.8.2 | 37% | 19% | yes | none |
+| 2 | langchain-ai/langgraph | 71 | v0.3.5 | 27% | 4% | no | none |
+| 3 | browser-use/browser-use | 69 | v1.9.0 | 27% | 4% | no | none |
+| 4 | microsoft/autogen | 66 | v0.6.3 | 27% | 4% | no | none |
+| 5 | openai/openai-agents-python | 65 | v0.4.1 | 27% | 4% | no | none |
 
 ## Top Candidates
-1. browser-use/browser-use | score=80 | release=0.12.7 | vetoes=none
-2. vllm-project/vllm | score=75 | release=v0.21.0 | vetoes=none
-3. langchain-ai/langgraph | score=70 | release=sdk==0.3.15 | vetoes=none
-4. lobehub/lobehub | score=69 | release=v2.2.0 | vetoes=license_unknown
-5. openai/openai-agents-python | score=68 | release=v0.17.3 | vetoes=benchmark_unverifiable
+1. vllm-project/vllm | score=76 | release=v0.8.2 | vetoes=none
+2. langchain-ai/langgraph | score=71 | release=v0.3.5 | vetoes=none
+3. browser-use/browser-use | score=69 | release=v1.9.0 | vetoes=none
+4. microsoft/autogen | score=66 | release=v0.6.3 | vetoes=none
+5. openai/openai-agents-python | score=65 | release=v0.4.1 | vetoes=none
 
 ## Discovery Notes
-- browser-use/browser-use: Active commits in last 30 days: 84; Latest release: 0.12.7; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
-- vllm-project/vllm: Active commits in last 30 days: 100; Latest release: v0.21.0; License: Apache-2.0; Projected performance gain: 37%; Projected cost reduction: 19%
-- langchain-ai/langgraph: Active commits in last 30 days: 100; Latest release: sdk==0.3.15; License: MIT; Projected performance gain: 9%; Projected cost reduction: 4%
-- lobehub/lobehub: Active commits in last 30 days: 100; Latest release: v2.2.0; License: NOASSERTION; Projected performance gain: 27%; Projected cost reduction: 14%
-- openai/openai-agents-python: Active commits in last 30 days: 100; Latest release: v0.17.3; License: MIT; Projected performance gain: 9%; Projected cost reduction: 4%
+- vllm-project/vllm: Active commits in last 30 days: 27; Latest release: v0.8.2; License: Apache-2.0; Projected performance gain: 37%; Projected cost reduction: 19%
+- langchain-ai/langgraph: Active commits in last 30 days: 18; Latest release: v0.3.5; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- browser-use/browser-use: Active commits in last 30 days: 31; Latest release: v1.9.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- microsoft/autogen: Active commits in last 30 days: 12; Latest release: v0.6.3; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- openai/openai-agents-python: Active commits in last 30 days: 24; Latest release: v0.4.1; License: Apache-2.0; Projected performance gain: 27%; Projected cost reduction: 4%
 
 ## Planned Execution
-- browser-use/browser-use@0.12.7 | status=skipped | branch=upgrade/2026-05-23-browser-use
-  note: Skipped because this candidate version already has an upgrade attempt recorded.
-- vllm-project/vllm@v0.21.0 | status=skipped | branch=upgrade/2026-05-23-vllm
-  note: Skipped because this candidate version already has an upgrade attempt recorded.
+- vllm-project/vllm@v0.8.2 | status=dry-run | branch=upgrade/2026-05-24-vllm
+  note: Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-05-24-vllm/PR_BODY.md).
 
 ## Failures
 - No failures recorded.
