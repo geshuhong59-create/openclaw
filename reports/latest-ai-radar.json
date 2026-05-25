@@ -1,34 +1,120 @@
 {
-  "executedAt": "2026-05-24T02:14:42.124Z",
-  "reportPath": "/home/runner/work/openclaw/openclaw/reports/2026-03-25-ai-radar.md",
-  "discoveredCount": 5,
+  "executedAt": "2026-05-25T02:33:17.779Z",
+  "reportPath": "/home/runner/work/openclaw/openclaw/reports/2026-05-25-ai-radar.md",
+  "discoveredCount": 98,
   "topCandidates": [
+    {
+      "repo": {
+        "fullName": "browser-use/browser-use",
+        "url": "https://github.com/browser-use/browser-use",
+        "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+        "topics": [
+          "ai-agents",
+          "ai-tools",
+          "browser-automation",
+          "browser-use",
+          "llm",
+          "playwright",
+          "python"
+        ],
+        "stars": 95343,
+        "forks": 10730,
+        "defaultBranch": "main",
+        "updatedAt": "2026-05-25T02:29:40Z",
+        "pushedAt": "2026-05-23T19:30:50Z",
+        "license": "MIT",
+        "readme": "<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/774a46d5-27a0-490c-b7d0-e65fcbbfa358\">\n  <img alt=\"Shows a black Browser Use Logo in light color mode and a white one in dark color mode.\" src=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"  width=\"full\">\n</picture>\n\n<div align=\"center\">\n    <picture>\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\">\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6797d09b-8ac3-4cb9-ba07-b289e080765a\">\n    <img alt=\"The AI browser agent.\" src=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"  width=\"400\">\n    </picture>\n</div>\n\n<div align=\"center\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-downloads\"><img src=\"https://media.browser-use.tools/badges/package\" height=\"48\" alt=\"Browser-Use Package Download Statistics\"></a>\n</div>\n\n---\n\n<div align=\"center\">\n<a href=\"#demos\"><img src=\"https://media.browser-use.tools/badges/demos\" alt=\"Demos\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://docs.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/docs\" alt=\"Docs\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browser-use.com/posts\"><img src=\"https://media.browser-use.tools/badges/blog\" alt=\"Blog\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browsermerch.com\"><img src=\"https://media.browser-use.tools/badges/merch\" alt=\"Merch\"></a>\n<img width=\"100\" height=\"1\" alt=\"\">\n<a href=\"https://github.com/browser-use/browser-use\"><img src=\"https://media.browser-use.tools/badges/github\" alt=\"Github Stars\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://x.com/intent/user?screen_name=browser_use\"><img src=\"https://media.browser-use.tools/badges/twitter\" alt=\"Twitter\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://link.browser-use.com/discord\"><img src=\"https://media.browser-use.tools/badges/discord\" alt=\"Discord\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-cloud\"><img src=\"https://media.browser-use.tools/badges/cloud\" height=\"48\" alt=\"Browser-Use Cloud\"></a>\n</div>\n\n</br>\n\n🌤️ Want to skip the setup? Use our <b>[cloud](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-skip-setup)</b> for faster, scalable, stealth-enabled browser automation!\n\n# 🤖 LLM Quickstart\n\n1. Direct your favorite coding agent (Cursor, Claude Code, etc) to [Agents.md](https://docs.browser-use.com/llms-full.txt)\n2. Prompt away!\n\n<br/>\n\n# 👋 Human Quickstart\n\n**1. Create environment and install Browser-Use with [uv](https://docs.astral.sh/uv/) (Python>=3.11):**\n```bash\nuv init && uv add browser-use && uv sync\n# uvx browser-use install  # Run if you don't have Chromium installed\n```\n\n**2. [Optional] Get your API key from [Browser Use Cloud](https://cloud.browser-use.com/new-api-key?utm_source=github&utm_medium=readme-quickstart-api-key):**\n```\n# .env\nBROWSER_USE_API_KEY=your-key\n# GOOGLE_API_KEY=your-key\n# ANTHROPIC_API_KEY=your-key\n```\n\n**3. Run your first agent:**\n```python\nfrom browser_use import Agent, Browser, ChatBrowserUse\n# from browser_use import ChatGoogle  # ChatGoogle(model='gemini-3-flash-preview')\n# from browser_use import ChatAnthropic  # ChatAnthropic(model='claude-sonnet-4-6')\nimport asyncio\n\nasync def main():\n    browser = Browser(\n        # use_cloud=True,  # Use a stealth browser on Browser Use Cloud\n    )\n\n    agent = Agent(\n        task=\"Find the number of stars of the browser-use repo\",\n        llm=ChatBrowserUse(),\n        # llm=ChatGoogle(model='gemini-3-flash-preview'),\n        # llm=ChatAnthropic(model='claude-sonnet-4-6'),\n        browser=browser,\n    )\n    await agent.run()\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nCheck out the [library docs](https://docs.browser-use.com/open-source/introduction) and the [cloud docs](https://docs.cloud.browser-use.com?utm_source=github&utm_medium=readme-cloud-docs) for more!\n\n<br/>\n\n# Open Source vs Cloud\n\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"static/accuracy_by_model_light.png\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/accuracy_by_model_dark.png\">\n  <img alt=\"BU Bench V1 - LLM Success Rates\" src=\"static/accuracy_by_model_light.png\" width=\"100%\">\n</picture>\n\nWe benchmark Browser Use across 100 real-world browser tasks. Full benchmark is open source: **[browser-use/benchmark](https://github.com/browser-use/benchmark)**.\n\n**Use the Open-Source Agent**\n- You need [custom tools](https://docs.browser-use.com/customize/tools/basics) or deep code-level integration\n- We recommend pairing with our [cloud browsers](https://docs.browser-use.com/open-source/customize/browser/remote) for leading stealth, proxy rotation, and scaling\n- Or self-host the open-source agent fully on your own machines\n\n**Use the [Fully-Hosted Cloud Agent](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-hosted-agent) (recommended)**\n- Much more powerful agent for complex tasks (see plot above)\n- Easiest way to start and scale\n- Best stealth with proxy rotation and captcha solving\n- 1000+ integrations (Gmail, Slack, Notion, and more)\n- Persistent filesystem and memory\n\n<br/>\n\n# Demos\n\n\n### 📋 Form-Filling\n#### Task = \"Fill in this job application with my resume and information.\"\n![Job Application Demo](https://github.com/user-attachments/assets/57865ee6-6004-49d5-b2c2-6dff39ec2ba9)\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/apply_to_job.py)\n\n\n### 🍎 Grocery-Shopping\n#### Task = \"Put this list of items into my instacart.\"\n\nhttps://github.com/user-attachments/assets/a6813fa7-4a7c-40a6-b4aa-382bf88b1850\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/buy_groceries.py)\n\n\n### 💻 Personal-Assistant.\n#### Task = \"Help me find parts for a custom PC.\"\n\nhttps://github.com/user-attachments/assets/ac34f75c-057a-43ef-ad06-5b2c9d42bf06\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/pcpartpicker.py)\n\n\n### 💡See [more examples here ↗](https://docs.browser-use.com/examples) and give us a star!\n\n<br/>\n\n# 🚀 Template Quickstart\n\n**Want to get started even faster?** Generate a ready-to-run template:\n\n```bash\nuvx browser-use init --template default\n```\n\nThis creates a `browser_use_default.py` file with a working example. Available templates:\n- `default` - Minimal setup to get started quickly\n- `advanced` - All configuration options with detailed comments\n- `tools` - Examples of custom tools and extending the agent\n\nYou can also specify a custom output path:\n```bash\nuvx browser-use init --template default --output my_agent.py\n```\n\n<br/>\n\n# 💻 CLI\n\nFast, persistent browser automation from the command line:\n\n```bash\nbrowser-use open https://example.com    # Navigate to URL\nbrowser-use state                       # See clickable elements\nbrowser-use click 5                     # Click element by index\nbrowser-use type \"Hello\"                # Type text\nbrowser-use screenshot page.png         # Take screenshot\nbrowser-use close                       # Close browser\n```\n\nThe CLI keeps the browser running between commands for fast iteration. See [CLI docs](browser_use/skill_cli/README.md) for all commands.\n\n### Claude Code Skill\n\nFor [Claude Code](https://claude.ai/code), install the skill to enable AI-assisted browser automation:\n\n```bash\nmkdir -p ~/.claude/skills/browser-use\ncurl -o ~/.claude/skills/browser-use/SKILL.md \\\n  https://raw.githubusercontent.com/browser-use/browser-use/main/skills/browser-use/SKILL.md\n```\n\n<br/>\n\n## Integrations, hosting, custom tools, MCP, and more on our [Docs ↗](https://docs.browser-use.com)\n\n<br/>\n\n# FAQ\n\n<details>\n<summary><b>What's the best model to use?</b></summary>\n\nWe optimized **ChatBrowserUse()** specifically for browser automation tasks. On avg it completes tasks 3-5x faster than other models with SOTA accuracy.\n\n**Pricing (per 1M tokens):**\n- Input tokens: $0.20\n- Cached input tokens: $0.02\n- Output tokens: $2.00\n\nFor other LLM providers, see our [supported models documentation](https://docs.browser-use.com/supported-models).\n</details>\n\n<details>\n<summary><b>Should I use the Browser Use system prompt with the open-source preview model?</b></summary>\n\nYes. If you use `ChatBrowserUse(model='browser-use/bu-30b-a3b-preview')` with a normal `Agent(...)`, Browser Use still sends its default agent system prompt for you.\n\nYou do **not** need to add a separate custom \"Browser Use system message\" just because you switched to the open-source preview model. Only use `extend_system_message` or `override_system_message` when you intentionally want to customize the default behavior for your task.\n\nIf you want the best default speed/accuracy, we still recommend the newer hosted `bu-*` models. If you want the open-source preview model, the setup stays the same apart from the `model=` value.\n</details>\n\n<details>\n<summary><b>Can I use custom tools with the agent?</b></summary>\n\nYes! You can add custom tools to extend the agent's capabilities:\n\n```python\nfrom browser_use import Tools\n\ntools = Tools()\n\n@tools.action(description='Description of what this tool does.')\ndef custom_tool(param: str) -> str:\n    return f\"Result: {param}\"\n\nagent = Agent(\n    task=\"Your task\",\n    llm=llm,\n    browser=browser,\n    tools=tools,\n)\n```\n\n</details>\n\n<details>\n<summary><b>Can I use this for free?</b></summary>\n\nYes! Browser-Use is open source and free to use. You only need to choose an LLM provider (like OpenAI, Google, ChatBrowserUse, or run local models with Ollama).\n</details>\n\n<details>\n<summary><b>Terms of Service</b></summary>\n\nThis open-source library is licensed under the MIT License. For Browser Use services & data policy, see our [Terms of Service](https://browser-use.com/legal/terms-of-service) and [Privacy Policy](https://browser-use.com/privacy/).\n</details>\n\n<details>\n<summary><b>How do I handle authentication?</b></summary>\n\nCheck out our authentication examples:\n- [Using real browser profiles](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py) - Reuse your existing Chrome profile with saved logins\n- If you want to use temporary accounts with inbox, choose AgentMail\n- To sync your auth profile with the remote browser, run `curl -fsSL https://browser-use.com/profile.sh | BROWSER_USE_API_KEY=XXXX sh` (replace XXXX with your API key)\n\nThese examples show how to maintain sessions and handle authentication seamlessly.\n</details>\n\n<details>\n<summary><b>How do I solve CAPTCHAs?</b></summary>\n\nFor CAPTCHA handling, you need better browser fingerprinting and proxies. Use [Browser Use Cloud](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-captcha) which provides stealth browsers designed to avoid detection and CAPTCHA challenges.\n</details>\n\n<details>\n<summary><b>How do I go into production?</b></summary>\n\nChrome can consume a lot of memory, and running many agents in parallel can be tricky to manage.\n\nFor production use cases, use our [Browser Use Cloud API](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-production) which handles:\n- Scalable browser infrastructure\n- Memory management\n- Proxy rotation\n- Stealth browser fingerprinting\n- High-performance parallel execution\n</details>\n\n<br/>\n\n<div align=\"center\">\n\n**Tell your computer what to do, and it gets it done.**\n\n<img src=\"https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f\" width=\"400\"/>\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)\n&emsp;&emsp;&emsp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)\n\n</div>\n\n<div align=\"center\"> Made with ❤️ in Zurich and San Francisco </div>\n",
+        "recentCommitCount30d": 93,
+        "latestRelease": {
+          "tagName": "0.12.8",
+          "name": "0.12.8",
+          "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/0.12.8",
+          "publishedAt": "2026-05-23T19:29:53Z",
+          "prerelease": false,
+          "draft": false,
+          "body": "## What's Changed\r\n* fix(daemon): restrict unix socket file to owner-only access by @sauravpanda in https://github.com/browser-use/browser-use/pull/4870\r\n* docs: clarify integration example placement by @felix-windsor in https://github.com/browser-use/browser-use/pull/4856\r\n* fix(tools): refuse evaluate() on restricted browser profiles by @sauravpanda in https://github.com/browser-use/browser-use/pull/4871\r\n* chore(llm): default ChatBrowserUse to bu-2-0 by @sauravpanda in https://github.com/browser-use/browser-use/pull/4876\r\n* feat: add client header to GoogleChat by @markmcd in https://github.com/browser-use/browser-use/pull/4884\r\n* chore(llm): recommend gemini-3-flash-preview in examples and tests by @sauravpanda in https://github.com/browser-use/browser-use/pull/4885\r\n* Add OpenRouter pricing fallback for token costs by @sauravpanda in https://github.com/browser-use/browser-use/pull/4886\r\n* agent(history): freeze HistoryItem + lock byte-prefix property by @sauravpanda in https://github.com/browser-use/browser-use/pull/4890\r\n* agent(prompts): move per-step metadata out of <agent_state> into a tail block by @sauravpanda in https://github.com/browser-use/browser-use/pull/4891\r\n* feat: forward cached_content into generate_content by @sauravpanda in https://github.com/browser-use/browser-use/pull/4889\r\n* Move user request before agent history by @MagMueller in https://github.com/browser-use/browser-use/pull/4897\r\n* Bump version to 0.12.8 by @MagMueller in https://github.com/browser-use/browser-use/pull/4899\r\n* Revert ChatGoogle cached_content forwarding by @MagMueller in https://github.com/browser-use/browser-use/pull/4900\r\n* Revert evaluate restriction on restricted profiles by @MagMueller in https://github.com/browser-use/browser-use/pull/4901\r\n* Trim HistoryItem freeze follow-up by @MagMueller in https://github.com/browser-use/browser-use/pull/4902\r\n\r\n## New Contributors\r\n* @felix-windsor made their first contribution in https://github.com/browser-use/browser-use/pull/4856\r\n\r\n**Full Changelog**: https://github.com/browser-use/browser-use/compare/0.12.7...0.12.8"
+        },
+        "source": [
+          {
+            "kind": "watch_repo",
+            "value": "browser-use/browser-use"
+          }
+        ]
+      },
+      "score": {
+        "maturityScore": 95,
+        "compatibilityScore": 85,
+        "performancePotentialScore": 32,
+        "maintenanceRiskScore": 20,
+        "adoptionSignalScore": 100,
+        "finalUpgradeScore": 80,
+        "estimatedPerformanceGainPct": 27,
+        "estimatedCostReductionPct": 4,
+        "hardVetoReasons": [],
+        "qualifyingSignals": {
+          "activeLast30Days": true,
+          "hasStableRelease": true,
+          "commercialLicense": true,
+          "documentationComplete": true,
+          "compatibilityAtLeast70": true,
+          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedCostReductionAtLeast10Pct": false,
+          "avoidsProductionSecurityBoundary": true
+        },
+        "qualifyingSignalCount": 7,
+        "eligibleForValidation": true,
+        "summary": [
+          "Active commits in last 30 days: 93",
+          "Latest release: 0.12.8",
+          "License: MIT",
+          "Projected performance gain: 27%",
+          "Projected cost reduction: 4%"
+        ]
+      }
+    },
     {
       "repo": {
         "fullName": "vllm-project/vllm",
         "url": "https://github.com/vllm-project/vllm",
-        "description": "High-throughput and memory-efficient inference engine for LLM serving.",
+        "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
         "topics": [
-          "llm-inference",
+          "amd",
+          "blackwell",
+          "cuda",
+          "deepseek",
+          "deepseek-v3",
+          "gpt",
+          "gpt-oss",
+          "inference",
+          "kimi",
+          "llama",
+          "llm",
+          "llm-serving",
           "model-serving",
-          "benchmark"
+          "moe",
+          "openai",
+          "pytorch",
+          "qwen",
+          "qwen3",
+          "tpu",
+          "transformer"
         ],
-        "stars": 42000,
-        "forks": 6200,
+        "stars": 80894,
+        "forks": 17177,
         "defaultBranch": "main",
-        "updatedAt": "2026-03-24T08:20:00Z",
-        "pushedAt": "2026-03-24T08:19:00Z",
+        "updatedAt": "2026-05-25T02:30:50Z",
+        "pushedAt": "2026-05-25T01:19:46Z",
         "license": "Apache-2.0",
-        "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
-        "recentCommitCount30d": 27,
+        "readme": "<!-- markdownlint-disable MD001 MD041 -->\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png\">\n    <img alt=\"vLLM\" src=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-light.png\" width=55%>\n  </picture>\n</p>\n\n<h3 align=\"center\">\nEasy, fast, and cheap LLM serving for everyone\n</h3>\n\n<p align=\"center\">\n| <a href=\"https://docs.vllm.ai\"><b>Documentation</b></a> | <a href=\"https://blog.vllm.ai/\"><b>Blog</b></a> | <a href=\"https://arxiv.org/abs/2309.06180\"><b>Paper</b></a> | <a href=\"https://x.com/vllm_project\"><b>Twitter/X</b></a> | <a href=\"https://discuss.vllm.ai\"><b>User Forum</b></a> | <a href=\"https://slack.vllm.ai\"><b>Developer Slack</b></a> |\n</p>\n\n🔥 We have built a vLLM website to help you get started with vLLM. Please visit [vllm.ai](https://vllm.ai) to learn more.\nFor events, please visit [vllm.ai/events](https://vllm.ai/events) to join us.\n\n---\n\n## About\n\nvLLM is a fast and easy-to-use library for LLM inference and serving.\n\nOriginally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley, vLLM has grown into one of the most active open-source AI projects built and maintained by a diverse community of many dozens of academic institutions and companies from over 2000 contributors.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)\n- Continuous batching of incoming requests, chunked prefill, prefix caching\n- Fast and flexible model execution with piecewise and full CUDA/HIP graphs\n- Quantization: FP8, MXFP8/MXFP4, NVFP4, INT8, INT4, GPTQ/AWQ, GGUF, compressed-tensors, ModelOpt, TorchAO, and [more](https://docs.vllm.ai/en/latest/features/quantization/index.html)\n- Optimized attention kernels including FlashAttention, FlashInfer, TRTLLM-GEN, FlashMLA, and Triton\n- Optimized GEMM/MoE kernels for various precisions using CUTLASS, TRTLLM-GEN, CuTeDSL\n- Speculative decoding including n-gram, suffix, EAGLE, DFlash\n- Automatic kernel generation and graph-level transformations using torch.compile\n- Disaggregated prefill, decode, and encode\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor, pipeline, data, expert, and context parallelism for distributed inference\n- Streaming outputs\n- Generation of structured outputs using xgrammar or guidance\n- Tool calling and reasoning parsers\n- OpenAI-compatible API server, plus Anthropic Messages API and gRPC support\n- Efficient multi-LoRA support for dense and MoE layers\n- Support for NVIDIA GPUs, AMD GPUs, and x86/ARM/PowerPC CPUs. Additionally, diverse hardware plugins such as Google TPUs, Intel Gaudi, IBM Spyre, Huawei Ascend, Rebellions NPU, Apple Silicon, MetaX GPU, and more.\n\nvLLM seamlessly supports 200+ model architectures on Hugging Face, including:\n\n- Decoder-only LLMs (e.g., Llama, Qwen, Gemma)\n- Mixture-of-Expert LLMs (e.g., Mixtral, DeepSeek-V3, Qwen-MoE, GPT-OSS)\n- Hybrid attention and state-space models (e.g., Mamba, Qwen3.5)\n- Multi-modal models (e.g., LLaVA, Qwen-VL, Pixtral)\n- Embedding and retrieval models (e.g., E5-Mistral, GTE, ColBERT)\n- Reward and classification models (e.g., Qwen-Math)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n\n## Getting Started\n\nInstall vLLM with [`uv`](https://docs.astral.sh/uv/) (recommended) or `pip`:\n\n```bash\nuv pip install vllm\n```\n\nOr [build from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source) for development.\n\nVisit our [documentation](https://docs.vllm.ai/en/latest/) to learn more.\n\n- [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)\n- [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)\n- [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)\n\n## Contributing\n\nWe welcome and value any contributions and collaborations.\nPlease check out [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) for how to get involved.\n\n## Citation\n\nIf you use vLLM for your research, please cite our [paper](https://arxiv.org/abs/2309.06180):\n\n```bibtex\n@inproceedings{kwon2023efficient,\n  title={Efficient Memory Management for Large Language Model Serving with PagedAttention},\n  author={Woosuk Kwon and Zhuohan Li and Siyuan Zhuang and Ying Sheng and Lianmin Zheng and Cody Hao Yu and Joseph E. Gonzalez and Hao Zhang and Ion Stoica},\n  booktitle={Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles},\n  year={2023}\n}\n```\n\n## Contact Us\n\n<!-- --8<-- [start:contact-us] -->\n- For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues)\n- For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)\n- For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)\n- For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature\n- For collaborations and partnerships, please contact us at [collaboration@vllm.ai](mailto:collaboration@vllm.ai)\n<!-- --8<-- [end:contact-us] -->\n\n## Media Kit\n\n- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)\n",
+        "recentCommitCount30d": 100,
         "latestRelease": {
-          "tagName": "v0.8.2",
-          "name": "v0.8.2",
-          "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
-          "publishedAt": "2026-03-19T05:20:00Z",
+          "tagName": "v0.21.0",
+          "name": "v0.21.0",
+          "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.21.0",
+          "publishedAt": "2026-05-15T08:44:26Z",
           "prerelease": false,
           "draft": false,
-          "body": "Higher throughput, lower latency, and better benchmark reproducibility."
+          "body": "## Highlights\r\n\r\nThis release features 367 commits from 202 contributors (49 new)!\r\n\r\n* **Transformers v4 deprecated**: This release formally deprecates `transformers` v4 support (#40389). Users should migrate to `transformers` v5.\r\n* **C++20 build requirement**: vLLM now requires a C++20-compatible compiler for compatibility with PyTorch (#40380). This is a **breaking build change**.\r\n* **KV Offload + Hybrid Memory Allocator (HMA)**: The KV offloading subsystem now integrates with the Hybrid Memory Allocator, including scheduler-side sliding window group support and full HMA enablement (#41228, #41445, #39571).\r\n* **Speculative decoding with thinking budget**: Speculative decoding now respects reasoning/thinking budgets, enabling correct spec decode for reasoning models (#34668).\r\n* **TOKENSPEED_MLA backend on Blackwell**: A new TOKENSPEED_MLA attention backend is available for DeepSeek-R1/Kimi-K25 prefill + decode on Blackwell GPUs (#41778).\r\n\r\n### Model Support\r\n* New architectures: MiMo-V2.5 (#40967), Laguna XS.2 (#41129, #41880), Moondream3 (#32325), Qianfan-OCR (#40136), Cohere MoE (#40817), Cohere Eagle (#42078).\r\n* Speculative decoding: EAGLE for Mistral (#41024), Gemma4 MTP (#41745), MTP for MiMo-V2.5 (#41905), Cohere Eagle (#42078).\r\n* DeepSeek V4: AMD/ROCm support (#40871), pipeline parallelism (#41694), `max` reasoning effort (#40982), disaggregated serving fixes (#41957).\r\n* Tool calling: Cohere reasoning and tool parsers (#40422), LFM2/2.5 tool parser (#39243).\r\n* Gemma3/Gemma4: `hidden_act` variant support (#40588), pipeline parallelism fix (#40786), MoE fixes (#41206, #41574, #41401), tool parser crash fix (#41991, #42188).\r\n* Model Runner V2: Qwen3.5/Mamba hybrid model support (#35520), `logprob_token_ids` support (#40559).\r\n* CUDA graph: ViT CUDA graph support for Qwen2.5-VL (#40830).\r\n* Compatibility: Vendor HCXVisionConfig for Transformers v5 (#38447), legacy `rope_type` checkpoint support (#41734).\r\n\r\n### Engine Core\r\n* KV offloading + HMA: Scheduler-side sliding window groups (#41228), full HMA enablement (#41445), multi-connector HMA (#39571), per-job store completion (#39186), DCP/PCP support in OffloadingConnector (#41549), MooncakeStoreConnector for distributed KV offloading (#40900).\r\n* Speculative decoding: Thinking budget support (#34668), independent drafter attention backend selection (#39930), multimodal model support with warning (#41752), per-step allocation elimination (#41043).\r\n* Model Runner V2: Rejection sampling acceptance rate fix (#40651), skip metadata rebuild before draft prefill (#40410), rebuild metadata between draft decode steps (#41162), Qwen3.5/Mamba hybrid support (#35520).\r\n* Routing: Replace routing replay with device cache and async D2H pipeline (#39917).\r\n* Ray: RayExecutorV2 enabled by default (#41421), actor name collision fix for DP > 1 (#40398).\r\n* Stability: Two-phase pause to prevent scheduler deadlock (#39366), thread-safe HF tokenizer wrappers (#41181), OOM prevention via `max_split_size_mb` during model loading (#41268).\r\n* IndexCache support for DSA models (#37735).\r\n\r\n### Hardware & Performance\r\n* **NVIDIA Blackwell**: TOKENSPEED_MLA backend for DSR1/Kimi-K25 (#41778), faster per-token FP8 group quant packed kernel (#41326), FP8 on NVIDIA Thor/SM110 (#39712), CUTLASS scaled mm for non-compatible sizes (#41868).\r\n* **Performance**: FlashInfer top-k/top-p sampler enabled by default (#40376), FP8 FlashInfer attention for ViT (#38065), TurboQuant shared dequant buffers (#40941), `AllPool.forward` 51% faster (#41163), GPU<->CPU sync elimination in pooling (#41433) and attention (#41434), numpy zero-copy embedding serialization (#41681), multimodal processor skip for text-only (#41246), FlashInfer FP8 async TP fusion (#39505), NVFP4 all-gather GEMM fusion for AsyncTP (#41882), re-enable allreduce+RMS fusion for DP/PP (#41458), DeepSeek bf16→fp32 via `torch.mm` (#41300), persistent MLA for sparse backend (#41990), configurable safetensors checkpoint prefetch (#41499), fused mhc_post_pre kernel (#41536), 2D-grid W8W8 group quant kernel (#42153), relaxed memory ordering for KV cache swaps (#39306).\r\n* **AMD ROCm**: ROCm 7.2.2 (#41386), DBO (Dynamic Batch Optimization) (#34726), AITER Fused Allreduce+RMSNorm (#37646), Fused Shared Expert (FSE) for Qwen3-Next (#39280), DeepSeek V3.2 TP4 AITER MLA (#41835), GDN linear attention fusion (#40711), eliminate redundant MoE buffer copies in AITER (#41713), CPU offloading support (#40549), DeepEP API update (#39721), cap Triton paged attention block size to fix shared memory OOM (#38502).\r\n* **CPU**: FP8 attention for AMX/AVX-512 (#39445), FP8 W8A16 linear (#41186), FP8 W8A16 MoE (#41314), DNNL AVX2 W8A8 Int8 (#41318), Gated DeltaNet Attention for Qwen 3.5/3.6 (#41025), RISC-V OMP thread auto-binding (#40569).\r\n* **Intel XPU**: Top-k/top-p sample kernel (#39285), out-of-place all-reduce (#41808), LoRA support (#38206).\r\n* **IBM Power**: VSX attention backend (#40451).\r\n* **FlexAttention**: Re-enabled for batch invariant mode (#40842).\r\n* **MLA**: Abstracted MLA prefill backends, eliminated cuDNN dependency (#32623).\r\n\r\n### Large Scale Serving\r\n* Disaggregated serving: Bi-directional KV cache transfers between P and D (#32553), NIXL transfer redesign (#40731), EPLB memory overhead optimization (#40013), NIXL connector bumped to 1.x (#42364), Mooncake KVConnectorStats for transfer observability (#40414), NIXL P-node pre-admission rejection notification (#41269), KV block release for skipped P-ranks (#40449).\r\n* DCP: Pack output and LSE in DCP A2A (#41160).\r\n* MoE: PluggableLayer interface for out-of-tree MoE runners (#35178).\r\n* LoRA: Initial expert parallel (EP) support (#40867), Qwen3.5 LoRA fusion fix (#37912).\r\n\r\n### Quantization\r\n* **NVFP4**: KV cache support (#40177), Triton dequant/QDQ emulation kernels for Hopper and AMD (#40033), GELU on TRT-LLM NvFP4 fused MoE for Gemma4 (#41050), ModelOpt NVFP4 W4A16 (#41769), NVFP4 all-gather GEMM fusion for AsyncTP (#41882), GLM4-MoE NVFP4 loading fix (#41755).\r\n* **MXFP4**: Humming MXFP4 MoE backend (#41083), FlashInfer CUTLASS MXFP4-MXFP8 MoE fix (#42089).\r\n* **TurboQuant**: Hybrid model and uniform quantization support (#39931).\r\n* **Compressed tensors**: Allow configs with non-explicit ignores (#41965).\r\n* **FP8**: Bias loading fix (#41424), FlashInfer autotune temporarily disabled for correctness (#41524).\r\n* **DSV4**: Improved fused Indexer Q quant kernel (#41428).\r\n\r\n### API & Frontend\r\n* **Responses API**: Streaming tool/function calling with `required` (#40700) and named tool/function choice (#41110), resubmitting output items with missing fields (#41355).\r\n* **OpenAI compatibility**: `system_fingerprint` field in responses (#40537), `prompt_embeds` content part support (#40720), `defer_loading` and `tool_reference` support (#40190), rendered prompt text in chat completion response (#42052), tolerate empty content in forced tool choice (#40148).\r\n* **Tool calling**: XGrammar 0.2.0 with structural tags for strict tool calling + reasoning (#40894), Cohere reasoning/tool parsers (#40422), LFM2/2.5 tool parser (#39243).\r\n* **Tokenizer**: Fastokens support (#41741).\r\n* **RLHF**: Explicit `/start_weight_update` and `/finish_weight_update` APIs (#39212).\r\n* **ASR**: Engine request abort on cancellation (#41266).\r\n* **Configuration**: `VLLM_SKIP_MODEL_NAME_VALIDATION` env var (#34676), configurable model weights loading tracking (#41086), Triton JIT compilation monitor (#40137).\r\n\r\n### Build & Dependencies\r\n* **Breaking**: C++20 required for PyTorch compatibility (#40380).\r\n* **Breaking**: Transformers v4 deprecated (#40389).\r\n* Docker image size reduced by ~2.5 GB via deferred FlashInfer cubin download (#41134).\r\n* CUDA 13.0 wheels switched to PyTorch manylinux_2_28 base (#41416).\r\n* DeepGEMM bundled wheel built per-Python for CPython compatibility (#41516).\r\n* Container image provenance metadata embedded (#40653).\r\n* tpu-inference upgraded to v0.19.0 (#41844).\r\n* NIXL connector bumped to 1.x (#42364).\r\n* ROCm 7.2.2 (#41386).\r\n\r\n## Contributors\r\n\r\n@AndreasKaratzas, @haosdent, @khluu, @yewentao256, @stecasta, @mgoin, @Isotr0py, @hmellor, @chaunceyjiang, @jeejeelee, @noooop, @MatthewBonanni, @njhill, @zyongye, @yzong-rh, @ronensc, @NickLucche, @chaojun-zhang, @dzhengAP, @chfeng-cs, @TheEpicDolphin, @esmeetu, @wzhao18, @ZJY0516, @juliendenize, @kylesayrs, @fadara01, @Etelis, @tianmu-li, @arpera, @ekagra-ranjan, @orozery, @wxsIcey, @jikunshang, @izhuhaoran, @rasmith, @russellb, @Lucaskabela, @Harry-Chen, @alec-flowers, @pmaybank, @Terrencezzj, @hickeyma, @Baekpica, @itej89, @fxmarty-amd, @WoosukKwon, @juhi10071998, @sychen52, @baonudesifeizhai, @vllmellm, @johncalesp, @the-david-oy, @lucianommartins, @bittoby, @Dao007forever, @lyd1992, @yuwenzho, @lesj0610, @sfeng33, @micah-wil, @akii96, @yma11, @SoluMilken, @mmangkad, @SiluPanda, @ojhaanshika, @zhandaz, @bhoomit, @simon-mo, @msanft, @angelayi, @anthonsu, @artem-spector, @zhangxin81, @benoittgt, @joerowell, @yangrz7, @chelnnexy, @liangel-02, @walterbm, @rishitdholakia13, @SKRohit, @BugenZhao, @JaredforReal, @amd-lalithnc, @frgossen, @h-avsha, @DarkLight1337, @danisereb, @laithsakka, @Bortlesboat, @wangluochao902, @Rohan138, @hao-aaron, @puririshi98, @roikoren755, @heachary, @UranusSeven, @dsingal0, @ChenxiQ, @snadampal, @ilmarkov, @wendyliu235, @lequytra, @JisoLya, @LuisRobaina, @sniper35, @eicherseiji, @Yuyi-Ao, @raviguptaamd, @sungsooha, @ganyi1996ppo, @andylolu2, @FredericOdermatt, @ProExpertProg, @rbrugaro-amd, @mcsantiago, @hnt2601, @jinzhen-lin, @taneem-ibrahim, @tomeras91, @alex-jw-brooks, @Aktsvigun, @HanFa, @netanel-haber, @JasonKeyiL, @gshtras, @joa-stdn, @Seven-Streams, @JartX, @xuechendi, @BowenBao, @Akashcodes732, @jeffreywang-anyscale, @czhu-cohere, @zhewenl, @marvinzh, @Lidang-Jiang, @gcanlin, @whx-sjtu, @S1ro1, @liulanze, @Dhruvilbhatt, @laviier, @wi-adam, @aaab8b, @yuankaichen-amd, @ZhanqiuHu, @QwertyJack, @viktorpusTT, @divakar-amd, @starkwj, @benchislett, @jcyang43, @JLiu4Coding, @xy3xy3, @hongxiayang, @amd-mghanimi, @wenyili, @bigPYJ1151, @s-yanev, @AlonKejzman, @noobHappylife, @TomerBN-Nvidia, @MeganEFlynn, @liuzijing2014, @jbuchananr, @lokashrinav, @ssam18, @dllehr-amd, @gmagogsfm, @tpopp, @tjtanaa, @simondanielsson, @zhenwei-intel, @HiroakiMikami, @nholmber, @SumanthRH, @LucasWilkinson, @maeehart, @rishaps, @r-barnes, @gau-nernst, @Kermit-C, @tdoublep, @aoshen02, @Naveassaf, @wangxingran222, @cvan20191, @AbhiOnGithub, @abdulrahman-cohere, @jmamou, @Flink-ddd, @bnellnm, @hqhq1025, @gnovack, @wangxiyuan, @princepride, @jiahanc, @LCAIZJ, @ovidiusm\r\n\r\n## New Contributors\r\n\r\n* @abdulrahman-cohere made their first contribution in https://github.com/vllm-project/vllm/pull/41266\r\n* @AbhiOnGithub made their first contribution in https://github.com/vllm-project/vllm/pull/42180\r\n* @Aktsvigun made their first contribution in https://github.com/vllm-project/vllm/pull/40788\r\n* @amd-mghanimi made their first contribution in https://github.com/vllm-project/vllm/pull/41713\r\n* @Baekpica made their first contribution in https://github.com/vllm-project/vllm/pull/41206\r\n* @benoittgt made their first contribution in https://github.com/vllm-project/vllm/pull/41134\r\n* @bittoby made their first contribution in https://github.com/vllm-project/vllm/pull/41690\r\n* @chelnnexy made their first contribution in https://github.com/vllm-project/vllm/pull/40754\r\n* @ChenxiQ made their first contribution in https://github.com/vllm-project/vllm/pull/40956\r\n* @chfeng-cs made their first contribution in https://github.com/vllm-project/vllm/pull/42066\r\n* @cvan20191 made their first contribution in https://github.com/vllm-project/vllm/pull/40951\r\n* @dzhengAP made their first contribution in https://github.com/vllm-project/vllm/pull/41423\r\n* @ghphotoframe made their first contribution in https://github.com/vllm-project/vllm/pull/40859\r\n* @HiroakiMikami made their first contribution in https://github.com/vllm-project/vllm/pull/40588\r\n* @itej89 made their first contribution in https://github.com/vllm-project/vllm/pull/39721\r\n* @JasonKeyiL made their first contribution in https://github.com/vllm-project/vllm/pull/41068\r\n* @jbuchananr made their first contribution in https://github.com/vllm-project/vllm/pull/39243\r\n* @JisoLya made their first contribution in https://github.com/vllm-project/vllm/pull/41363\r\n* @JLiu4Coding made their first contribution in https://github.com/vllm-project/vllm/pull/41832\r\n* @juhi10071998 made their first contribution in https://github.com/vllm-project/vllm/pull/41050\r\n* @Kermit-C made their first contribution in https://github.com/vllm-project/vllm/pull/42076\r\n* @lequytra made their first contribution in https://github.com/vllm-project/vllm/pull/41401\r\n* @Lidang-Jiang made their first contribution in https://github.com/vllm-project/vllm/pull/38099\r\n* @liulanze made their first contribution in https://github.com/vllm-project/vllm/pull/41571\r\n* @lokashrinav made their first contribution in https://github.com/vllm-project/vllm/pull/41681\r\n* @LuisRobaina made their first contribution in https://github.com/vllm-project/vllm/pull/40720\r\n* @maeehart made their first contribution in https://github.com/vllm-project/vllm/pull/42061\r\n* @marvinzh made their first contribution in https://github.com/vllm-project/vllm/pull/40136\r\n* @mcsantiago made their first contribution in https://github.com/vllm-project/vllm/pull/41492\r\n* @MeganEFlynn made their first contribution in https://github.com/vllm-project/vllm/pull/41880\r\n* @nholmber made their first contribution in https://github.com/vllm-project/vllm/pull/39280\r\n* @pmaybank made their first contribution in https://github.com/vllm-project/vllm/pull/41012\r\n* @raviguptaamd made their first contribution in https://github.com/vllm-project/vllm/pull/34726\r\n* @s-yanev made their first contribution in https://github.com/vllm-project/vllm/pull/41755\r\n* @S1ro1 made their first contribution in https://github.com/vllm-project/vllm/pull/39213\r\n* @Seven-Streams made their first contribution in https://github.com/vllm-project/vllm/pull/40894\r\n* @SiluPanda made their first contribution in https://github.com/vllm-project/vllm/pull/40907\r\n* @SKRohit made their first contribution in https://github.com/vllm-project/vllm/pull/40786\r\n* @snadampal made their first contribution in https://github.com/vllm-project/vllm/pull/32553\r\n* @sniper35 made their first contribution in https://github.com/vllm-project/vllm/pull/32325\r\n* @ssam18 made their first contribution in https://github.com/vllm-project/vllm/pull/41486\r\n* @the-david-oy made their first contribution in https://github.com/vllm-project/vllm/pull/40737\r\n* @wangluochao902 made their first contribution in https://github.com/vllm-project/vllm/pull/41043\r\n* @wenyili made their first contribution in https://github.com/vllm-project/vllm/pull/41901\r\n* @wi-adam made their first contribution in https://github.com/vllm-project/vllm/pull/40749\r\n* @xy3xy3 made their first contribution in https://github.com/vllm-project/vllm/pull/40820\r\n* @yangrz7 made their first contribution in https://github.com/vllm-project/vllm/pull/40449\r\n* @yuankaichen-amd made their first contribution in https://github.com/vllm-project/vllm/pull/40390\r\n* @zhangxin81 made their first contribution in https://github.com/vllm-project/vllm/pull/39904\r\n"
         },
         "source": [
           {
@@ -37,25 +123,17 @@
           },
           {
             "kind": "topic",
-            "value": "llm-inference"
-          },
-          {
-            "kind": "topic",
             "value": "model-serving"
-          },
-          {
-            "kind": "topic",
-            "value": "benchmark"
           }
         ]
       },
       "score": {
-        "maturityScore": 80,
-        "compatibilityScore": 77,
+        "maturityScore": 95,
+        "compatibilityScore": 61,
         "performancePotentialScore": 42,
         "maintenanceRiskScore": 20,
         "adoptionSignalScore": 100,
-        "finalUpgradeScore": 76,
+        "finalUpgradeScore": 75,
         "estimatedPerformanceGainPct": 37,
         "estimatedCostReductionPct": 19,
         "hardVetoReasons": [],
@@ -63,8 +141,8 @@
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": false,
-          "compatibilityAtLeast70": true,
+          "documentationComplete": true,
+          "compatibilityAtLeast70": false,
           "projectedPerformanceGainAtLeast15Pct": true,
           "projectedCostReductionAtLeast10Pct": true,
           "avoidsProductionSecurityBoundary": true
@@ -72,8 +150,8 @@
         "qualifyingSignalCount": 7,
         "eligibleForValidation": true,
         "summary": [
-          "Active commits in last 30 days: 27",
-          "Latest release: v0.8.2",
+          "Active commits in last 30 days: 100",
+          "Latest release: v0.21.0",
           "License: Apache-2.0",
           "Projected performance gain: 37%",
           "Projected cost reduction: 19%"
@@ -82,305 +160,230 @@
     },
     {
       "repo": {
-        "fullName": "langchain-ai/langgraph",
-        "url": "https://github.com/langchain-ai/langgraph",
-        "description": "Graph-based workflow engine for stateful agents.",
+        "fullName": "infiniflow/ragflow",
+        "url": "https://github.com/infiniflow/ragflow",
+        "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
         "topics": [
-          "workflow-automation",
-          "agent-framework",
-          "multi-agent"
+          "agentic-ai",
+          "agentic-retrieval",
+          "agentic-search",
+          "ai",
+          "ai-agents",
+          "context-engine",
+          "context-management",
+          "llm-apps",
+          "rag",
+          "retrieval-augmented-generation"
         ],
-        "stars": 21000,
-        "forks": 2400,
+        "stars": 81148,
+        "forks": 9305,
         "defaultBranch": "main",
-        "updatedAt": "2026-03-21T16:05:00Z",
-        "pushedAt": "2026-03-21T16:01:00Z",
-        "license": "MIT",
-        "readme": "## Quickstart\nLangGraph provides workflow orchestration for stateful agents, examples, setup, and production guidance.\n\n## Benchmark\nExamples include latency and reliability measurements for graph execution.\n\n## Release\nStable release notes include migration and compatibility details.",
-        "recentCommitCount30d": 18,
+        "updatedAt": "2026-05-25T02:32:51Z",
+        "pushedAt": "2026-05-25T02:32:46Z",
+        "license": "Apache-2.0",
+        "readme": "<div align=\"center\">\n<a href=\"https://cloud.ragflow.io/\">\n<img src=\"web/src/assets/logo-with-text.svg\" width=\"520\" alt=\"ragflow logo\">\n</a>\n</div>\n\n<p align=\"center\">\n  <a href=\"./README.md\"><img alt=\"README in English\" src=\"https://img.shields.io/badge/English-DBEDFA\"></a>\n  <a href=\"./README_zh.md\"><img alt=\"简体中文版自述文件\" src=\"https://img.shields.io/badge/简体中文-DFE0E5\"></a>\n  <a href=\"./README_tzh.md\"><img alt=\"繁體版中文自述文件\" src=\"https://img.shields.io/badge/繁體中文-DFE0E5\"></a>\n  <a href=\"./README_ja.md\"><img alt=\"日本語のREADME\" src=\"https://img.shields.io/badge/日本語-DFE0E5\"></a>\n  <a href=\"./README_ko.md\"><img alt=\"한국어\" src=\"https://img.shields.io/badge/한국어-DFE0E5\"></a>\n  <a href=\"./README_fr.md\"><img alt=\"README en Français\" src=\"https://img.shields.io/badge/Français-DFE0E5\"></a>\n  <a href=\"./README_id.md\"><img alt=\"Bahasa Indonesia\" src=\"https://img.shields.io/badge/Bahasa Indonesia-DFE0E5\"></a>\n  <a href=\"./README_pt_br.md\"><img alt=\"Português(Brasil)\" src=\"https://img.shields.io/badge/Português(Brasil)-DFE0E5\"></a>\n  <a href=\"./README_ar.md\"><img alt=\"README in Arabic\" src=\"https://img.shields.io/badge/Arabic-DFE0E5\"></a>\n  <a href=\"./README_tr.md\"><img alt=\"Türkçe README\" src=\"https://img.shields.io/badge/Türkçe-DFE0E5\"></a>\n</p>\n\n<p align=\"center\">\n    <a href=\"https://x.com/intent/follow?screen_name=infiniflowai\" target=\"_blank\">\n        <img src=\"https://img.shields.io/twitter/follow/infiniflow?logo=X&color=%20%23f5f5f5\" alt=\"follow on X(Twitter)\">\n    </a>\n    <a href=\"https://cloud.ragflow.io\" target=\"_blank\">\n        <img alt=\"Static Badge\" src=\"https://img.shields.io/badge/Get-Started-4e6b99\">\n    </a>\n    <a href=\"https://hub.docker.com/r/infiniflow/ragflow\" target=\"_blank\">\n        <img src=\"https://img.shields.io/docker/pulls/infiniflow/ragflow?label=Docker%20Pulls&color=0db7ed&logo=docker&logoColor=white&style=flat-square\" alt=\"docker pull infiniflow/ragflow:v0.25.5\">\n    </a>\n    <a href=\"https://github.com/infiniflow/ragflow/releases/latest\">\n        <img src=\"https://img.shields.io/github/v/release/infiniflow/ragflow?color=blue&label=Latest%20Release\" alt=\"Latest Release\">\n    </a>\n    <a href=\"https://github.com/infiniflow/ragflow/blob/main/LICENSE\">\n        <img height=\"21\" src=\"https://img.shields.io/badge/License-Apache--2.0-ffffff?labelColor=d4eaf7&color=2e6cc4\" alt=\"license\">\n    </a>\n    <a href=\"https://deepwiki.com/infiniflow/ragflow\">\n        <img alt=\"Ask DeepWiki\" src=\"https://deepwiki.com/badge.svg\">\n    </a>\n</p>\n\n<h4 align=\"center\">\n  <a href=\"https://cloud.ragflow.io\">Cloud</a> |\n  <a href=\"https://ragflow.io/docs/dev/\">Document</a> |\n  <a href=\"https://github.com/infiniflow/ragflow/issues/12241\">Roadmap</a> |\n  <a href=\"https://discord.gg/NjYzJD3GM3\">Discord</a>\n</h4>\n\n<div align=\"center\" style=\"margin-top:20px;margin-bottom:20px;\">\n<img src=\"https://raw.githubusercontent.com/infiniflow/ragflow-docs/refs/heads/image/image/ragflow-octoverse.png\" width=\"1200\"/>\n</div>\n\n<div align=\"center\">\n<a href=\"https://trendshift.io/repositories/9064\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/9064\" alt=\"infiniflow%2Fragflow | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n</div>\n\n<details open>\n<summary><b>📕 Table of Contents</b></summary>\n\n- 💡 [What is RAGFlow?](#-what-is-ragflow)\n- 🎮 [Get Started](#-get-started)\n- 📌 [Latest Updates](#-latest-updates)\n- 🌟 [Key Features](#-key-features)\n- 🔎 [System Architecture](#-system-architecture)\n- 🎬 [Self-Hosting](#-self-hosting)\n- 🔧 [Configurations](#-configurations)\n- 🔧 [Build a Docker image](#-build-a-docker-image)\n- 🔨 [Launch service from source for development](#-launch-service-from-source-for-development)\n- 📚 [Documentation](#-documentation)\n- 📜 [Roadmap](#-roadmap)\n- 🏄 [Community](#-community)\n- 🙌 [Contributing](#-contributing)\n\n</details>\n\n## 💡 What is RAGFlow?\n\n[RAGFlow](https://ragflow.io/) is a leading open-source Retrieval-Augmented Generation ([RAG](https://ragflow.io/basics/what-is-rag)) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs. It offers a streamlined RAG workflow adaptable to enterprises of any scale. Powered by a converged [context engine](https://ragflow.io/basics/what-is-agent-context-engine) and pre-built agent templates, RAGFlow enables developers to transform complex data into high-fidelity, production-ready AI systems with exceptional efficiency and precision.\n\n## 🎮 Get Started\n\nTry our cloud service at [https://cloud.ragflow.io](https://cloud.ragflow.io).\n\n<div align=\"center\" style=\"margin-top:20px;margin-bottom:20px;\">\n<img src=\"https://raw.githubusercontent.com/infiniflow/ragflow-docs/refs/heads/image/image/chunking.gif\" width=\"1200\"/>\n<img src=\"https://raw.githubusercontent.com/infiniflow/ragflow-docs/refs/heads/image/image/agentic-dark.gif\" width=\"1200\"/>\n</div>\n\n## 🔥 Latest Updates\n\n- 2026-04-24 Supports DeepSeek v4.\n- 2026-03-24 [RAGFlow Skill on OpenClaw](https://clawhub.ai/yingfeng/ragflow-skill) — Provides an official skill for accessing RAGFlow datasets via OpenClaw.\n- 2025-12-26 Supports 'Memory' for AI agent.\n- 2025-11-19 Supports Gemini 3 Pro.\n- 2025-11-12 Supports data synchronization from Confluence, S3, Notion, Discord, Google Drive.\n- 2025-10-23 Supports MinerU & Docling as document parsing methods.\n- 2025-10-15 Supports orchestrable ingestion pipeline.\n- 2025-08-08 Supports OpenAI's latest GPT-5 series models.\n- 2025-08-01 Supports agentic workflow and MCP.\n- 2025-05-23 Adds a Python/JavaScript code executor component to Agent.\n- 2025-05-05 Supports cross-language query.\n- 2025-03-19 Supports using a multi-modal model to make sense of images within PDF or DOCX files.\n\n## 🎉 Stay Tuned\n\n⭐️ Star our repository to stay up-to-date with exciting new features and improvements! Get instant notifications for new\nreleases! 🌟\n\n<div align=\"center\" style=\"margin-top:20px;margin-bottom:20px;\">\n<img src=\"https://github.com/user-attachments/assets/18c9707e-b8aa-4caf-a154-037089c105ba\" width=\"1200\"/>\n</div>\n\n## 🌟 Key Features\n\n### 🍭 **\"Quality in, quality out\"**\n\n- [Deep document understanding](./deepdoc/README.md)-based knowledge extraction from unstructured data with complicated\n  formats.\n- Finds \"needle in a data haystack\" of literally unlimited tokens.\n\n### 🍱 **Template-based chunking**\n\n- Intelligent and explainable.\n- Plenty of template options to choose from.\n\n### 🌱 **Grounded citations with reduced hallucinations**\n\n- Visualization of text chunking to allow human intervention.\n- Quick view of the key references and traceable citations to support grounded answers.\n\n### 🍔 **Compatibility with heterogeneous data sources**\n\n- Supports Word, slides, excel, txt, images, scanned copies, structured data, web pages, and more.\n\n### 🛀 **Automated and effortless RAG workflow**\n\n- Streamlined RAG orchestration catered to both personal and large businesses.\n- Configurable LLMs as well as embedding models.\n- Multiple recall paired with fused re-ranking.\n- Intuitive APIs for seamless integration with business.\n\n## 🔎 System Architecture\n\n<div align=\"center\" style=\"margin-top:20px;margin-bottom:20px;\">\n<img src=\"https://github.com/user-attachments/assets/31b0dd6f-ca4f-445a-9457-70cb44a381b2\" width=\"1000\"/>\n</div>\n\n## 🎬 Self-Hosting\n\n### 📝 Prerequisites\n\n- CPU >= 4 cores\n- RAM >= 16 GB\n- Disk >= 50 GB\n- Docker >= 24.0.0 & Docker Compose >= v2.26.1\n- [gVisor](https://gvisor.dev/docs/user_guide/install/): Required only if you intend to use the code executor (sandbox) feature of RAGFlow.\n\n> [!TIP]\n> If you have not installed Docker on your local machine (Windows, Mac, or Linux), see [Install Docker Engine](https://docs.docker.com/engine/install/).\n\n### 🚀 Start up the server\n\n1. Ensure `vm.max_map_count` >= 262144:\n\n   > To check the value of `vm.max_map_count`:\n   >\n   > ```bash\n   > $ sysctl vm.max_map_count\n   > ```\n   >\n   > Reset `vm.max_map_count` to a value at least 262144 if it is not.\n   >\n   > ```bash\n   > # In this case, we set it to 262144:\n   > $ sudo sysctl -w vm.max_map_count=262144\n   > ```\n   >\n   > This change will be reset after a system reboot. To ensure your change remains permanent, add or update the\n   > `vm.max_map_count` value in **/etc/sysctl.conf** accordingly:\n   >\n   > ```bash\n   > vm.max_map_count=262144\n   > ```\n   >\n2. Clone the repo:\n\n   ```bash\n   $ git clone https://github.com/infiniflow/ragflow.git\n   ```\n3. Start up the server using the pre-built Docker images:\n\n> [!CAUTION]\n> All Docker images are built for x86 platforms. We don't currently offer Docker images for ARM64.\n> If you are on an ARM64 platform, follow [this guide](https://ragflow.io/docs/dev/build_docker_image) to build a Docker image compatible with your system.\n\n> The command below downloads the `v0.25.5` edition of the RAGFlow Docker image. See the following table for descriptions of different RAGFlow editions. To download a RAGFlow edition different from `v0.25.5`, update the `RAGFLOW_IMAGE` variable accordingly in **docker/.env** before using `docker compose` to start the server.\n\n```bash\n   $ cd ragflow/docker\n\n   # git checkout v0.25.5\n   # Optional: use a stable tag (see releases: https://github.com/infiniflow/ragflow/releases)\n   # This step ensures the **entrypoint.sh** file in the code matches the Docker image version.\n\n   # Use CPU for DeepDoc tasks:\n   $ docker compose -f docker-compose.yml up -d\n\n   # To use GPU to accelerate DeepDoc tasks:\n   # sed -i '1i DEVICE=gpu' .env\n   # docker compose -f docker-compose.yml up -d\n```\n\n> Note: Prior to `v0.22.0`, we provided both images with embedding models and slim images without embedding models. Details as follows:\n\n| RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?        |\n|-------------------|-----------------|-----------------------|----------------|\n| v0.21.1           | &approx;9       | ✔️                    | Stable release |\n| v0.21.1-slim      | &approx;2       | ❌                     | Stable release |\n\n> Starting with `v0.22.0`, we ship only the slim edition and no longer append the **-slim** suffix to the image tag.\n\n4. Check the server status after having the server up and running:\n\n   ```bash\n   $ docker logs -f docker-ragflow-cpu-1\n   ```\n\n   _The following output confirms a successful launch of the system:_\n\n   ```bash\n\n         ____   ___    ______ ______ __\n        / __ \\ /   |  / ____// ____// /____  _      __\n       / /_/ // /| | / / __ / /_   / // __ \\| | /| / /\n      / _, _// ___ |/ /_/ // __/  / // /_/ /| |/ |/ /\n     /_/ |_|/_/  |_|\\____//_/    /_/ \\____/ |__/|__/\n\n    * Running on all addresses (0.0.0.0)\n   ```\n\n   > If you skip this confirmation step and directly log in to RAGFlow, your browser may prompt a `network abnormal`\n   > error because, at that moment, your RAGFlow may not be fully initialized.\n   >\n5. In your web browser, enter the IP address of your server and log in to RAGFlow.\n\n   > With the default settings, you only need to enter `http://IP_OF_YOUR_MACHINE` (**sans** port number) as the default\n   > HTTP serving port `80` can be omitted when using the default configurations.\n   >\n6. In [service_conf.yaml.template](./docker/service_conf.yaml.template), select the desired LLM factory in `user_default_llm` and update\n   the `API_KEY` field with the corresponding API key.\n\n   > See [llm_api_key_setup](https://ragflow.io/docs/dev/llm_api_key_setup) for more information.\n   >\n\n   _The show is on!_\n\n## 🔧 Configurations\n\nWhen it comes to system configurations, you will need to manage the following files:\n\n- [.env](./docker/.env): Keeps the fundamental setups for the system, such as `SVR_HTTP_PORT`, `MYSQL_PASSWORD`, and\n  `MINIO_PASSWORD`.\n- [service_conf.yaml.template](./docker/service_conf.yaml.template): Configures the back-end services. The environment variables in this file will be automatically populated when the Docker container starts. Any environment variables set within the Docker container will be available for use, allowing you to customize service behavior based on the deployment environment.\n- [docker-compose.yml](./docker/docker-compose.yml): The system relies on [docker-compose.yml](./docker/docker-compose.yml) to start up.\n\n> The [./docker/README](./docker/README.md) file provides a detailed description of the environment settings and service\n> configurations which can be used as `${ENV_VARS}` in the [service_conf.yaml.template](./docker/service_conf.yaml.template) file.\n\nTo update the default HTTP serving port (80), go to [docker-compose.yml](./docker/docker-compose.yml) and change `80:80`\nto `<YOUR_SERVING_PORT>:80`.\n\nUpdates to the above configurations require a reboot of all containers to take effect:\n\n> ```bash\n> $ docker compose -f docker-compose.yml up -d\n> ```\n\n### Switch doc engine from Elasticsearch to Infinity\n\nRAGFlow uses Elasticsearch by default for storing full text and vectors. To switch to [Infinity](https://github.com/infiniflow/infinity/), follow these steps:\n\n1. Stop all running containers:\n\n   ```bash\n   $ docker compose -f docker/docker-compose.yml down -v\n   ```\n\n> [!WARNING]\n> `-v` will delete the docker container volumes, and the existing data will be cleared.\n\n2. Set `DOC_ENGINE` in **docker/.env** to `infinity`.\n3. Start the containers:\n\n   ```bash\n   $ docker compose -f docker-compose.yml up -d\n   ```\n\n> [!WARNING]\n> Switching to Infinity on a Linux/arm64 machine is not yet officially supported.\n\n## 🔧 Build a Docker image\n\nThis image is approximately 2 GB in size and relies on external LLM and embedding services.\n\n```bash\ngit clone https://github.com/infiniflow/ragflow.git\ncd ragflow/\ndocker build --platform linux/amd64 -f Dockerfile -t infiniflow/ragflow:nightly .\n```\n\nOr if you are behind a proxy, you can pass proxy arguments:\n\n```bash\ndocker build --platform linux/amd64 \\\n  --build-arg http_proxy=http://YOUR_PROXY:PORT \\\n  --build-arg https_proxy=http://YOUR_PROXY:PORT \\\n  -f Dockerfile -t infiniflow/ragflow:nightly .\n```\n\n## 🔨 Launch service from source for development\n\n1. Install `uv` and `pre-commit`, or skip this step if they are already installed:\n\n   ```bash\n   pipx install uv pre-commit\n   ```\n2. Clone the source code and install Python dependencies:\n\n   ```bash\n   git clone https://github.com/infiniflow/ragflow.git\n   cd ragflow/\n   uv sync --python 3.13 # install RAGFlow dependent python modules\n   uv run python3 download_deps.py\n   pre-commit install\n   ```\n3. Launch the dependent services (MinIO, Elasticsearch, Redis, and MySQL) using Docker Compose:\n\n   ```bash\n   docker compose -f docker/docker-compose-base.yml up -d\n   ```\n\n   Add the following line to `/etc/hosts` to resolve all hosts specified in **docker/.env** to `127.0.0.1`:\n\n   ```\n   127.0.0.1       es01 infinity mysql minio redis sandbox-executor-manager\n   ```\n4. If you cannot access HuggingFace, set the `HF_ENDPOINT` environment variable to use a mirror site:\n\n   ```bash\n   export HF_ENDPOINT=https://hf-mirror.com\n   ```\n5. If your operating system does not have jemalloc, please install it as follows:\n\n   ```bash\n   # Ubuntu\n   sudo apt-get install libjemalloc-dev\n   # CentOS\n   sudo yum install jemalloc\n   # OpenSUSE\n   sudo zypper install jemalloc\n   # macOS\n   sudo brew install jemalloc\n   ```\n6. Launch backend service:\n\n   ```bash\n   source .venv/bin/activate\n   export PYTHONPATH=$(pwd)\n   bash docker/launch_backend_service.sh\n   ```\n7. Install frontend dependencies:\n\n   ```bash\n   cd web\n   npm install\n   ```\n8. Launch frontend service:\n\n   ```bash\n   npm run dev\n   ```\n\n   _The following output confirms a successful launch of the system:_\n\n   ![](https://github.com/user-attachments/assets/0daf462c-a24d-4496-a66f-92533534e187)\n9. Stop RAGFlow front-end and back-end service after development is complete:\n\n   ```bash\n   pkill -f \"ragflow_server.py|task_executor.py\"\n   ```\n\n## 📚 Documentation\n\n- [Quickstart](https://ragflow.io/docs/dev/)\n- [Configuration](https://ragflow.io/docs/dev/configurations)\n- [Release notes](https://ragflow.io/docs/dev/release_notes)\n- [User guides](https://ragflow.io/docs/category/user-guides)\n- [Developer guides](https://ragflow.io/docs/category/developer-guides)\n- [References](https://ragflow.io/docs/dev/category/references)\n- [FAQs](https://ragflow.io/docs/dev/faq)\n\n## 📜 Roadmap\n\nSee the [RAGFlow Roadmap 2026](https://github.com/infiniflow/ragflow/issues/12241)\n\n## 🏄 Community\n\n- [Discord](https://discord.gg/NjYzJD3GM3)\n- [X](https://x.com/infiniflowai)\n- [GitHub Discussions](https://github.com/orgs/infiniflow/discussions)\n\n## 🙌 Contributing\n\nRAGFlow flourishes via open-source collaboration. In this spirit, we embrace diverse contributions from the community.\nIf you would like to be a part, review our [Contribution Guidelines](https://ragflow.io/docs/dev/contributing) first.\n",
+        "recentCommitCount30d": 100,
         "latestRelease": {
-          "tagName": "v0.3.5",
-          "name": "v0.3.5",
-          "htmlUrl": "https://github.com/langchain-ai/langgraph/releases/tag/v0.3.5",
-          "publishedAt": "2026-03-14T12:15:00Z",
+          "tagName": "v0.25.5",
+          "name": "v0.25.5",
+          "htmlUrl": "https://github.com/infiniflow/ragflow/releases/tag/v0.25.5",
+          "publishedAt": "2026-05-20T12:08:27Z",
           "prerelease": false,
           "draft": false,
-          "body": "Better workflow checkpoints and evaluation improvements."
+          "body": "## Summary\r\n\r\nReleased on May 20, 2026.\r\n\r\n### New features\r\n\r\n- Adds local & SSH providers in admin panel. [#15039](https://github.com/infiniflow/ragflow/pull/15039)\r\n\r\n### Improvements\r\n\r\n- Accelerated dataset search path, reducing latency by 50–100% by removing expensive vector fetch and rerank similarity computation steps. [#14970](https://github.com/infiniflow/ragflow/pull/14970)\r\n- Pushes metadata filters down to Infinity, significantly speeding up metadata filtering. [#14974](https://github.com/infiniflow/ragflow/pull/14974)\r\n- added Redis caching for TTS. [#14851](https://github.com/infiniflow/ragflow/pull/14851)\r\n- atomic document counter updates [#14867](https://github.com/infiniflow/ragflow/pull/14974)\r\n- Improved server startup speed and memory usage [#14973](https://github.com/infiniflow/ragflow/pull/14973)\r\n- Agent: structured output aggregation [#13384](https://github.com/infiniflow/ragflow/issues/13384) [#14848](https://github.com/infiniflow/ragflow/pull/14848)\r\n- Agent: metadata filter reuse. [#14849](https://github.com/infiniflow/ragflow/pull/14849)\r\n- Optimizes connector dashboard. [#14979](https://github.com/infiniflow/ragflow/pull/14979)\r\n## What's Changed\r\n* fix: optimize reranking module robustness and bug fixes by @07heco in https://github.com/infiniflow/ragflow/pull/14264\r\n* fix: replace broken assert with raise ValueError in variable_assigner and loop by @Ricardo-M-L in https://github.com/infiniflow/ragflow/pull/13906\r\n* Fix: send input and output token usage to Langfuse by @Br1an67 in https://github.com/infiniflow/ragflow/pull/13294\r\n* Go: implement TTS for MiniMax provider and CLI testing for TTS by @Haruko386 in https://github.com/infiniflow/ragflow/pull/14911\r\n* fix: correct nested path traversal in set_variable_param_value by @Ricardo-M-L in https://github.com/infiniflow/ragflow/pull/13986\r\n* Fix WebDriver resource leak in HTML-to-PDF conversion by @Ricardo-M-L in https://github.com/infiniflow/ragflow/pull/14310\r\n* Doc: code component output section by @buua436 in https://github.com/infiniflow/ragflow/pull/14915\r\n* GO: align time units with Python and centralize timestamp injection in BaseModel by @buua436 in https://github.com/infiniflow/ragflow/pull/14875\r\n* Fix: missing authentication on agent file upload and download endpoints by @dale053 in https://github.com/infiniflow/ragflow/pull/14854\r\n* Go: fix LastLoginTime update by @buua436 in https://github.com/infiniflow/ragflow/pull/14917\r\n* fix: replace mutable default arguments with None in LLM chat models by @gambletan in https://github.com/infiniflow/ragflow/pull/13513\r\n* Go: update user settings fields by @buua436 in https://github.com/infiniflow/ragflow/pull/14918\r\n* fix: atomic chunk/token counter updates for documents and knowledge b… by @dale053 in https://github.com/infiniflow/ragflow/pull/14867\r\n* fix(agent): handle duplicate MCP tool names by @eviaaaaa in https://github.com/infiniflow/ragflow/pull/14217\r\n* fix: close db connections reliably in test_db_connection by @wdeveloper16 in https://github.com/infiniflow/ragflow/pull/14777\r\n* Go: implement TTS for fishaudio, openrouter and asr for fishaudio by @Haruko386 in https://github.com/infiniflow/ragflow/pull/14926\r\n* Feat: This enables SelectWithSearch to search by label. by @cike8899 in https://github.com/infiniflow/ragflow/pull/14925\r\n* Doc: Finalized v0.25.4 release notes by @writinwaters in https://github.com/infiniflow/ragflow/pull/14929\r\n* fix: add document download endpoint and refactor existing download function by @buua436 in https://github.com/infiniflow/ragflow/pull/14927\r\n* fix: preserve uploaded file attachments after subsequent assistant messages by @octo-patch in https://github.com/infiniflow/ragflow/pull/13993\r\n* fix(llm): Tongyi-Qianwen embeddings use correct DashScope native API for intl URLs by @sham-sr in https://github.com/infiniflow/ragflow/pull/14784\r\n* fix(agent): pass top_k and fix similarity weight slider behavior by @yingjianzh in https://github.com/infiniflow/ragflow/pull/14760\r\n* security: always use RestrictedUnpickler in deserialize_b64 (CWE-502) by @sebastiondev in https://github.com/infiniflow/ragflow/pull/14803\r\n* Go: add file parse command by @JinHai-CN in https://github.com/infiniflow/ragflow/pull/14892\r\n* fix(agentbot): aggregate structured output in non-streaming completions by @plind-junior in https://github.com/infiniflow/ragflow/pull/14848\r\n* fix: enable GitHub connector to sync PRs and issues by default by @octo-patch in https://github.com/infiniflow/ragflow/pull/14062\r\n* Go: implement Rerank in vLLM driver (#14878) by @hunnyboy1217 in https://github.com/infiniflow/ragflow/pull/14880\r\n* docs: add FAQ entry for using Ollama with RAGFlow by @SnakeEye-sudo in https://github.com/infiniflow/ragflow/pull/14557\r\n* Go: add cli command, list dataset documents by @JinHai-CN in https://github.com/infiniflow/ragflow/pull/14948\r\n* Go: implement TTS, ASR for Siliconflow and TTs for StepFun by @Haruko386 in https://github.com/infiniflow/ragflow/pull/14944\r\n* fix: correct attribute name typo model_speciess to model_species by @Ricardo-M-L in https://github.com/infiniflow/ragflow/pull/13929\r\n* feat: bump Python minimum from 3.12 to 3.13, drop strenum backport by @wdeveloper16 in https://github.com/infiniflow/ragflow/pull/14767\r\n* Go: implement PaddleOCR provider and implement ASR for CoHere by @Haruko386 in https://github.com/infiniflow/ragflow/pull/14954\r\n* Feat/web markdown UI updates by @xjq123456 in https://github.com/infiniflow/ragflow/pull/14214\r\n* fix: correct literal_eval dispatch and bool isinstance ordering in agent components by @Ricardo-M-L in https://github.com/infiniflow/ragflow/pull/13988\r\n* refactor: optimize BaseTitleChunker to improve RAG document chunk quality by @07heco in https://github.com/infiniflow/ragflow/pull/14247\r\n* Bump to infinity v0.7.0 by @qinling0210 in https://github.com/infiniflow/ragflow/pull/14968\r\n* Fix session deletion leaking chat-upload blobs by @6ba3i in https://github.com/infiniflow/ragflow/pull/14969\r\n* Go: implement Embed (embeddings) in Novita driver by @pandadev66 in https://github.com/infiniflow/ragflow/pull/14895\r\n* Go: add Jina chat completions support by @jakearmstrong59 in https://github.com/infiniflow/ragflow/pull/14935\r\n* Add Anthropic Go model provider by @carlos4s in https://github.com/infiniflow/ragflow/pull/14940\r\n* Fix: guard empty/whitespace embedding inputs in LLMBundle (#14428) by @Rene0422 in https://github.com/infiniflow/ragflow/pull/14924\r\n* Refactor: Drop the vector fetch for ES by @KevinHuSh in https://github.com/infiniflow/ragflow/pull/14970\r\n* Push metadata filters down to Infinity by @qinling0210 in https://github.com/infiniflow/ragflow/pull/14974\r\n* Go: implement provider: CometAPI by @tmimmanuel in https://github.com/infiniflow/ragflow/pull/14930\r\n* Fix: add SSRF guard for agent test_db_connection endpoint by @dale053 in https://github.com/infiniflow/ragflow/pull/14860\r\n* Go: fix siliconflow embedding response by @buua436 in https://github.com/infiniflow/ragflow/pull/14975\r\n* Refactor: speed up ragflow server, save startup memory by @wangq8 in https://github.com/infiniflow/ragflow/pull/14973\r\n* fix(api): enforce tenant access for connector routes by @dev111-actor in https://github.com/infiniflow/ragflow/pull/14747\r\n* Refactor: enhance graphrag - part 2 by @wangq8 in https://github.com/infiniflow/ragflow/pull/14972\r\n* Go: add restful api route aliases by @buua436 in https://github.com/infiniflow/ragflow/pull/14977\r\n* Go: implement provider: DeepInfra, XunFei by @Haruko386 in https://github.com/infiniflow/ragflow/pull/14978\r\n* fix: metadata_condition returning all docs when filter matches nothing by @hak2979 in https://github.com/infiniflow/ragflow/pull/14967\r\n* Bugfix: fix tag show by @wangq8 in https://github.com/infiniflow/ragflow/pull/14980\r\n* Fix admin CLI system variable commands by @jakearmstrong59 in https://github.com/infiniflow/ragflow/pull/14956\r\n* Go: fix forgetting policy validation and fix memory update diff checks by @buua436 in https://github.com/infiniflow/ragflow/pull/14976\r\n* Go: align document list response by @buua436 in https://github.com/infiniflow/ragflow/pull/14982\r\n* Go: add dataset graph api by @buua436 in https://github.com/infiniflow/ragflow/pull/14984\r\n* Feat: full optimization on connector dashboard by @Magicbook1108 in https://github.com/infiniflow/ragflow/pull/14979\r\n* Fix: validate memory tenant model IDs on update and enforce tenant scope in memory pipeline by @jony376 in https://github.com/infiniflow/ragflow/pull/14923\r\n* Misc: fix some typos by @kingloon in https://github.com/infiniflow/ragflow/pull/14987\r\n* Go: implement provider: MinerU by @Haruko386 in https://github.com/infiniflow/ragflow/pull/14990\r\n* Add Replicate chat provider by @tmimmanuel in https://github.com/infiniflow/ragflow/pull/14958\r\n* Fix: agent session log message by @buua436 in https://github.com/infiniflow/ragflow/pull/14991\r\n* Fix: MinerU vlm-http-client backend output file detection by @lksr1201 in https://github.com/infiniflow/ragflow/pull/14240\r\n* fix: the opencc c library uses fgets() to read dicti... in text.c by @orbisai0security in https://github.com/infiniflow/ragflow/pull/13970\r\n* feat(tts): cache synthesized speech in Redis to avoid redundant calls by @plind-junior in https://github.com/infiniflow/ragflow/pull/14851\r\n* fix(retrieval): keep manual metadata filter reusable inside Iteration by @plind-junior in https://github.com/infiniflow/ragflow/pull/14849\r\n* Go: implement provider: Xinference by @tmimmanuel in https://github.com/infiniflow/ragflow/pull/14938\r\n* Add TogetherAI chat provider by @tmimmanuel in https://github.com/infiniflow/ragflow/pull/14957\r\n* Fix: restore saved api_key fallback in add_llm (#14921) by @Rene0422 in https://github.com/infiniflow/ragflow/pull/14941\r\n* Feat: add new tests and tescases for restful api suite by @6ba3i in https://github.com/infiniflow/ragflow/pull/14993\r\n* Feat: VLM image descriptions in MinerU parser (#14869) by @Rene0422 in https://github.com/infiniflow/ragflow/pull/14946\r\n* feat(sdk): make Begin inputs discoverable on Session.ask by @plind-junior in https://github.com/infiniflow/ragflow/pull/14842\r\n* Feat: add new tests and tescases for restful api suite by @6ba3i in https://github.com/infiniflow/ragflow/pull/14996\r\n* Refact functions in engine in GO by @qinling0210 in https://github.com/infiniflow/ragflow/pull/14981\r\n* Go: implement provider: 302.AI and JieKou-AI by @Haruko386 in https://github.com/infiniflow/ragflow/pull/15034\r\n* Feat: add new tests and tescases for restful api suite by @6ba3i in https://github.com/infiniflow/ragflow/pull/15038\r\n* fix(go): guard custom base URL driver creation by @bitloi in https://github.com/infiniflow/ragflow/pull/15030\r\n* Fix: The folder tree menu for moving folders cannot be scrolled. by @cike8899 in https://github.com/infiniflow/ragflow/pull/15037\r\n* fix: Langfuse chat observation by @bitloi in https://github.com/infiniflow/ragflow/pull/15026\r\n* Feat: add local & ssh provider in admin panel by @Magicbook1108 in https://github.com/infiniflow/ragflow/pull/15039\r\n* Fix discord async issue by @wangq8 in https://github.com/infiniflow/ragflow/pull/15054\r\n* Go: implement provider: MinerU_Local by @Haruko386 in https://github.com/infiniflow/ragflow/pull/15051\r\n* Docs: Initial draft of v0.25.5 release notes. by @writinwaters in https://github.com/infiniflow/ragflow/pull/15058\r\n* Docs: Update version references to v0.25.5 in READMEs and docs  by @JinHai-CN in https://github.com/infiniflow/ragflow/pull/15059\r\n\r\n## New Contributors\r\n* @Br1an67 made their first contribution in https://github.com/infiniflow/ragflow/pull/13294\r\n* @sham-sr made their first contribution in https://github.com/infiniflow/ragflow/pull/14784\r\n* @yingjianzh made their first contribution in https://github.com/infiniflow/ragflow/pull/14760\r\n* @SnakeEye-sudo made their first contribution in https://github.com/infiniflow/ragflow/pull/14557\r\n* @xjq123456 made their first contribution in https://github.com/infiniflow/ragflow/pull/14214\r\n* @jakearmstrong59 made their first contribution in https://github.com/infiniflow/ragflow/pull/14935\r\n* @carlos4s made their first contribution in https://github.com/infiniflow/ragflow/pull/14940\r\n* @Rene0422 made their first contribution in https://github.com/infiniflow/ragflow/pull/14924\r\n* @dev111-actor made their first contribution in https://github.com/infiniflow/ragflow/pull/14747\r\n* @hak2979 made their first contribution in https://github.com/infiniflow/ragflow/pull/14967\r\n* @kingloon made their first contribution in https://github.com/infiniflow/ragflow/pull/14987\r\n* @lksr1201 made their first contribution in https://github.com/infiniflow/ragflow/pull/14240\r\n\r\n**Full Changelog**: https://github.com/infiniflow/ragflow/compare/v0.25.4...v0.25.5"
+        },
+        "source": [
+          {
+            "kind": "topic",
+            "value": "ai-agents"
+          }
+        ]
+      },
+      "score": {
+        "maturityScore": 95,
+        "compatibilityScore": 43,
+        "performancePotentialScore": 42,
+        "maintenanceRiskScore": 20,
+        "adoptionSignalScore": 100,
+        "finalUpgradeScore": 70,
+        "estimatedPerformanceGainPct": 37,
+        "estimatedCostReductionPct": 9,
+        "hardVetoReasons": [],
+        "qualifyingSignals": {
+          "activeLast30Days": true,
+          "hasStableRelease": true,
+          "commercialLicense": true,
+          "documentationComplete": true,
+          "compatibilityAtLeast70": false,
+          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedCostReductionAtLeast10Pct": false,
+          "avoidsProductionSecurityBoundary": true
+        },
+        "qualifyingSignalCount": 6,
+        "eligibleForValidation": false,
+        "summary": [
+          "Active commits in last 30 days: 100",
+          "Latest release: v0.25.5",
+          "License: Apache-2.0",
+          "Projected performance gain: 37%",
+          "Projected cost reduction: 9%"
+        ]
+      }
+    },
+    {
+      "repo": {
+        "fullName": "langchain-ai/langgraph",
+        "url": "https://github.com/langchain-ai/langgraph",
+        "description": "Build resilient agents.",
+        "topics": [
+          "agents",
+          "ai",
+          "ai-agents",
+          "chatgpt",
+          "deepagents",
+          "enterprise",
+          "framework",
+          "gemini",
+          "generative-ai",
+          "langchain",
+          "langgraph",
+          "llm",
+          "multiagent",
+          "open-source",
+          "openai",
+          "pydantic",
+          "python",
+          "rag"
+        ],
+        "stars": 32846,
+        "forks": 5553,
+        "defaultBranch": "main",
+        "updatedAt": "2026-05-25T02:12:23Z",
+        "pushedAt": "2026-05-24T01:11:15Z",
+        "license": "MIT",
+        "readme": "<div align=\"center\">\n  <a href=\"https://www.langchain.com/langgraph\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/images/logo-dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\".github/images/logo-light.svg\">\n      <img alt=\"LangGraph Logo\" src=\".github/images/logo-dark.svg\" width=\"50%\">\n    </picture>\n  </a>\n</div>\n\n<div align=\"center\">\n  <h3>Low-level orchestration framework for building stateful agents.</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://opensource.org/licenses/MIT\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/l/langgraph\" alt=\"PyPI - License\"></a>\n  <a href=\"https://pypistats.org/packages/langgraph\" target=\"_blank\"><img src=\"https://img.shields.io/pepy/dt/langgraph\" alt=\"PyPI - Downloads\"></a>\n  <a href=\"https://pypi.org/project/langgraph/\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/v/langgraph.svg?label=%20\" alt=\"Version\"></a>\n  <a href=\"https://x.com/langchain_oss\" target=\"_blank\"><img src=\"https://img.shields.io/twitter/url/https/twitter.com/langchain_oss.svg?style=social&label=Follow%20%40LangChain\" alt=\"Twitter / X\"></a>\n</div>\n\n<br>\n\nTrusted by companies shaping the future of agents – including Klarna, Replit, Elastic, and more – LangGraph is a low-level orchestration framework for building, managing, and deploying long-running, stateful agents.\n\n```bash\npip install -U langgraph\n```\n\n> [!TIP]\n> If you're looking to quickly build agents, check out **[Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview)** — a higher-level package built on LangGraph for agents that can plan, use subagents, and leverage file systems for complex tasks.\n\nFor an equivalent JS/TS library, check out [LangGraph.js](https://github.com/langchain-ai/langgraphjs) and the [JS docs](https://docs.langchain.com/oss/javascript/langgraph/overview).\n\n## Why use LangGraph?\n\nLangGraph provides low-level supporting infrastructure for *any* long-running, stateful workflow or agent:\n\n- **[Durable execution](https://docs.langchain.com/oss/python/langgraph/durable-execution)** — Build agents that persist through failures and can run for extended periods, automatically resuming from exactly where they left off.\n- **[Human-in-the-loop](https://docs.langchain.com/oss/python/langgraph/interrupts)** — Seamlessly incorporate human oversight by inspecting and modifying agent state at any point during execution.\n- **[Comprehensive memory](https://docs.langchain.com/oss/python/langgraph/memory)** — Create truly stateful agents with both short-term working memory for ongoing reasoning and long-term persistent memory across sessions.\n- **[Debugging with LangSmith](https://www.langchain.com/langsmith)** — Gain deep visibility into complex agent behavior with visualization tools that trace execution paths, capture state transitions, and provide detailed runtime metrics.\n- **[Production-ready deployment](https://docs.langchain.com/langsmith/deployments)** — Deploy sophisticated agent systems confidently with scalable infrastructure designed to handle the unique challenges of stateful, long-running workflows.\n\n> [!TIP]\n> For developing, debugging, and deploying AI agents and LLM applications, see [LangSmith](https://docs.langchain.com/langsmith/home).\n\n## LangGraph ecosystem\n\nWhile LangGraph can be used standalone, it also integrates seamlessly with any LangChain product, giving developers a full suite of tools for building agents.\n\nTo improve your LLM application development, pair LangGraph with:\n\n- [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview) – Build agents that can plan, use subagents, and leverage file systems for complex tasks.\n- [LangChain](https://docs.langchain.com/oss/python/langchain/overview) – Provides integrations and composable components to streamline LLM application development.\n- [LangSmith](https://www.langchain.com/langsmith) – Helpful for agent evals and observability. Debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and improve performance over time.\n- [LangSmith Deployment](https://docs.langchain.com/langsmith/deployments) – Deploy and scale agents effortlessly with a purpose-built deployment platform for long-running, stateful workflows. Discover, reuse, configure, and share agents across teams – and iterate quickly with visual prototyping in [LangSmith Studio](https://docs.langchain.com/langsmith/studio).\n\n---\n\n## Documentation\n\n- [docs.langchain.com](https://docs.langchain.com/oss/python/langgraph/overview) – Comprehensive documentation, including conceptual overviews and guides\n- [reference.langchain.com/python/langgraph](https://reference.langchain.com/python/langgraph) – API reference docs for LangGraph packages\n- [LangGraph Quickstart](https://docs.langchain.com/oss/python/langgraph/quickstart) – Get started building with LangGraph\n- [Chat LangChain](https://chat.langchain.com/) – Chat with the LangChain documentation and get answers to your questions\n\n**Discussions**: Visit the [LangChain Forum](https://forum.langchain.com) to connect with the community and share all of your technical questions, ideas, and feedback.\n\n## Additional resources\n\n- **[Guides](https://docs.langchain.com/oss/python/learn)** – Quick, actionable code snippets for topics such as streaming, adding memory & persistence, and design patterns (e.g. branching, subgraphs, etc.).\n- **[LangChain Academy](https://academy.langchain.com/courses/intro-to-langgraph)** – Learn the basics of LangGraph in our free, structured course.\n- **[Case studies](https://www.langchain.com/built-with-langgraph)** – Hear how industry leaders use LangGraph to ship AI applications at scale.\n- [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview) – Learn how to contribute to LangChain projects and find good first issues.\n- [Code of Conduct](https://github.com/langchain-ai/langchain/?tab=coc-ov-file) – Our community guidelines and standards for participation.\n\n---\n\n## Acknowledgements\n\nLangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.\n",
+        "recentCommitCount30d": 100,
+        "latestRelease": {
+          "tagName": "sdk==0.3.15",
+          "name": "langgraph-sdk==0.3.15",
+          "htmlUrl": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.3.15",
+          "publishedAt": "2026-05-22T16:54:42Z",
+          "prerelease": false,
+          "draft": false,
+          "body": "Changes since sdk==0.3.14\n\n* release(checkpoint): 4.1.1 (#7890)\n* release(sdk-py): 0.3.15 (#7891)\n* fix(sdk-py): percent-encode caller-supplied identifiers in URL paths (#7893)\n* release(langgraph): 1.2.1 (#7883)\n* chore(deps): bump idna from 3.11 to 3.15 in /libs/sdk-py (#7863)\n* chore(deps): bump urllib3 from 2.6.3 to 2.7.0 in /libs/sdk-py (#7764)\n* chore(deps): bump langsmith from 0.7.31 to 0.8.0 in /libs/sdk-py (#7789)\n* release: bump alpha packages to official versions (#7775)\n* chore(langgraph): bump langchain-core to 1.4.0 (#7767)\n* feat(sdk-py): support metadata filter for crons search/count (#7737)\n* chore(deps): bump ty from 0.0.23 to 0.0.33 in /libs/sdk-py (#7666)"
         },
         "source": [
           {
             "kind": "watch_repo",
             "value": "langchain-ai/langgraph"
-          },
-          {
-            "kind": "topic",
-            "value": "agent-framework"
-          },
-          {
-            "kind": "topic",
-            "value": "multi-agent"
-          },
-          {
-            "kind": "topic",
-            "value": "workflow-automation"
           }
         ]
       },
       "score": {
-        "maturityScore": 77,
-        "compatibilityScore": 77,
-        "performancePotentialScore": 32,
-        "maintenanceRiskScore": 23,
-        "adoptionSignalScore": 91,
-        "finalUpgradeScore": 71,
-        "estimatedPerformanceGainPct": 27,
-        "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [],
-        "qualifyingSignals": {
-          "activeLast30Days": true,
-          "hasStableRelease": true,
-          "commercialLicense": true,
-          "documentationComplete": false,
-          "compatibilityAtLeast70": true,
-          "projectedPerformanceGainAtLeast15Pct": true,
-          "projectedCostReductionAtLeast10Pct": false,
-          "avoidsProductionSecurityBoundary": true
-        },
-        "qualifyingSignalCount": 6,
-        "eligibleForValidation": false,
-        "summary": [
-          "Active commits in last 30 days: 18",
-          "Latest release: v0.3.5",
-          "License: MIT",
-          "Projected performance gain: 27%",
-          "Projected cost reduction: 4%"
-        ]
-      }
-    },
-    {
-      "repo": {
-        "fullName": "browser-use/browser-use",
-        "url": "https://github.com/browser-use/browser-use",
-        "description": "Browser automation agent framework for web tasks.",
-        "topics": [
-          "browser-automation",
-          "agent-framework",
-          "tool-use"
-        ],
-        "stars": 15000,
-        "forks": 1600,
-        "defaultBranch": "main",
-        "updatedAt": "2026-03-23T13:40:00Z",
-        "pushedAt": "2026-03-23T13:39:00Z",
-        "license": "MIT",
-        "readme": "## Quickstart\nInstall and launch browser tasks with reproducible examples. Usage, configuration, troubleshooting, and benchmark sections are included. The docs describe latency improvements and safety boundaries for browser control.\n\n## Benchmark\nThe project shows benchmark comparisons for task completion and browsing latency.\n\n## Roadmap\nRelease notes and examples are updated regularly.",
-        "recentCommitCount30d": 31,
-        "latestRelease": {
-          "tagName": "v1.9.0",
-          "name": "v1.9.0",
-          "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/v1.9.0",
-          "publishedAt": "2026-03-18T09:30:00Z",
-          "prerelease": false,
-          "draft": false,
-          "body": "Adds more efficient browser sessions, lower latency task execution, and benchmark dashboards."
-        },
-        "source": [
-          {
-            "kind": "watch_repo",
-            "value": "browser-use/browser-use"
-          },
-          {
-            "kind": "topic",
-            "value": "browser-automation"
-          },
-          {
-            "kind": "topic",
-            "value": "agent-framework"
-          },
-          {
-            "kind": "topic",
-            "value": "tool-use"
-          }
-        ]
-      },
-      "score": {
-        "maturityScore": 80,
-        "compatibilityScore": 77,
-        "performancePotentialScore": 32,
+        "maturityScore": 95,
+        "compatibilityScore": 61,
+        "performancePotentialScore": 14,
         "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 72,
-        "finalUpgradeScore": 69,
-        "estimatedPerformanceGainPct": 27,
+        "adoptionSignalScore": 100,
+        "finalUpgradeScore": 70,
+        "estimatedPerformanceGainPct": 9,
         "estimatedCostReductionPct": 4,
         "hardVetoReasons": [],
         "qualifyingSignals": {
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": false,
-          "compatibilityAtLeast70": true,
-          "projectedPerformanceGainAtLeast15Pct": true,
-          "projectedCostReductionAtLeast10Pct": false,
-          "avoidsProductionSecurityBoundary": true
-        },
-        "qualifyingSignalCount": 6,
-        "eligibleForValidation": false,
-        "summary": [
-          "Active commits in last 30 days: 31",
-          "Latest release: v1.9.0",
-          "License: MIT",
-          "Projected performance gain: 27%",
-          "Projected cost reduction: 4%"
-        ]
-      }
-    },
-    {
-      "repo": {
-        "fullName": "microsoft/autogen",
-        "url": "https://github.com/microsoft/autogen",
-        "description": "Multi-agent orchestration framework.",
-        "topics": [
-          "multi-agent",
-          "agent-framework",
-          "automation"
-        ],
-        "stars": 39000,
-        "forks": 5400,
-        "defaultBranch": "main",
-        "updatedAt": "2026-03-22T21:00:00Z",
-        "pushedAt": "2026-03-22T20:58:00Z",
-        "license": "MIT",
-        "readme": "## Quickstart\nAutoGen provides multi-agent orchestration, examples, installation instructions, and migration notes.\n\n## Benchmark\nThe repository publishes evaluation notes and performance discussions.\n\n## Release\nReleases include changelog entries and upgrade instructions.",
-        "recentCommitCount30d": 12,
-        "latestRelease": {
-          "tagName": "v0.6.3",
-          "name": "v0.6.3",
-          "htmlUrl": "https://github.com/microsoft/autogen/releases/tag/v0.6.3",
-          "publishedAt": "2026-03-17T07:45:00Z",
-          "prerelease": false,
-          "draft": false,
-          "body": "Improves automation reliability and benchmark coverage."
-        },
-        "source": [
-          {
-            "kind": "watch_repo",
-            "value": "microsoft/autogen"
-          },
-          {
-            "kind": "topic",
-            "value": "agent-framework"
-          },
-          {
-            "kind": "topic",
-            "value": "multi-agent"
-          }
-        ]
-      },
-      "score": {
-        "maturityScore": 66,
-        "compatibilityScore": 69,
-        "performancePotentialScore": 32,
-        "maintenanceRiskScore": 32,
-        "adoptionSignalScore": 94,
-        "finalUpgradeScore": 66,
-        "estimatedPerformanceGainPct": 27,
-        "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [],
-        "qualifyingSignals": {
-          "activeLast30Days": true,
-          "hasStableRelease": true,
-          "commercialLicense": true,
-          "documentationComplete": false,
+          "documentationComplete": true,
           "compatibilityAtLeast70": false,
-          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedPerformanceGainAtLeast15Pct": false,
           "projectedCostReductionAtLeast10Pct": false,
           "avoidsProductionSecurityBoundary": true
         },
         "qualifyingSignalCount": 5,
         "eligibleForValidation": false,
         "summary": [
-          "Active commits in last 30 days: 12",
-          "Latest release: v0.6.3",
+          "Active commits in last 30 days: 100",
+          "Latest release: sdk==0.3.15",
           "License: MIT",
-          "Projected performance gain: 27%",
+          "Projected performance gain: 9%",
           "Projected cost reduction: 4%"
         ]
       }
     },
     {
       "repo": {
-        "fullName": "openai/openai-agents-python",
-        "url": "https://github.com/openai/openai-agents-python",
-        "description": "Python toolkit for building structured agents with tracing and tool orchestration.",
+        "fullName": "mastra-ai/mastra",
+        "url": "https://github.com/mastra-ai/mastra",
+        "description": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
         "topics": [
-          "agent-framework",
-          "automation",
-          "tool-use",
-          "workflow-automation"
+          "agents",
+          "ai",
+          "chatbots",
+          "evals",
+          "javascript",
+          "llm",
+          "mcp",
+          "nextjs",
+          "nodejs",
+          "reactjs",
+          "tts",
+          "typescript",
+          "workflows"
         ],
-        "stars": 9200,
-        "forks": 1100,
+        "stars": 24265,
+        "forks": 2118,
         "defaultBranch": "main",
-        "updatedAt": "2026-03-24T18:11:00Z",
-        "pushedAt": "2026-03-24T18:10:00Z",
-        "license": "Apache-2.0",
-        "readme": "## Quickstart\nInstall the package, define tools, and run an agent loop with traces. The project ships setup instructions, benchmark notes, release guidance, and examples for tool use, agent orchestration, and model provider switching.\n\n## Benchmark\nThe examples describe latency, reliability, and tracing impact in reproducible local runs.\n\n## Release\nStable releases are published with changelog notes and migration guidance.",
-        "recentCommitCount30d": 24,
+        "updatedAt": "2026-05-25T02:07:06Z",
+        "pushedAt": "2026-05-25T01:21:05Z",
+        "license": "NOASSERTION",
+        "readme": "# Mastra\n\n[![npm version](https://badge.fury.io/js/@mastra%2Fcore.svg)](https://www.npmjs.com/package/@mastra/core)\n[![CodeQl](https://github.com/mastra-ai/mastra/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mastra-ai/mastra/actions/workflows/github-code-scanning/codeql)\n[![GitHub Repo stars](https://img.shields.io/github/stars/mastra-ai/mastra)](https://github.com/mastra-ai/mastra/stargazers)\n[![Discord](https://img.shields.io/discord/1309558646228779139?logo=discord&label=Discord&labelColor=white&color=7289DA)](https://discord.gg/BTYqqHKUrf)\n[![Twitter Follow](https://img.shields.io/twitter/follow/mastra?style=social)](https://x.com/mastra)\n[![NPM Downloads](https://img.shields.io/npm/dm/%40mastra%252Fcore)](https://www.npmjs.com/package/@mastra/core)\n[![Static Badge](https://img.shields.io/badge/Y%20Combinator-W25-orange)](https://www.ycombinator.com/companies?batch=W25)\n\nMastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.\n\nIt includes everything you need to go from early prototypes to production-ready applications. Mastra integrates with frontend and backend frameworks like React, Next.js, and Node, or you can deploy it anywhere as a standalone server. It's the easiest way to build, tune, and scale reliable AI products.\n\n## Why Mastra?\n\nPurpose-built for TypeScript and designed around established AI patterns, Mastra gives you everything you need to build great AI applications out-of-the-box.\n\nSome highlights include:\n\n- [**Model routing**](https://mastra.ai/models) - Connect to 40+ providers through one standard interface. Use models from OpenAI, Anthropic, Gemini, and more.\n\n- [**Agents**](https://mastra.ai/docs/agents/overview) - Build autonomous agents that use LLMs and tools to solve open-ended tasks. Agents reason about goals, decide which tools to use, and iterate internally until the model emits a final answer or an optional stopping condition is met.\n\n- [**Workflows**](https://mastra.ai/docs/workflows/overview) - When you need explicit control over execution, use Mastra's graph-based workflow engine to orchestrate complex multi-step processes. Mastra workflows use an intuitive syntax for control flow (`.then()`, `.branch()`, `.parallel()`).\n\n- [**Human-in-the-loop**](https://mastra.ai/docs/workflows/suspend-and-resume) - Suspend an agent or workflow and await user input or approval before resuming. Mastra uses [storage](https://mastra.ai/docs/server-db/storage) to remember execution state, so you can pause indefinitely and resume where you left off.\n\n- **Context management** - Give your agents the right context at the right time. Provide [conversation history](https://mastra.ai/docs/memory/conversation-history), [retrieve](https://mastra.ai/docs/rag/overview) data from your sources (APIs, databases, files), and add human-like [working](https://mastra.ai/docs/memory/working-memory) and [semantic](https://mastra.ai/docs/memory/semantic-recall) memory so your agents behave coherently.\n\n- **Integrations** - Bundle agents and workflows into existing React, Next.js, or Node.js apps, or ship them as standalone endpoints. When building UIs, integrate with agentic libraries like Vercel's AI SDK UI and CopilotKit to bring your AI assistant to life on the web.\n\n- [**MCP servers**](https://mastra.ai/docs/tools-mcp/mcp-overview) - Author Model Context Protocol servers, exposing agents, tools, and other structured resources via the MCP interface. These can then be accessed by any system or agent that supports the protocol.\n\n- **Production essentials** - Shipping reliable agents takes ongoing insight, evaluation, and iteration. With built-in [evals](https://mastra.ai/docs/evals/overview) and [observability](https://mastra.ai/docs/observability/overview), Mastra gives you the tools to observe, measure, and refine continuously.\n\n## Get started\n\nThe **recommended** way to get started with Mastra is by running the command below:\n\n```shell\nnpm create mastra@latest\n```\n\nFollow the [Installation guide](https://mastra.ai/docs/getting-started/installation) for step-by-step setup with the CLI or a manual install.\n\nIf you're new to AI agents, check out our [templates](https://mastra.ai/docs/getting-started/templates), [course](https://mastra.ai/course), and [YouTube videos](https://youtube.com/@mastra-ai) to start building with Mastra today.\n\n## Documentation\n\nVisit our [official documentation](https://mastra.ai/docs).\n\n## Build with AI\n\nLearn how to make your agent a Mastra expert by following the [Build with AI guide](https://mastra.ai/docs/getting-started/build-with-ai).\n\n## Contributing\n\nLooking to contribute? All types of help are appreciated, from coding to testing and feature specification. Read [CONTRIBUTING.md](./CONTRIBUTING.md) for more details on how to get involved.\n\nIf you are a developer and would like to contribute with code, please open an issue to discuss before opening a Pull Request.\n\nInformation about the project setup can be found in the [development documentation](./DEVELOPMENT.md)\n\n## Support\n\nWe have an [open community Discord](https://discord.gg/BTYqqHKUrf). Come and say hello and let us know if you have any questions or need any help getting things running.\n\nIt's also super helpful if you leave the project a star here, at the [top of the page](https://github.com/mastra-ai/mastra)\n\n## Licensing\n\nThis repository uses a dual-license model:\n\n- **Apache License 2.0** — The core framework and the vast majority of this codebase is open source under Apache-2.0.\n- **Mastra Enterprise License** — Code in any directory named `ee/` (e.g., `packages/core/src/auth/ee/`) is source-available under the Mastra Enterprise License. These features require a valid enterprise license for production use but can be freely used for development and testing.\n\nSee [LICENSE.md](./LICENSE.md) for the full license mapping and [ee/LICENSE](./ee/LICENSE) for the enterprise license terms.\n\n## Security\n\nWe are committed to maintaining the security of this repo and of Mastra as a whole. If you discover a security finding we ask you to please responsibly disclose this to us at [security@mastra.ai](mailto:security@mastra.ai) and we will get back to you.\n",
+        "recentCommitCount30d": 100,
         "latestRelease": {
-          "tagName": "v0.4.1",
-          "name": "v0.4.1",
-          "htmlUrl": "https://github.com/openai/openai-agents-python/releases/tag/v0.4.1",
-          "publishedAt": "2026-03-20T10:00:00Z",
+          "tagName": "@mastra/core@1.35.0",
+          "name": "May 15, 2026",
+          "htmlUrl": "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.35.0",
+          "publishedAt": "2026-05-18T10:36:06Z",
           "prerelease": false,
           "draft": false,
-          "body": "Performance improvements for tracing, benchmark updates, and more stable tool execution."
+          "body": "## Highlights\r\n\r\n### FGA Route Policy Coverage + Resolver Hooks (Core/Server/WorkOS)\r\nNew FGA route policy coverage controls add guardrails for protected routes, with built-in resource route metadata resolution and resolver hooks so you can centrally map route → `{resourceType, resourceId, permission}` while still overriding per-route config.\r\n\r\n### Favorites Storage Domain for Agents/Skills (Core + Storage Adapters)\r\nA new `favorites` storage domain lets users favorite/unfavorite stored agents and skills, and adds `visibility` (`private|public`) and `favoriteCount` fields so listings can be filtered and ordered by favorite state (e.g., `pinFavoritedFor`, `favoritedOnly`).\r\n\r\n### Favorites Support Across Major Storage Backends\r\nFavorites is implemented across multiple adapters (@mastra/pg, @mastra/libsql, @mastra/mongodb, @mastra/clickhouse, @mastra/cloudflare), enabling consistent favoriting/visibility queries regardless of your chosen persistence layer.\r\n\r\n### Observational Memory: Accurate Token Estimation for Large File Parts\r\n`@mastra/memory` improves local token estimation for non-image file parts (notably large PDFs), preventing observational memory from missing thresholds and replaying excessive history when provider token-count endpoints aren’t available.\r\n\r\n### Reliability Fixes for Workspaces, Workflows, and Route Matching\r\nMultiple fixes improve correctness: workspace PATCH no longer overwrites stored values with `undefined`, scheduled workflows created via `@mastra/core/workflows` apply schedules correctly, NestJS adapter prefix matching is stricter, and a circular ESM import crash in `@mastra/core/workflows/workflow` is resolved.\r\n\r\n### Breaking Changes\r\n- None called out in this changelog.\r\n\r\n## Changelog\r\n\r\n### [@mastra/core@1.35.0](https://github.com/mastra-ai/mastra/blob/@mastra/core@1.35.0/packages/core/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added FGA route policy coverage controls, built-in resource route metadata resolution, and resolver hooks. ([#16485](https://github.com/mastra-ai/mastra/pull/16485))\r\n\r\n  For example:\r\n\r\n  ```ts\r\n  import { MastraFGAWorkos } from '@mastra/auth-workos';\r\n  import type { FGARouteConfig, FGARouteResolver, IFGAProvider } from '@mastra/core/auth/ee';\r\n  import { createRoute } from '@mastra/server/server-adapter';\r\n\r\n  const routeFGA = {\r\n    'GET /billing/:accountId': {\r\n      resourceType: 'account',\r\n      resourceIdParam: 'accountId',\r\n      permission: 'billing:read',\r\n    },\r\n  } satisfies Record<string, FGARouteConfig>;\r\n\r\n  const resolveRouteFGA: FGARouteResolver = ({ route }) => routeFGA[`${route.method} ${route.path}`];\r\n\r\n  const fga: IFGAProvider = new MastraFGAWorkos({\r\n    apiKey: process.env.WORKOS_API_KEY!,\r\n    clientId: process.env.WORKOS_CLIENT_ID!,\r\n    requireForProtectedRoutes: true,\r\n    auditProtectedRoutes: 'warn',\r\n    resolveRouteFGA,\r\n    validatePermissions: async permissions => {\r\n      /* validate mappings */\r\n    },\r\n  });\r\n\r\n  export const getProjectRoute = createRoute({\r\n    method: 'GET',\r\n    path: '/projects/:projectId',\r\n    responseType: 'json',\r\n    requiresAuth: true,\r\n    fga: {\r\n      resourceType: 'project',\r\n      resourceIdParam: 'projectId',\r\n      permission: 'projects:read',\r\n    },\r\n    handler: async () => {\r\n      return { project: null };\r\n    },\r\n  });\r\n  ```\r\n\r\n- Added a favorites storage domain that lets users mark stored agents and skills as favorites, plus `visibility` (`'private' | 'public'`) and `favoriteCount` fields on stored agents and skills so callers can list, filter, and order by favorite state. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n  Existing rows without `visibility` or `favoriteCount` continue to work; the new fields and APIs are opt-in.\r\n\r\n  **Example**\r\n\r\n  ```ts\r\n  const favorites = await storage.getStore('favorites');\r\n\r\n  await favorites?.favorite({ userId: 'u1', entityType: 'agent', entityId: 'agent-123' });\r\n\r\n  const favoritedIds = await favorites?.listFavoritedIds({ userId: 'u1', entityType: 'agent' });\r\n\r\n  // List agents the user has favorited, surfaced first\r\n  const { agents } = await storage.getStore('agents').list({\r\n    pinFavoritedFor: 'u1',\r\n    favoritedOnly: true,\r\n  });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n- Update provider registry and model documentation with latest models and providers ([`b661349`](https://github.com/mastra-ai/mastra/commit/b661349281514691db78941a9044e6e4f1cde7a7))\r\n\r\n- Fixed a workspace PATCH bug in the inmemory workspace adapter: omitted config fields in a PATCH no longer overwrite previously-persisted values with `undefined`. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n- Fixed active signals so they stay in the correct order when conversations are reloaded from memory. ([#16623](https://github.com/mastra-ai/mastra/pull/16623))\r\n\r\n- Fixed scheduled workflows created from the public @mastra/core/workflows entry point so declared schedules are applied correctly. ([#16637](https://github.com/mastra-ai/mastra/pull/16637))\r\n\r\n- Fixed a crash when importing `@mastra/core/workflows/workflow` from tests or apps, which previously failed with `TypeError: Class extends value undefined is not a constructor or null` (caused by a circular ESM import through the `workflows` barrel). ([#16661](https://github.com/mastra-ai/mastra/pull/16661))\r\n\r\n### [@mastra/auth-workos@1.4.0](https://github.com/mastra-ai/mastra/blob/@mastra/auth-workos@1.4.0/auth/workos/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added FGA route policy coverage controls, built-in resource route metadata resolution, and resolver hooks. ([#16485](https://github.com/mastra-ai/mastra/pull/16485))\r\n\r\n  For example:\r\n\r\n  ```ts\r\n  import { MastraFGAWorkos } from '@mastra/auth-workos';\r\n  import type { FGARouteConfig, FGARouteResolver, IFGAProvider } from '@mastra/core/auth/ee';\r\n  import { createRoute } from '@mastra/server/server-adapter';\r\n\r\n  const routeFGA = {\r\n    'GET /billing/:accountId': {\r\n      resourceType: 'account',\r\n      resourceIdParam: 'accountId',\r\n      permission: 'billing:read',\r\n    },\r\n  } satisfies Record<string, FGARouteConfig>;\r\n\r\n  const resolveRouteFGA: FGARouteResolver = ({ route }) => routeFGA[`${route.method} ${route.path}`];\r\n\r\n  const fga: IFGAProvider = new MastraFGAWorkos({\r\n    apiKey: process.env.WORKOS_API_KEY!,\r\n    clientId: process.env.WORKOS_CLIENT_ID!,\r\n    requireForProtectedRoutes: true,\r\n    auditProtectedRoutes: 'warn',\r\n    resolveRouteFGA,\r\n    validatePermissions: async permissions => {\r\n      /* validate mappings */\r\n    },\r\n  });\r\n\r\n  export const getProjectRoute = createRoute({\r\n    method: 'GET',\r\n    path: '/projects/:projectId',\r\n    responseType: 'json',\r\n    requiresAuth: true,\r\n    fga: {\r\n      resourceType: 'project',\r\n      resourceIdParam: 'projectId',\r\n      permission: 'projects:read',\r\n    },\r\n    handler: async () => {\r\n      return { project: null };\r\n    },\r\n  });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n- Fixed WorkOS FGA missing resources so authorization checks deny access instead of surfacing provider errors. ([#16485](https://github.com/mastra-ai/mastra/pull/16485))\r\n\r\n### [@mastra/clickhouse@1.8.0](https://github.com/mastra-ai/mastra/blob/@mastra/clickhouse@1.8.0/stores/clickhouse/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added favorites support to storage adapters so callers can favorite/unfavorite stored agents and skills, query favorite state alongside list results, and filter listings by visibility. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n  **Example**\r\n\r\n  ```ts\r\n  const storage = new LibSQLStore({\r\n    /* config */\r\n  });\r\n  const favorites = await storage.getStore('favorites');\r\n\r\n  await favorites?.favorite({\r\n    userId: 'user-1',\r\n    entityType: 'agent',\r\n    entityId: 'agent-42',\r\n  });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n- Bumped `@mastra/core` peer dependency floor to `>=1.34.0-0` so the new `@mastra/core/storage/domains/favorites` subpath is available. Older `@mastra/core` versions don't ship the `FavoritesStorage` base class these adapters now extend. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n### [@mastra/cloudflare@1.4.0](https://github.com/mastra-ai/mastra/blob/@mastra/cloudflare@1.4.0/stores/cloudflare/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added favorites support to storage adapters so callers can favorite/unfavorite stored agents and skills, query favorite state alongside list results, and filter listings by visibility. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n  **Example**\r\n\r\n  ```ts\r\n  const storage = new LibSQLStore({\r\n    /* config */\r\n  });\r\n  const favorites = await storage.getStore('favorites');\r\n\r\n  await favorites?.favorite({\r\n    userId: 'user-1',\r\n    entityType: 'agent',\r\n    entityId: 'agent-42',\r\n  });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n- Bumped `@mastra/core` peer dependency floor to `>=1.34.0-0` so the new `@mastra/core/storage/domains/favorites` subpath is available. Older `@mastra/core` versions don't ship the `FavoritesStorage` base class these adapters now extend. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n### [@mastra/libsql@1.11.0](https://github.com/mastra-ai/mastra/blob/@mastra/libsql@1.11.0/stores/libsql/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added favorites support to storage adapters so callers can favorite/unfavorite stored agents and skills, query favorite state alongside list results, and filter listings by visibility. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n  **Example**\r\n\r\n  ```ts\r\n  const storage = new LibSQLStore({\r\n    /* config */\r\n  });\r\n  const favorites = await storage.getStore('favorites');\r\n\r\n  await favorites?.favorite({\r\n    userId: 'user-1',\r\n    entityType: 'agent',\r\n    entityId: 'agent-42',\r\n  });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n- Bumped `@mastra/core` peer dependency floor to `>=1.34.0-0` so the new `@mastra/core/storage/domains/favorites` subpath is available. Older `@mastra/core` versions don't ship the `FavoritesStorage` base class these adapters now extend. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n- Fixed a workspace PATCH bug: omitted config fields in a PATCH no longer overwrite previously-persisted values with `undefined`. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n### [@mastra/memory@1.18.2](https://github.com/mastra-ai/mastra/blob/@mastra/memory@1.18.2/packages/memory/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed thread deletion so it also clears thread-scoped observational memory. ([#16628](https://github.com/mastra-ai/mastra/pull/16628))\r\n\r\n- Fixed Observational Memory missing the observation threshold for messages with large file parts. Previously `TokenCounter`'s local/sync counting path only stringified the file descriptor (`type`, `mimeType`, `filename`) for non-image files, so a 100KB PDF looked like ~8 tokens to OM and the conversation kept replaying the full unobserved history past every reasonable threshold. ([#16562](https://github.com/mastra-ai/mastra/pull/16562))\r\n\r\n  `TokenCounter` now estimates non-image file part tokens locally from the attachment's byte size and mime type using a per-provider heuristic, mirroring the existing local image-token estimator:\r\n  - Anthropic PDFs ≈ `bytes / 3` (floor 1500)\r\n  - Google PDFs ≈ `bytes / 20` (floor 258)\r\n  - OpenAI / unknown PDFs ≈ `bytes / 4` (floor 500)\r\n  - Text-ish mime types (`text/*`, JSON, XML, YAML) ≈ `bytes / 4`\r\n  - Other binary ≈ `bytes / 4`\r\n\r\n  URL-only file parts (no body to size) keep the previous descriptor-only local estimate. `countMessagesAsync()` continues to prefer provider token-count endpoints for supported providers; this change only improves the local fallback used when no provider endpoint is available.\r\n\r\n  ```ts\r\n  // Before: this PDF counted as ~8 tokens locally regardless of size, so OM never triggered.\r\n  const part = {\r\n    type: 'file',\r\n    data: largePdfBase64,\r\n    mimeType: 'application/pdf',\r\n    filename: 'report.pdf',\r\n  };\r\n  // counter.countMessage(message) ≈ 8\r\n\r\n  // After: estimated locally from byte size on the active provider.\r\n  // counter.countMessage(message) ≈ tens of thousands of tokens\r\n  //   → OM threshold trips as expected.\r\n  ```\r\n\r\n  The internal token-estimate cache version was bumped, which invalidates persisted estimates from older `@mastra/memory` releases on the next read; entries are recomputed automatically.\r\n\r\n  Fixes https://github.com/mastra-ai/mastra/issues/16522\r\n\r\n### [@mastra/mongodb@1.9.0](https://github.com/mastra-ai/mastra/blob/@mastra/mongodb@1.9.0/stores/mongodb/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added favorites support to storage adapters so callers can favorite/unfavorite stored agents and skills, query favorite state alongside list results, and filter listings by visibility. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n  **Example**\r\n\r\n  ```ts\r\n  const storage = new LibSQLStore({\r\n    /* config */\r\n  });\r\n  const favorites = await storage.getStore('favorites');\r\n\r\n  await favorites?.favorite({\r\n    userId: 'user-1',\r\n    entityType: 'agent',\r\n    entityId: 'agent-42',\r\n  });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n- Bumped `@mastra/core` peer dependency floor to `>=1.34.0-0` so the new `@mastra/core/storage/domains/favorites` subpath is available. Older `@mastra/core` versions don't ship the `FavoritesStorage` base class these adapters now extend. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n### [@mastra/nestjs@0.1.6](https://github.com/mastra-ai/mastra/blob/@mastra/nestjs@0.1.6/server-adapters/nestjs/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed NestJS route matching so configured prefixes are enforced and partial prefix matches are ignored. For example, a prefix of `/api` no longer matches `/apiish/agents`; only `/api` and `/api/*` are treated as Mastra routes. ([#16637](https://github.com/mastra-ai/mastra/pull/16637))\r\n\r\n### [@mastra/pg@1.11.0](https://github.com/mastra-ai/mastra/blob/@mastra/pg@1.11.0/stores/pg/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added favorites support to storage adapters so callers can favorite/unfavorite stored agents and skills, query favorite state alongside list results, and filter listings by visibility. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n  **Example**\r\n\r\n  ```ts\r\n  const storage = new LibSQLStore({\r\n    /* config */\r\n  });\r\n  const favorites = await storage.getStore('favorites');\r\n\r\n  await favorites?.favorite({\r\n    userId: 'user-1',\r\n    entityType: 'agent',\r\n    entityId: 'agent-42',\r\n  });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n- Fixed a workspace PATCH bug: omitted config fields in a PATCH no longer overwrite previously-persisted values with `undefined`. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n- Bumped `@mastra/core` peer dependency floor to `>=1.34.0-0` so the new `@mastra/core/storage/domains/favorites` subpath is available. Older `@mastra/core` versions don't ship the `FavoritesStorage` base class these adapters now extend. ([#16580](https://github.com/mastra-ai/mastra/pull/16580))\r\n\r\n### [@mastra/playground-ui@28.0.1](https://github.com/mastra-ai/mastra/blob/@mastra/playground-ui@28.0.1/packages/playground-ui/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed the Observability traces page on storage providers that don't support the Branches list mode. The page now falls back to Traces mode, hides the Branches option in the filter, and shows a dismissible notice instead of a full-screen error. ([#16601](https://github.com/mastra-ai/mastra/pull/16601))\r\n\r\n- Improved the Observability traces list to make the with-subtraces view more discoverable. ([#16643](https://github.com/mastra-ai/mastra/pull/16643))\r\n  - **Added:** A **Level** column whose icon distinguishes top-level **Trace** rows from nested **Subtrace** rows.\r\n  - **Added:** A tooltip legend on the **Level** header showing both icons side by side.\r\n  - **Added:** A standalone **Show subtraces** toggle next to **Add Filter** — off keeps the default top-level view, on includes subtraces.\r\n  - **Removed:** The **List mode** entry from the **Add Filter** menu (now driven by the toggle).\r\n\r\n  **Usage:** Open Observability → Traces → switch **Show subtraces** on. The **Level** column updates: top-level rows keep the Trace icon, nested rows show the Subtrace (↳) icon. The toggle is hidden automatically when the active storage provider doesn't support subtraces.\r\n\r\n- Removed the \"Group traces by thread\" option from the Observability traces page. The list now always displays a flat view of traces, without thread-id subheaders. To narrow results to a specific thread, use the Thread ID property in the Add filter menu (open Observability → Traces → Add filter → Thread ID → paste the threadId). ([#16633](https://github.com/mastra-ai/mastra/pull/16633))\r\n\r\n- Polished the property filter dropdown so the chevron icon next to each option keeps the same shape when its side panel opens ([#16635](https://github.com/mastra-ai/mastra/pull/16635))\r\n\r\n### [@mastra/server@1.35.0](https://github.com/mastra-ai/mastra/blob/@mastra/server@1.35.0/packages/server/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added FGA route policy coverage controls, built-in resource route metadata resolution, and resolver hooks. ([#16485](https://github.com/mastra-ai/mastra/pull/16485))\r\n\r\n  For example:\r\n\r\n  ```ts\r\n  import { MastraFGAWorkos } from '@mastra/auth-workos';\r\n  import type { FGARouteConfig, FGARouteResolver, IFGAProvider } from '@mastra/core/auth/ee';\r\n  import { createRoute } from '@mastra/server/server-adapter';\r\n\r\n  const routeFGA = {\r\n    'GET /billing/:accountId': {\r\n      resourceType: 'account',\r\n      resourceIdParam: 'accountId',\r\n      permission: 'billing:read',\r\n    },\r\n  } satisfies Record<string, FGARouteConfig>;\r\n\r\n  const resolveRouteFGA: FGARouteResolver = ({ route }) => routeFGA[`${route.method} ${route.path}`];\r\n\r\n  const fga: IFGAProvider = new MastraFGAWorkos({\r\n    apiKey: process.env.WORKOS_API_KEY!,\r\n    clientId: process.env.WORKOS_CLIENT_ID!,\r\n    requireForProtectedRoutes: true,\r\n    auditProtectedRoutes: 'warn',\r\n    resolveRouteFGA,\r\n    validatePermissions: async permissions => {\r\n      /* validate mappings */\r\n    },\r\n  });\r\n\r\n  export const getProjectRoute = createRoute({\r\n    method: 'GET',\r\n    path: '/projects/:projectId',\r\n    responseType: 'json',\r\n    requiresAuth: true,\r\n    fga: {\r\n      resourceType: 'project',\r\n      resourceIdParam: 'projectId',\r\n      permission: 'projects:read',\r\n    },\r\n    handler: async () => {\r\n      return { project: null };\r\n    },\r\n  });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n### Other updated packages\r\n\r\nThe following packages were updated with dependency changes only:\r\n\r\n- [@mastra/agent-builder@1.0.36](https://github.com/mastra-ai/mastra/blob/@mastra/agent-builder@1.0.36/packages/agent-builder/CHANGELOG.md)\r\n- [@mastra/client-js@1.19.1](https://github.com/mastra-ai/mastra/blob/@mastra/client-js@1.19.1/client-sdks/client-js/CHANGELOG.md)\r\n- [@mastra/deployer@1.35.0](https://github.com/mastra-ai/mastra/blob/@mastra/deployer@1.35.0/packages/deployer/CHANGELOG.md)\r\n- [@mastra/deployer-cloud@1.35.0](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-cloud@1.35.0/deployers/cloud/CHANGELOG.md)\r\n- [@mastra/deployer-cloudflare@1.1.36](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-cloudflare@1.1.36/deployers/cloudflare/CHANGELOG.md)\r\n- [@mastra/deployer-netlify@1.1.12](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-netlify@1.1.12/deployers/netlify/CHANGELOG.md)\r\n- [@mastra/deployer-vercel@1.1.30](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-vercel@1.1.30/deployers/vercel/CHANGELOG.md)\r\n- [@mastra/editor@0.8.1](https://github.com/mastra-ai/mastra/blob/@mastra/editor@0.8.1/packages/editor/CHANGELOG.md)\r\n- [@mastra/express@1.3.22](https://github.com/mastra-ai/mastra/blob/@mastra/express@1.3.22/server-adapters/express/CHANGELOG.md)\r\n- [@mastra/fastify@1.3.22](https://github.com/mastra-ai/mastra/blob/@mastra/fastify@1.3.22/server-adapters/fastify/CHANGELOG.md)\r\n- [@mastra/hono@1.4.17](https://github.com/mastra-ai/mastra/blob/@mastra/hono@1.4.17/server-adapters/hono/CHANGELOG.md)\r\n- [@mastra/koa@1.5.5](https://github.com/mastra-ai/mastra/blob/@mastra/koa@1.5.5/server-adapters/koa/CHANGELOG.md)\r\n- [@mastra/longmemeval@1.0.41](https://github.com/mastra-ai/mastra/blob/@mastra/longmemeval@1.0.41/explorations/longmemeval/CHANGELOG.md)\r\n- [@mastra/mcp-docs-server@1.1.38](https://github.com/mastra-ai/mastra/blob/@mastra/mcp-docs-server@1.1.38/packages/mcp-docs-server/CHANGELOG.md)\r\n- [@mastra/opencode@0.0.38](https://github.com/mastra-ai/mastra/blob/@mastra/opencode@0.0.38/integrations/opencode/CHANGELOG.md)\r\n- [@mastra/react@0.3.3](https://github.com/mastra-ai/mastra/blob/@mastra/react@0.3.3/client-sdks/react/CHANGELOG.md)\r\n- [@mastra/temporal@0.1.5](https://github.com/mastra-ai/mastra/blob/@mastra/temporal@0.1.5/workflows/temporal/CHANGELOG.md)\r\n\r\n"
         },
         "source": [
           {
-            "kind": "watch_repo",
-            "value": "openai/openai-agents-python"
-          },
-          {
             "kind": "topic",
-            "value": "agent-framework"
-          },
-          {
-            "kind": "topic",
-            "value": "tool-use"
-          },
-          {
-            "kind": "topic",
-            "value": "workflow-automation"
+            "value": "evals"
           }
         ]
       },
       "score": {
-        "maturityScore": 80,
-        "compatibilityScore": 77,
-        "performancePotentialScore": 32,
-        "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 51,
-        "finalUpgradeScore": 65,
-        "estimatedPerformanceGainPct": 27,
+        "maturityScore": 95,
+        "compatibilityScore": 75,
+        "performancePotentialScore": 14,
+        "maintenanceRiskScore": 40,
+        "adoptionSignalScore": 91,
+        "finalUpgradeScore": 69,
+        "estimatedPerformanceGainPct": 9,
         "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [],
+        "hardVetoReasons": [
+          "license_unknown",
+          "breaking_change_high_risk"
+        ],
         "qualifyingSignals": {
           "activeLast30Days": true,
           "hasStableRelease": true,
-          "commercialLicense": true,
-          "documentationComplete": false,
+          "commercialLicense": false,
+          "documentationComplete": true,
           "compatibilityAtLeast70": true,
-          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedPerformanceGainAtLeast15Pct": false,
           "projectedCostReductionAtLeast10Pct": false,
           "avoidsProductionSecurityBoundary": true
         },
-        "qualifyingSignalCount": 6,
+        "qualifyingSignalCount": 5,
         "eligibleForValidation": false,
         "summary": [
-          "Active commits in last 30 days: 24",
-          "Latest release: v0.4.1",
-          "License: Apache-2.0",
-          "Projected performance gain: 27%",
+          "Active commits in last 30 days: 100",
+          "Latest release: @mastra/core@1.35.0",
+          "License: NOASSERTION",
+          "Projected performance gain: 9%",
           "Projected cost reduction: 4%"
         ]
       }
@@ -390,30 +393,146 @@
     {
       "candidate": {
         "repo": {
-          "fullName": "vllm-project/vllm",
-          "url": "https://github.com/vllm-project/vllm",
-          "description": "High-throughput and memory-efficient inference engine for LLM serving.",
+          "fullName": "browser-use/browser-use",
+          "url": "https://github.com/browser-use/browser-use",
+          "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
           "topics": [
-            "llm-inference",
-            "model-serving",
-            "benchmark"
+            "ai-agents",
+            "ai-tools",
+            "browser-automation",
+            "browser-use",
+            "llm",
+            "playwright",
+            "python"
           ],
-          "stars": 42000,
-          "forks": 6200,
+          "stars": 95343,
+          "forks": 10730,
           "defaultBranch": "main",
-          "updatedAt": "2026-03-24T08:20:00Z",
-          "pushedAt": "2026-03-24T08:19:00Z",
-          "license": "Apache-2.0",
-          "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
-          "recentCommitCount30d": 27,
+          "updatedAt": "2026-05-25T02:29:40Z",
+          "pushedAt": "2026-05-23T19:30:50Z",
+          "license": "MIT",
+          "readme": "<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/774a46d5-27a0-490c-b7d0-e65fcbbfa358\">\n  <img alt=\"Shows a black Browser Use Logo in light color mode and a white one in dark color mode.\" src=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"  width=\"full\">\n</picture>\n\n<div align=\"center\">\n    <picture>\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\">\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6797d09b-8ac3-4cb9-ba07-b289e080765a\">\n    <img alt=\"The AI browser agent.\" src=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"  width=\"400\">\n    </picture>\n</div>\n\n<div align=\"center\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-downloads\"><img src=\"https://media.browser-use.tools/badges/package\" height=\"48\" alt=\"Browser-Use Package Download Statistics\"></a>\n</div>\n\n---\n\n<div align=\"center\">\n<a href=\"#demos\"><img src=\"https://media.browser-use.tools/badges/demos\" alt=\"Demos\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://docs.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/docs\" alt=\"Docs\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browser-use.com/posts\"><img src=\"https://media.browser-use.tools/badges/blog\" alt=\"Blog\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browsermerch.com\"><img src=\"https://media.browser-use.tools/badges/merch\" alt=\"Merch\"></a>\n<img width=\"100\" height=\"1\" alt=\"\">\n<a href=\"https://github.com/browser-use/browser-use\"><img src=\"https://media.browser-use.tools/badges/github\" alt=\"Github Stars\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://x.com/intent/user?screen_name=browser_use\"><img src=\"https://media.browser-use.tools/badges/twitter\" alt=\"Twitter\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://link.browser-use.com/discord\"><img src=\"https://media.browser-use.tools/badges/discord\" alt=\"Discord\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-cloud\"><img src=\"https://media.browser-use.tools/badges/cloud\" height=\"48\" alt=\"Browser-Use Cloud\"></a>\n</div>\n\n</br>\n\n🌤️ Want to skip the setup? Use our <b>[cloud](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-skip-setup)</b> for faster, scalable, stealth-enabled browser automation!\n\n# 🤖 LLM Quickstart\n\n1. Direct your favorite coding agent (Cursor, Claude Code, etc) to [Agents.md](https://docs.browser-use.com/llms-full.txt)\n2. Prompt away!\n\n<br/>\n\n# 👋 Human Quickstart\n\n**1. Create environment and install Browser-Use with [uv](https://docs.astral.sh/uv/) (Python>=3.11):**\n```bash\nuv init && uv add browser-use && uv sync\n# uvx browser-use install  # Run if you don't have Chromium installed\n```\n\n**2. [Optional] Get your API key from [Browser Use Cloud](https://cloud.browser-use.com/new-api-key?utm_source=github&utm_medium=readme-quickstart-api-key):**\n```\n# .env\nBROWSER_USE_API_KEY=your-key\n# GOOGLE_API_KEY=your-key\n# ANTHROPIC_API_KEY=your-key\n```\n\n**3. Run your first agent:**\n```python\nfrom browser_use import Agent, Browser, ChatBrowserUse\n# from browser_use import ChatGoogle  # ChatGoogle(model='gemini-3-flash-preview')\n# from browser_use import ChatAnthropic  # ChatAnthropic(model='claude-sonnet-4-6')\nimport asyncio\n\nasync def main():\n    browser = Browser(\n        # use_cloud=True,  # Use a stealth browser on Browser Use Cloud\n    )\n\n    agent = Agent(\n        task=\"Find the number of stars of the browser-use repo\",\n        llm=ChatBrowserUse(),\n        # llm=ChatGoogle(model='gemini-3-flash-preview'),\n        # llm=ChatAnthropic(model='claude-sonnet-4-6'),\n        browser=browser,\n    )\n    await agent.run()\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nCheck out the [library docs](https://docs.browser-use.com/open-source/introduction) and the [cloud docs](https://docs.cloud.browser-use.com?utm_source=github&utm_medium=readme-cloud-docs) for more!\n\n<br/>\n\n# Open Source vs Cloud\n\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"static/accuracy_by_model_light.png\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/accuracy_by_model_dark.png\">\n  <img alt=\"BU Bench V1 - LLM Success Rates\" src=\"static/accuracy_by_model_light.png\" width=\"100%\">\n</picture>\n\nWe benchmark Browser Use across 100 real-world browser tasks. Full benchmark is open source: **[browser-use/benchmark](https://github.com/browser-use/benchmark)**.\n\n**Use the Open-Source Agent**\n- You need [custom tools](https://docs.browser-use.com/customize/tools/basics) or deep code-level integration\n- We recommend pairing with our [cloud browsers](https://docs.browser-use.com/open-source/customize/browser/remote) for leading stealth, proxy rotation, and scaling\n- Or self-host the open-source agent fully on your own machines\n\n**Use the [Fully-Hosted Cloud Agent](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-hosted-agent) (recommended)**\n- Much more powerful agent for complex tasks (see plot above)\n- Easiest way to start and scale\n- Best stealth with proxy rotation and captcha solving\n- 1000+ integrations (Gmail, Slack, Notion, and more)\n- Persistent filesystem and memory\n\n<br/>\n\n# Demos\n\n\n### 📋 Form-Filling\n#### Task = \"Fill in this job application with my resume and information.\"\n![Job Application Demo](https://github.com/user-attachments/assets/57865ee6-6004-49d5-b2c2-6dff39ec2ba9)\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/apply_to_job.py)\n\n\n### 🍎 Grocery-Shopping\n#### Task = \"Put this list of items into my instacart.\"\n\nhttps://github.com/user-attachments/assets/a6813fa7-4a7c-40a6-b4aa-382bf88b1850\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/buy_groceries.py)\n\n\n### 💻 Personal-Assistant.\n#### Task = \"Help me find parts for a custom PC.\"\n\nhttps://github.com/user-attachments/assets/ac34f75c-057a-43ef-ad06-5b2c9d42bf06\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/pcpartpicker.py)\n\n\n### 💡See [more examples here ↗](https://docs.browser-use.com/examples) and give us a star!\n\n<br/>\n\n# 🚀 Template Quickstart\n\n**Want to get started even faster?** Generate a ready-to-run template:\n\n```bash\nuvx browser-use init --template default\n```\n\nThis creates a `browser_use_default.py` file with a working example. Available templates:\n- `default` - Minimal setup to get started quickly\n- `advanced` - All configuration options with detailed comments\n- `tools` - Examples of custom tools and extending the agent\n\nYou can also specify a custom output path:\n```bash\nuvx browser-use init --template default --output my_agent.py\n```\n\n<br/>\n\n# 💻 CLI\n\nFast, persistent browser automation from the command line:\n\n```bash\nbrowser-use open https://example.com    # Navigate to URL\nbrowser-use state                       # See clickable elements\nbrowser-use click 5                     # Click element by index\nbrowser-use type \"Hello\"                # Type text\nbrowser-use screenshot page.png         # Take screenshot\nbrowser-use close                       # Close browser\n```\n\nThe CLI keeps the browser running between commands for fast iteration. See [CLI docs](browser_use/skill_cli/README.md) for all commands.\n\n### Claude Code Skill\n\nFor [Claude Code](https://claude.ai/code), install the skill to enable AI-assisted browser automation:\n\n```bash\nmkdir -p ~/.claude/skills/browser-use\ncurl -o ~/.claude/skills/browser-use/SKILL.md \\\n  https://raw.githubusercontent.com/browser-use/browser-use/main/skills/browser-use/SKILL.md\n```\n\n<br/>\n\n## Integrations, hosting, custom tools, MCP, and more on our [Docs ↗](https://docs.browser-use.com)\n\n<br/>\n\n# FAQ\n\n<details>\n<summary><b>What's the best model to use?</b></summary>\n\nWe optimized **ChatBrowserUse()** specifically for browser automation tasks. On avg it completes tasks 3-5x faster than other models with SOTA accuracy.\n\n**Pricing (per 1M tokens):**\n- Input tokens: $0.20\n- Cached input tokens: $0.02\n- Output tokens: $2.00\n\nFor other LLM providers, see our [supported models documentation](https://docs.browser-use.com/supported-models).\n</details>\n\n<details>\n<summary><b>Should I use the Browser Use system prompt with the open-source preview model?</b></summary>\n\nYes. If you use `ChatBrowserUse(model='browser-use/bu-30b-a3b-preview')` with a normal `Agent(...)`, Browser Use still sends its default agent system prompt for you.\n\nYou do **not** need to add a separate custom \"Browser Use system message\" just because you switched to the open-source preview model. Only use `extend_system_message` or `override_system_message` when you intentionally want to customize the default behavior for your task.\n\nIf you want the best default speed/accuracy, we still recommend the newer hosted `bu-*` models. If you want the open-source preview model, the setup stays the same apart from the `model=` value.\n</details>\n\n<details>\n<summary><b>Can I use custom tools with the agent?</b></summary>\n\nYes! You can add custom tools to extend the agent's capabilities:\n\n```python\nfrom browser_use import Tools\n\ntools = Tools()\n\n@tools.action(description='Description of what this tool does.')\ndef custom_tool(param: str) -> str:\n    return f\"Result: {param}\"\n\nagent = Agent(\n    task=\"Your task\",\n    llm=llm,\n    browser=browser,\n    tools=tools,\n)\n```\n\n</details>\n\n<details>\n<summary><b>Can I use this for free?</b></summary>\n\nYes! Browser-Use is open source and free to use. You only need to choose an LLM provider (like OpenAI, Google, ChatBrowserUse, or run local models with Ollama).\n</details>\n\n<details>\n<summary><b>Terms of Service</b></summary>\n\nThis open-source library is licensed under the MIT License. For Browser Use services & data policy, see our [Terms of Service](https://browser-use.com/legal/terms-of-service) and [Privacy Policy](https://browser-use.com/privacy/).\n</details>\n\n<details>\n<summary><b>How do I handle authentication?</b></summary>\n\nCheck out our authentication examples:\n- [Using real browser profiles](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py) - Reuse your existing Chrome profile with saved logins\n- If you want to use temporary accounts with inbox, choose AgentMail\n- To sync your auth profile with the remote browser, run `curl -fsSL https://browser-use.com/profile.sh | BROWSER_USE_API_KEY=XXXX sh` (replace XXXX with your API key)\n\nThese examples show how to maintain sessions and handle authentication seamlessly.\n</details>\n\n<details>\n<summary><b>How do I solve CAPTCHAs?</b></summary>\n\nFor CAPTCHA handling, you need better browser fingerprinting and proxies. Use [Browser Use Cloud](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-captcha) which provides stealth browsers designed to avoid detection and CAPTCHA challenges.\n</details>\n\n<details>\n<summary><b>How do I go into production?</b></summary>\n\nChrome can consume a lot of memory, and running many agents in parallel can be tricky to manage.\n\nFor production use cases, use our [Browser Use Cloud API](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-production) which handles:\n- Scalable browser infrastructure\n- Memory management\n- Proxy rotation\n- Stealth browser fingerprinting\n- High-performance parallel execution\n</details>\n\n<br/>\n\n<div align=\"center\">\n\n**Tell your computer what to do, and it gets it done.**\n\n<img src=\"https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f\" width=\"400\"/>\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)\n&emsp;&emsp;&emsp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)\n\n</div>\n\n<div align=\"center\"> Made with ❤️ in Zurich and San Francisco </div>\n",
+          "recentCommitCount30d": 93,
           "latestRelease": {
-            "tagName": "v0.8.2",
-            "name": "v0.8.2",
-            "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
-            "publishedAt": "2026-03-19T05:20:00Z",
+            "tagName": "0.12.8",
+            "name": "0.12.8",
+            "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/0.12.8",
+            "publishedAt": "2026-05-23T19:29:53Z",
             "prerelease": false,
             "draft": false,
-            "body": "Higher throughput, lower latency, and better benchmark reproducibility."
+            "body": "## What's Changed\r\n* fix(daemon): restrict unix socket file to owner-only access by @sauravpanda in https://github.com/browser-use/browser-use/pull/4870\r\n* docs: clarify integration example placement by @felix-windsor in https://github.com/browser-use/browser-use/pull/4856\r\n* fix(tools): refuse evaluate() on restricted browser profiles by @sauravpanda in https://github.com/browser-use/browser-use/pull/4871\r\n* chore(llm): default ChatBrowserUse to bu-2-0 by @sauravpanda in https://github.com/browser-use/browser-use/pull/4876\r\n* feat: add client header to GoogleChat by @markmcd in https://github.com/browser-use/browser-use/pull/4884\r\n* chore(llm): recommend gemini-3-flash-preview in examples and tests by @sauravpanda in https://github.com/browser-use/browser-use/pull/4885\r\n* Add OpenRouter pricing fallback for token costs by @sauravpanda in https://github.com/browser-use/browser-use/pull/4886\r\n* agent(history): freeze HistoryItem + lock byte-prefix property by @sauravpanda in https://github.com/browser-use/browser-use/pull/4890\r\n* agent(prompts): move per-step metadata out of <agent_state> into a tail block by @sauravpanda in https://github.com/browser-use/browser-use/pull/4891\r\n* feat: forward cached_content into generate_content by @sauravpanda in https://github.com/browser-use/browser-use/pull/4889\r\n* Move user request before agent history by @MagMueller in https://github.com/browser-use/browser-use/pull/4897\r\n* Bump version to 0.12.8 by @MagMueller in https://github.com/browser-use/browser-use/pull/4899\r\n* Revert ChatGoogle cached_content forwarding by @MagMueller in https://github.com/browser-use/browser-use/pull/4900\r\n* Revert evaluate restriction on restricted profiles by @MagMueller in https://github.com/browser-use/browser-use/pull/4901\r\n* Trim HistoryItem freeze follow-up by @MagMueller in https://github.com/browser-use/browser-use/pull/4902\r\n\r\n## New Contributors\r\n* @felix-windsor made their first contribution in https://github.com/browser-use/browser-use/pull/4856\r\n\r\n**Full Changelog**: https://github.com/browser-use/browser-use/compare/0.12.7...0.12.8"
+          },
+          "source": [
+            {
+              "kind": "watch_repo",
+              "value": "browser-use/browser-use"
+            }
+          ]
+        },
+        "score": {
+          "maturityScore": 95,
+          "compatibilityScore": 85,
+          "performancePotentialScore": 32,
+          "maintenanceRiskScore": 20,
+          "adoptionSignalScore": 100,
+          "finalUpgradeScore": 80,
+          "estimatedPerformanceGainPct": 27,
+          "estimatedCostReductionPct": 4,
+          "hardVetoReasons": [],
+          "qualifyingSignals": {
+            "activeLast30Days": true,
+            "hasStableRelease": true,
+            "commercialLicense": true,
+            "documentationComplete": true,
+            "compatibilityAtLeast70": true,
+            "projectedPerformanceGainAtLeast15Pct": true,
+            "projectedCostReductionAtLeast10Pct": false,
+            "avoidsProductionSecurityBoundary": true
+          },
+          "qualifyingSignalCount": 7,
+          "eligibleForValidation": true,
+          "summary": [
+            "Active commits in last 30 days: 93",
+            "Latest release: 0.12.8",
+            "License: MIT",
+            "Projected performance gain: 27%",
+            "Projected cost reduction: 4%"
+          ]
+        }
+      },
+      "plan": {
+        "target": "browser-use/browser-use",
+        "changeType": "tool-plugin-integration",
+        "riskLevel": "medium",
+        "filesToChange": [
+          ".openclaw/extensions/github-architecture-radar/index.ts",
+          ".github/workflows/ai-radar-daily.yml"
+        ],
+        "summary": "Evaluate browser-use/browser-use as a tool-plugin-integration candidate on an isolated branch with staging-only validation.",
+        "rollbackPlan": [
+          "Reset the experiment branch to the last successful staging commit.",
+          "Restore the candidate version recorded in state/last_successful_version.json.",
+          "Re-run smoke, regression, and rollback simulation before reopening the PR."
+        ],
+        "validationChecklist": [
+          "Smoke test passes on the isolated branch.",
+          "Integration test passes against the staging profile.",
+          "Regression suite shows no critical diff.",
+          "Benchmark smoke confirms the projected improvement is directionally true.",
+          "Rollback simulation restores the last successful staging version."
+        ],
+        "humanEscalations": [
+          "Escalate if production deployment is requested.",
+          "Escalate if the release notes imply a breaking API migration.",
+          "Escalate if license status is unknown or incompatible.",
+          "Escalate if benchmark outcomes are ambiguous."
+        ]
+      }
+    },
+    {
+      "candidate": {
+        "repo": {
+          "fullName": "vllm-project/vllm",
+          "url": "https://github.com/vllm-project/vllm",
+          "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+          "topics": [
+            "amd",
+            "blackwell",
+            "cuda",
+            "deepseek",
+            "deepseek-v3",
+            "gpt",
+            "gpt-oss",
+            "inference",
+            "kimi",
+            "llama",
+            "llm",
+            "llm-serving",
+            "model-serving",
+            "moe",
+            "openai",
+            "pytorch",
+            "qwen",
+            "qwen3",
+            "tpu",
+            "transformer"
+          ],
+          "stars": 80894,
+          "forks": 17177,
+          "defaultBranch": "main",
+          "updatedAt": "2026-05-25T02:30:50Z",
+          "pushedAt": "2026-05-25T01:19:46Z",
+          "license": "Apache-2.0",
+          "readme": "<!-- markdownlint-disable MD001 MD041 -->\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png\">\n    <img alt=\"vLLM\" src=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-light.png\" width=55%>\n  </picture>\n</p>\n\n<h3 align=\"center\">\nEasy, fast, and cheap LLM serving for everyone\n</h3>\n\n<p align=\"center\">\n| <a href=\"https://docs.vllm.ai\"><b>Documentation</b></a> | <a href=\"https://blog.vllm.ai/\"><b>Blog</b></a> | <a href=\"https://arxiv.org/abs/2309.06180\"><b>Paper</b></a> | <a href=\"https://x.com/vllm_project\"><b>Twitter/X</b></a> | <a href=\"https://discuss.vllm.ai\"><b>User Forum</b></a> | <a href=\"https://slack.vllm.ai\"><b>Developer Slack</b></a> |\n</p>\n\n🔥 We have built a vLLM website to help you get started with vLLM. Please visit [vllm.ai](https://vllm.ai) to learn more.\nFor events, please visit [vllm.ai/events](https://vllm.ai/events) to join us.\n\n---\n\n## About\n\nvLLM is a fast and easy-to-use library for LLM inference and serving.\n\nOriginally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley, vLLM has grown into one of the most active open-source AI projects built and maintained by a diverse community of many dozens of academic institutions and companies from over 2000 contributors.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)\n- Continuous batching of incoming requests, chunked prefill, prefix caching\n- Fast and flexible model execution with piecewise and full CUDA/HIP graphs\n- Quantization: FP8, MXFP8/MXFP4, NVFP4, INT8, INT4, GPTQ/AWQ, GGUF, compressed-tensors, ModelOpt, TorchAO, and [more](https://docs.vllm.ai/en/latest/features/quantization/index.html)\n- Optimized attention kernels including FlashAttention, FlashInfer, TRTLLM-GEN, FlashMLA, and Triton\n- Optimized GEMM/MoE kernels for various precisions using CUTLASS, TRTLLM-GEN, CuTeDSL\n- Speculative decoding including n-gram, suffix, EAGLE, DFlash\n- Automatic kernel generation and graph-level transformations using torch.compile\n- Disaggregated prefill, decode, and encode\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor, pipeline, data, expert, and context parallelism for distributed inference\n- Streaming outputs\n- Generation of structured outputs using xgrammar or guidance\n- Tool calling and reasoning parsers\n- OpenAI-compatible API server, plus Anthropic Messages API and gRPC support\n- Efficient multi-LoRA support for dense and MoE layers\n- Support for NVIDIA GPUs, AMD GPUs, and x86/ARM/PowerPC CPUs. Additionally, diverse hardware plugins such as Google TPUs, Intel Gaudi, IBM Spyre, Huawei Ascend, Rebellions NPU, Apple Silicon, MetaX GPU, and more.\n\nvLLM seamlessly supports 200+ model architectures on Hugging Face, including:\n\n- Decoder-only LLMs (e.g., Llama, Qwen, Gemma)\n- Mixture-of-Expert LLMs (e.g., Mixtral, DeepSeek-V3, Qwen-MoE, GPT-OSS)\n- Hybrid attention and state-space models (e.g., Mamba, Qwen3.5)\n- Multi-modal models (e.g., LLaVA, Qwen-VL, Pixtral)\n- Embedding and retrieval models (e.g., E5-Mistral, GTE, ColBERT)\n- Reward and classification models (e.g., Qwen-Math)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n\n## Getting Started\n\nInstall vLLM with [`uv`](https://docs.astral.sh/uv/) (recommended) or `pip`:\n\n```bash\nuv pip install vllm\n```\n\nOr [build from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source) for development.\n\nVisit our [documentation](https://docs.vllm.ai/en/latest/) to learn more.\n\n- [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)\n- [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)\n- [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)\n\n## Contributing\n\nWe welcome and value any contributions and collaborations.\nPlease check out [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) for how to get involved.\n\n## Citation\n\nIf you use vLLM for your research, please cite our [paper](https://arxiv.org/abs/2309.06180):\n\n```bibtex\n@inproceedings{kwon2023efficient,\n  title={Efficient Memory Management for Large Language Model Serving with PagedAttention},\n  author={Woosuk Kwon and Zhuohan Li and Siyuan Zhuang and Ying Sheng and Lianmin Zheng and Cody Hao Yu and Joseph E. Gonzalez and Hao Zhang and Ion Stoica},\n  booktitle={Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles},\n  year={2023}\n}\n```\n\n## Contact Us\n\n<!-- --8<-- [start:contact-us] -->\n- For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues)\n- For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)\n- For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)\n- For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature\n- For collaborations and partnerships, please contact us at [collaboration@vllm.ai](mailto:collaboration@vllm.ai)\n<!-- --8<-- [end:contact-us] -->\n\n## Media Kit\n\n- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)\n",
+          "recentCommitCount30d": 100,
+          "latestRelease": {
+            "tagName": "v0.21.0",
+            "name": "v0.21.0",
+            "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.21.0",
+            "publishedAt": "2026-05-15T08:44:26Z",
+            "prerelease": false,
+            "draft": false,
+            "body": "## Highlights\r\n\r\nThis release features 367 commits from 202 contributors (49 new)!\r\n\r\n* **Transformers v4 deprecated**: This release formally deprecates `transformers` v4 support (#40389). Users should migrate to `transformers` v5.\r\n* **C++20 build requirement**: vLLM now requires a C++20-compatible compiler for compatibility with PyTorch (#40380). This is a **breaking build change**.\r\n* **KV Offload + Hybrid Memory Allocator (HMA)**: The KV offloading subsystem now integrates with the Hybrid Memory Allocator, including scheduler-side sliding window group support and full HMA enablement (#41228, #41445, #39571).\r\n* **Speculative decoding with thinking budget**: Speculative decoding now respects reasoning/thinking budgets, enabling correct spec decode for reasoning models (#34668).\r\n* **TOKENSPEED_MLA backend on Blackwell**: A new TOKENSPEED_MLA attention backend is available for DeepSeek-R1/Kimi-K25 prefill + decode on Blackwell GPUs (#41778).\r\n\r\n### Model Support\r\n* New architectures: MiMo-V2.5 (#40967), Laguna XS.2 (#41129, #41880), Moondream3 (#32325), Qianfan-OCR (#40136), Cohere MoE (#40817), Cohere Eagle (#42078).\r\n* Speculative decoding: EAGLE for Mistral (#41024), Gemma4 MTP (#41745), MTP for MiMo-V2.5 (#41905), Cohere Eagle (#42078).\r\n* DeepSeek V4: AMD/ROCm support (#40871), pipeline parallelism (#41694), `max` reasoning effort (#40982), disaggregated serving fixes (#41957).\r\n* Tool calling: Cohere reasoning and tool parsers (#40422), LFM2/2.5 tool parser (#39243).\r\n* Gemma3/Gemma4: `hidden_act` variant support (#40588), pipeline parallelism fix (#40786), MoE fixes (#41206, #41574, #41401), tool parser crash fix (#41991, #42188).\r\n* Model Runner V2: Qwen3.5/Mamba hybrid model support (#35520), `logprob_token_ids` support (#40559).\r\n* CUDA graph: ViT CUDA graph support for Qwen2.5-VL (#40830).\r\n* Compatibility: Vendor HCXVisionConfig for Transformers v5 (#38447), legacy `rope_type` checkpoint support (#41734).\r\n\r\n### Engine Core\r\n* KV offloading + HMA: Scheduler-side sliding window groups (#41228), full HMA enablement (#41445), multi-connector HMA (#39571), per-job store completion (#39186), DCP/PCP support in OffloadingConnector (#41549), MooncakeStoreConnector for distributed KV offloading (#40900).\r\n* Speculative decoding: Thinking budget support (#34668), independent drafter attention backend selection (#39930), multimodal model support with warning (#41752), per-step allocation elimination (#41043).\r\n* Model Runner V2: Rejection sampling acceptance rate fix (#40651), skip metadata rebuild before draft prefill (#40410), rebuild metadata between draft decode steps (#41162), Qwen3.5/Mamba hybrid support (#35520).\r\n* Routing: Replace routing replay with device cache and async D2H pipeline (#39917).\r\n* Ray: RayExecutorV2 enabled by default (#41421), actor name collision fix for DP > 1 (#40398).\r\n* Stability: Two-phase pause to prevent scheduler deadlock (#39366), thread-safe HF tokenizer wrappers (#41181), OOM prevention via `max_split_size_mb` during model loading (#41268).\r\n* IndexCache support for DSA models (#37735).\r\n\r\n### Hardware & Performance\r\n* **NVIDIA Blackwell**: TOKENSPEED_MLA backend for DSR1/Kimi-K25 (#41778), faster per-token FP8 group quant packed kernel (#41326), FP8 on NVIDIA Thor/SM110 (#39712), CUTLASS scaled mm for non-compatible sizes (#41868).\r\n* **Performance**: FlashInfer top-k/top-p sampler enabled by default (#40376), FP8 FlashInfer attention for ViT (#38065), TurboQuant shared dequant buffers (#40941), `AllPool.forward` 51% faster (#41163), GPU<->CPU sync elimination in pooling (#41433) and attention (#41434), numpy zero-copy embedding serialization (#41681), multimodal processor skip for text-only (#41246), FlashInfer FP8 async TP fusion (#39505), NVFP4 all-gather GEMM fusion for AsyncTP (#41882), re-enable allreduce+RMS fusion for DP/PP (#41458), DeepSeek bf16→fp32 via `torch.mm` (#41300), persistent MLA for sparse backend (#41990), configurable safetensors checkpoint prefetch (#41499), fused mhc_post_pre kernel (#41536), 2D-grid W8W8 group quant kernel (#42153), relaxed memory ordering for KV cache swaps (#39306).\r\n* **AMD ROCm**: ROCm 7.2.2 (#41386), DBO (Dynamic Batch Optimization) (#34726), AITER Fused Allreduce+RMSNorm (#37646), Fused Shared Expert (FSE) for Qwen3-Next (#39280), DeepSeek V3.2 TP4 AITER MLA (#41835), GDN linear attention fusion (#40711), eliminate redundant MoE buffer copies in AITER (#41713), CPU offloading support (#40549), DeepEP API update (#39721), cap Triton paged attention block size to fix shared memory OOM (#38502).\r\n* **CPU**: FP8 attention for AMX/AVX-512 (#39445), FP8 W8A16 linear (#41186), FP8 W8A16 MoE (#41314), DNNL AVX2 W8A8 Int8 (#41318), Gated DeltaNet Attention for Qwen 3.5/3.6 (#41025), RISC-V OMP thread auto-binding (#40569).\r\n* **Intel XPU**: Top-k/top-p sample kernel (#39285), out-of-place all-reduce (#41808), LoRA support (#38206).\r\n* **IBM Power**: VSX attention backend (#40451).\r\n* **FlexAttention**: Re-enabled for batch invariant mode (#40842).\r\n* **MLA**: Abstracted MLA prefill backends, eliminated cuDNN dependency (#32623).\r\n\r\n### Large Scale Serving\r\n* Disaggregated serving: Bi-directional KV cache transfers between P and D (#32553), NIXL transfer redesign (#40731), EPLB memory overhead optimization (#40013), NIXL connector bumped to 1.x (#42364), Mooncake KVConnectorStats for transfer observability (#40414), NIXL P-node pre-admission rejection notification (#41269), KV block release for skipped P-ranks (#40449).\r\n* DCP: Pack output and LSE in DCP A2A (#41160).\r\n* MoE: PluggableLayer interface for out-of-tree MoE runners (#35178).\r\n* LoRA: Initial expert parallel (EP) support (#40867), Qwen3.5 LoRA fusion fix (#37912).\r\n\r\n### Quantization\r\n* **NVFP4**: KV cache support (#40177), Triton dequant/QDQ emulation kernels for Hopper and AMD (#40033), GELU on TRT-LLM NvFP4 fused MoE for Gemma4 (#41050), ModelOpt NVFP4 W4A16 (#41769), NVFP4 all-gather GEMM fusion for AsyncTP (#41882), GLM4-MoE NVFP4 loading fix (#41755).\r\n* **MXFP4**: Humming MXFP4 MoE backend (#41083), FlashInfer CUTLASS MXFP4-MXFP8 MoE fix (#42089).\r\n* **TurboQuant**: Hybrid model and uniform quantization support (#39931).\r\n* **Compressed tensors**: Allow configs with non-explicit ignores (#41965).\r\n* **FP8**: Bias loading fix (#41424), FlashInfer autotune temporarily disabled for correctness (#41524).\r\n* **DSV4**: Improved fused Indexer Q quant kernel (#41428).\r\n\r\n### API & Frontend\r\n* **Responses API**: Streaming tool/function calling with `required` (#40700) and named tool/function choice (#41110), resubmitting output items with missing fields (#41355).\r\n* **OpenAI compatibility**: `system_fingerprint` field in responses (#40537), `prompt_embeds` content part support (#40720), `defer_loading` and `tool_reference` support (#40190), rendered prompt text in chat completion response (#42052), tolerate empty content in forced tool choice (#40148).\r\n* **Tool calling**: XGrammar 0.2.0 with structural tags for strict tool calling + reasoning (#40894), Cohere reasoning/tool parsers (#40422), LFM2/2.5 tool parser (#39243).\r\n* **Tokenizer**: Fastokens support (#41741).\r\n* **RLHF**: Explicit `/start_weight_update` and `/finish_weight_update` APIs (#39212).\r\n* **ASR**: Engine request abort on cancellation (#41266).\r\n* **Configuration**: `VLLM_SKIP_MODEL_NAME_VALIDATION` env var (#34676), configurable model weights loading tracking (#41086), Triton JIT compilation monitor (#40137).\r\n\r\n### Build & Dependencies\r\n* **Breaking**: C++20 required for PyTorch compatibility (#40380).\r\n* **Breaking**: Transformers v4 deprecated (#40389).\r\n* Docker image size reduced by ~2.5 GB via deferred FlashInfer cubin download (#41134).\r\n* CUDA 13.0 wheels switched to PyTorch manylinux_2_28 base (#41416).\r\n* DeepGEMM bundled wheel built per-Python for CPython compatibility (#41516).\r\n* Container image provenance metadata embedded (#40653).\r\n* tpu-inference upgraded to v0.19.0 (#41844).\r\n* NIXL connector bumped to 1.x (#42364).\r\n* ROCm 7.2.2 (#41386).\r\n\r\n## Contributors\r\n\r\n@AndreasKaratzas, @haosdent, @khluu, @yewentao256, @stecasta, @mgoin, @Isotr0py, @hmellor, @chaunceyjiang, @jeejeelee, @noooop, @MatthewBonanni, @njhill, @zyongye, @yzong-rh, @ronensc, @NickLucche, @chaojun-zhang, @dzhengAP, @chfeng-cs, @TheEpicDolphin, @esmeetu, @wzhao18, @ZJY0516, @juliendenize, @kylesayrs, @fadara01, @Etelis, @tianmu-li, @arpera, @ekagra-ranjan, @orozery, @wxsIcey, @jikunshang, @izhuhaoran, @rasmith, @russellb, @Lucaskabela, @Harry-Chen, @alec-flowers, @pmaybank, @Terrencezzj, @hickeyma, @Baekpica, @itej89, @fxmarty-amd, @WoosukKwon, @juhi10071998, @sychen52, @baonudesifeizhai, @vllmellm, @johncalesp, @the-david-oy, @lucianommartins, @bittoby, @Dao007forever, @lyd1992, @yuwenzho, @lesj0610, @sfeng33, @micah-wil, @akii96, @yma11, @SoluMilken, @mmangkad, @SiluPanda, @ojhaanshika, @zhandaz, @bhoomit, @simon-mo, @msanft, @angelayi, @anthonsu, @artem-spector, @zhangxin81, @benoittgt, @joerowell, @yangrz7, @chelnnexy, @liangel-02, @walterbm, @rishitdholakia13, @SKRohit, @BugenZhao, @JaredforReal, @amd-lalithnc, @frgossen, @h-avsha, @DarkLight1337, @danisereb, @laithsakka, @Bortlesboat, @wangluochao902, @Rohan138, @hao-aaron, @puririshi98, @roikoren755, @heachary, @UranusSeven, @dsingal0, @ChenxiQ, @snadampal, @ilmarkov, @wendyliu235, @lequytra, @JisoLya, @LuisRobaina, @sniper35, @eicherseiji, @Yuyi-Ao, @raviguptaamd, @sungsooha, @ganyi1996ppo, @andylolu2, @FredericOdermatt, @ProExpertProg, @rbrugaro-amd, @mcsantiago, @hnt2601, @jinzhen-lin, @taneem-ibrahim, @tomeras91, @alex-jw-brooks, @Aktsvigun, @HanFa, @netanel-haber, @JasonKeyiL, @gshtras, @joa-stdn, @Seven-Streams, @JartX, @xuechendi, @BowenBao, @Akashcodes732, @jeffreywang-anyscale, @czhu-cohere, @zhewenl, @marvinzh, @Lidang-Jiang, @gcanlin, @whx-sjtu, @S1ro1, @liulanze, @Dhruvilbhatt, @laviier, @wi-adam, @aaab8b, @yuankaichen-amd, @ZhanqiuHu, @QwertyJack, @viktorpusTT, @divakar-amd, @starkwj, @benchislett, @jcyang43, @JLiu4Coding, @xy3xy3, @hongxiayang, @amd-mghanimi, @wenyili, @bigPYJ1151, @s-yanev, @AlonKejzman, @noobHappylife, @TomerBN-Nvidia, @MeganEFlynn, @liuzijing2014, @jbuchananr, @lokashrinav, @ssam18, @dllehr-amd, @gmagogsfm, @tpopp, @tjtanaa, @simondanielsson, @zhenwei-intel, @HiroakiMikami, @nholmber, @SumanthRH, @LucasWilkinson, @maeehart, @rishaps, @r-barnes, @gau-nernst, @Kermit-C, @tdoublep, @aoshen02, @Naveassaf, @wangxingran222, @cvan20191, @AbhiOnGithub, @abdulrahman-cohere, @jmamou, @Flink-ddd, @bnellnm, @hqhq1025, @gnovack, @wangxiyuan, @princepride, @jiahanc, @LCAIZJ, @ovidiusm\r\n\r\n## New Contributors\r\n\r\n* @abdulrahman-cohere made their first contribution in https://github.com/vllm-project/vllm/pull/41266\r\n* @AbhiOnGithub made their first contribution in https://github.com/vllm-project/vllm/pull/42180\r\n* @Aktsvigun made their first contribution in https://github.com/vllm-project/vllm/pull/40788\r\n* @amd-mghanimi made their first contribution in https://github.com/vllm-project/vllm/pull/41713\r\n* @Baekpica made their first contribution in https://github.com/vllm-project/vllm/pull/41206\r\n* @benoittgt made their first contribution in https://github.com/vllm-project/vllm/pull/41134\r\n* @bittoby made their first contribution in https://github.com/vllm-project/vllm/pull/41690\r\n* @chelnnexy made their first contribution in https://github.com/vllm-project/vllm/pull/40754\r\n* @ChenxiQ made their first contribution in https://github.com/vllm-project/vllm/pull/40956\r\n* @chfeng-cs made their first contribution in https://github.com/vllm-project/vllm/pull/42066\r\n* @cvan20191 made their first contribution in https://github.com/vllm-project/vllm/pull/40951\r\n* @dzhengAP made their first contribution in https://github.com/vllm-project/vllm/pull/41423\r\n* @ghphotoframe made their first contribution in https://github.com/vllm-project/vllm/pull/40859\r\n* @HiroakiMikami made their first contribution in https://github.com/vllm-project/vllm/pull/40588\r\n* @itej89 made their first contribution in https://github.com/vllm-project/vllm/pull/39721\r\n* @JasonKeyiL made their first contribution in https://github.com/vllm-project/vllm/pull/41068\r\n* @jbuchananr made their first contribution in https://github.com/vllm-project/vllm/pull/39243\r\n* @JisoLya made their first contribution in https://github.com/vllm-project/vllm/pull/41363\r\n* @JLiu4Coding made their first contribution in https://github.com/vllm-project/vllm/pull/41832\r\n* @juhi10071998 made their first contribution in https://github.com/vllm-project/vllm/pull/41050\r\n* @Kermit-C made their first contribution in https://github.com/vllm-project/vllm/pull/42076\r\n* @lequytra made their first contribution in https://github.com/vllm-project/vllm/pull/41401\r\n* @Lidang-Jiang made their first contribution in https://github.com/vllm-project/vllm/pull/38099\r\n* @liulanze made their first contribution in https://github.com/vllm-project/vllm/pull/41571\r\n* @lokashrinav made their first contribution in https://github.com/vllm-project/vllm/pull/41681\r\n* @LuisRobaina made their first contribution in https://github.com/vllm-project/vllm/pull/40720\r\n* @maeehart made their first contribution in https://github.com/vllm-project/vllm/pull/42061\r\n* @marvinzh made their first contribution in https://github.com/vllm-project/vllm/pull/40136\r\n* @mcsantiago made their first contribution in https://github.com/vllm-project/vllm/pull/41492\r\n* @MeganEFlynn made their first contribution in https://github.com/vllm-project/vllm/pull/41880\r\n* @nholmber made their first contribution in https://github.com/vllm-project/vllm/pull/39280\r\n* @pmaybank made their first contribution in https://github.com/vllm-project/vllm/pull/41012\r\n* @raviguptaamd made their first contribution in https://github.com/vllm-project/vllm/pull/34726\r\n* @s-yanev made their first contribution in https://github.com/vllm-project/vllm/pull/41755\r\n* @S1ro1 made their first contribution in https://github.com/vllm-project/vllm/pull/39213\r\n* @Seven-Streams made their first contribution in https://github.com/vllm-project/vllm/pull/40894\r\n* @SiluPanda made their first contribution in https://github.com/vllm-project/vllm/pull/40907\r\n* @SKRohit made their first contribution in https://github.com/vllm-project/vllm/pull/40786\r\n* @snadampal made their first contribution in https://github.com/vllm-project/vllm/pull/32553\r\n* @sniper35 made their first contribution in https://github.com/vllm-project/vllm/pull/32325\r\n* @ssam18 made their first contribution in https://github.com/vllm-project/vllm/pull/41486\r\n* @the-david-oy made their first contribution in https://github.com/vllm-project/vllm/pull/40737\r\n* @wangluochao902 made their first contribution in https://github.com/vllm-project/vllm/pull/41043\r\n* @wenyili made their first contribution in https://github.com/vllm-project/vllm/pull/41901\r\n* @wi-adam made their first contribution in https://github.com/vllm-project/vllm/pull/40749\r\n* @xy3xy3 made their first contribution in https://github.com/vllm-project/vllm/pull/40820\r\n* @yangrz7 made their first contribution in https://github.com/vllm-project/vllm/pull/40449\r\n* @yuankaichen-amd made their first contribution in https://github.com/vllm-project/vllm/pull/40390\r\n* @zhangxin81 made their first contribution in https://github.com/vllm-project/vllm/pull/39904\r\n"
           },
           "source": [
             {
@@ -422,25 +541,17 @@
             },
             {
               "kind": "topic",
-              "value": "llm-inference"
-            },
-            {
-              "kind": "topic",
               "value": "model-serving"
-            },
-            {
-              "kind": "topic",
-              "value": "benchmark"
             }
           ]
         },
         "score": {
-          "maturityScore": 80,
-          "compatibilityScore": 77,
+          "maturityScore": 95,
+          "compatibilityScore": 61,
           "performancePotentialScore": 42,
           "maintenanceRiskScore": 20,
           "adoptionSignalScore": 100,
-          "finalUpgradeScore": 76,
+          "finalUpgradeScore": 75,
           "estimatedPerformanceGainPct": 37,
           "estimatedCostReductionPct": 19,
           "hardVetoReasons": [],
@@ -448,8 +559,8 @@
             "activeLast30Days": true,
             "hasStableRelease": true,
             "commercialLicense": true,
-            "documentationComplete": false,
-            "compatibilityAtLeast70": true,
+            "documentationComplete": true,
+            "compatibilityAtLeast70": false,
             "projectedPerformanceGainAtLeast15Pct": true,
             "projectedCostReductionAtLeast10Pct": true,
             "avoidsProductionSecurityBoundary": true
@@ -457,8 +568,8 @@
           "qualifyingSignalCount": 7,
           "eligibleForValidation": true,
           "summary": [
-            "Active commits in last 30 days: 27",
-            "Latest release: v0.8.2",
+            "Active commits in last 30 days: 100",
+            "Latest release: v0.21.0",
             "License: Apache-2.0",
             "Projected performance gain: 37%",
             "Projected cost reduction: 19%"
@@ -499,12 +610,20 @@
   ],
   "executionRecords": [
     {
-      "candidateKey": "vllm-project/vllm@v0.8.2",
-      "status": "dry-run",
-      "branchName": "upgrade/2026-05-24-vllm",
-      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-05-24-vllm/UPGRADE_REPORT.md",
-      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-05-24-vllm/PR_BODY.md).",
-      "executedAt": "2026-05-24T02:14:42.124Z"
+      "candidateKey": "browser-use/browser-use@0.12.8",
+      "status": "skipped",
+      "branchName": "upgrade/2026-05-25-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-05-25-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-05-25T02:33:17.779Z"
+    },
+    {
+      "candidateKey": "vllm-project/vllm@v0.21.0",
+      "status": "skipped",
+      "branchName": "upgrade/2026-05-25-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-05-25-vllm/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-05-25T02:33:17.779Z"
     }
   ],
   "failures": [],
