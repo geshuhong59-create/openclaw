@@ -1,14 +1,14 @@
 # AI Radar Branch Cleanup
 
 ## Summary
-- Executed at: 2026-05-29T02:12:14.833Z
+- Executed at: 2026-06-11T02:42:08.116Z
 - Repository: geshuhong59-create/openclaw
 - Branch prefix: upgrade/
 - Dry run: no
-- Scanned upgrade branches: 47
+- Scanned upgrade branches: 59
 - Keep newest closed branches: 2
-- Preserved for open PRs: 45
-- Deleted stale branches: 0
+- Preserved for open PRs: 56
+- Deleted stale branches: 1
 
 ## Preserved For Open PRs
 - upgrade/2026-04-01-vllm | https://github.com/geshuhong59-create/openclaw/pull/15
@@ -56,10 +56,21 @@
 - upgrade/2026-05-17-vllm | https://github.com/geshuhong59-create/openclaw/pull/58
 - upgrade/2026-05-18-vllm | https://github.com/geshuhong59-create/openclaw/pull/59
 - upgrade/2026-05-19-browser-use | https://github.com/geshuhong59-create/openclaw/pull/60
+- upgrade/2026-05-30-vllm | https://github.com/geshuhong59-create/openclaw/pull/64
+- upgrade/2026-05-31-vllm | https://github.com/geshuhong59-create/openclaw/pull/65
+- upgrade/2026-06-01-vllm | https://github.com/geshuhong59-create/openclaw/pull/66
+- upgrade/2026-06-02-vllm | https://github.com/geshuhong59-create/openclaw/pull/67
+- upgrade/2026-06-03-vllm | https://github.com/geshuhong59-create/openclaw/pull/68
+- upgrade/2026-06-04-vllm | https://github.com/geshuhong59-create/openclaw/pull/69
+- upgrade/2026-06-05-vllm | https://github.com/geshuhong59-create/openclaw/pull/70
+- upgrade/2026-06-06-vllm | https://github.com/geshuhong59-create/openclaw/pull/71
+- upgrade/2026-06-07-vllm | https://github.com/geshuhong59-create/openclaw/pull/72
+- upgrade/2026-06-08-vllm | https://github.com/geshuhong59-create/openclaw/pull/73
+- upgrade/2026-06-09-browser-use | https://github.com/geshuhong59-create/openclaw/pull/74
 
 ## Kept Recent Branches
-- upgrade/2026-05-27-browser-use | committedAt=2026-05-27T02:33:10Z
-- upgrade/2026-05-24-browser-use | committedAt=2026-05-24T02:14:53Z
+- upgrade/2026-06-10-browser-use | committedAt=2026-06-10T02:32:20Z
+- upgrade/2026-06-09-vllm | committedAt=2026-06-09T02:08:15Z
 
 ## Deleted Branches
-- None
+- upgrade/2026-05-27-browser-use | committedAt=2026-05-27T02:33:10Z
