@@ -1,6 +1,5 @@
 {
-  "version": 1,
-  "updatedAt": "2026-06-13T02:30:43.654Z",
+  "appliedAt": "2026-06-13T02:30:43.654Z",
   "candidate": {
     "repo": "browser-use/browser-use",
     "releaseTag": "0.13.2",
@@ -9,15 +8,6 @@
     "reportPath": "reports/upgrades/upgrade-2026-06-13-browser-use/UPGRADE_REPORT.md",
     "score": 80
   },
-  "notes": [
-    "Applied candidate browser-use/browser-use@0.13.2",
-    "Change type: tool-plugin-integration",
-    "Active commits in last 30 days: 100",
-    "Latest release: 0.13.2",
-    "License: MIT",
-    "Projected performance gain: 27%",
-    "Projected cost reduction: 4%"
-  ],
   "runtime": {
     "provider": "aggregate",
     "limit": 15,
@@ -83,5 +73,14 @@
       }
     ],
     "hnStoryType": "topstories"
-  }
+  },
+  "notes": [
+    "Applied candidate browser-use/browser-use@0.13.2",
+    "Change type: tool-plugin-integration",
+    "Active commits in last 30 days: 100",
+    "Latest release: 0.13.2",
+    "License: MIT",
+    "Projected performance gain: 27%",
+    "Projected cost reduction: 4%"
+  ]
 }

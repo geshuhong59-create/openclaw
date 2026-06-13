@@ -1,44 +1,42 @@
 # AI Architecture Radar Daily Report
 
-- Executed at: 2026-06-12T02:37:16.895Z
-- Discovered candidates: 97
-- Report path: /home/runner/work/openclaw/openclaw/reports/2026-06-12-ai-radar.md
+- Executed at: 2026-06-13T02:30:42.542Z
+- Discovered candidates: 5
+- Report path: /home/runner/work/openclaw/openclaw/reports/2026-03-25-ai-radar.md
 
 ## Executive Summary
-- Winner: browser-use/browser-use@0.13.1 (score 80)
-- Eligible candidates in today's shortlist: 2/5
-- Planned upgrade executions: 2
+- Winner: vllm-project/vllm@v0.8.2 (score 76)
+- Eligible candidates in today's shortlist: 1/5
+- Planned upgrade executions: 1
 - Failed execution records: 0
 - Auto-created upgrade PRs during planning: 0
 
 ## Top Candidate Scoreboard
 | Rank | Repo | Score | Release | Perf Gain | Cost Down | Eligible | Vetoes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | browser-use/browser-use | 80 | 0.13.1 | 27% | 4% | yes | none |
-| 2 | vllm-project/vllm | 75 | v0.22.1 | 37% | 19% | yes | none |
-| 3 | langchain-ai/langgraph | 70 | cli==0.4.29 | 9% | 4% | no | none |
-| 4 | mastra-ai/mastra | 69 | @mastra/core@1.41.0 | 9% | 4% | no | license_unknown, breaking_change_high_risk |
-| 5 | nocobase/nocobase | 69 | v2.1.2 | 27% | 4% | no | license_unknown, benchmark_unverifiable |
+| 1 | vllm-project/vllm | 76 | v0.8.2 | 37% | 19% | yes | none |
+| 2 | langchain-ai/langgraph | 71 | v0.3.5 | 27% | 4% | no | none |
+| 3 | browser-use/browser-use | 69 | v1.9.0 | 27% | 4% | no | none |
+| 4 | microsoft/autogen | 66 | v0.6.3 | 27% | 4% | no | none |
+| 5 | openai/openai-agents-python | 65 | v0.4.1 | 27% | 4% | no | none |
 
 ## Top Candidates
-1. browser-use/browser-use | score=80 | release=0.13.1 | vetoes=none
-2. vllm-project/vllm | score=75 | release=v0.22.1 | vetoes=none
-3. langchain-ai/langgraph | score=70 | release=cli==0.4.29 | vetoes=none
-4. mastra-ai/mastra | score=69 | release=@mastra/core@1.41.0 | vetoes=license_unknown,breaking_change_high_risk
-5. nocobase/nocobase | score=69 | release=v2.1.2 | vetoes=license_unknown,benchmark_unverifiable
+1. vllm-project/vllm | score=76 | release=v0.8.2 | vetoes=none
+2. langchain-ai/langgraph | score=71 | release=v0.3.5 | vetoes=none
+3. browser-use/browser-use | score=69 | release=v1.9.0 | vetoes=none
+4. microsoft/autogen | score=66 | release=v0.6.3 | vetoes=none
+5. openai/openai-agents-python | score=65 | release=v0.4.1 | vetoes=none
 
 ## Discovery Notes
-- browser-use/browser-use: Active commits in last 30 days: 100; Latest release: 0.13.1; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
-- vllm-project/vllm: Active commits in last 30 days: 100; Latest release: v0.22.1; License: Apache-2.0; Projected performance gain: 37%; Projected cost reduction: 19%
-- langchain-ai/langgraph: Active commits in last 30 days: 91; Latest release: cli==0.4.29; License: MIT; Projected performance gain: 9%; Projected cost reduction: 4%
-- mastra-ai/mastra: Active commits in last 30 days: 100; Latest release: @mastra/core@1.41.0; License: NOASSERTION; Projected performance gain: 9%; Projected cost reduction: 4%
-- nocobase/nocobase: Active commits in last 30 days: 100; Latest release: v2.1.2; License: NOASSERTION; Projected performance gain: 27%; Projected cost reduction: 4%
+- vllm-project/vllm: Active commits in last 30 days: 27; Latest release: v0.8.2; License: Apache-2.0; Projected performance gain: 37%; Projected cost reduction: 19%
+- langchain-ai/langgraph: Active commits in last 30 days: 18; Latest release: v0.3.5; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- browser-use/browser-use: Active commits in last 30 days: 31; Latest release: v1.9.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- microsoft/autogen: Active commits in last 30 days: 12; Latest release: v0.6.3; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- openai/openai-agents-python: Active commits in last 30 days: 24; Latest release: v0.4.1; License: Apache-2.0; Projected performance gain: 27%; Projected cost reduction: 4%
 
 ## Planned Execution
-- browser-use/browser-use@0.13.1 | status=skipped | branch=upgrade/2026-06-12-browser-use
-  note: Skipped because this candidate version already has an upgrade attempt recorded.
-- vllm-project/vllm@v0.22.1 | status=skipped | branch=upgrade/2026-06-12-vllm
-  note: Skipped because this candidate version already has an upgrade attempt recorded.
+- vllm-project/vllm@v0.8.2 | status=dry-run | branch=upgrade/2026-06-13-vllm
+  note: Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-06-13-vllm/PR_BODY.md).
 
 ## Failures
 - No failures recorded.
