@@ -1,10 +1,10 @@
 {
-  "executedAt": "2026-06-12T02:37:41.899Z",
+  "executedAt": "2026-06-14T02:42:15.981Z",
   "repository": "geshuhong59-create/openclaw",
   "branchPrefix": "upgrade/",
   "dryRun": false,
   "keepCount": 2,
-  "scannedBranches": 58,
+  "scannedBranches": 59,
   "preservedOpenPrBranches": [
     {
       "name": "upgrade/2026-04-01-vllm",
@@ -397,19 +397,26 @@
       "committedAt": "2026-06-09T02:07:57Z",
       "reason": "open-pr",
       "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/74"
+    },
+    {
+      "name": "upgrade/2026-06-14-vllm",
+      "sha": "67e0c976192e32f08cf0717d4be5aebef291ea5f",
+      "committedAt": "2026-06-14T02:42:12Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/78"
     }
   ],
   "keptRecentBranches": [
     {
-      "name": "upgrade/2026-06-10-browser-use",
-      "sha": "54d4b68e739071ba1e001ecc47a46e8bd851978a",
-      "committedAt": "2026-06-10T02:32:20Z",
+      "name": "upgrade/2026-06-13-browser-use",
+      "sha": "62cc00fc69df5cc511431905e82cd45d21dd4276",
+      "committedAt": "2026-06-13T02:30:55Z",
       "reason": "recent-retention"
     },
     {
-      "name": "upgrade/2026-06-09-vllm",
-      "sha": "cd3758d64af6910c9bfd0f9cf8c3fd0e960ce14b",
-      "committedAt": "2026-06-09T02:08:15Z",
+      "name": "upgrade/2026-06-10-browser-use",
+      "sha": "54d4b68e739071ba1e001ecc47a46e8bd851978a",
+      "committedAt": "2026-06-10T02:32:20Z",
       "reason": "recent-retention"
     }
   ],
