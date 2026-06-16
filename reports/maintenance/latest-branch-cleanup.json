@@ -1,10 +1,10 @@
 {
-  "executedAt": "2026-06-12T02:37:41.899Z",
+  "executedAt": "2026-06-16T02:48:42.836Z",
   "repository": "geshuhong59-create/openclaw",
   "branchPrefix": "upgrade/",
   "dryRun": false,
   "keepCount": 2,
-  "scannedBranches": 58,
+  "scannedBranches": 61,
   "preservedOpenPrBranches": [
     {
       "name": "upgrade/2026-04-01-vllm",
@@ -397,19 +397,40 @@
       "committedAt": "2026-06-09T02:07:57Z",
       "reason": "open-pr",
       "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/74"
+    },
+    {
+      "name": "upgrade/2026-06-14-vllm",
+      "sha": "a0c7f5c71b9051e80e5478443ccc0f04dc15bd73",
+      "committedAt": "2026-06-14T02:42:16Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/78"
+    },
+    {
+      "name": "upgrade/2026-06-15-vllm",
+      "sha": "2fa9488ef3c5e1b3e709b813f9d85fb77c433c2a",
+      "committedAt": "2026-06-15T02:46:51Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/79"
+    },
+    {
+      "name": "upgrade/2026-06-16-vllm",
+      "sha": "dc28c354a333588227d2864d700f63be8ae9945f",
+      "committedAt": "2026-06-16T02:48:39Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/80"
     }
   ],
   "keptRecentBranches": [
     {
-      "name": "upgrade/2026-06-10-browser-use",
-      "sha": "54d4b68e739071ba1e001ecc47a46e8bd851978a",
-      "committedAt": "2026-06-10T02:32:20Z",
+      "name": "upgrade/2026-06-13-browser-use",
+      "sha": "62cc00fc69df5cc511431905e82cd45d21dd4276",
+      "committedAt": "2026-06-13T02:30:55Z",
       "reason": "recent-retention"
     },
     {
-      "name": "upgrade/2026-06-09-vllm",
-      "sha": "cd3758d64af6910c9bfd0f9cf8c3fd0e960ce14b",
-      "committedAt": "2026-06-09T02:08:15Z",
+      "name": "upgrade/2026-06-10-browser-use",
+      "sha": "54d4b68e739071ba1e001ecc47a46e8bd851978a",
+      "committedAt": "2026-06-10T02:32:20Z",
       "reason": "recent-retention"
     }
   ],
