@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-13T02:30:42.542Z",
+  "updatedAt": "2026-06-28T02:34:28.329Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -497,6 +497,34 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-06-13-vllm/UPGRADE_REPORT.md",
       "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-06-13-vllm/PR_BODY.md).",
       "executedAt": "2026-06-13T02:30:42.542Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.2",
+      "status": "skipped",
+      "branchName": "upgrade/2026-06-28-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-06-28-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-06-28T02:34:28.329Z"
+    },
+    {
+      "candidateKey": "vllm-project/vllm@v0.23.0",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-06-28-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-06-28-vllm/UPGRADE_REPORT.md",
+      "commitSha": "03721fd98ab0ae2d20887c8f2648564f7daf1df3",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/92",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-06-28T02:34:28.329Z"
+    },
+    {
+      "candidateKey": "esengine/DeepSeek-Reasonix@desktop-v1.13.0",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-06-28-deepseek-reasonix",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-06-28-deepseek-reasonix/UPGRADE_REPORT.md",
+      "commitSha": "cb09853bfb8643edc76df06767c32fc9d73feb3a",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/93",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-06-28T02:34:28.329Z"
     }
   ]
 }
