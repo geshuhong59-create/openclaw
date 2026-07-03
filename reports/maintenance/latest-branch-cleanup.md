@@ -1,14 +1,14 @@
 # AI Radar Branch Cleanup
 
 ## Summary
-- Executed at: 2026-06-12T02:37:41.899Z
+- Executed at: 2026-07-03T01:59:54.575Z
 - Repository: geshuhong59-create/openclaw
 - Branch prefix: upgrade/
 - Dry run: no
-- Scanned upgrade branches: 58
+- Scanned upgrade branches: 79
 - Keep newest closed branches: 2
-- Preserved for open PRs: 56
-- Deleted stale branches: 0
+- Preserved for open PRs: 76
+- Deleted stale branches: 1
 
 ## Preserved For Open PRs
 - upgrade/2026-04-01-vllm | https://github.com/geshuhong59-create/openclaw/pull/15
@@ -67,10 +67,30 @@
 - upgrade/2026-06-07-vllm | https://github.com/geshuhong59-create/openclaw/pull/72
 - upgrade/2026-06-08-vllm | https://github.com/geshuhong59-create/openclaw/pull/73
 - upgrade/2026-06-09-browser-use | https://github.com/geshuhong59-create/openclaw/pull/74
+- upgrade/2026-06-14-vllm | https://github.com/geshuhong59-create/openclaw/pull/78
+- upgrade/2026-06-15-vllm | https://github.com/geshuhong59-create/openclaw/pull/79
+- upgrade/2026-06-16-vllm | https://github.com/geshuhong59-create/openclaw/pull/80
+- upgrade/2026-06-17-vllm | https://github.com/geshuhong59-create/openclaw/pull/81
+- upgrade/2026-06-18-vllm | https://github.com/geshuhong59-create/openclaw/pull/82
+- upgrade/2026-06-19-vllm | https://github.com/geshuhong59-create/openclaw/pull/83
+- upgrade/2026-06-20-vllm | https://github.com/geshuhong59-create/openclaw/pull/84
+- upgrade/2026-06-21-vllm | https://github.com/geshuhong59-create/openclaw/pull/85
+- upgrade/2026-06-22-vllm | https://github.com/geshuhong59-create/openclaw/pull/86
+- upgrade/2026-06-23-vllm | https://github.com/geshuhong59-create/openclaw/pull/87
+- upgrade/2026-06-24-vllm | https://github.com/geshuhong59-create/openclaw/pull/88
+- upgrade/2026-06-25-vllm | https://github.com/geshuhong59-create/openclaw/pull/89
+- upgrade/2026-06-26-vllm | https://github.com/geshuhong59-create/openclaw/pull/90
+- upgrade/2026-06-27-vllm | https://github.com/geshuhong59-create/openclaw/pull/91
+- upgrade/2026-06-28-deepseek-reasonix | https://github.com/geshuhong59-create/openclaw/pull/93
+- upgrade/2026-06-28-vllm | https://github.com/geshuhong59-create/openclaw/pull/92
+- upgrade/2026-06-29-vllm | https://github.com/geshuhong59-create/openclaw/pull/94
+- upgrade/2026-06-30-vllm | https://github.com/geshuhong59-create/openclaw/pull/95
+- upgrade/2026-07-01-vllm | https://github.com/geshuhong59-create/openclaw/pull/96
+- upgrade/2026-07-02-browser-use | https://github.com/geshuhong59-create/openclaw/pull/97
 
 ## Kept Recent Branches
-- upgrade/2026-06-10-browser-use | committedAt=2026-06-10T02:32:20Z
-- upgrade/2026-06-09-vllm | committedAt=2026-06-09T02:08:15Z
+- upgrade/2026-07-02-vllm | committedAt=2026-07-02T02:15:07Z
+- upgrade/2026-06-13-browser-use | committedAt=2026-06-13T02:30:55Z
 
 ## Deleted Branches
-- None
+- upgrade/2026-06-10-browser-use | committedAt=2026-06-10T02:32:20Z
