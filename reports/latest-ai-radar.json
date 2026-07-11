@@ -1,135 +1,61 @@
 {
-  "executedAt": "2026-07-10T01:57:40.566Z",
-  "reportPath": "/home/runner/work/openclaw/openclaw/reports/2026-07-10-ai-radar.md",
-  "discoveredCount": 98,
+  "executedAt": "2026-07-11T01:46:22.847Z",
+  "reportPath": "/home/runner/work/openclaw/openclaw/reports/2026-03-25-ai-radar.md",
+  "discoveredCount": 5,
   "topCandidates": [
-    {
-      "repo": {
-        "fullName": "browser-use/browser-use",
-        "url": "https://github.com/browser-use/browser-use",
-        "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
-        "topics": [
-          "ai-agents",
-          "ai-tools",
-          "browser-automation",
-          "browser-use",
-          "llm",
-          "playwright",
-          "python"
-        ],
-        "stars": 103988,
-        "forks": 11476,
-        "defaultBranch": "main",
-        "updatedAt": "2026-07-10T01:55:44Z",
-        "pushedAt": "2026-07-09T18:17:15Z",
-        "license": "MIT",
-        "readme": "<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/774a46d5-27a0-490c-b7d0-e65fcbbfa358\">\n  <img alt=\"Shows a black Browser Use Logo in light color mode and a white one in dark color mode.\" src=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"  width=\"full\">\n</picture>\n\n<div align=\"center\">\n    <picture>\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\">\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6797d09b-8ac3-4cb9-ba07-b289e080765a\">\n    <img alt=\"The AI browser agent.\" src=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"  width=\"400\">\n    </picture>\n</div>\n\n<div align=\"center\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-downloads\"><img src=\"https://media.browser-use.tools/badges/package\" height=\"48\" alt=\"Browser-Use Package Download Statistics\"></a>\n</div>\n\n---\n\n<div align=\"center\">\n<a href=\"#what-can-browser-use-do\"><img src=\"https://media.browser-use.tools/badges/demos\" alt=\"Demos\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://docs.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/docs\" alt=\"Docs\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browser-use.com/posts\"><img src=\"https://media.browser-use.tools/badges/blog\" alt=\"Blog\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browsermerch.com\"><img src=\"https://media.browser-use.tools/badges/merch\" alt=\"Merch\"></a>\n<img width=\"100\" height=\"1\" alt=\"\">\n<a href=\"https://github.com/browser-use/browser-use\"><img src=\"https://media.browser-use.tools/badges/github\" alt=\"Github Stars\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://x.com/intent/user?screen_name=browser_use\"><img src=\"https://media.browser-use.tools/badges/twitter\" alt=\"Twitter\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://link.browser-use.com/discord\"><img src=\"https://media.browser-use.tools/badges/discord\" alt=\"Discord\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-cloud\"><img src=\"https://media.browser-use.tools/badges/cloud\" height=\"48\" alt=\"Browser-Use Cloud\"></a>\n</div>\n\n</br>\n\n# What can Browser Use do?\n\nBrowser Use lets an AI agent use a web browser the same way you do — it opens pages, clicks buttons, types, and fills in forms. You describe the task, and it completes it. For example, you can have it:\n\n\n### 📋 Fill Forms\n#### Task: \"Fill in this job application with my resume and information.\"\n![Job Application Demo](https://github.com/user-attachments/assets/57865ee6-6004-49d5-b2c2-6dff39ec2ba9)\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/apply_to_job.py)\n\n\n### 🍎 Shop for Groceries\n#### Task: \"Put this list of items into my instacart.\"\n\nhttps://github.com/user-attachments/assets/a6813fa7-4a7c-40a6-b4aa-382bf88b1850\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/buy_groceries.py)\n\n\n### 💻 Be Your Personal Assistant\n#### Task: \"Help me find parts for a custom PC.\"\n\nhttps://github.com/user-attachments/assets/ac34f75c-057a-43ef-ad06-5b2c9d42bf06\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/pcpartpicker.py)\n\n\n<br/>\n\n# Quickstart\n\nIf you want to use Browser Use in your agent (Claude Code, Codex, Cursor, Hermes, OpenClaw, etc.), paste this prompt, and it sets everything up itself:\n\n```text\nInstall or upgrade browser-use to the latest stable version with uv using Python 3.12, run `browser-use skill install` to register the skill, and connect it to my browser. If setup or connection fails, follow https://github.com/browser-use/browser-harness/blob/main/install.md.\n```\n\nThen tell your agent what you want done.\n\n<br/>\n\n# Python library: the easiest way to automate the web\n\nWant to automate the web at scale, from your own code, and with any LLM? Use the Python library:\n\n**1. Install Browser Use (Python >= 3.11):**\n\n```bash\nuv add browser-use\n# or: pip install browser-use\n```\n\n**2. Add your LLM API key to `.env`**. Get one from [Browser Use Cloud](https://cloud.browser-use.com/new-api-key?utm_source=github&utm_medium=readme-quickstart-api-key), or bring your own provider key:\n\n```bash\n# .env\nBROWSER_USE_API_KEY=your-key\n# GOOGLE_API_KEY=your-key\n# ANTHROPIC_API_KEY=your-key\n```\n\n**3. Run your first agent:**\n\n```python\nimport asyncio\n\nfrom browser_use import Agent, ChatBrowserUse\n\nasync def main():\n    agent = Agent(\n        task=\"Find the number of stars of the browser-use repo\",\n        llm=ChatBrowserUse(model='openai/gpt-5.5'),\n        # llm=ChatBrowserUse(model='bu-2-0'),  # Browser Use's optimized model\n        # llm=ChatOpenAI(model='gpt-5.5'),\n        # llm=ChatAnthropic(model='claude-opus-4-8'),  # Sonnet also works well\n    )\n    history = await agent.run()\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nCheck out the [library docs](https://docs.browser-use.com/open-source/introduction) and the [cloud docs](https://docs.cloud.browser-use.com?utm_source=github&utm_medium=readme-cloud-docs) for more!\n\n<br/>\n\n# Open Source vs Cloud\n\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"static/accuracy_by_model_light.png\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/accuracy_by_model_dark.png\">\n  <img alt=\"BU Bench V1 - LLM Success Rates\" src=\"static/accuracy_by_model_light.png\" width=\"100%\">\n</picture>\n\nWe benchmark Browser Use across 100 real-world browser tasks. Full benchmark is open source: **[browser-use/benchmark](https://github.com/browser-use/benchmark)**.\n\nBrowser Use is also **#1 on the [Odysseys leaderboard](https://odysseysbench.com/leaderboard)** with an 87.4% average, ahead of computer-use agents from OpenAI, Anthropic, Google, and Microsoft. Odysseys measures the agent's performance on 200 long-horizon web tasks.\n\n**Use the Open-Source Agent**\n- Free, and runs on your own machine\n- Deep code-level integration and control: pick your LLM, customize the agent's behavior\n- We recommend pairing it with our [cloud browsers](https://docs.browser-use.com/open-source/customize/browser/remote) for leading stealth, proxy rotation, and scaling\n\n**Use the [Fully-Hosted Cloud Agent](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-hosted-agent) (recommended)**\n- Much more powerful agent for complex tasks (see plot above)\n- Easiest way to start and scale\n- Best stealth with proxy rotation and captcha solving\n- 1000+ integrations (Gmail, Slack, Notion, and more)\n- Persistent filesystem and memory\n\n<br/>\n\n## Integrations, hosting, custom tools, MCP, and more on our [Docs ↗](https://docs.browser-use.com)\n\n<br/>\n\n# FAQ\n\n<details>\n<summary><b>Should I use the CLI vs. the Python library?</b></summary>\n\n**Use the CLI** if you already have an agent (Claude Code, Codex, Cursor, Hermes, OpenClaw, etc.) that you want to complete browser tasks for you. The agent installs the skill once (see [Quickstart](#quickstart)) and can then control the browser. Examples:\n- \"Upload this video to YouTube\"\n- \"Compare these three laptops and give me a table with prices\"\n- \"Fill in this job application with my resume\"\n\n**Use the Python library** when you are building software that automates the web. Examples:\n- Run many tasks on a schedule or in parallel (scraping, monitoring, QA)\n- Embed a browser agent into your own product\n- Custom tools, custom system prompts, structured output, fine-grained browser control\n\nRule of thumb: one-off tasks through an agent → CLI. Repeatable automation in code → Python library.\n</details>\n\n<details>\n<summary><b>What's the best model to use?</b></summary>\n\nWe optimized **ChatBrowserUse()** specifically for browser automation tasks. On avg it completes tasks 3-5x faster than other models with SOTA accuracy.\n\nFor pricing and other LLM providers, see our [supported models documentation](https://docs.browser-use.com/supported-models).\n</details>\n\n<details>\n<summary><b>Can I use Claude / GPT / Gemini through ChatBrowserUse?</b></summary>\n\nYes. `ChatBrowserUse` accepts provider-prefixed model ids, so a single `BROWSER_USE_API_KEY` reaches all of them — no separate OpenAI/Anthropic/Google keys required:\n\n```python\nfrom browser_use import Agent, ChatBrowserUse\n\nllm = ChatBrowserUse(model='anthropic/claude-sonnet-4-6')  # or 'openai/gpt-5.5', 'google/gemini-3-pro'\nagent = Agent(task='...', llm=llm)\n```\n\nFor the best speed and cost we still recommend the default `bu-*` models.\n</details>\n\n<details>\n<summary><b>Should I use the Browser Use system prompt with the open-source preview model?</b></summary>\n\nYes. If you use `ChatBrowserUse(model='browser-use/bu-30b-a3b-preview')` with a normal `Agent(...)`, Browser Use still sends its default agent system prompt for you.\n\nYou do **not** need to add a separate custom \"Browser Use system message\" just because you switched to the open-source preview model. Only use `extend_system_message` or `override_system_message` when you intentionally want to customize the default behavior for your task.\n\nIf you want the best default speed/accuracy, we still recommend the newer hosted `bu-*` models. If you want the open-source preview model, the setup stays the same apart from the `model=` value.\n</details>\n\n<details>\n<summary><b>Can I use custom tools with the agent?</b></summary>\n\nYes! You can add custom tools to extend the agent's capabilities:\n\n```python\nfrom browser_use import Tools\n\ntools = Tools()\n\n@tools.action(description='Description of what this tool does.')\ndef custom_tool(param: str) -> str:\n    return f\"Result: {param}\"\n\nagent = Agent(\n    task=\"Your task\",\n    llm=llm,\n    browser=browser,\n    tools=tools,\n)\n```\n\n</details>\n\n<details>\n<summary><b>Can I use this for free?</b></summary>\n\nYes! Browser-Use is open source and free to use. You only need to choose an LLM provider (like OpenAI, Google, ChatBrowserUse, or run local models with Ollama).\n</details>\n\n<details>\n<summary><b>Terms of Service</b></summary>\n\nThis open-source library is licensed under the MIT License. For Browser Use services & data policy, see our [Terms of Service](https://browser-use.com/legal/terms-of-service) and [Privacy Policy](https://browser-use.com/privacy/).\n</details>\n\n<details>\n<summary><b>How do I handle authentication?</b></summary>\n\nCheck out our authentication examples:\n- [Using real browser profiles](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py) - Reuse your existing Chrome profile with saved logins\n- If you want to use temporary accounts with inbox, choose AgentMail\n- To sync your auth profile with the remote browser, run `curl -fsSL https://browser-use.com/profile.sh | BROWSER_USE_API_KEY=XXXX sh` (replace XXXX with your API key)\n\nThese examples show how to maintain sessions and handle authentication seamlessly.\n</details>\n\n<details>\n<summary><b>How do I solve CAPTCHAs?</b></summary>\n\nFor CAPTCHA handling, you need better browser fingerprinting and proxies. Use [Browser Use Cloud](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-captcha) which provides stealth browsers designed to avoid detection and CAPTCHA challenges.\n</details>\n\n<details>\n<summary><b>How do I go into production?</b></summary>\n\nChrome can consume a lot of memory, and running many agents in parallel can be tricky to manage.\n\nFor production use cases, use our [Browser Use Cloud API](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-production) which handles:\n- Scalable browser infrastructure\n- Memory management\n- Proxy rotation\n- Stealth browser fingerprinting\n- High-performance parallel execution\n</details>\n\n<br/>\n\n## Citation\n\nIf you use Browser Use in your research or project, please cite:\n\n```bibtex\n@software{browser_use2024,\n  author = {Müller, Magnus and Žunič, Gregor},\n  title = {Browser Use: Enable AI to control your browser},\n  year = {2024},\n  publisher = {GitHub},\n  url = {https://github.com/browser-use/browser-use}\n}\n```\n\n<br/>\n\n<div align=\"center\">\n\n**Tell your computer what to do, and it gets it done.**\n\n<img src=\"https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f\" width=\"400\"/>\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)\n&emsp;&emsp;&emsp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)\n\n</div>\n\n<div align=\"center\"> Made with ❤️ in Zurich and San Francisco </div>\n",
-        "recentCommitCount30d": 100,
-        "latestRelease": {
-          "tagName": "0.13.3",
-          "name": "0.13.3",
-          "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/0.13.3",
-          "publishedAt": "2026-07-01T15:06:07Z",
-          "prerelease": false,
-          "draft": false,
-          "body": "## What's Changed\n- Launch Browser Use CLI 3.0 powered by Browser Harness.\n- Add `browser-use skill` so coding agents can install the Browser Use skill directly.\n- Pin Browser Harness to `0.1.4` and ship the Browser Use skill with the package.\n- Improve skill install behavior across Claude Code, Codex, Cursor, Gemini, OpenCode, and related agent skill directories.\n\n**Full Changelog**: https://github.com/browser-use/browser-use/compare/0.13.2...0.13.3"
-        },
-        "source": [
-          {
-            "kind": "watch_repo",
-            "value": "browser-use/browser-use"
-          }
-        ]
-      },
-      "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 85,
-        "performancePotentialScore": 32,
-        "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 100,
-        "finalUpgradeScore": 80,
-        "estimatedPerformanceGainPct": 27,
-        "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [],
-        "qualifyingSignals": {
-          "activeLast30Days": true,
-          "hasStableRelease": true,
-          "commercialLicense": true,
-          "documentationComplete": true,
-          "compatibilityAtLeast70": true,
-          "projectedPerformanceGainAtLeast15Pct": true,
-          "projectedCostReductionAtLeast10Pct": false,
-          "avoidsProductionSecurityBoundary": true
-        },
-        "qualifyingSignalCount": 7,
-        "eligibleForValidation": true,
-        "summary": [
-          "Active commits in last 30 days: 100",
-          "Latest release: 0.13.3",
-          "License: MIT",
-          "Projected performance gain: 27%",
-          "Projected cost reduction: 4%"
-        ]
-      }
-    },
     {
       "repo": {
         "fullName": "vllm-project/vllm",
         "url": "https://github.com/vllm-project/vllm",
-        "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+        "description": "High-throughput and memory-efficient inference engine for LLM serving.",
         "topics": [
-          "amd",
-          "blackwell",
-          "cuda",
-          "deepseek",
-          "deepseek-v3",
-          "gpt",
-          "gpt-oss",
-          "inference",
-          "kimi",
-          "llama",
-          "llm",
-          "llm-serving",
+          "llm-inference",
           "model-serving",
-          "moe",
-          "openai",
-          "pytorch",
-          "qwen",
-          "qwen3",
-          "tpu",
-          "transformer"
+          "benchmark"
         ],
-        "stars": 85846,
-        "forks": 19208,
+        "stars": 42000,
+        "forks": 6200,
         "defaultBranch": "main",
-        "updatedAt": "2026-07-10T01:54:01Z",
-        "pushedAt": "2026-07-10T00:20:16Z",
+        "updatedAt": "2026-03-24T08:20:00Z",
+        "pushedAt": "2026-03-24T08:19:00Z",
         "license": "Apache-2.0",
-        "readme": "<!-- markdownlint-disable MD001 MD041 -->\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png\">\n    <img alt=\"vLLM\" src=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-light.png\" width=55%>\n  </picture>\n</p>\n\n<h3 align=\"center\">\nEasy, fast, and cheap LLM serving for everyone\n</h3>\n\n<p align=\"center\">\n| <a href=\"https://docs.vllm.ai\"><b>Documentation</b></a> | <a href=\"https://blog.vllm.ai/\"><b>Blog</b></a> | <a href=\"https://arxiv.org/abs/2309.06180\"><b>Paper</b></a> | <a href=\"https://x.com/vllm_project\"><b>Twitter/X</b></a> | <a href=\"https://discuss.vllm.ai\"><b>User Forum</b></a> | <a href=\"https://slack.vllm.ai\"><b>Developer Slack</b></a> |\n</p>\n\n🔥 We have built a vLLM website to help you get started with vLLM. Please visit [vllm.ai](https://vllm.ai) to learn more.\nFor events, please visit [vllm.ai/events](https://vllm.ai/events) to join us.\n\n---\n\n## About\n\nvLLM is a fast and easy-to-use library for LLM inference and serving.\n\nOriginally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley, vLLM has grown into one of the most active open-source AI projects built and maintained by a diverse community of many dozens of academic institutions and companies from over 2000 contributors.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)\n- Continuous batching of incoming requests, chunked prefill, prefix caching\n- Fast and flexible model execution with piecewise and full CUDA/HIP graphs\n- Quantization: FP8, MXFP8/MXFP4, NVFP4, INT8, INT4, GPTQ/AWQ, GGUF, compressed-tensors, ModelOpt, TorchAO, and [more](https://docs.vllm.ai/en/latest/features/quantization/index.html)\n- Optimized attention kernels including FlashAttention, FlashInfer, TRTLLM-GEN, FlashMLA, and Triton\n- Optimized GEMM/MoE kernels for various precisions using CUTLASS, TRTLLM-GEN, CuTeDSL\n- Speculative decoding including n-gram, suffix, EAGLE, DFlash\n- Automatic kernel generation and graph-level transformations using torch.compile\n- Disaggregated prefill, decode, and encode\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor, pipeline, data, expert, and context parallelism for distributed inference\n- Streaming outputs\n- Generation of structured outputs using xgrammar or guidance\n- Tool calling and reasoning parsers\n- OpenAI-compatible API server, plus Anthropic Messages API and gRPC support\n- Efficient multi-LoRA support for dense and MoE layers\n- Support for NVIDIA GPUs, AMD GPUs, and x86/ARM/PowerPC CPUs. Additionally, diverse hardware plugins such as Google TPUs, Intel Gaudi, IBM Spyre, Huawei Ascend, Rebellions NPU, Apple Silicon, MetaX GPU, and more.\n\nvLLM seamlessly supports 200+ model architectures on Hugging Face, including:\n\n- Decoder-only LLMs (e.g., Llama, Qwen, Gemma)\n- Mixture-of-Expert LLMs (e.g., Mixtral, DeepSeek-V3, Qwen-MoE, GPT-OSS)\n- Hybrid attention and state-space models (e.g., Mamba, Qwen3.5)\n- Multi-modal models (e.g., LLaVA, Qwen-VL, Pixtral)\n- Embedding and retrieval models (e.g., E5-Mistral, GTE, ColBERT)\n- Reward and classification models (e.g., Qwen-Math)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n\n## Getting Started\n\nInstall vLLM with [`uv`](https://docs.astral.sh/uv/) (recommended) or `pip`:\n\n```bash\nuv pip install vllm\n```\n\nOr [build from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source) for development.\n\nVisit our [documentation](https://docs.vllm.ai/en/latest/) to learn more.\n\n- [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)\n- [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)\n- [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)\n\n## Contributing\n\nWe welcome and value any contributions and collaborations.\nPlease check out [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) for how to get involved.\n\n## Citation\n\nIf you use vLLM for your research, please cite our [paper](https://arxiv.org/abs/2309.06180):\n\n```bibtex\n@inproceedings{kwon2023efficient,\n  title={Efficient Memory Management for Large Language Model Serving with PagedAttention},\n  author={Woosuk Kwon and Zhuohan Li and Siyuan Zhuang and Ying Sheng and Lianmin Zheng and Cody Hao Yu and Joseph E. Gonzalez and Hao Zhang and Ion Stoica},\n  booktitle={Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles},\n  year={2023}\n}\n```\n\n## Contact Us\n\n<!-- --8<-- [start:contact-us] -->\n- For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues)\n- For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)\n- For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)\n- For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature\n- For collaborations and partnerships, please contact us at [collaboration@vllm.ai](mailto:collaboration@vllm.ai)\n<!-- --8<-- [end:contact-us] -->\n\n## Media Kit\n\n- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)\n",
-        "recentCommitCount30d": 100,
+        "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
+        "recentCommitCount30d": 27,
         "latestRelease": {
-          "tagName": "v0.24.0",
-          "name": "v0.24.0",
-          "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.24.0",
-          "publishedAt": "2026-06-29T19:41:59Z",
+          "tagName": "v0.8.2",
+          "name": "v0.8.2",
+          "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
+          "publishedAt": "2026-03-19T05:20:00Z",
           "prerelease": false,
           "draft": false,
-          "body": "# vLLM v0.24.0 Release Notes\r\n\r\n## Highlights\r\n\r\nThis release features 571 commits from 256 contributors (77 new)!\r\n\r\n* **MiniMax-M3**: Added support for the new **MiniMax-M3** model (#45381), with a fast follow-on of BF16/FP8 indexer via MSA (#45892), MXFP4 support (#45896), FP8 sparse GQA (#45744), and extensive AMD/ROCm tuning — mxfp8 MoE/linear on gfx950 (#45725), fp8_per_channel for bf16 weights on MI300X (#45854), FP8 KV-cache fix (#45720), and packed-modules mapping (#45794). A MiniMax-M2 perf regression was also fixed (#45935).\r\n* **DeepSeek-V4 keeps maturing**: Following its debut, DeepSeek-V4 received another large optimization pass — a FlashInfer sparse index cache (2–4% TTFT) (#45863), prefill chunk-planning optimization (4% E2E throughput) (#45061), a cluster-cooperative topK kernel for low-latency (#43008), contiguous per-block KV allocations (#44577), TEP=16 for the block-FP8 shared expert (#46001), and native DSA indexer decode for `next_n > 2` on SM100 (#45322). It is now enabled on **SM120** alongside GLM-5.1 (#43477), with XPU (#44144, #44517, #45240) and ROCm (#44899, #45103, #45681) attention/MoE paths added.\r\n* **Model Runner V2 (MRv2) continues to expand**: MRv2 now **supports quantized models by default** (#44446), enables **GraniteMoE by default** (#45461), and gained migration of Qwen + DeepSeek-V2 MoE models (#42667), DFlash speculative decoding (#44586), and more accurate FP32 Gumbel sampling (#45996).\r\n* **Streaming Parser Engine**: A new streaming parser engine unifies tool-call/reasoning parsing across models, with parsers for Qwen3 (#45413), MiniMax-M2 (#45701), GLM-4.7/5.1/5.2 (#45915), and Nemotron V3 (#45755).\r\n* **Diffusion LLMs**: Added **DiffusionGemma** (#45163), including a CPU path (#45690) and structured-output guardrails for diffusion decoders (#45468).\r\n* **WideEP / DeepEP v2**: Integrated **DeepEP v2** for expert parallelism (#41183), with follow-on robustness fixes (#46404, #46432).\r\n* **Rust frontend matures further**: Added API-key authentication (#44321), CORS (#45753), `/tokenize` + `/detokenize` (#44222), `/pause` `/resume` `/is_paused` (#44499), `/abort_requests` (#44382), `/get_world_size` (#44801), `thinking_token_budget` (#46137), a Python bridge for Rust tool parsers (#44624), and many new parsers and validation paths.\r\n* **Device selection change**: vLLM no longer sets `CUDA_VISIBLE_DEVICES` internally; a new `device_ids` argument is provided instead (#45026). On ROCm, a deprecation window for `CUDA_VISIBLE_DEVICES` has begun (#46636).\r\n\r\n### Model Support\r\n* **New models**: MiniMax-M3 (#45381), DiffusionGemma (#45163) + Gemma Diffusion on CPU (#45690), Hierarchical Reasoning Model — Text / HrmTextForCausalLM (#43098), OpenMOSS (#44124).\r\n* **Gemma 4**: Unified FlashAttention (FA4) across all layers + `mm_prefix` support (#42175); many parser/serving fixes — forced-JSON skip for required/named tool choice (#45795), parsing with thinking disabled (#45832), streaming reasoning-state init (#45852), reasoning rendering on assistant turns (#45867), offline-parser truncation/token-leak fix (#45553); legacy Gemma4 parsers replaced with an engine-based implementation (#45588).\r\n* **DeepSeek-V4**: OOM fix (#44914), MTP projection prefixing (#44821), supported KV-cache dtypes (#44892).\r\n* **Qwen / multimodal**: Qwen3-VL video loader (#44412), Qwen2-VL/Qwen2.5-VL processor-mapped video loader (#45555), Qwen3-VL multi-video processing optimization (#46026) and multi-video crash fix (#46305), Qwen3-Omni VIT cu_seqlens device fix (#44264), fused qk-rmsnorm-rope-gate for Qwen3.5 (#44176), Qwen3.5 EP weight-loading fix (#45002).\r\n* **ViT full CUDA graph**: GLM-4.1V (#40576), DeepSeek-OCR dual-path (#43586), Kimi-VL (#41992), mllama4 (#40660), Lfm2VL encoder (#44930).\r\n* **Other model fixes**: Llama4 weight loading (#45047) and streamed loading to avoid host-OOM (#44645), MiMo v2.x QKV TP sharding + FP4 (#45200), ColQwen3.5 retrieval correctness (#46108), EXAONE-4.5 vision encoder (#45073), MiDashengLM TP>1 audio-encoder crash (#44408), MiniCPM-o/V device-placement and image-size fixes (#43844, #42332, #44980, #45244), Cohere2 MoE weight loading + parser (#44747, #44907), Nemotron V3 reasoning-as-content (#39091), ColBERT AutoWeightsLoader + query/document embedding io processor (#44999, #45210).\r\n* **Kernels**: GLM-5 TRT-LLM ragged MLA prefill dimensions (#43525), GLM-5 router GEMM (#46385).\r\n\r\n### Engine Core\r\n* **Model Runner V2**: Quantized models by default (#44446), GraniteMoE default (#45461), Qwen/DSv2 MoE migration (#42667), DFlash (#44586), simplified async output handling (#45442), attention-group split on `num_heads_q` (#45564), LoRA warmup fix (#35536), more accurate FP32 Gumbel sampling (#45996), `min_tokens` off-by-one fix in the V2 GPU sampler (#46243), plus assorted model/config compatibility fixes (#45868).\r\n* **Speculative decoding**: Dynamic SD (#32374); DFlash with FlashInfer (#43081), mixed KV page sizes (#45181), and Qwen3Next targets (#45319); EAGLE3 support for Qwen3 (#43132); reduced TP communication for large-vocab drafts (#39419); race fix in async accepted counts (#45100); EAGLE multimodal encoder cache fixes (#46315).\r\n* **KV cache & scheduler**: KV-cache watermark to reduce preemptions (#44594), two-phase allocation for cross-group prefix-cache hits (#44409), Marconi-style admission policy for hybrid cache (#37898), prefix-cache retention for Mamba/linear attention (#45845), DS Mamba tail-copy for MTP align mode (#45473), reduced scheduler copy overhead (#45840).\r\n* **Attention**: Re-enabled cross-layer KV cache layout for MLA via stride-aware kernels (#45111), MLA prefill FA4 fp8 output (#43050), FlexAttention custom mask mods made fully cudagraphable (#45232), triton diff-kv backend for MiMo (#41797), FlashMLA sparse accuracy fix (#36616).\r\n* **Weight loading & core**: fastsafetensors `ParallelLoader` for weight loading (#40183), release of cached device memory under pressure on UMA GPUs (#45179), structured outputs for beam search (#35022), `device_ids` arg / no internal `CUDA_VISIBLE_DEVICES` (#45026), graceful fallback when `numactl --membind` is blocked (#45438), config-class registration before tokenizer init (#40299), async scheduling with prompt embeds for multimodal models (#45673).\r\n\r\n### Large Scale Serving & Distributed\r\n* **Expert parallel**: DeepEP v2 integration (#41183) with token-bound and topk-index fixes (#46404, #46432); NIXL EP — DBO with NIXL EP (#45275), top-k index dtype query (#45298), NVFP4 post-receive quantization skip (#45606), elastic-EP communicator (#45013); reject NCCL-based EPLB with async EPLB (#44978).\r\n* **KV connectors / disaggregated serving**: KV push from prefill to decode via NIXL (#35264); per-region KV transfer classification for mixed full-attn + MLA groups (#44583); Mooncake pipeline-parallel PD support (#44528), async lookup (#45659), compact chunk-hash zero-copy lookup (#45969), SWA-block skipping (#45444); P/D fixes with DP supervisor (#46628) and DSV4 disaggregation (#45831); removed `P2pNcclConnector` (#44854).\r\n* **KV offloading**: Multi-tier async batched lookup (#44193), packed HMA KV-cache layout (#46205, gated #46252), parallel-agnostic fs-tier cache (#44733), offloading-manager stats (#35669) and labeled/CPU-usage metrics (#45957, #45737), self-describing KV events (#43468), non-blocking idle flush (#45595), and numerous correctness/race fixes (#44784, #45823, #46231, #46278).\r\n* **Distributed core**: Prefill step cadence for better non-PD DP balancing (#44558), KV-event map encoding (#42892), one-shot fused all-reduce PDL NaN fix (#45448).\r\n\r\n### Hardware & Performance\r\n* **NVIDIA / kernels**: SM90 CUTLASS FP8 mm odd-M support via swap_ab (180–290% kernel speedup) (#44572), tuned `fused_moe` FP8 for Qwen3-Next-80B on H100 (+25%) (#44830), native DSA indexer decode on SM100 (#45322), cluster-cooperative topK for DeepSeek low-latency (#43008), PDL support for DeepGEMM (#46006), FlashInfer cutedsl NVFP4 GEMM (#42235) and cute-dsl MXFP8 linear kernel (#46393), new Helion kernels for FP8/RMSNorm quant (#36902, #33790, #36895, #34432).\r\n* **torch stable ABI**: Continued (and completed) migration of kernels to the libtorch stable ABI — MoE [10c/n] (#44565), Marlin [11a/n] (#45176), Machete [11b/n] (#45304), final `_C` library migration [12/n] (#45415).\r\n* **AMD ROCm**: Torch 2.11 (#45362); fused AR + RMSNorm + per-group FP8 quant (#42864), fused softplus-sqrt-topk MoE router under AITER (#44945), DSv4 flash-decode split-K kernel (#44899) and inverse-RoPE fusion (#45103), W4A16 FlyDSL MoE (#44400), A8W4 MoE CDNA4 swizzle gate for gpt-oss (#44804); deprecation window begun for `CUDA_VISIBLE_DEVICES` on ROCm (#46636).\r\n* **Intel XPU**: Sequence-parallel support (#38608), torch-xpu 2.12 (#42262), vllm-xpu-kernels v0.1.10 (#40367), W4A16 int4 group_size=32 MoE (#45136), DeepSeek-V4 attention/MoE paths (#44144, #44517, #45240), top-p sampling correctness fix (#44470).\r\n* **CPU & other architectures**: 2.5× faster ASR CPU preprocessing via multi-threading (#44612), CPU W4A16 INT4 MoE (#43409), cgroup memory-limit-aware KV cache sizing (#45086), RISC-V oneDNN W8A8 INT8 (#44478) and RVV micro-GEMM for WNA16 (#44324), pinned memory for WSL2 (#41496), ZenCPU runtime logging (#42726).\r\n* **TPU**: tpu-inference upgraded to v0.22.1 (#45793).\r\n* **Misc perf**: `VLLM_TRITON_FORCE_FIRST_CONFIG` to skip Triton autotuning (#42425), Triton recompile detection (#45631), fused multi-group block-table staged writes (#44944).\r\n\r\n### Quantization\r\n* **Online & mixed-precision**: Online FP8 per-token-per-channel (PTPC) quantization (#44132); `modelopt_mixed` support extended to Ampere/SM80-86 (#45306) and Turing/SM75 (#45375).\r\n* **FP4 / MXFP**: FlashInfer cutedsl NVFP4 GEMM backend (#42235) and cute-dsl MXFP8 linear kernel (#46393), MXFP4 W4A4 MoE CUTLASS E8M0 scale fix (#43557), SwiGLU clamp wired for NVFP4 MoE on non-Blackwell (#45836), `flashinfer_cutlass` allowed as a clamped NVFP4 MoE backend (#46492), NVFP4/OCP MX MoE emulation fix (#46254), FP8 MoE re-enabled on NVIDIA Thor (#46339).\r\n* **GGUF / compressed-tensors / AWQ**: GGUF quantization migrated to a plugin (#39612), compressed-tensors WNA16 MoE actorder fix (#41161) and KV-cache-scheme rejection (#45312), AWQ format on XPU (#43404) and AWQ dequantize fix on Intel XPU (#42727).\r\n* **Kernels & correctness**: QuantizedActivation linear-kernel contract (#44260), consolidated Marlin thread-tile padding (#45295), FP8 weight layout canonicalized to (K, N) (#44735), corrupt-output fix for MoE FP8 with LoRAs loaded (#42120), symmetric-quant regression fix in GPTQ/CT MoE (#45656), `fp8_e5m2` KV cache allowed for non-fp8 checkpoints (#45040).\r\n\r\n### API & Frontend\r\n* **Tool calling & parsing**: Strict mode for tool calling in Chat Completions (#45003) and Responses API (#45396); new Streaming Parser Engine (#45413) with Qwen3, MiniMax-M2 (#45701), GLM-4.7/5.1/5.2 (#45915), Nemotron V3 (#45755) parsers; unified Parser consolidation in chat serving (#45548); numerous parser correctness fixes (#46047, #46091, #46159, #45763, #46351, #43984).\r\n* **OpenAI / Responses**: Real `/v1/embeddings` support for messages + `chat_template_kwargs` (#45173), multimodal token counts in `usage.prompt_tokens_details` (#45458), omit empty `tool_calls` from chat responses (#44105), Responses API streaming `function_call` id fix (#44608), Harmony refactor of streaming/non-streaming paths (#45171, #45104).\r\n* **Anthropic Messages API**: Cache-usage reporting in `/v1/messages` (#40912), mid-conversation system-message handling (#46025), inline system-message position preserved for prefix caching (#44602), `tool_use` argument-dropping fix (#45287).\r\n* **Rust frontend**: API-key auth (#44321), CORS (#45753), `/tokenize` + `/detokenize` (#44222), `/pause` `/resume` `/is_paused` (#44499), `/abort_requests` (#44382), `/get_world_size` (#44801), `thinking_token_budget` (#46137), `parallel_tool_calls=false` (#44760), continuous usage stats (#43965), model metadata in `/v1/models` (#45950), Python bridge for Rust tool parsers (#44624), dedicated runtime for HTTP/ZMQ (#46051), and many validation/correctness fixes.\r\n* **Metrics**: `vllm:tool_call_parser_invocations_total` (#44448), group-aware KV cache capacity in `vllm:cache_config_info` (#42206), MLA attention metrics for DeepSeek MFU estimation (#39457).\r\n* **Pooling / embeddings**: Validation for Cohere `/v2/embed` input exclusivity (#45640), non-negative rerank `top_n` (#46119), matryoshka embedding dimension bounds (#46313).\r\n* **Benchmarks**: BFCL tool-calling dataset for `vllm bench serve` (#42457), multi-turn benchmark api_key/custom headers (#44516), tokenizer-mismatch auto-correction (#44708).\r\n\r\n### Security\r\n\r\nThis release ships another coordinated security-hardening batch (much of it from security researcher @jperezdealgaba).\r\n\r\n* **Denial of service**: Audio decompression bomb in the speech-to-text endpoint (#44970), remote DoS via invalid recovered-token reinjection in speculative decoding (#44744), DoS via `prompt_embeds` on M-RoPE models (#45252), regex-compilation timeout guard in structured outputs (#45118), audio upload size limit before full materialization (#45510), audio decode duration limit in the chat-completions path (#45908).\r\n* **Information disclosure**: int32 truncation in the GGUF dequantize kernels (#44971).\r\n* **Input validation & hardening**: Image EXIF orientation and tRNS transparency handling (#44974), rejection of non-finite `temperature`/`repetition_penalty` (#45116), `sanitize_message` applied to Anthropic and STT error paths (#45119).\r\n* **Dependencies**: Upgrade Starlette to ≥ 1.0.1 to fix CVE-2026-48710 (#45675).\r\n\r\n### Dependencies\r\n* Torch 2.11 on ROCm (#45362), torch-xpu 2.12 (#42262), tpu-inference v0.22.1 (#45793), NIXL v0.10.1 for XPU (#40287), Starlette ≥ 1.0.1 (#45675).\r\n* `mistral_common` is now optional via deferred import (#45305); CUDA Dockerfiles upgraded from GCC 10 to GCC 12 for C++20 (#44923); spinloop extension skipped on Python < 3.11 (#44783).\r\n\r\n### Deprecations & Removals\r\n* **Removed models**: ERNIE (obsolete) (#45127), Xverse (#45638), Dots1 (#45637), Bamba (#45990), Mono-InternVL (#45129), InternLM registry alias (#45128).\r\n* **Deprecated**: First-generation Qwen and QwenVL models (#45131), Transformers v4 support (#45161), `CUDA_VISIBLE_DEVICES` on ROCm (#46636); general deprecations for v0.23/v0.24 (#44992).\r\n\r\n## New Contributors\r\n\r\n* @abcd1927 made their first contribution in https://github.com/vllm-project/vllm/pull/43098\r\n* @Achyuthan-S made their first contribution in https://github.com/vllm-project/vllm/pull/44795\r\n* @Alex-ai-future made their first contribution in https://github.com/vllm-project/vllm/pull/45905\r\n* @alexbi29 made their first contribution in https://github.com/vllm-project/vllm/pull/45763\r\n* @amanchugh89 made their first contribution in https://github.com/vllm-project/vllm/pull/45840\r\n* @ankrovv made their first contribution in https://github.com/vllm-project/vllm/pull/44608\r\n* @anony-mous-e made their first contribution in https://github.com/vllm-project/vllm/pull/45412\r\n* @appleparan made their first contribution in https://github.com/vllm-project/vllm/pull/45073\r\n* @ashishpatel26 made their first contribution in https://github.com/vllm-project/vllm/pull/43984\r\n* @Bot1822 made their first contribution in https://github.com/vllm-project/vllm/pull/44053\r\n* @ByteFlowing1337 made their first contribution in https://github.com/vllm-project/vllm/pull/45988\r\n* @Change72 made their first contribution in https://github.com/vllm-project/vllm/pull/43756\r\n* @coder3101 made their first contribution in https://github.com/vllm-project/vllm/pull/44801\r\n* @cquil11 made their first contribution in https://github.com/vllm-project/vllm/pull/45720\r\n* @dmaniloff made their first contribution in https://github.com/vllm-project/vllm/pull/40470\r\n* @factnn made their first contribution in https://github.com/vllm-project/vllm/pull/44955\r\n* @FAUST-BENCHOU made their first contribution in https://github.com/vllm-project/vllm/pull/44760\r\n* @felix0080 made their first contribution in https://github.com/vllm-project/vllm/pull/44602\r\n* @gitbisector made their first contribution in https://github.com/vllm-project/vllm/pull/40183\r\n* @gq112 made their first contribution in https://github.com/vllm-project/vllm/pull/43081\r\n* @guan404ming made their first contribution in https://github.com/vllm-project/vllm/pull/35022\r\n* @HanHan009527 made their first contribution in https://github.com/vllm-project/vllm/pull/44528\r\n* @hello-args made their first contribution in https://github.com/vllm-project/vllm/pull/44109\r\n* @HumphreySun98 made their first contribution in https://github.com/vllm-project/vllm/pull/45466\r\n* @j-i-l made their first contribution in https://github.com/vllm-project/vllm/pull/45319\r\n* @JasonLi314 made their first contribution in https://github.com/vllm-project/vllm/pull/45255\r\n* @jeffye-dev made their first contribution in https://github.com/vllm-project/vllm/pull/43595\r\n* @jimmy-evo made their first contribution in https://github.com/vllm-project/vllm/pull/44516\r\n* @jjppp made their first contribution in https://github.com/vllm-project/vllm/pull/45217\r\n* @JOSH1024 made their first contribution in https://github.com/vllm-project/vllm/pull/44784\r\n* @junkang1991 made their first contribution in https://github.com/vllm-project/vllm/pull/46039\r\n* @KaletoAI made their first contribution in https://github.com/vllm-project/vllm/pull/43495\r\n* @kliukovkin made their first contribution in https://github.com/vllm-project/vllm/pull/43724\r\n* @littlecircle0730 made their first contribution in https://github.com/vllm-project/vllm/pull/44750\r\n* @llx-08 made their first contribution in https://github.com/vllm-project/vllm/pull/45357\r\n* @m4r1k made their first contribution in https://github.com/vllm-project/vllm/pull/45795\r\n* @martin-kukla made their first contribution in https://github.com/vllm-project/vllm/pull/45417\r\n* @MichaelCao0 made their first contribution in https://github.com/vllm-project/vllm/pull/46398\r\n* @mrn3088 made their first contribution in https://github.com/vllm-project/vllm/pull/45383\r\n* @nataliepjlin made their first contribution in https://github.com/vllm-project/vllm/pull/45218\r\n* @nehmathe2 made their first contribution in https://github.com/vllm-project/vllm/pull/44912\r\n* @nikhilesh-csa made their first contribution in https://github.com/vllm-project/vllm/pull/45852\r\n* @nv-nedelman-1 made their first contribution in https://github.com/vllm-project/vllm/pull/42120\r\n* @Oseltamivir made their first contribution in https://github.com/vllm-project/vllm/pull/45879\r\n* @parthash0804 made their first contribution in https://github.com/vllm-project/vllm/pull/43844\r\n* @pjdurden made their first contribution in https://github.com/vllm-project/vllm/pull/44942\r\n* @pst2154 made their first contribution in https://github.com/vllm-project/vllm/pull/45181\r\n* @Saddss made their first contribution in https://github.com/vllm-project/vllm/pull/44409\r\n* @sahilsGit made their first contribution in https://github.com/vllm-project/vllm/pull/44499\r\n* @sasindharan made their first contribution in https://github.com/vllm-project/vllm/pull/44383\r\n* @shantipriya-amd made their first contribution in https://github.com/vllm-project/vllm/pull/39498\r\n* @Sirius29 made their first contribution in https://github.com/vllm-project/vllm/pull/46026\r\n* @srajabos made their first contribution in https://github.com/vllm-project/vllm/pull/44665\r\n* @sridhar-3009 made their first contribution in https://github.com/vllm-project/vllm/pull/44055\r\n* @stefankoncarevic made their first contribution in https://github.com/vllm-project/vllm/pull/45706\r\n* @sunnweiwei made their first contribution in https://github.com/vllm-project/vllm/pull/45100\r\n* @TanNgocDo made their first contribution in https://github.com/vllm-project/vllm/pull/44222\r\n* @thisisjimmyfb made their first contribution in https://github.com/vllm-project/vllm/pull/41496\r\n* @tykow made their first contribution in https://github.com/vllm-project/vllm/pull/44663\r\n* @V-3604 made their first contribution in https://github.com/vllm-project/vllm/pull/43362\r\n* @vincentzed made their first contribution in https://github.com/vllm-project/vllm/pull/44930\r\n* @vraiti made their first contribution in https://github.com/vllm-project/vllm/pull/42331\r\n* @wangjiaxin99 made their first contribution in https://github.com/vllm-project/vllm/pull/45794\r\n* @waynehacking8 made their first contribution in https://github.com/vllm-project/vllm/pull/45376\r\n* @x41lakazam made their first contribution in https://github.com/vllm-project/vllm/pull/43300\r\n* @xiaguan made their first contribution in https://github.com/vllm-project/vllm/pull/45286\r\n* @xiaohuguo2023 made their first contribution in https://github.com/vllm-project/vllm/pull/44804\r\n* @xin3he made their first contribution in https://github.com/vllm-project/vllm/pull/43557\r\n* @xx-thomas made their first contribution in https://github.com/vllm-project/vllm/pull/45210\r\n* @yangdian96 made their first contribution in https://github.com/vllm-project/vllm/pull/44173\r\n* @YellowFoxH4XOR made their first contribution in https://github.com/vllm-project/vllm/pull/45057\r\n* @yzhan1 made their first contribution in https://github.com/vllm-project/vllm/pull/44552\r\n* @Zedong-Liu made their first contribution in https://github.com/vllm-project/vllm/pull/45361\r\n* @ZewenShen-Cohere made their first contribution in https://github.com/vllm-project/vllm/pull/41161\r\n* @zhangshuoming990105 made their first contribution in https://github.com/vllm-project/vllm/pull/40912\r\n* @ZiguanWang made their first contribution in https://github.com/vllm-project/vllm/pull/43981\r\n* @zlxi02 made their first contribution in https://github.com/vllm-project/vllm/pull/44595\r\n\r\n## Contributors\r\n\r\nThank you to everyone who made this release possible!\r\n\r\n@yewentao256, @Sunt-ing, @jperezdealgaba, @AndreasKaratzas, @BugenZhao, @sfeng33, @njhill, @micah-wil, @bbrowning, @mgoin, @jeejeelee, @hmellor, @tlrmchlsmth, @xianbaoqian, @mmangkad, @jikunshang, @Dao007forever, @zhenwei-intel, @noooop, @Isotr0py, @ivanium, @reidliu41, @varun-sundar-rabindranath, @chaunceyjiang, @WoosukKwon, @mawong-amd, @zxd1997066, @chaojun-zhang, @NickLucche, @bigPYJ1151, @ZJY0516, @charlifu, @yzong-rh, @divakar-amd, @khluu, @cleonard530, @wseaton, @xiaohongchen1991, @ywang96, @taneem-ibrahim, @mikekg, @itayalroy, @Alex-ai-future, @sahilsGit, @bnellnm, @littlecircle0730, @majian4work, @ricky-chaoju, @ronensc, @Fangzhou-Ai, @lucianommartins, @Srinivasoo7, @zyongye, @Rohan138, @Etelis, @wentian-byte, @ekagra-ranjan, @LucasWilkinson, @tahsintunan, @waynehacking8, @gau-nernst, @tuukkjs, @stefankoncarevic, @Palaiologos1453, @lucifer1004, @jmamou, @liulanze, @Terrencezzj, @Change72, @LopezCastroRoberto, @he-yufeng, @benchislett, @juliendenize, @s3woz, @panpan0000, @ilmarkov, @zixi-qi, @wcynb1023, @fynnsu, @ZhanqiuHu, @yuwenzho, @tdoublep, @MatthewBonanni, @hickeyma, @majunze2001, @mrn3088, @Yejing-Lai, @vllmellm, @Saddss, @DarkLight1337, @hongxiayang, @m4r1k, @qli88, @jonathanc-n, @felix0080, @djramic, @aoshen02, @fxmarty-amd, @simon-mo, @llsj14, @akii96, @walterbm, @dmaniloff, @zlxi02, @grYe99, @jeffye-dev, @parthash0804, @qyYue1389, @sagearc, @maeehart, @TanNgocDo, @cinnamonica02, @zucchini-nlp, @tykow, @mganczarenko, @yangdian96, @jimmy-evo, @YellowFoxH4XOR, @yzhan1, @shenoyvvarun, @yufufi, @laviier, @xiaohuguo2023, @EanWang211123, @JartX, @shantipriya-amd, @askliar, @hallerite, @appleparan, @effi-ofer, @angelayi, @TheCodeWrangler, @DanBlanaru, @ankrovv, @velonica0, @pjdurden, @cyyever, @wjinxu, @kliukovkin, @x41lakazam, @Jasen2201, @r-barnes, @tc-mb, @nataliepjlin, @KaletoAI, @WineChord, @fangyuchu, @vraiti, @nascheme, @jjppp, @sasindharan, @xiaguan, @snadampal, @chfeng-cs, @thillai-c, @guan404ming, @sridhar-3009, @vincentzed, @j-i-l, @rjrock, @abinggo, @anony-mous-e, @Achyuthan-S, @Harry-Chen, @mfylcek, @amd-asalykov, @noa-neria, @maobaolong, @TheEpicDolphin, @FAUST-BENCHOU, @martin-kukla, @xin3he, @ZiguanWang, @youkaichao, @factnn, @llx-08, @xx-thomas, @gitbisector, @Bortlesboat, @thisisjimmyfb, @JOSH1024, @wendyliu235, @wangxiyuan, @shen-shanshan, @HanHan009527, @amd-lalithnc, @netanel-haber, @fuscof-ibm, @AjAnubolu, @carlyou, @abcd1927, @CienetStingLin, @kouroshHakha, @alexbi29, @jesse996, @sungsooha, @andakai, @cquil11, @nehmathe2, @liangel-02, @hello-args, @j9smith, @nikhilesh-csa, @ruocco, @oguzhankir, @yiliu30, @xaguilar-amd, @amirkl94, @danisereb, @wangjiaxin99, @shanjiaz, @Oseltamivir, @alexeldeib, @wzhao18, @coder3101, @lyd1992, @markmc, @ashishpatel26, @HumphreySun98, @ByteFlowing1337, @nv-nedelman-1, @JaredforReal, @sammshen, @okorzh-amd, @muhammadfawaz1, @vadiklyutiy, @JasonLi314, @SumanthRH, @Sirius29, @tjtanaa, @zhangshuoming990105, @amanchugh89, @umut-polat, @srajabos, @junkang1991, @pst2154, @WindChimeRan, @Zedong-Liu, @gq112, @sunnweiwei, @athrael-soju, @EazyReal, @Liangliang-Ma, @jinzhen-lin, @V-3604, @aarushjain29, @ZewenShen-Cohere, @Bot1822, @BowenBao, @MichaelCao0, @tanpinsiang, @QwertyJack, @nagisa-kunhah, @Meihan-chen, @robertgshaw2-redhat\r\n"
+          "body": "Higher throughput, lower latency, and better benchmark reproducibility."
         },
         "source": [
           {
             "kind": "watch_repo",
             "value": "vllm-project/vllm"
+          },
+          {
+            "kind": "topic",
+            "value": "llm-inference"
+          },
+          {
+            "kind": "topic",
+            "value": "model-serving"
+          },
+          {
+            "kind": "topic",
+            "value": "benchmark"
           }
         ]
       },
       "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 61,
+        "maturityScore": 80,
+        "compatibilityScore": 77,
         "performancePotentialScore": 42,
         "maintenanceRiskScore": 20,
         "adoptionSignalScore": 100,
-        "finalUpgradeScore": 75,
+        "finalUpgradeScore": 76,
         "estimatedPerformanceGainPct": 37,
         "estimatedCostReductionPct": 19,
         "hardVetoReasons": [],
@@ -137,8 +63,8 @@
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": true,
-          "compatibilityAtLeast70": false,
+          "documentationComplete": false,
+          "compatibilityAtLeast70": true,
           "projectedPerformanceGainAtLeast15Pct": true,
           "projectedCostReductionAtLeast10Pct": true,
           "avoidsProductionSecurityBoundary": true
@@ -146,8 +72,8 @@
         "qualifyingSignalCount": 7,
         "eligibleForValidation": true,
         "summary": [
-          "Active commits in last 30 days: 100",
-          "Latest release: v0.24.0",
+          "Active commits in last 30 days: 27",
+          "Latest release: v0.8.2",
           "License: Apache-2.0",
           "Projected performance gain: 37%",
           "Projected cost reduction: 19%"
@@ -156,48 +82,56 @@
     },
     {
       "repo": {
-        "fullName": "openai/openai-agents-python",
-        "url": "https://github.com/openai/openai-agents-python",
-        "description": "A lightweight, powerful framework for multi-agent workflows",
+        "fullName": "langchain-ai/langgraph",
+        "url": "https://github.com/langchain-ai/langgraph",
+        "description": "Graph-based workflow engine for stateful agents.",
         "topics": [
-          "agents",
-          "ai",
-          "framework",
-          "harness",
-          "llm",
-          "openai",
-          "python"
+          "workflow-automation",
+          "agent-framework",
+          "multi-agent"
         ],
-        "stars": 27765,
-        "forks": 4285,
+        "stars": 21000,
+        "forks": 2400,
         "defaultBranch": "main",
-        "updatedAt": "2026-07-10T01:55:41Z",
-        "pushedAt": "2026-07-10T00:58:33Z",
+        "updatedAt": "2026-03-21T16:05:00Z",
+        "pushedAt": "2026-03-21T16:01:00Z",
         "license": "MIT",
-        "readme": "# OpenAI Agents SDK [![PyPI](https://img.shields.io/pypi/v/openai-agents?label=pypi%20package)](https://pypi.org/project/openai-agents/)\n\nThe OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows. It is provider-agnostic, supporting the OpenAI Responses and Chat Completions APIs, as well as 100+ other LLMs.\n\n<img src=\"https://cdn.openai.com/API/docs/images/orchestration.png\" alt=\"Image of the Agents Tracing UI\" style=\"max-height: 803px;\">\n\n> [!NOTE]\n> Looking for the JavaScript/TypeScript version? Check out [Agents SDK JS/TS](https://github.com/openai/openai-agents-js).\n\n### Core concepts:\n\n1. [**Agents**](https://openai.github.io/openai-agents-python/agents): LLMs configured with instructions, tools, guardrails, and handoffs\n1. [**Sandbox Agents**](https://openai.github.io/openai-agents-python/sandbox_agents): Agents preconfigured to work with a container to perform work over long time horizons.\n1. **[Agents as tools](https://openai.github.io/openai-agents-python/tools/#agents-as-tools) / [Handoffs](https://openai.github.io/openai-agents-python/handoffs/)**: Delegating to other agents for specific tasks\n1. [**Tools**](https://openai.github.io/openai-agents-python/tools/): Various Tools let agents take actions (functions, MCP, hosted tools)\n1. [**Guardrails**](https://openai.github.io/openai-agents-python/guardrails/): Configurable safety checks for input and output validation\n1. [**Human in the loop**](https://openai.github.io/openai-agents-python/human_in_the_loop/): Built-in mechanisms for involving humans across agent runs\n1. [**Sessions**](https://openai.github.io/openai-agents-python/sessions/): Automatic conversation history management across agent runs\n1. [**Tracing**](https://openai.github.io/openai-agents-python/tracing/): Built-in tracking of agent runs, allowing you to view, debug and optimize your workflows\n1. [**Realtime Agents**](https://openai.github.io/openai-agents-python/realtime/quickstart/): Build powerful voice agents with `gpt-realtime-2.1` and full agent features\n\nExplore the [examples](https://github.com/openai/openai-agents-python/tree/main/examples) directory to see the SDK in action, and read our [documentation](https://openai.github.io/openai-agents-python/) for more details.\n\n## Get started\n\nTo get started, set up your Python environment (Python 3.10 or newer required), and then install OpenAI Agents SDK package.\n\n### venv\n\n```bash\npython -m venv .venv\nsource .venv/bin/activate  # On Windows: .venv\\Scripts\\activate\npip install openai-agents\n```\n\nFor voice support, install with the optional `voice` group: `pip install 'openai-agents[voice]'`. For Redis session support, install with the optional `redis` group: `pip install 'openai-agents[redis]'`.\n\n### uv\n\nIf you're familiar with [uv](https://docs.astral.sh/uv/), installing the package would be even easier:\n\n```bash\nuv init\nuv add openai-agents\n```\n\nFor voice support, install with the optional `voice` group: `uv add 'openai-agents[voice]'`. For Redis session support, install with the optional `redis` group: `uv add 'openai-agents[redis]'`.\n\n## Run your first agents\n\nThe SDK supports three primary ways to run agents. Set the `OPENAI_API_KEY` environment variable before running any of these examples.\n\n### Run a sandbox agent\n\nUse a [`SandboxAgent`](https://openai.github.io/openai-agents-python/sandbox_agents) when the agent needs to inspect files, run commands, apply patches, or preserve workspace state across longer tasks.\n\n```python\nfrom agents import Runner\nfrom agents.run import RunConfig\nfrom agents.sandbox import Manifest, SandboxAgent, SandboxRunConfig\nfrom agents.sandbox.entries import GitRepo\nfrom agents.sandbox.sandboxes import UnixLocalSandboxClient\n\nagent = SandboxAgent(\n    name=\"Workspace Assistant\",\n    instructions=\"Inspect the sandbox workspace before answering.\",\n    default_manifest=Manifest(entries={\"repo\": GitRepo(repo=\"openai/openai-agents-python\", ref=\"main\")}),\n)\n\nresult = Runner.run_sync(\n    agent,\n    \"Inspect the repo README and summarize what this project does.\",\n    run_config=RunConfig(sandbox=SandboxRunConfig(client=UnixLocalSandboxClient())),\n)\nprint(result.final_output)\n```\n\n### Run a text agent\n\nUse a text `Agent` for workflows that do not need a persistent realtime connection or a sandbox workspace.\n\n```python\nfrom agents import Agent, Runner\n\nagent = Agent(name=\"Assistant\", instructions=\"You are a helpful assistant\")\n\nresult = Runner.run_sync(agent, \"Write a haiku about recursion in programming.\")\nprint(result.final_output)\n\n# Code within the code,\n# Functions calling themselves,\n# Infinite loop's dance.\n```\n\n(_For Jupyter notebook users, see [hello_world_jupyter.ipynb](https://github.com/openai/openai-agents-python/blob/main/examples/basic/hello_world_jupyter.ipynb)_)\n\n### Run a realtime agent\n\nUse a [`RealtimeAgent`](https://openai.github.io/openai-agents-python/realtime/quickstart/) for low-latency, server-side voice and multimodal experiences over WebSocket.\n\n```python\nimport asyncio\nfrom agents.realtime import RealtimeAgent, RealtimeRunner\n\nasync def main() -> None:\n    agent = RealtimeAgent(name=\"Assistant\", instructions=\"You are a helpful voice assistant. Keep responses short.\")\n    runner = RealtimeRunner(starting_agent=agent)\n    session = await runner.run()\n\n    async with session:\n        await session.send_message(\"Say hello in one short sentence.\")\n        async for event in session:\n            if event.type == \"audio\":\n                # Forward or play event.audio.data.\n                pass\n            elif event.type == \"history_added\":\n                print(event.item)\n            elif event.type == \"agent_end\":\n                break\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nExplore the [examples](https://github.com/openai/openai-agents-python/tree/main/examples) directory to see the SDK in action, and read our [documentation](https://openai.github.io/openai-agents-python/) for more details.\n\n## Acknowledgements\n\nWe'd like to acknowledge the excellent work of the open-source community, especially:\n\n- [Pydantic](https://docs.pydantic.dev/latest/)\n- [Requests](https://github.com/psf/requests)\n- [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)\n- [Griffe](https://github.com/mkdocstrings/griffe)\n\nThis library has these optional dependencies:\n\n- [websockets](https://github.com/python-websockets/websockets)\n- [SQLAlchemy](https://github.com/sqlalchemy/sqlalchemy)\n- [any-llm](https://github.com/mozilla-ai/any-llm) and [LiteLLM](https://github.com/BerriAI/litellm)\n\nWe also rely on the following tools to manage the project:\n\n- [uv](https://github.com/astral-sh/uv) and [ruff](https://github.com/astral-sh/ruff)\n- [mypy](https://github.com/python/mypy) and [Pyright](https://github.com/microsoft/pyright)\n- [pytest](https://github.com/pytest-dev/pytest) and [Coverage.py](https://github.com/coveragepy/coveragepy)\n- [MkDocs](https://github.com/squidfunk/mkdocs-material)\n\nWe're committed to continuing to build the Agents SDK as an open source framework so others in the community can expand on our approach.\n",
-        "recentCommitCount30d": 90,
+        "readme": "## Quickstart\nLangGraph provides workflow orchestration for stateful agents, examples, setup, and production guidance.\n\n## Benchmark\nExamples include latency and reliability measurements for graph execution.\n\n## Release\nStable release notes include migration and compatibility details.",
+        "recentCommitCount30d": 18,
         "latestRelease": {
-          "tagName": "v0.18.1",
-          "name": "v0.18.1",
-          "htmlUrl": "https://github.com/openai/openai-agents-python/releases/tag/v0.18.1",
-          "publishedAt": "2026-07-09T23:38:36Z",
+          "tagName": "v0.3.5",
+          "name": "v0.3.5",
+          "htmlUrl": "https://github.com/langchain-ai/langgraph/releases/tag/v0.3.5",
+          "publishedAt": "2026-03-14T12:15:00Z",
           "prerelease": false,
           "draft": false,
-          "body": "## What's Changed\r\n\r\n* feat: add GPT-5.6 model defaults and migrate examples by @seratch in https://github.com/openai/openai-agents-python/pull/3774\r\n* fix: support cache-write usage across OpenAI Python versions by @seratch in https://github.com/openai/openai-agents-python/pull/3773\r\n* fix(realtime): make session cleanup deterministic by @seratch in https://github.com/openai/openai-agents-python/pull/3767\r\n* fix: preserve nested tool state during restoration by @seratch in https://github.com/openai/openai-agents-python/pull/3753\r\n* fix: close Chat Completions streams on early exit by @fallintoplace in https://github.com/openai/openai-agents-python/pull/3689\r\n* fix(sessions): handle list content in AdvancedSQLiteSession browsing helpers by @anxkhn in https://github.com/openai/openai-agents-python/pull/3761\r\n* fix(models): accumulate streamed logprobs in place to avoid O(n^2) copies by @anxkhn in https://github.com/openai/openai-agents-python/pull/3762\r\n* fix: send logprobs=True when top_logprobs is set on Chat Completions by @winklemad in https://github.com/openai/openai-agents-python/pull/3763\r\n\r\n### Documentation & Other Changes\r\n\r\n* docs: updates for v0.18.0 by @seratch in https://github.com/openai/openai-agents-python/pull/3741\r\n* docs(realtime): fix RealtimeRunner context docstring by @anxkhn in https://github.com/openai/openai-agents-python/pull/3748\r\n* docs: clarify agent tool state options by @william-xue in https://github.com/openai/openai-agents-python/pull/3754\r\n* test(items): document refusal None invariant by @seratch in https://github.com/openai/openai-agents-python/pull/3751\r\n* Release 0.18.1 by @github-actions[bot] in https://github.com/openai/openai-agents-python/pull/3775\r\n\r\n## New Contributors\r\n* @william-xue made their first contribution in https://github.com/openai/openai-agents-python/pull/3754\r\n* @winklemad made their first contribution in https://github.com/openai/openai-agents-python/pull/3763\r\n\r\n**Full Changelog**: https://github.com/openai/openai-agents-python/compare/v0.18.0...v0.18.1"
+          "body": "Better workflow checkpoints and evaluation improvements."
         },
         "source": [
           {
             "kind": "watch_repo",
-            "value": "openai/openai-agents-python"
+            "value": "langchain-ai/langgraph"
+          },
+          {
+            "kind": "topic",
+            "value": "agent-framework"
+          },
+          {
+            "kind": "topic",
+            "value": "multi-agent"
+          },
+          {
+            "kind": "topic",
+            "value": "workflow-automation"
           }
         ]
       },
       "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 53,
+        "maturityScore": 77,
+        "compatibilityScore": 77,
         "performancePotentialScore": 32,
-        "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 100,
+        "maintenanceRiskScore": 23,
+        "adoptionSignalScore": 91,
         "finalUpgradeScore": 71,
         "estimatedPerformanceGainPct": 27,
         "estimatedCostReductionPct": 4,
@@ -206,8 +140,8 @@
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": true,
-          "compatibilityAtLeast70": false,
+          "documentationComplete": false,
+          "compatibilityAtLeast70": true,
           "projectedPerformanceGainAtLeast15Pct": true,
           "projectedCostReductionAtLeast10Pct": false,
           "avoidsProductionSecurityBoundary": true
@@ -215,8 +149,8 @@
         "qualifyingSignalCount": 6,
         "eligibleForValidation": false,
         "summary": [
-          "Active commits in last 30 days: 90",
-          "Latest release: v0.18.1",
+          "Active commits in last 30 days: 18",
+          "Latest release: v0.3.5",
           "License: MIT",
           "Projected performance gain: 27%",
           "Projected cost reduction: 4%"
@@ -225,125 +159,40 @@
     },
     {
       "repo": {
-        "fullName": "langchain-ai/langgraph",
-        "url": "https://github.com/langchain-ai/langgraph",
-        "description": "Build resilient agents.",
+        "fullName": "browser-use/browser-use",
+        "url": "https://github.com/browser-use/browser-use",
+        "description": "Browser automation agent framework for web tasks.",
         "topics": [
-          "agents",
-          "ai",
-          "ai-agents",
-          "chatgpt",
-          "deepagents",
-          "enterprise",
-          "framework",
-          "gemini",
-          "generative-ai",
-          "langchain",
-          "langgraph",
-          "llm",
-          "multiagent",
-          "open-source",
-          "openai",
-          "pydantic",
-          "python",
-          "rag"
+          "browser-automation",
+          "agent-framework",
+          "tool-use"
         ],
-        "stars": 36914,
-        "forks": 6197,
+        "stars": 15000,
+        "forks": 1600,
         "defaultBranch": "main",
-        "updatedAt": "2026-07-10T01:54:34Z",
-        "pushedAt": "2026-07-10T01:30:24Z",
+        "updatedAt": "2026-03-23T13:40:00Z",
+        "pushedAt": "2026-03-23T13:39:00Z",
         "license": "MIT",
-        "readme": "<div align=\"center\">\n  <a href=\"https://www.langchain.com/langgraph\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/images/logo-dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\".github/images/logo-light.svg\">\n      <img alt=\"LangGraph Logo\" src=\".github/images/logo-dark.svg\" width=\"50%\">\n    </picture>\n  </a>\n</div>\n\n<div align=\"center\">\n  <h3>Low-level orchestration framework for building stateful agents.</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://opensource.org/licenses/MIT\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/l/langgraph\" alt=\"PyPI - License\"></a>\n  <a href=\"https://pypistats.org/packages/langgraph\" target=\"_blank\"><img src=\"https://img.shields.io/pepy/dt/langgraph\" alt=\"PyPI - Downloads\"></a>\n  <a href=\"https://pypi.org/project/langgraph/\" target=\"_blank\"><img src=\"https://img.shields.io/pypi/v/langgraph.svg?label=%20\" alt=\"Version\"></a>\n  <a href=\"https://x.com/langchain_oss\" target=\"_blank\"><img src=\"https://img.shields.io/twitter/url/https/twitter.com/langchain_oss.svg?style=social&label=Follow%20%40LangChain\" alt=\"Twitter / X\"></a>\n</div>\n\n<br>\n\nTrusted by companies shaping the future of agents – including Klarna, Replit, Elastic, and more – LangGraph is a low-level orchestration framework for building, managing, and deploying long-running, stateful agents.\n\n```bash\npip install -U langgraph\n```\n\n> [!TIP]\n> If you're looking to quickly build agents, check out **[Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview)** — a higher-level package built on LangGraph for agents that can plan, use subagents, and leverage file systems for complex tasks.\n\nFor an equivalent JS/TS library, check out [LangGraph.js](https://github.com/langchain-ai/langgraphjs) and the [JS docs](https://docs.langchain.com/oss/javascript/langgraph/overview).\n\n## Why use LangGraph?\n\nLangGraph provides low-level supporting infrastructure for *any* long-running, stateful workflow or agent:\n\n- **[Durable execution](https://docs.langchain.com/oss/python/langgraph/durable-execution)** — Build agents that persist through failures and can run for extended periods, automatically resuming from exactly where they left off.\n- **[Human-in-the-loop](https://docs.langchain.com/oss/python/langgraph/interrupts)** — Seamlessly incorporate human oversight by inspecting and modifying agent state at any point during execution.\n- **[Comprehensive memory](https://docs.langchain.com/oss/python/langgraph/memory)** — Create truly stateful agents with both short-term working memory for ongoing reasoning and long-term persistent memory across sessions.\n- **[Debugging with LangSmith](https://www.langchain.com/langsmith)** — Gain deep visibility into complex agent behavior with visualization tools that trace execution paths, capture state transitions, and provide detailed runtime metrics.\n- **[Production-ready deployment](https://docs.langchain.com/langsmith/deployments)** — Deploy sophisticated agent systems confidently with scalable infrastructure designed to handle the unique challenges of stateful, long-running workflows.\n\n> [!TIP]\n> For developing, debugging, and deploying AI agents and LLM applications, see [LangSmith](https://docs.langchain.com/langsmith/home).\n\n## LangGraph ecosystem\n\nWhile LangGraph can be used standalone, it also integrates seamlessly with any LangChain product, giving developers a full suite of tools for building agents.\n\nTo improve your LLM application development, pair LangGraph with:\n\n- [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview) – Build agents that can plan, use subagents, and leverage file systems for complex tasks.\n- [LangChain](https://docs.langchain.com/oss/python/langchain/overview) – Provides integrations and composable components to streamline LLM application development.\n- [LangSmith](https://www.langchain.com/langsmith) – Helpful for agent evals and observability. Debug poor-performing LLM app runs, evaluate agent trajectories, gain visibility in production, and improve performance over time.\n- [LangSmith Deployment](https://docs.langchain.com/langsmith/deployments) – Deploy and scale agents effortlessly with a purpose-built deployment platform for long-running, stateful workflows. Discover, reuse, configure, and share agents across teams – and iterate quickly with visual prototyping in [LangSmith Studio](https://docs.langchain.com/langsmith/studio).\n\n---\n\n## Documentation\n\n- [docs.langchain.com](https://docs.langchain.com/oss/python/langgraph/overview) – Comprehensive documentation, including conceptual overviews and guides\n- [reference.langchain.com/python/langgraph](https://reference.langchain.com/python/langgraph) – API reference docs for LangGraph packages\n- [LangGraph Quickstart](https://docs.langchain.com/oss/python/langgraph/quickstart) – Get started building with LangGraph\n- [Chat LangChain](https://chat.langchain.com/) – Chat with the LangChain documentation and get answers to your questions\n\n**Discussions**: Visit the [LangChain Forum](https://forum.langchain.com) to connect with the community and share all of your technical questions, ideas, and feedback.\n\n## Additional resources\n\n- **[Guides](https://docs.langchain.com/oss/python/learn)** – Quick, actionable code snippets for topics such as streaming, adding memory & persistence, and design patterns (e.g. branching, subgraphs, etc.).\n- **[LangChain Academy](https://academy.langchain.com/courses/intro-to-langgraph)** – Learn the basics of LangGraph in our free, structured course.\n- **[Case studies](https://www.langchain.com/built-with-langgraph)** – Hear how industry leaders use LangGraph to ship AI applications at scale.\n- [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview) – Learn how to contribute to LangChain projects and find good first issues.\n- [Code of Conduct](https://github.com/langchain-ai/langchain/?tab=coc-ov-file) – Our community guidelines and standards for participation.\n\n---\n\n## Acknowledgements\n\nLangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.\n",
-        "recentCommitCount30d": 58,
+        "readme": "## Quickstart\nInstall and launch browser tasks with reproducible examples. Usage, configuration, troubleshooting, and benchmark sections are included. The docs describe latency improvements and safety boundaries for browser control.\n\n## Benchmark\nThe project shows benchmark comparisons for task completion and browsing latency.\n\n## Roadmap\nRelease notes and examples are updated regularly.",
+        "recentCommitCount30d": 31,
         "latestRelease": {
-          "tagName": "1.2.9",
-          "name": "langgraph==1.2.9",
-          "htmlUrl": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.9",
-          "publishedAt": "2026-07-10T01:30:24Z",
+          "tagName": "v1.9.0",
+          "name": "v1.9.0",
+          "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/v1.9.0",
+          "publishedAt": "2026-03-18T09:30:00Z",
           "prerelease": false,
           "draft": false,
-          "body": "Changes since 1.2.8\n\n* release(langgraph): 1.2.9 (#8316)\n* fix: updateState metadata/counters for delta channel (#8315)"
+          "body": "Adds more efficient browser sessions, lower latency task execution, and benchmark dashboards."
         },
         "source": [
           {
             "kind": "watch_repo",
-            "value": "langchain-ai/langgraph"
-          }
-        ]
-      },
-      "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 61,
-        "performancePotentialScore": 14,
-        "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 100,
-        "finalUpgradeScore": 70,
-        "estimatedPerformanceGainPct": 9,
-        "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [],
-        "qualifyingSignals": {
-          "activeLast30Days": true,
-          "hasStableRelease": true,
-          "commercialLicense": true,
-          "documentationComplete": true,
-          "compatibilityAtLeast70": false,
-          "projectedPerformanceGainAtLeast15Pct": false,
-          "projectedCostReductionAtLeast10Pct": false,
-          "avoidsProductionSecurityBoundary": true
-        },
-        "qualifyingSignalCount": 5,
-        "eligibleForValidation": false,
-        "summary": [
-          "Active commits in last 30 days: 58",
-          "Latest release: 1.2.9",
-          "License: MIT",
-          "Projected performance gain: 9%",
-          "Projected cost reduction: 4%"
-        ]
-      }
-    },
-    {
-      "repo": {
-        "fullName": "esengine/DeepSeek-Reasonix",
-        "url": "https://github.com/esengine/DeepSeek-Reasonix",
-        "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
-        "topics": [
-          "agent",
-          "agent-framework",
-          "ai-agent",
-          "ai-coding",
-          "cli",
-          "coding-agent",
-          "deepseek",
-          "developer-tools",
-          "ink",
-          "llm",
-          "prompt-caching",
-          "r1",
-          "terminal",
-          "tool-use",
-          "tui",
-          "typescript"
-        ],
-        "stars": 26544,
-        "forks": 1655,
-        "defaultBranch": "main-v2",
-        "updatedAt": "2026-07-10T01:55:42Z",
-        "pushedAt": "2026-07-10T01:55:37Z",
-        "license": "MIT",
-        "readme": "<p align=\"center\">\n  <img src=\"docs/logo.svg\" alt=\"Reasonix\" width=\"640\"/>\n</p>\n\n<p align=\"center\">\n  <strong>English</strong>\n  &nbsp;·&nbsp;\n  <a href=\"./README.zh-CN.md\">简体中文</a>\n  &nbsp;·&nbsp;\n  <a href=\"./docs/GUIDE.md\">Guide</a>\n  &nbsp;·&nbsp;\n  <a href=\"./docs/SPEC.md\">Spec</a>\n  &nbsp;·&nbsp;\n  <a href=\"https://esengine.github.io/DeepSeek-Reasonix/\">Website</a>\n  &nbsp;·&nbsp;\n  <strong><a href=\"https://discord.gg/XF78rEME2D\">Discord</a></strong>\n</p>\n\n> [!IMPORTANT]\n> **Reasonix 1.0 is a ground-up rewrite in Go** — this branch (`main-v2`) is the new default and where development happens now.\n> The earlier `0.x` TypeScript releases are **legacy**, living on the [`v1`](https://github.com/esengine/DeepSeek-Reasonix/tree/v1) branch (maintenance only).\n> See the **[migration guide](./docs/MIGRATING.md)**. `npm i -g reasonix` stays the install command — `1.0.0`+ delivers the Go binary, `0.x` is the legacy TS build.\n\n<p align=\"center\">\n  <a href=\"https://www.npmjs.com/package/reasonix\"><img src=\"https://img.shields.io/npm/v/reasonix.svg?style=flat-square&color=cb3837&labelColor=161b22&logo=npm&logoColor=white\" alt=\"npm version\"/></a>\n  <a href=\"https://github.com/esengine/DeepSeek-Reasonix/actions/workflows/ci.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/esengine/DeepSeek-Reasonix/ci.yml?style=flat-square&label=ci&labelColor=161b22&logo=githubactions&logoColor=white\" alt=\"CI\"/></a>\n  <a href=\"./LICENSE\"><img src=\"https://img.shields.io/npm/l/reasonix.svg?style=flat-square&color=8b949e&labelColor=161b22\" alt=\"license\"/></a>\n  <a href=\"https://www.npmjs.com/package/reasonix\"><img src=\"https://img.shields.io/npm/dm/reasonix.svg?style=flat-square&color=3fb950&labelColor=161b22&label=downloads\" alt=\"downloads\"/></a>\n  <a href=\"https://github.com/esengine/DeepSeek-Reasonix/stargazers\"><img src=\"https://img.shields.io/github/stars/esengine/DeepSeek-Reasonix.svg?style=flat-square&color=dbab09&labelColor=161b22&logo=github&logoColor=white\" alt=\"GitHub stars\"/></a>\n  <a href=\"https://atomgit.com/esengine/DeepSeek-Reasonix\"><img src=\"https://atomgit.com/esengine/DeepSeek-Reasonix/star/badge.svg\" alt=\"AtomGit stars\"/></a>\n  <a href=\"https://github.com/esengine/DeepSeek-Reasonix/graphs/contributors\"><img src=\"https://img.shields.io/github/contributors/esengine/DeepSeek-Reasonix.svg?style=flat-square&color=bc8cff&labelColor=161b22&logo=github&logoColor=white\" alt=\"contributors\"/></a>\n  <a href=\"https://github.com/esengine/DeepSeek-Reasonix/discussions\"><img src=\"https://img.shields.io/github/discussions/esengine/DeepSeek-Reasonix.svg?style=flat-square&color=58a6ff&labelColor=161b22&logo=github&logoColor=white\" alt=\"Discussions\"/></a>\n  <a href=\"https://discord.gg/XF78rEME2D\"><img src=\"https://img.shields.io/badge/discord-join-5865F2.svg?style=flat-square&labelColor=161b22&logo=discord&logoColor=white\" alt=\"Discord\"/></a>\n</p>\n\n<br/>\n\n<h3 align=\"center\">A DeepSeek-native AI coding agent for your terminal.</h3>\n<p align=\"center\">A config- and plugin-driven harness — a single static Go binary, tuned around DeepSeek's prefix cache so token costs stay low across long sessions.</p>\n\n<br/>\n\n> [!IMPORTANT]\n> **Community · 加入社区** — bilingual Discord for setup help (`#help` / `#求助`), workflow showcases, and feature ideas. → **<https://discord.gg/XF78rEME2D>**\n\n<br/>\n\n## Features\n\n- **Config-driven.** Providers, the agent, enabled tools, and plugins are all\n  declared in `reasonix.toml`. No hardcoded models.\n- **Multi-model & composable.** DeepSeek ships as a preset; any\n  OpenAI-compatible endpoint is a config entry, not new code. Optionally run\n  two models together (executor + planner) in separate, cache-stable sessions.\n- **Plugin-driven.** External tools run as subprocesses over stdio JSON-RPC\n  (MCP-compatible). Built-in tools self-register at compile time.\n- **Cache-aware context maintenance.** Startup injects a small stable environment\n  summary, stale tool output is snipped/pruned before summary compaction, and the\n  built-in tool schema contract is documented for regression review.\n- **Zero-friction distribution.** `CGO_ENABLED=0` single binary; cross-compile\n  to six targets with one command. The only dependency is a TOML parser.\n\n## Install\n\n```sh\nnpm i -g reasonix                  # any OS; pulls the prebuilt native binary\nbrew install esengine/reasonix/reasonix   # macOS\n```\n\nPrebuilt archives (`darwin|linux|windows × amd64|arm64`) and `SHA256SUMS` are on\nevery [GitHub release](https://github.com/esengine/DeepSeek-Reasonix/releases).\n\n### Code signing\n\nWindows builds are code-signed with a free certificate provided by the\n[SignPath Foundation](https://signpath.org/), with signing through\n[SignPath.io](https://signpath.io/).\n\n### Build from source\n\n```sh\nmake build      # -> bin/reasonix(.exe)\nmake cross      # -> dist/ (darwin|linux|windows × amd64|arm64)\n```\n\n## Quick start\n\n```sh\nreasonix setup                      # config wizard → ./reasonix.toml\nexport DEEPSEEK_API_KEY=sk-...      # or let setup save it to Reasonix home .env\nreasonix                            # then run /init to generate AGENTS.md (project memory)\nreasonix run \"implement the TODOs in main.go\"\nreasonix run --model deepseek-pro \"add unit tests for this function\"\necho \"explain this code\" | reasonix run\n```\n\n## Configuration\n\nA minimal `reasonix.toml` — one provider and a default model — is enough to start:\n\n```toml\ndefault_model = \"deepseek-flash\"\n\n[[providers]]\nname        = \"deepseek-flash\"\nkind        = \"openai\"\nbase_url    = \"https://api.deepseek.com\"\nmodel       = \"deepseek-v4-flash\"\napi_key_env = \"DEEPSEEK_API_KEY\"\n```\n\nResolution order is **flag > `./reasonix.toml` > the user config file >\nbuilt-in defaults**; starting with **Reasonix v1.8.1**, the user file lives at\n`~/.reasonix/config.toml` on macOS/Linux and\n`%AppData%\\reasonix\\config.toml` on Windows. See\n**[Configuration paths](./docs/CONFIG_PATHS.md)** for migration details and the\nfull `config.toml` / `.env` structure. Provider entries name secrets with\n`api_key_env`; the secret values themselves live in Reasonix's global\n`<Reasonix home>/.env`, shared by CLI and desktop. Project `.env` files are not\nprovider-key runtime fallbacks, but still feed workspace-scoped, non-provider\n`${VAR}` expansion for MCP/plugin settings without importing Reasonix control\nvariables. Permissions, the sandbox, plugins (MCP), slash\ncommands, `@` references, and two-model setup are all in the\n**[Guide](./docs/GUIDE.md)**.\n\n## Documentation\n\n- **[Guide](./docs/GUIDE.md)** — configuration, permissions & sandbox, plugins\n  (MCP), slash commands, `@` references, two-model collaboration.\n- **[Bot guide](./docs/BOT_GUIDE.md)** — connect Feishu, Lark, and WeChat bots\n  from the desktop app, then use approvals, YOLO, and commands from IM.\n- **[Spec](./docs/SPEC.md)** — engineering contract: architecture, registries,\n  data types, and roadmap.\n- **[Task contracts & pause policy](./docs/TASK_CONTRACT.md)** — structure\n  complex requests with context, output boundaries, constraints, and when to ask.\n- **[Tool contract](./docs/TOOL_CONTRACT.md)** — provider-visible built-in tool\n  names, read-only flags, and schema snapshot guard.\n- **[Migrating from 0.x](./docs/MIGRATING.md)** — moving from the legacy\n  TypeScript releases to the 1.0 Go rewrite.\n- **[Checkpoints & rewind](./docs/CHECKPOINTS.md)** — the snapshot-based edit\n  safety net (Esc-Esc / `/rewind`).\n\n<br/>\n\n## Star History\n\n<a href=\"https://www.star-history.com/?repos=esengine%2FDeepSeek-Reasonix&type=date&legend=top-left\">\n <picture>\n   <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/chart?repos=esengine/DeepSeek-Reasonix&type=date&theme=dark&legend=top-left\" />\n   <source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/chart?repos=esengine/DeepSeek-Reasonix&type=date&legend=top-left\" />\n   <img alt=\"Star History Chart\" src=\"https://api.star-history.com/chart?repos=esengine/DeepSeek-Reasonix&type=date&legend=top-left\" />\n </picture>\n</a>\n\n<br/>\n\n## Support\n\nIf Reasonix has been useful and you'd like to say thanks, you can. It stays a coffee, not a contract — donations don't buy feature priority or change how issues get triaged.\n\n- **International** — PayPal: [paypal.me/yuhuahui](https://paypal.me/yuhuahui)\n- **国内** — 微信支付（扫码）\n\n<p align=\"center\">\n  <img src=\".github/sponsor/wechat-pay.jpg\" alt=\"WeChat Pay QR code\" width=\"240\"/>\n</p>\n\n<br/>\n\n## Acknowledgments\n\nA small list of folks whose work has shaped Reasonix the most — the current top\n20 contributors by commit count. The full contributor graph is on\n[GitHub](https://github.com/esengine/DeepSeek-Reasonix/graphs/contributors?all=1).\n\n<!-- reasonix-top-contributors:start -->\n| Contributor | Contributor | Contributor | Contributor |\n| --- | --- | --- | --- |\n| [**SivanCola**](https://github.com/SivanCola) | [**esengine**](https://github.com/esengine) | [**ttmouse**](https://github.com/ttmouse) | [**lifu963**](https://github.com/lifu963) |\n| **reasonix** (anonymous) | [**HUQIANTAO**](https://github.com/HUQIANTAO) | [**GTC2080**](https://github.com/GTC2080) | [**light-front-theory**](https://github.com/light-front-theory) |\n| **merge-order-check** (anonymous) | [**Li-Charles-One**](https://github.com/Li-Charles-One) | [**eghrhegpe**](https://github.com/eghrhegpe) | **wufengfan** (anonymous) |\n| [**CVEngineer66**](https://github.com/CVEngineer66) | [**dependabot\\[bot\\]**](https://github.com/apps/dependabot) | [**lanshi17**](https://github.com/lanshi17) | [**SuMuxi66**](https://github.com/SuMuxi66) |\n| [**CnsMaple**](https://github.com/CnsMaple) | [**cyq1017**](https://github.com/cyq1017) | [**JesonChou**](https://github.com/JesonChou) | [**XTLine**](https://github.com/XTLine) |\n<!-- reasonix-top-contributors:end -->\n\nAlso a separate thank-you to [**Bernardxu123**](https://github.com/Bernardxu123)\nfor designing the project logo, and to\n[AIGC Link](https://xhslink.com/m/80ngts127cA) for promoting the project on XiaoHongShu.\n\n<p align=\"center\">\n  <a href=\"https://github.com/esengine/DeepSeek-Reasonix/graphs/contributors\">\n    <img src=\"https://contrib.rocks/image?repo=esengine/DeepSeek-Reasonix&max=100&columns=12\" alt=\"Contributors to esengine/DeepSeek-Reasonix\" width=\"860\"/>\n  </a>\n</p>\n\n<br/>\n\n---\n\n<p align=\"center\">\n  <sub>MIT — see <a href=\"./LICENSE\">LICENSE</a></sub>\n  <br/>\n  <sub>Built by the community at <a href=\"https://github.com/esengine/DeepSeek-Reasonix/graphs/contributors\">esengine/DeepSeek-Reasonix</a></sub>\n</p>\n",
-        "recentCommitCount30d": 100,
-        "latestRelease": {
-          "tagName": "desktop-v1.17.9",
-          "name": "Reasonix Desktop v1.17.9",
-          "htmlUrl": "https://github.com/esengine/DeepSeek-Reasonix/releases/tag/desktop-v1.17.9",
-          "publishedAt": "2026-07-09T05:08:28Z",
-          "prerelease": false,
-          "draft": false,
-          "body": "## What's Changed\n* Allow agents to repair Reasonix config / 允许 Agent 修复 Reasonix 配置 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6159\n* feat(creation): polish ContextWindowRing popover data by @Li-Charles-One in https://github.com/esengine/DeepSeek-Reasonix/pull/6197\n* chore(gitignore): ignore local temp/ scratch directories / 忽略本地 temp 临时目录 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6199\n* fix(agent): unify sub-agent Options construction to stop config drift / 统一子代理 Options 构造点，修复配置漂移 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6198\n* Explicit planner no-op contract and executor fallback on planner failure / 规划模型 no-op 显式合约与故障回退执行模型 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6193\n* Fix escaped PowerShell file hooks / 修复 PowerShell 文件 hook 转义引号 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6200\n* fix(skill): enforce review/security-review read-only contract at the tool boundary / 在工具边界强制 review/security-review 只读契约 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6202\n* fix(agent): share child step-budget rule with parallel_tasks and keep read_skill at depth cap / 统一 parallel_tasks 子任务步数预算并在深度封顶时保留 read_skill by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6203\n* Thread turn context into planner gate, trim handoff tool block, planner-attribute no-op conclusion / 规划门槛透传回合上下文、精简 handoff 工具块、no-op 结论归因规划模型 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6201\n* Bump Go toolchain to 1.26.5 for stdlib vulnerability fixes / Go 工具链升至 1.26.5 修复标准库漏洞 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6206\n* fix(desktop): skip blank topics whose session lease is foreign-held / 修复新建对话复用外部持锁的空白会话 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6208\n* Keep compaction on failed planner-turn rollback; marker-only no-op contract / 规划回合失败回滚保留 compaction、no-op 判定仅认 marker by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6204\n* fix(desktop): 弹出窗口失去焦点时不自动关闭 + 未保存编辑保护 by @ttmouse in https://github.com/esengine/DeepSeek-Reasonix/pull/6213\n* fix(desktop): auto-send queued guidance when a turn ends naturally / 修复任务自然结束时排队消息丢失 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6215\n* Guardian reviews use strictly alternating turns / guardian 评审改为严格交替的对话轮次 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6205\n* Widen Windows node-eval statusline test timeout to 30s / 放宽 Windows node-eval statusline 测试超时至 30s by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6212\n* fix(agent): clarify planner only has read-only tools to stop tool-worry loops (#6190) by @ttmouse in https://github.com/esengine/DeepSeek-Reasonix/pull/6214\n* fix(desktop): prevent settings sidebar from flipping to horizontal tabs on narrow windows / 修复窄窗口下设置侧边栏突变为横向排列 by @HaoyueQin in https://github.com/esengine/DeepSeek-Reasonix/pull/6019\n* feat(acp): client fs/terminal integration, tool locations, plan updates, session modes / ACP 客户端 fs/终端集成、工具定位、plan 更新与会话模式 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6221\n* Guard DeepSeek tool-call reasoning replay / 保护 DeepSeek 工具调用 reasoning 回放 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6217\n* fix(desktop): respect manual transcript scrolling by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6220\n* feat(creation): Windows 平台标题栏元素垂直对齐 by @Li-Charles-One in https://github.com/esengine/DeepSeek-Reasonix/pull/6207\n* fix(desktop): 输入框右键编辑菜单（剪切/复制/粘贴/全选，含快捷键提示） by @ttmouse in https://github.com/esengine/DeepSeek-Reasonix/pull/6219\n* Update website install options / 更新官网安装入口 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6240\n* Disable Windows Bash sandbox in stable config / 在 Windows 配置中禁用 Bash 沙箱 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6230\n* Update acknowledgments contributors / 更新致谢贡献者 by @SivanCola in https://github.com/esengine/DeepSeek-Reasonix/pull/6243\n* feat(creation): 统一右侧面板与 Windows 控制框背景色 by @Li-Charles-One in https://github.com/esengine/DeepSeek-Reasonix/pull/6244\n\n\n**Full Changelog**: https://github.com/esengine/DeepSeek-Reasonix/compare/desktop-v1.17.8...desktop-v1.17.9"
-        },
-        "source": [
+            "value": "browser-use/browser-use"
+          },
+          {
+            "kind": "topic",
+            "value": "browser-automation"
+          },
           {
             "kind": "topic",
             "value": "agent-framework"
@@ -355,32 +204,183 @@
         ]
       },
       "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 63,
-        "performancePotentialScore": 14,
+        "maturityScore": 80,
+        "compatibilityScore": 77,
+        "performancePotentialScore": 32,
         "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 88,
-        "finalUpgradeScore": 68,
-        "estimatedPerformanceGainPct": 9,
+        "adoptionSignalScore": 72,
+        "finalUpgradeScore": 69,
+        "estimatedPerformanceGainPct": 27,
         "estimatedCostReductionPct": 4,
         "hardVetoReasons": [],
         "qualifyingSignals": {
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": true,
+          "documentationComplete": false,
+          "compatibilityAtLeast70": true,
+          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedCostReductionAtLeast10Pct": false,
+          "avoidsProductionSecurityBoundary": true
+        },
+        "qualifyingSignalCount": 6,
+        "eligibleForValidation": false,
+        "summary": [
+          "Active commits in last 30 days: 31",
+          "Latest release: v1.9.0",
+          "License: MIT",
+          "Projected performance gain: 27%",
+          "Projected cost reduction: 4%"
+        ]
+      }
+    },
+    {
+      "repo": {
+        "fullName": "microsoft/autogen",
+        "url": "https://github.com/microsoft/autogen",
+        "description": "Multi-agent orchestration framework.",
+        "topics": [
+          "multi-agent",
+          "agent-framework",
+          "automation"
+        ],
+        "stars": 39000,
+        "forks": 5400,
+        "defaultBranch": "main",
+        "updatedAt": "2026-03-22T21:00:00Z",
+        "pushedAt": "2026-03-22T20:58:00Z",
+        "license": "MIT",
+        "readme": "## Quickstart\nAutoGen provides multi-agent orchestration, examples, installation instructions, and migration notes.\n\n## Benchmark\nThe repository publishes evaluation notes and performance discussions.\n\n## Release\nReleases include changelog entries and upgrade instructions.",
+        "recentCommitCount30d": 12,
+        "latestRelease": {
+          "tagName": "v0.6.3",
+          "name": "v0.6.3",
+          "htmlUrl": "https://github.com/microsoft/autogen/releases/tag/v0.6.3",
+          "publishedAt": "2026-03-17T07:45:00Z",
+          "prerelease": false,
+          "draft": false,
+          "body": "Improves automation reliability and benchmark coverage."
+        },
+        "source": [
+          {
+            "kind": "watch_repo",
+            "value": "microsoft/autogen"
+          },
+          {
+            "kind": "topic",
+            "value": "agent-framework"
+          },
+          {
+            "kind": "topic",
+            "value": "multi-agent"
+          }
+        ]
+      },
+      "score": {
+        "maturityScore": 66,
+        "compatibilityScore": 69,
+        "performancePotentialScore": 32,
+        "maintenanceRiskScore": 32,
+        "adoptionSignalScore": 94,
+        "finalUpgradeScore": 66,
+        "estimatedPerformanceGainPct": 27,
+        "estimatedCostReductionPct": 4,
+        "hardVetoReasons": [],
+        "qualifyingSignals": {
+          "activeLast30Days": true,
+          "hasStableRelease": true,
+          "commercialLicense": true,
+          "documentationComplete": false,
           "compatibilityAtLeast70": false,
-          "projectedPerformanceGainAtLeast15Pct": false,
+          "projectedPerformanceGainAtLeast15Pct": true,
           "projectedCostReductionAtLeast10Pct": false,
           "avoidsProductionSecurityBoundary": true
         },
         "qualifyingSignalCount": 5,
         "eligibleForValidation": false,
         "summary": [
-          "Active commits in last 30 days: 100",
-          "Latest release: desktop-v1.17.9",
+          "Active commits in last 30 days: 12",
+          "Latest release: v0.6.3",
           "License: MIT",
-          "Projected performance gain: 9%",
+          "Projected performance gain: 27%",
+          "Projected cost reduction: 4%"
+        ]
+      }
+    },
+    {
+      "repo": {
+        "fullName": "openai/openai-agents-python",
+        "url": "https://github.com/openai/openai-agents-python",
+        "description": "Python toolkit for building structured agents with tracing and tool orchestration.",
+        "topics": [
+          "agent-framework",
+          "automation",
+          "tool-use",
+          "workflow-automation"
+        ],
+        "stars": 9200,
+        "forks": 1100,
+        "defaultBranch": "main",
+        "updatedAt": "2026-03-24T18:11:00Z",
+        "pushedAt": "2026-03-24T18:10:00Z",
+        "license": "Apache-2.0",
+        "readme": "## Quickstart\nInstall the package, define tools, and run an agent loop with traces. The project ships setup instructions, benchmark notes, release guidance, and examples for tool use, agent orchestration, and model provider switching.\n\n## Benchmark\nThe examples describe latency, reliability, and tracing impact in reproducible local runs.\n\n## Release\nStable releases are published with changelog notes and migration guidance.",
+        "recentCommitCount30d": 24,
+        "latestRelease": {
+          "tagName": "v0.4.1",
+          "name": "v0.4.1",
+          "htmlUrl": "https://github.com/openai/openai-agents-python/releases/tag/v0.4.1",
+          "publishedAt": "2026-03-20T10:00:00Z",
+          "prerelease": false,
+          "draft": false,
+          "body": "Performance improvements for tracing, benchmark updates, and more stable tool execution."
+        },
+        "source": [
+          {
+            "kind": "watch_repo",
+            "value": "openai/openai-agents-python"
+          },
+          {
+            "kind": "topic",
+            "value": "agent-framework"
+          },
+          {
+            "kind": "topic",
+            "value": "tool-use"
+          },
+          {
+            "kind": "topic",
+            "value": "workflow-automation"
+          }
+        ]
+      },
+      "score": {
+        "maturityScore": 80,
+        "compatibilityScore": 77,
+        "performancePotentialScore": 32,
+        "maintenanceRiskScore": 20,
+        "adoptionSignalScore": 51,
+        "finalUpgradeScore": 65,
+        "estimatedPerformanceGainPct": 27,
+        "estimatedCostReductionPct": 4,
+        "hardVetoReasons": [],
+        "qualifyingSignals": {
+          "activeLast30Days": true,
+          "hasStableRelease": true,
+          "commercialLicense": true,
+          "documentationComplete": false,
+          "compatibilityAtLeast70": true,
+          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedCostReductionAtLeast10Pct": false,
+          "avoidsProductionSecurityBoundary": true
+        },
+        "qualifyingSignalCount": 6,
+        "eligibleForValidation": false,
+        "summary": [
+          "Active commits in last 30 days: 24",
+          "Latest release: v0.4.1",
+          "License: Apache-2.0",
+          "Projected performance gain: 27%",
           "Projected cost reduction: 4%"
         ]
       }
@@ -390,161 +390,57 @@
     {
       "candidate": {
         "repo": {
-          "fullName": "browser-use/browser-use",
-          "url": "https://github.com/browser-use/browser-use",
-          "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
-          "topics": [
-            "ai-agents",
-            "ai-tools",
-            "browser-automation",
-            "browser-use",
-            "llm",
-            "playwright",
-            "python"
-          ],
-          "stars": 103988,
-          "forks": 11476,
-          "defaultBranch": "main",
-          "updatedAt": "2026-07-10T01:55:44Z",
-          "pushedAt": "2026-07-09T18:17:15Z",
-          "license": "MIT",
-          "readme": "<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/774a46d5-27a0-490c-b7d0-e65fcbbfa358\">\n  <img alt=\"Shows a black Browser Use Logo in light color mode and a white one in dark color mode.\" src=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"  width=\"full\">\n</picture>\n\n<div align=\"center\">\n    <picture>\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\">\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6797d09b-8ac3-4cb9-ba07-b289e080765a\">\n    <img alt=\"The AI browser agent.\" src=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"  width=\"400\">\n    </picture>\n</div>\n\n<div align=\"center\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-downloads\"><img src=\"https://media.browser-use.tools/badges/package\" height=\"48\" alt=\"Browser-Use Package Download Statistics\"></a>\n</div>\n\n---\n\n<div align=\"center\">\n<a href=\"#what-can-browser-use-do\"><img src=\"https://media.browser-use.tools/badges/demos\" alt=\"Demos\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://docs.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/docs\" alt=\"Docs\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browser-use.com/posts\"><img src=\"https://media.browser-use.tools/badges/blog\" alt=\"Blog\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browsermerch.com\"><img src=\"https://media.browser-use.tools/badges/merch\" alt=\"Merch\"></a>\n<img width=\"100\" height=\"1\" alt=\"\">\n<a href=\"https://github.com/browser-use/browser-use\"><img src=\"https://media.browser-use.tools/badges/github\" alt=\"Github Stars\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://x.com/intent/user?screen_name=browser_use\"><img src=\"https://media.browser-use.tools/badges/twitter\" alt=\"Twitter\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://link.browser-use.com/discord\"><img src=\"https://media.browser-use.tools/badges/discord\" alt=\"Discord\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-cloud\"><img src=\"https://media.browser-use.tools/badges/cloud\" height=\"48\" alt=\"Browser-Use Cloud\"></a>\n</div>\n\n</br>\n\n# What can Browser Use do?\n\nBrowser Use lets an AI agent use a web browser the same way you do — it opens pages, clicks buttons, types, and fills in forms. You describe the task, and it completes it. For example, you can have it:\n\n\n### 📋 Fill Forms\n#### Task: \"Fill in this job application with my resume and information.\"\n![Job Application Demo](https://github.com/user-attachments/assets/57865ee6-6004-49d5-b2c2-6dff39ec2ba9)\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/apply_to_job.py)\n\n\n### 🍎 Shop for Groceries\n#### Task: \"Put this list of items into my instacart.\"\n\nhttps://github.com/user-attachments/assets/a6813fa7-4a7c-40a6-b4aa-382bf88b1850\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/buy_groceries.py)\n\n\n### 💻 Be Your Personal Assistant\n#### Task: \"Help me find parts for a custom PC.\"\n\nhttps://github.com/user-attachments/assets/ac34f75c-057a-43ef-ad06-5b2c9d42bf06\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/pcpartpicker.py)\n\n\n<br/>\n\n# Quickstart\n\nIf you want to use Browser Use in your agent (Claude Code, Codex, Cursor, Hermes, OpenClaw, etc.), paste this prompt, and it sets everything up itself:\n\n```text\nInstall or upgrade browser-use to the latest stable version with uv using Python 3.12, run `browser-use skill install` to register the skill, and connect it to my browser. If setup or connection fails, follow https://github.com/browser-use/browser-harness/blob/main/install.md.\n```\n\nThen tell your agent what you want done.\n\n<br/>\n\n# Python library: the easiest way to automate the web\n\nWant to automate the web at scale, from your own code, and with any LLM? Use the Python library:\n\n**1. Install Browser Use (Python >= 3.11):**\n\n```bash\nuv add browser-use\n# or: pip install browser-use\n```\n\n**2. Add your LLM API key to `.env`**. Get one from [Browser Use Cloud](https://cloud.browser-use.com/new-api-key?utm_source=github&utm_medium=readme-quickstart-api-key), or bring your own provider key:\n\n```bash\n# .env\nBROWSER_USE_API_KEY=your-key\n# GOOGLE_API_KEY=your-key\n# ANTHROPIC_API_KEY=your-key\n```\n\n**3. Run your first agent:**\n\n```python\nimport asyncio\n\nfrom browser_use import Agent, ChatBrowserUse\n\nasync def main():\n    agent = Agent(\n        task=\"Find the number of stars of the browser-use repo\",\n        llm=ChatBrowserUse(model='openai/gpt-5.5'),\n        # llm=ChatBrowserUse(model='bu-2-0'),  # Browser Use's optimized model\n        # llm=ChatOpenAI(model='gpt-5.5'),\n        # llm=ChatAnthropic(model='claude-opus-4-8'),  # Sonnet also works well\n    )\n    history = await agent.run()\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nCheck out the [library docs](https://docs.browser-use.com/open-source/introduction) and the [cloud docs](https://docs.cloud.browser-use.com?utm_source=github&utm_medium=readme-cloud-docs) for more!\n\n<br/>\n\n# Open Source vs Cloud\n\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"static/accuracy_by_model_light.png\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/accuracy_by_model_dark.png\">\n  <img alt=\"BU Bench V1 - LLM Success Rates\" src=\"static/accuracy_by_model_light.png\" width=\"100%\">\n</picture>\n\nWe benchmark Browser Use across 100 real-world browser tasks. Full benchmark is open source: **[browser-use/benchmark](https://github.com/browser-use/benchmark)**.\n\nBrowser Use is also **#1 on the [Odysseys leaderboard](https://odysseysbench.com/leaderboard)** with an 87.4% average, ahead of computer-use agents from OpenAI, Anthropic, Google, and Microsoft. Odysseys measures the agent's performance on 200 long-horizon web tasks.\n\n**Use the Open-Source Agent**\n- Free, and runs on your own machine\n- Deep code-level integration and control: pick your LLM, customize the agent's behavior\n- We recommend pairing it with our [cloud browsers](https://docs.browser-use.com/open-source/customize/browser/remote) for leading stealth, proxy rotation, and scaling\n\n**Use the [Fully-Hosted Cloud Agent](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-hosted-agent) (recommended)**\n- Much more powerful agent for complex tasks (see plot above)\n- Easiest way to start and scale\n- Best stealth with proxy rotation and captcha solving\n- 1000+ integrations (Gmail, Slack, Notion, and more)\n- Persistent filesystem and memory\n\n<br/>\n\n## Integrations, hosting, custom tools, MCP, and more on our [Docs ↗](https://docs.browser-use.com)\n\n<br/>\n\n# FAQ\n\n<details>\n<summary><b>Should I use the CLI vs. the Python library?</b></summary>\n\n**Use the CLI** if you already have an agent (Claude Code, Codex, Cursor, Hermes, OpenClaw, etc.) that you want to complete browser tasks for you. The agent installs the skill once (see [Quickstart](#quickstart)) and can then control the browser. Examples:\n- \"Upload this video to YouTube\"\n- \"Compare these three laptops and give me a table with prices\"\n- \"Fill in this job application with my resume\"\n\n**Use the Python library** when you are building software that automates the web. Examples:\n- Run many tasks on a schedule or in parallel (scraping, monitoring, QA)\n- Embed a browser agent into your own product\n- Custom tools, custom system prompts, structured output, fine-grained browser control\n\nRule of thumb: one-off tasks through an agent → CLI. Repeatable automation in code → Python library.\n</details>\n\n<details>\n<summary><b>What's the best model to use?</b></summary>\n\nWe optimized **ChatBrowserUse()** specifically for browser automation tasks. On avg it completes tasks 3-5x faster than other models with SOTA accuracy.\n\nFor pricing and other LLM providers, see our [supported models documentation](https://docs.browser-use.com/supported-models).\n</details>\n\n<details>\n<summary><b>Can I use Claude / GPT / Gemini through ChatBrowserUse?</b></summary>\n\nYes. `ChatBrowserUse` accepts provider-prefixed model ids, so a single `BROWSER_USE_API_KEY` reaches all of them — no separate OpenAI/Anthropic/Google keys required:\n\n```python\nfrom browser_use import Agent, ChatBrowserUse\n\nllm = ChatBrowserUse(model='anthropic/claude-sonnet-4-6')  # or 'openai/gpt-5.5', 'google/gemini-3-pro'\nagent = Agent(task='...', llm=llm)\n```\n\nFor the best speed and cost we still recommend the default `bu-*` models.\n</details>\n\n<details>\n<summary><b>Should I use the Browser Use system prompt with the open-source preview model?</b></summary>\n\nYes. If you use `ChatBrowserUse(model='browser-use/bu-30b-a3b-preview')` with a normal `Agent(...)`, Browser Use still sends its default agent system prompt for you.\n\nYou do **not** need to add a separate custom \"Browser Use system message\" just because you switched to the open-source preview model. Only use `extend_system_message` or `override_system_message` when you intentionally want to customize the default behavior for your task.\n\nIf you want the best default speed/accuracy, we still recommend the newer hosted `bu-*` models. If you want the open-source preview model, the setup stays the same apart from the `model=` value.\n</details>\n\n<details>\n<summary><b>Can I use custom tools with the agent?</b></summary>\n\nYes! You can add custom tools to extend the agent's capabilities:\n\n```python\nfrom browser_use import Tools\n\ntools = Tools()\n\n@tools.action(description='Description of what this tool does.')\ndef custom_tool(param: str) -> str:\n    return f\"Result: {param}\"\n\nagent = Agent(\n    task=\"Your task\",\n    llm=llm,\n    browser=browser,\n    tools=tools,\n)\n```\n\n</details>\n\n<details>\n<summary><b>Can I use this for free?</b></summary>\n\nYes! Browser-Use is open source and free to use. You only need to choose an LLM provider (like OpenAI, Google, ChatBrowserUse, or run local models with Ollama).\n</details>\n\n<details>\n<summary><b>Terms of Service</b></summary>\n\nThis open-source library is licensed under the MIT License. For Browser Use services & data policy, see our [Terms of Service](https://browser-use.com/legal/terms-of-service) and [Privacy Policy](https://browser-use.com/privacy/).\n</details>\n\n<details>\n<summary><b>How do I handle authentication?</b></summary>\n\nCheck out our authentication examples:\n- [Using real browser profiles](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py) - Reuse your existing Chrome profile with saved logins\n- If you want to use temporary accounts with inbox, choose AgentMail\n- To sync your auth profile with the remote browser, run `curl -fsSL https://browser-use.com/profile.sh | BROWSER_USE_API_KEY=XXXX sh` (replace XXXX with your API key)\n\nThese examples show how to maintain sessions and handle authentication seamlessly.\n</details>\n\n<details>\n<summary><b>How do I solve CAPTCHAs?</b></summary>\n\nFor CAPTCHA handling, you need better browser fingerprinting and proxies. Use [Browser Use Cloud](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-captcha) which provides stealth browsers designed to avoid detection and CAPTCHA challenges.\n</details>\n\n<details>\n<summary><b>How do I go into production?</b></summary>\n\nChrome can consume a lot of memory, and running many agents in parallel can be tricky to manage.\n\nFor production use cases, use our [Browser Use Cloud API](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-production) which handles:\n- Scalable browser infrastructure\n- Memory management\n- Proxy rotation\n- Stealth browser fingerprinting\n- High-performance parallel execution\n</details>\n\n<br/>\n\n## Citation\n\nIf you use Browser Use in your research or project, please cite:\n\n```bibtex\n@software{browser_use2024,\n  author = {Müller, Magnus and Žunič, Gregor},\n  title = {Browser Use: Enable AI to control your browser},\n  year = {2024},\n  publisher = {GitHub},\n  url = {https://github.com/browser-use/browser-use}\n}\n```\n\n<br/>\n\n<div align=\"center\">\n\n**Tell your computer what to do, and it gets it done.**\n\n<img src=\"https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f\" width=\"400\"/>\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)\n&emsp;&emsp;&emsp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)\n\n</div>\n\n<div align=\"center\"> Made with ❤️ in Zurich and San Francisco </div>\n",
-          "recentCommitCount30d": 100,
-          "latestRelease": {
-            "tagName": "0.13.3",
-            "name": "0.13.3",
-            "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/0.13.3",
-            "publishedAt": "2026-07-01T15:06:07Z",
-            "prerelease": false,
-            "draft": false,
-            "body": "## What's Changed\n- Launch Browser Use CLI 3.0 powered by Browser Harness.\n- Add `browser-use skill` so coding agents can install the Browser Use skill directly.\n- Pin Browser Harness to `0.1.4` and ship the Browser Use skill with the package.\n- Improve skill install behavior across Claude Code, Codex, Cursor, Gemini, OpenCode, and related agent skill directories.\n\n**Full Changelog**: https://github.com/browser-use/browser-use/compare/0.13.2...0.13.3"
-          },
-          "source": [
-            {
-              "kind": "watch_repo",
-              "value": "browser-use/browser-use"
-            }
-          ]
-        },
-        "score": {
-          "maturityScore": 95,
-          "compatibilityScore": 85,
-          "performancePotentialScore": 32,
-          "maintenanceRiskScore": 20,
-          "adoptionSignalScore": 100,
-          "finalUpgradeScore": 80,
-          "estimatedPerformanceGainPct": 27,
-          "estimatedCostReductionPct": 4,
-          "hardVetoReasons": [],
-          "qualifyingSignals": {
-            "activeLast30Days": true,
-            "hasStableRelease": true,
-            "commercialLicense": true,
-            "documentationComplete": true,
-            "compatibilityAtLeast70": true,
-            "projectedPerformanceGainAtLeast15Pct": true,
-            "projectedCostReductionAtLeast10Pct": false,
-            "avoidsProductionSecurityBoundary": true
-          },
-          "qualifyingSignalCount": 7,
-          "eligibleForValidation": true,
-          "summary": [
-            "Active commits in last 30 days: 100",
-            "Latest release: 0.13.3",
-            "License: MIT",
-            "Projected performance gain: 27%",
-            "Projected cost reduction: 4%"
-          ]
-        }
-      },
-      "plan": {
-        "target": "browser-use/browser-use",
-        "changeType": "tool-plugin-integration",
-        "riskLevel": "medium",
-        "filesToChange": [
-          ".openclaw/extensions/github-architecture-radar/index.ts",
-          ".github/workflows/ai-radar-daily.yml"
-        ],
-        "summary": "Evaluate browser-use/browser-use as a tool-plugin-integration candidate on an isolated branch with staging-only validation.",
-        "rollbackPlan": [
-          "Reset the experiment branch to the last successful staging commit.",
-          "Restore the candidate version recorded in state/last_successful_version.json.",
-          "Re-run smoke, regression, and rollback simulation before reopening the PR."
-        ],
-        "validationChecklist": [
-          "Smoke test passes on the isolated branch.",
-          "Integration test passes against the staging profile.",
-          "Regression suite shows no critical diff.",
-          "Benchmark smoke confirms the projected improvement is directionally true.",
-          "Rollback simulation restores the last successful staging version."
-        ],
-        "humanEscalations": [
-          "Escalate if production deployment is requested.",
-          "Escalate if the release notes imply a breaking API migration.",
-          "Escalate if license status is unknown or incompatible.",
-          "Escalate if benchmark outcomes are ambiguous."
-        ]
-      }
-    },
-    {
-      "candidate": {
-        "repo": {
           "fullName": "vllm-project/vllm",
           "url": "https://github.com/vllm-project/vllm",
-          "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+          "description": "High-throughput and memory-efficient inference engine for LLM serving.",
           "topics": [
-            "amd",
-            "blackwell",
-            "cuda",
-            "deepseek",
-            "deepseek-v3",
-            "gpt",
-            "gpt-oss",
-            "inference",
-            "kimi",
-            "llama",
-            "llm",
-            "llm-serving",
+            "llm-inference",
             "model-serving",
-            "moe",
-            "openai",
-            "pytorch",
-            "qwen",
-            "qwen3",
-            "tpu",
-            "transformer"
+            "benchmark"
           ],
-          "stars": 85846,
-          "forks": 19208,
+          "stars": 42000,
+          "forks": 6200,
           "defaultBranch": "main",
-          "updatedAt": "2026-07-10T01:54:01Z",
-          "pushedAt": "2026-07-10T00:20:16Z",
+          "updatedAt": "2026-03-24T08:20:00Z",
+          "pushedAt": "2026-03-24T08:19:00Z",
           "license": "Apache-2.0",
-          "readme": "<!-- markdownlint-disable MD001 MD041 -->\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png\">\n    <img alt=\"vLLM\" src=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-light.png\" width=55%>\n  </picture>\n</p>\n\n<h3 align=\"center\">\nEasy, fast, and cheap LLM serving for everyone\n</h3>\n\n<p align=\"center\">\n| <a href=\"https://docs.vllm.ai\"><b>Documentation</b></a> | <a href=\"https://blog.vllm.ai/\"><b>Blog</b></a> | <a href=\"https://arxiv.org/abs/2309.06180\"><b>Paper</b></a> | <a href=\"https://x.com/vllm_project\"><b>Twitter/X</b></a> | <a href=\"https://discuss.vllm.ai\"><b>User Forum</b></a> | <a href=\"https://slack.vllm.ai\"><b>Developer Slack</b></a> |\n</p>\n\n🔥 We have built a vLLM website to help you get started with vLLM. Please visit [vllm.ai](https://vllm.ai) to learn more.\nFor events, please visit [vllm.ai/events](https://vllm.ai/events) to join us.\n\n---\n\n## About\n\nvLLM is a fast and easy-to-use library for LLM inference and serving.\n\nOriginally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley, vLLM has grown into one of the most active open-source AI projects built and maintained by a diverse community of many dozens of academic institutions and companies from over 2000 contributors.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)\n- Continuous batching of incoming requests, chunked prefill, prefix caching\n- Fast and flexible model execution with piecewise and full CUDA/HIP graphs\n- Quantization: FP8, MXFP8/MXFP4, NVFP4, INT8, INT4, GPTQ/AWQ, GGUF, compressed-tensors, ModelOpt, TorchAO, and [more](https://docs.vllm.ai/en/latest/features/quantization/index.html)\n- Optimized attention kernels including FlashAttention, FlashInfer, TRTLLM-GEN, FlashMLA, and Triton\n- Optimized GEMM/MoE kernels for various precisions using CUTLASS, TRTLLM-GEN, CuTeDSL\n- Speculative decoding including n-gram, suffix, EAGLE, DFlash\n- Automatic kernel generation and graph-level transformations using torch.compile\n- Disaggregated prefill, decode, and encode\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor, pipeline, data, expert, and context parallelism for distributed inference\n- Streaming outputs\n- Generation of structured outputs using xgrammar or guidance\n- Tool calling and reasoning parsers\n- OpenAI-compatible API server, plus Anthropic Messages API and gRPC support\n- Efficient multi-LoRA support for dense and MoE layers\n- Support for NVIDIA GPUs, AMD GPUs, and x86/ARM/PowerPC CPUs. Additionally, diverse hardware plugins such as Google TPUs, Intel Gaudi, IBM Spyre, Huawei Ascend, Rebellions NPU, Apple Silicon, MetaX GPU, and more.\n\nvLLM seamlessly supports 200+ model architectures on Hugging Face, including:\n\n- Decoder-only LLMs (e.g., Llama, Qwen, Gemma)\n- Mixture-of-Expert LLMs (e.g., Mixtral, DeepSeek-V3, Qwen-MoE, GPT-OSS)\n- Hybrid attention and state-space models (e.g., Mamba, Qwen3.5)\n- Multi-modal models (e.g., LLaVA, Qwen-VL, Pixtral)\n- Embedding and retrieval models (e.g., E5-Mistral, GTE, ColBERT)\n- Reward and classification models (e.g., Qwen-Math)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n\n## Getting Started\n\nInstall vLLM with [`uv`](https://docs.astral.sh/uv/) (recommended) or `pip`:\n\n```bash\nuv pip install vllm\n```\n\nOr [build from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source) for development.\n\nVisit our [documentation](https://docs.vllm.ai/en/latest/) to learn more.\n\n- [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)\n- [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)\n- [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)\n\n## Contributing\n\nWe welcome and value any contributions and collaborations.\nPlease check out [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) for how to get involved.\n\n## Citation\n\nIf you use vLLM for your research, please cite our [paper](https://arxiv.org/abs/2309.06180):\n\n```bibtex\n@inproceedings{kwon2023efficient,\n  title={Efficient Memory Management for Large Language Model Serving with PagedAttention},\n  author={Woosuk Kwon and Zhuohan Li and Siyuan Zhuang and Ying Sheng and Lianmin Zheng and Cody Hao Yu and Joseph E. Gonzalez and Hao Zhang and Ion Stoica},\n  booktitle={Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles},\n  year={2023}\n}\n```\n\n## Contact Us\n\n<!-- --8<-- [start:contact-us] -->\n- For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues)\n- For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)\n- For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)\n- For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature\n- For collaborations and partnerships, please contact us at [collaboration@vllm.ai](mailto:collaboration@vllm.ai)\n<!-- --8<-- [end:contact-us] -->\n\n## Media Kit\n\n- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)\n",
-          "recentCommitCount30d": 100,
+          "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
+          "recentCommitCount30d": 27,
           "latestRelease": {
-            "tagName": "v0.24.0",
-            "name": "v0.24.0",
-            "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.24.0",
-            "publishedAt": "2026-06-29T19:41:59Z",
+            "tagName": "v0.8.2",
+            "name": "v0.8.2",
+            "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
+            "publishedAt": "2026-03-19T05:20:00Z",
             "prerelease": false,
             "draft": false,
-            "body": "# vLLM v0.24.0 Release Notes\r\n\r\n## Highlights\r\n\r\nThis release features 571 commits from 256 contributors (77 new)!\r\n\r\n* **MiniMax-M3**: Added support for the new **MiniMax-M3** model (#45381), with a fast follow-on of BF16/FP8 indexer via MSA (#45892), MXFP4 support (#45896), FP8 sparse GQA (#45744), and extensive AMD/ROCm tuning — mxfp8 MoE/linear on gfx950 (#45725), fp8_per_channel for bf16 weights on MI300X (#45854), FP8 KV-cache fix (#45720), and packed-modules mapping (#45794). A MiniMax-M2 perf regression was also fixed (#45935).\r\n* **DeepSeek-V4 keeps maturing**: Following its debut, DeepSeek-V4 received another large optimization pass — a FlashInfer sparse index cache (2–4% TTFT) (#45863), prefill chunk-planning optimization (4% E2E throughput) (#45061), a cluster-cooperative topK kernel for low-latency (#43008), contiguous per-block KV allocations (#44577), TEP=16 for the block-FP8 shared expert (#46001), and native DSA indexer decode for `next_n > 2` on SM100 (#45322). It is now enabled on **SM120** alongside GLM-5.1 (#43477), with XPU (#44144, #44517, #45240) and ROCm (#44899, #45103, #45681) attention/MoE paths added.\r\n* **Model Runner V2 (MRv2) continues to expand**: MRv2 now **supports quantized models by default** (#44446), enables **GraniteMoE by default** (#45461), and gained migration of Qwen + DeepSeek-V2 MoE models (#42667), DFlash speculative decoding (#44586), and more accurate FP32 Gumbel sampling (#45996).\r\n* **Streaming Parser Engine**: A new streaming parser engine unifies tool-call/reasoning parsing across models, with parsers for Qwen3 (#45413), MiniMax-M2 (#45701), GLM-4.7/5.1/5.2 (#45915), and Nemotron V3 (#45755).\r\n* **Diffusion LLMs**: Added **DiffusionGemma** (#45163), including a CPU path (#45690) and structured-output guardrails for diffusion decoders (#45468).\r\n* **WideEP / DeepEP v2**: Integrated **DeepEP v2** for expert parallelism (#41183), with follow-on robustness fixes (#46404, #46432).\r\n* **Rust frontend matures further**: Added API-key authentication (#44321), CORS (#45753), `/tokenize` + `/detokenize` (#44222), `/pause` `/resume` `/is_paused` (#44499), `/abort_requests` (#44382), `/get_world_size` (#44801), `thinking_token_budget` (#46137), a Python bridge for Rust tool parsers (#44624), and many new parsers and validation paths.\r\n* **Device selection change**: vLLM no longer sets `CUDA_VISIBLE_DEVICES` internally; a new `device_ids` argument is provided instead (#45026). On ROCm, a deprecation window for `CUDA_VISIBLE_DEVICES` has begun (#46636).\r\n\r\n### Model Support\r\n* **New models**: MiniMax-M3 (#45381), DiffusionGemma (#45163) + Gemma Diffusion on CPU (#45690), Hierarchical Reasoning Model — Text / HrmTextForCausalLM (#43098), OpenMOSS (#44124).\r\n* **Gemma 4**: Unified FlashAttention (FA4) across all layers + `mm_prefix` support (#42175); many parser/serving fixes — forced-JSON skip for required/named tool choice (#45795), parsing with thinking disabled (#45832), streaming reasoning-state init (#45852), reasoning rendering on assistant turns (#45867), offline-parser truncation/token-leak fix (#45553); legacy Gemma4 parsers replaced with an engine-based implementation (#45588).\r\n* **DeepSeek-V4**: OOM fix (#44914), MTP projection prefixing (#44821), supported KV-cache dtypes (#44892).\r\n* **Qwen / multimodal**: Qwen3-VL video loader (#44412), Qwen2-VL/Qwen2.5-VL processor-mapped video loader (#45555), Qwen3-VL multi-video processing optimization (#46026) and multi-video crash fix (#46305), Qwen3-Omni VIT cu_seqlens device fix (#44264), fused qk-rmsnorm-rope-gate for Qwen3.5 (#44176), Qwen3.5 EP weight-loading fix (#45002).\r\n* **ViT full CUDA graph**: GLM-4.1V (#40576), DeepSeek-OCR dual-path (#43586), Kimi-VL (#41992), mllama4 (#40660), Lfm2VL encoder (#44930).\r\n* **Other model fixes**: Llama4 weight loading (#45047) and streamed loading to avoid host-OOM (#44645), MiMo v2.x QKV TP sharding + FP4 (#45200), ColQwen3.5 retrieval correctness (#46108), EXAONE-4.5 vision encoder (#45073), MiDashengLM TP>1 audio-encoder crash (#44408), MiniCPM-o/V device-placement and image-size fixes (#43844, #42332, #44980, #45244), Cohere2 MoE weight loading + parser (#44747, #44907), Nemotron V3 reasoning-as-content (#39091), ColBERT AutoWeightsLoader + query/document embedding io processor (#44999, #45210).\r\n* **Kernels**: GLM-5 TRT-LLM ragged MLA prefill dimensions (#43525), GLM-5 router GEMM (#46385).\r\n\r\n### Engine Core\r\n* **Model Runner V2**: Quantized models by default (#44446), GraniteMoE default (#45461), Qwen/DSv2 MoE migration (#42667), DFlash (#44586), simplified async output handling (#45442), attention-group split on `num_heads_q` (#45564), LoRA warmup fix (#35536), more accurate FP32 Gumbel sampling (#45996), `min_tokens` off-by-one fix in the V2 GPU sampler (#46243), plus assorted model/config compatibility fixes (#45868).\r\n* **Speculative decoding**: Dynamic SD (#32374); DFlash with FlashInfer (#43081), mixed KV page sizes (#45181), and Qwen3Next targets (#45319); EAGLE3 support for Qwen3 (#43132); reduced TP communication for large-vocab drafts (#39419); race fix in async accepted counts (#45100); EAGLE multimodal encoder cache fixes (#46315).\r\n* **KV cache & scheduler**: KV-cache watermark to reduce preemptions (#44594), two-phase allocation for cross-group prefix-cache hits (#44409), Marconi-style admission policy for hybrid cache (#37898), prefix-cache retention for Mamba/linear attention (#45845), DS Mamba tail-copy for MTP align mode (#45473), reduced scheduler copy overhead (#45840).\r\n* **Attention**: Re-enabled cross-layer KV cache layout for MLA via stride-aware kernels (#45111), MLA prefill FA4 fp8 output (#43050), FlexAttention custom mask mods made fully cudagraphable (#45232), triton diff-kv backend for MiMo (#41797), FlashMLA sparse accuracy fix (#36616).\r\n* **Weight loading & core**: fastsafetensors `ParallelLoader` for weight loading (#40183), release of cached device memory under pressure on UMA GPUs (#45179), structured outputs for beam search (#35022), `device_ids` arg / no internal `CUDA_VISIBLE_DEVICES` (#45026), graceful fallback when `numactl --membind` is blocked (#45438), config-class registration before tokenizer init (#40299), async scheduling with prompt embeds for multimodal models (#45673).\r\n\r\n### Large Scale Serving & Distributed\r\n* **Expert parallel**: DeepEP v2 integration (#41183) with token-bound and topk-index fixes (#46404, #46432); NIXL EP — DBO with NIXL EP (#45275), top-k index dtype query (#45298), NVFP4 post-receive quantization skip (#45606), elastic-EP communicator (#45013); reject NCCL-based EPLB with async EPLB (#44978).\r\n* **KV connectors / disaggregated serving**: KV push from prefill to decode via NIXL (#35264); per-region KV transfer classification for mixed full-attn + MLA groups (#44583); Mooncake pipeline-parallel PD support (#44528), async lookup (#45659), compact chunk-hash zero-copy lookup (#45969), SWA-block skipping (#45444); P/D fixes with DP supervisor (#46628) and DSV4 disaggregation (#45831); removed `P2pNcclConnector` (#44854).\r\n* **KV offloading**: Multi-tier async batched lookup (#44193), packed HMA KV-cache layout (#46205, gated #46252), parallel-agnostic fs-tier cache (#44733), offloading-manager stats (#35669) and labeled/CPU-usage metrics (#45957, #45737), self-describing KV events (#43468), non-blocking idle flush (#45595), and numerous correctness/race fixes (#44784, #45823, #46231, #46278).\r\n* **Distributed core**: Prefill step cadence for better non-PD DP balancing (#44558), KV-event map encoding (#42892), one-shot fused all-reduce PDL NaN fix (#45448).\r\n\r\n### Hardware & Performance\r\n* **NVIDIA / kernels**: SM90 CUTLASS FP8 mm odd-M support via swap_ab (180–290% kernel speedup) (#44572), tuned `fused_moe` FP8 for Qwen3-Next-80B on H100 (+25%) (#44830), native DSA indexer decode on SM100 (#45322), cluster-cooperative topK for DeepSeek low-latency (#43008), PDL support for DeepGEMM (#46006), FlashInfer cutedsl NVFP4 GEMM (#42235) and cute-dsl MXFP8 linear kernel (#46393), new Helion kernels for FP8/RMSNorm quant (#36902, #33790, #36895, #34432).\r\n* **torch stable ABI**: Continued (and completed) migration of kernels to the libtorch stable ABI — MoE [10c/n] (#44565), Marlin [11a/n] (#45176), Machete [11b/n] (#45304), final `_C` library migration [12/n] (#45415).\r\n* **AMD ROCm**: Torch 2.11 (#45362); fused AR + RMSNorm + per-group FP8 quant (#42864), fused softplus-sqrt-topk MoE router under AITER (#44945), DSv4 flash-decode split-K kernel (#44899) and inverse-RoPE fusion (#45103), W4A16 FlyDSL MoE (#44400), A8W4 MoE CDNA4 swizzle gate for gpt-oss (#44804); deprecation window begun for `CUDA_VISIBLE_DEVICES` on ROCm (#46636).\r\n* **Intel XPU**: Sequence-parallel support (#38608), torch-xpu 2.12 (#42262), vllm-xpu-kernels v0.1.10 (#40367), W4A16 int4 group_size=32 MoE (#45136), DeepSeek-V4 attention/MoE paths (#44144, #44517, #45240), top-p sampling correctness fix (#44470).\r\n* **CPU & other architectures**: 2.5× faster ASR CPU preprocessing via multi-threading (#44612), CPU W4A16 INT4 MoE (#43409), cgroup memory-limit-aware KV cache sizing (#45086), RISC-V oneDNN W8A8 INT8 (#44478) and RVV micro-GEMM for WNA16 (#44324), pinned memory for WSL2 (#41496), ZenCPU runtime logging (#42726).\r\n* **TPU**: tpu-inference upgraded to v0.22.1 (#45793).\r\n* **Misc perf**: `VLLM_TRITON_FORCE_FIRST_CONFIG` to skip Triton autotuning (#42425), Triton recompile detection (#45631), fused multi-group block-table staged writes (#44944).\r\n\r\n### Quantization\r\n* **Online & mixed-precision**: Online FP8 per-token-per-channel (PTPC) quantization (#44132); `modelopt_mixed` support extended to Ampere/SM80-86 (#45306) and Turing/SM75 (#45375).\r\n* **FP4 / MXFP**: FlashInfer cutedsl NVFP4 GEMM backend (#42235) and cute-dsl MXFP8 linear kernel (#46393), MXFP4 W4A4 MoE CUTLASS E8M0 scale fix (#43557), SwiGLU clamp wired for NVFP4 MoE on non-Blackwell (#45836), `flashinfer_cutlass` allowed as a clamped NVFP4 MoE backend (#46492), NVFP4/OCP MX MoE emulation fix (#46254), FP8 MoE re-enabled on NVIDIA Thor (#46339).\r\n* **GGUF / compressed-tensors / AWQ**: GGUF quantization migrated to a plugin (#39612), compressed-tensors WNA16 MoE actorder fix (#41161) and KV-cache-scheme rejection (#45312), AWQ format on XPU (#43404) and AWQ dequantize fix on Intel XPU (#42727).\r\n* **Kernels & correctness**: QuantizedActivation linear-kernel contract (#44260), consolidated Marlin thread-tile padding (#45295), FP8 weight layout canonicalized to (K, N) (#44735), corrupt-output fix for MoE FP8 with LoRAs loaded (#42120), symmetric-quant regression fix in GPTQ/CT MoE (#45656), `fp8_e5m2` KV cache allowed for non-fp8 checkpoints (#45040).\r\n\r\n### API & Frontend\r\n* **Tool calling & parsing**: Strict mode for tool calling in Chat Completions (#45003) and Responses API (#45396); new Streaming Parser Engine (#45413) with Qwen3, MiniMax-M2 (#45701), GLM-4.7/5.1/5.2 (#45915), Nemotron V3 (#45755) parsers; unified Parser consolidation in chat serving (#45548); numerous parser correctness fixes (#46047, #46091, #46159, #45763, #46351, #43984).\r\n* **OpenAI / Responses**: Real `/v1/embeddings` support for messages + `chat_template_kwargs` (#45173), multimodal token counts in `usage.prompt_tokens_details` (#45458), omit empty `tool_calls` from chat responses (#44105), Responses API streaming `function_call` id fix (#44608), Harmony refactor of streaming/non-streaming paths (#45171, #45104).\r\n* **Anthropic Messages API**: Cache-usage reporting in `/v1/messages` (#40912), mid-conversation system-message handling (#46025), inline system-message position preserved for prefix caching (#44602), `tool_use` argument-dropping fix (#45287).\r\n* **Rust frontend**: API-key auth (#44321), CORS (#45753), `/tokenize` + `/detokenize` (#44222), `/pause` `/resume` `/is_paused` (#44499), `/abort_requests` (#44382), `/get_world_size` (#44801), `thinking_token_budget` (#46137), `parallel_tool_calls=false` (#44760), continuous usage stats (#43965), model metadata in `/v1/models` (#45950), Python bridge for Rust tool parsers (#44624), dedicated runtime for HTTP/ZMQ (#46051), and many validation/correctness fixes.\r\n* **Metrics**: `vllm:tool_call_parser_invocations_total` (#44448), group-aware KV cache capacity in `vllm:cache_config_info` (#42206), MLA attention metrics for DeepSeek MFU estimation (#39457).\r\n* **Pooling / embeddings**: Validation for Cohere `/v2/embed` input exclusivity (#45640), non-negative rerank `top_n` (#46119), matryoshka embedding dimension bounds (#46313).\r\n* **Benchmarks**: BFCL tool-calling dataset for `vllm bench serve` (#42457), multi-turn benchmark api_key/custom headers (#44516), tokenizer-mismatch auto-correction (#44708).\r\n\r\n### Security\r\n\r\nThis release ships another coordinated security-hardening batch (much of it from security researcher @jperezdealgaba).\r\n\r\n* **Denial of service**: Audio decompression bomb in the speech-to-text endpoint (#44970), remote DoS via invalid recovered-token reinjection in speculative decoding (#44744), DoS via `prompt_embeds` on M-RoPE models (#45252), regex-compilation timeout guard in structured outputs (#45118), audio upload size limit before full materialization (#45510), audio decode duration limit in the chat-completions path (#45908).\r\n* **Information disclosure**: int32 truncation in the GGUF dequantize kernels (#44971).\r\n* **Input validation & hardening**: Image EXIF orientation and tRNS transparency handling (#44974), rejection of non-finite `temperature`/`repetition_penalty` (#45116), `sanitize_message` applied to Anthropic and STT error paths (#45119).\r\n* **Dependencies**: Upgrade Starlette to ≥ 1.0.1 to fix CVE-2026-48710 (#45675).\r\n\r\n### Dependencies\r\n* Torch 2.11 on ROCm (#45362), torch-xpu 2.12 (#42262), tpu-inference v0.22.1 (#45793), NIXL v0.10.1 for XPU (#40287), Starlette ≥ 1.0.1 (#45675).\r\n* `mistral_common` is now optional via deferred import (#45305); CUDA Dockerfiles upgraded from GCC 10 to GCC 12 for C++20 (#44923); spinloop extension skipped on Python < 3.11 (#44783).\r\n\r\n### Deprecations & Removals\r\n* **Removed models**: ERNIE (obsolete) (#45127), Xverse (#45638), Dots1 (#45637), Bamba (#45990), Mono-InternVL (#45129), InternLM registry alias (#45128).\r\n* **Deprecated**: First-generation Qwen and QwenVL models (#45131), Transformers v4 support (#45161), `CUDA_VISIBLE_DEVICES` on ROCm (#46636); general deprecations for v0.23/v0.24 (#44992).\r\n\r\n## New Contributors\r\n\r\n* @abcd1927 made their first contribution in https://github.com/vllm-project/vllm/pull/43098\r\n* @Achyuthan-S made their first contribution in https://github.com/vllm-project/vllm/pull/44795\r\n* @Alex-ai-future made their first contribution in https://github.com/vllm-project/vllm/pull/45905\r\n* @alexbi29 made their first contribution in https://github.com/vllm-project/vllm/pull/45763\r\n* @amanchugh89 made their first contribution in https://github.com/vllm-project/vllm/pull/45840\r\n* @ankrovv made their first contribution in https://github.com/vllm-project/vllm/pull/44608\r\n* @anony-mous-e made their first contribution in https://github.com/vllm-project/vllm/pull/45412\r\n* @appleparan made their first contribution in https://github.com/vllm-project/vllm/pull/45073\r\n* @ashishpatel26 made their first contribution in https://github.com/vllm-project/vllm/pull/43984\r\n* @Bot1822 made their first contribution in https://github.com/vllm-project/vllm/pull/44053\r\n* @ByteFlowing1337 made their first contribution in https://github.com/vllm-project/vllm/pull/45988\r\n* @Change72 made their first contribution in https://github.com/vllm-project/vllm/pull/43756\r\n* @coder3101 made their first contribution in https://github.com/vllm-project/vllm/pull/44801\r\n* @cquil11 made their first contribution in https://github.com/vllm-project/vllm/pull/45720\r\n* @dmaniloff made their first contribution in https://github.com/vllm-project/vllm/pull/40470\r\n* @factnn made their first contribution in https://github.com/vllm-project/vllm/pull/44955\r\n* @FAUST-BENCHOU made their first contribution in https://github.com/vllm-project/vllm/pull/44760\r\n* @felix0080 made their first contribution in https://github.com/vllm-project/vllm/pull/44602\r\n* @gitbisector made their first contribution in https://github.com/vllm-project/vllm/pull/40183\r\n* @gq112 made their first contribution in https://github.com/vllm-project/vllm/pull/43081\r\n* @guan404ming made their first contribution in https://github.com/vllm-project/vllm/pull/35022\r\n* @HanHan009527 made their first contribution in https://github.com/vllm-project/vllm/pull/44528\r\n* @hello-args made their first contribution in https://github.com/vllm-project/vllm/pull/44109\r\n* @HumphreySun98 made their first contribution in https://github.com/vllm-project/vllm/pull/45466\r\n* @j-i-l made their first contribution in https://github.com/vllm-project/vllm/pull/45319\r\n* @JasonLi314 made their first contribution in https://github.com/vllm-project/vllm/pull/45255\r\n* @jeffye-dev made their first contribution in https://github.com/vllm-project/vllm/pull/43595\r\n* @jimmy-evo made their first contribution in https://github.com/vllm-project/vllm/pull/44516\r\n* @jjppp made their first contribution in https://github.com/vllm-project/vllm/pull/45217\r\n* @JOSH1024 made their first contribution in https://github.com/vllm-project/vllm/pull/44784\r\n* @junkang1991 made their first contribution in https://github.com/vllm-project/vllm/pull/46039\r\n* @KaletoAI made their first contribution in https://github.com/vllm-project/vllm/pull/43495\r\n* @kliukovkin made their first contribution in https://github.com/vllm-project/vllm/pull/43724\r\n* @littlecircle0730 made their first contribution in https://github.com/vllm-project/vllm/pull/44750\r\n* @llx-08 made their first contribution in https://github.com/vllm-project/vllm/pull/45357\r\n* @m4r1k made their first contribution in https://github.com/vllm-project/vllm/pull/45795\r\n* @martin-kukla made their first contribution in https://github.com/vllm-project/vllm/pull/45417\r\n* @MichaelCao0 made their first contribution in https://github.com/vllm-project/vllm/pull/46398\r\n* @mrn3088 made their first contribution in https://github.com/vllm-project/vllm/pull/45383\r\n* @nataliepjlin made their first contribution in https://github.com/vllm-project/vllm/pull/45218\r\n* @nehmathe2 made their first contribution in https://github.com/vllm-project/vllm/pull/44912\r\n* @nikhilesh-csa made their first contribution in https://github.com/vllm-project/vllm/pull/45852\r\n* @nv-nedelman-1 made their first contribution in https://github.com/vllm-project/vllm/pull/42120\r\n* @Oseltamivir made their first contribution in https://github.com/vllm-project/vllm/pull/45879\r\n* @parthash0804 made their first contribution in https://github.com/vllm-project/vllm/pull/43844\r\n* @pjdurden made their first contribution in https://github.com/vllm-project/vllm/pull/44942\r\n* @pst2154 made their first contribution in https://github.com/vllm-project/vllm/pull/45181\r\n* @Saddss made their first contribution in https://github.com/vllm-project/vllm/pull/44409\r\n* @sahilsGit made their first contribution in https://github.com/vllm-project/vllm/pull/44499\r\n* @sasindharan made their first contribution in https://github.com/vllm-project/vllm/pull/44383\r\n* @shantipriya-amd made their first contribution in https://github.com/vllm-project/vllm/pull/39498\r\n* @Sirius29 made their first contribution in https://github.com/vllm-project/vllm/pull/46026\r\n* @srajabos made their first contribution in https://github.com/vllm-project/vllm/pull/44665\r\n* @sridhar-3009 made their first contribution in https://github.com/vllm-project/vllm/pull/44055\r\n* @stefankoncarevic made their first contribution in https://github.com/vllm-project/vllm/pull/45706\r\n* @sunnweiwei made their first contribution in https://github.com/vllm-project/vllm/pull/45100\r\n* @TanNgocDo made their first contribution in https://github.com/vllm-project/vllm/pull/44222\r\n* @thisisjimmyfb made their first contribution in https://github.com/vllm-project/vllm/pull/41496\r\n* @tykow made their first contribution in https://github.com/vllm-project/vllm/pull/44663\r\n* @V-3604 made their first contribution in https://github.com/vllm-project/vllm/pull/43362\r\n* @vincentzed made their first contribution in https://github.com/vllm-project/vllm/pull/44930\r\n* @vraiti made their first contribution in https://github.com/vllm-project/vllm/pull/42331\r\n* @wangjiaxin99 made their first contribution in https://github.com/vllm-project/vllm/pull/45794\r\n* @waynehacking8 made their first contribution in https://github.com/vllm-project/vllm/pull/45376\r\n* @x41lakazam made their first contribution in https://github.com/vllm-project/vllm/pull/43300\r\n* @xiaguan made their first contribution in https://github.com/vllm-project/vllm/pull/45286\r\n* @xiaohuguo2023 made their first contribution in https://github.com/vllm-project/vllm/pull/44804\r\n* @xin3he made their first contribution in https://github.com/vllm-project/vllm/pull/43557\r\n* @xx-thomas made their first contribution in https://github.com/vllm-project/vllm/pull/45210\r\n* @yangdian96 made their first contribution in https://github.com/vllm-project/vllm/pull/44173\r\n* @YellowFoxH4XOR made their first contribution in https://github.com/vllm-project/vllm/pull/45057\r\n* @yzhan1 made their first contribution in https://github.com/vllm-project/vllm/pull/44552\r\n* @Zedong-Liu made their first contribution in https://github.com/vllm-project/vllm/pull/45361\r\n* @ZewenShen-Cohere made their first contribution in https://github.com/vllm-project/vllm/pull/41161\r\n* @zhangshuoming990105 made their first contribution in https://github.com/vllm-project/vllm/pull/40912\r\n* @ZiguanWang made their first contribution in https://github.com/vllm-project/vllm/pull/43981\r\n* @zlxi02 made their first contribution in https://github.com/vllm-project/vllm/pull/44595\r\n\r\n## Contributors\r\n\r\nThank you to everyone who made this release possible!\r\n\r\n@yewentao256, @Sunt-ing, @jperezdealgaba, @AndreasKaratzas, @BugenZhao, @sfeng33, @njhill, @micah-wil, @bbrowning, @mgoin, @jeejeelee, @hmellor, @tlrmchlsmth, @xianbaoqian, @mmangkad, @jikunshang, @Dao007forever, @zhenwei-intel, @noooop, @Isotr0py, @ivanium, @reidliu41, @varun-sundar-rabindranath, @chaunceyjiang, @WoosukKwon, @mawong-amd, @zxd1997066, @chaojun-zhang, @NickLucche, @bigPYJ1151, @ZJY0516, @charlifu, @yzong-rh, @divakar-amd, @khluu, @cleonard530, @wseaton, @xiaohongchen1991, @ywang96, @taneem-ibrahim, @mikekg, @itayalroy, @Alex-ai-future, @sahilsGit, @bnellnm, @littlecircle0730, @majian4work, @ricky-chaoju, @ronensc, @Fangzhou-Ai, @lucianommartins, @Srinivasoo7, @zyongye, @Rohan138, @Etelis, @wentian-byte, @ekagra-ranjan, @LucasWilkinson, @tahsintunan, @waynehacking8, @gau-nernst, @tuukkjs, @stefankoncarevic, @Palaiologos1453, @lucifer1004, @jmamou, @liulanze, @Terrencezzj, @Change72, @LopezCastroRoberto, @he-yufeng, @benchislett, @juliendenize, @s3woz, @panpan0000, @ilmarkov, @zixi-qi, @wcynb1023, @fynnsu, @ZhanqiuHu, @yuwenzho, @tdoublep, @MatthewBonanni, @hickeyma, @majunze2001, @mrn3088, @Yejing-Lai, @vllmellm, @Saddss, @DarkLight1337, @hongxiayang, @m4r1k, @qli88, @jonathanc-n, @felix0080, @djramic, @aoshen02, @fxmarty-amd, @simon-mo, @llsj14, @akii96, @walterbm, @dmaniloff, @zlxi02, @grYe99, @jeffye-dev, @parthash0804, @qyYue1389, @sagearc, @maeehart, @TanNgocDo, @cinnamonica02, @zucchini-nlp, @tykow, @mganczarenko, @yangdian96, @jimmy-evo, @YellowFoxH4XOR, @yzhan1, @shenoyvvarun, @yufufi, @laviier, @xiaohuguo2023, @EanWang211123, @JartX, @shantipriya-amd, @askliar, @hallerite, @appleparan, @effi-ofer, @angelayi, @TheCodeWrangler, @DanBlanaru, @ankrovv, @velonica0, @pjdurden, @cyyever, @wjinxu, @kliukovkin, @x41lakazam, @Jasen2201, @r-barnes, @tc-mb, @nataliepjlin, @KaletoAI, @WineChord, @fangyuchu, @vraiti, @nascheme, @jjppp, @sasindharan, @xiaguan, @snadampal, @chfeng-cs, @thillai-c, @guan404ming, @sridhar-3009, @vincentzed, @j-i-l, @rjrock, @abinggo, @anony-mous-e, @Achyuthan-S, @Harry-Chen, @mfylcek, @amd-asalykov, @noa-neria, @maobaolong, @TheEpicDolphin, @FAUST-BENCHOU, @martin-kukla, @xin3he, @ZiguanWang, @youkaichao, @factnn, @llx-08, @xx-thomas, @gitbisector, @Bortlesboat, @thisisjimmyfb, @JOSH1024, @wendyliu235, @wangxiyuan, @shen-shanshan, @HanHan009527, @amd-lalithnc, @netanel-haber, @fuscof-ibm, @AjAnubolu, @carlyou, @abcd1927, @CienetStingLin, @kouroshHakha, @alexbi29, @jesse996, @sungsooha, @andakai, @cquil11, @nehmathe2, @liangel-02, @hello-args, @j9smith, @nikhilesh-csa, @ruocco, @oguzhankir, @yiliu30, @xaguilar-amd, @amirkl94, @danisereb, @wangjiaxin99, @shanjiaz, @Oseltamivir, @alexeldeib, @wzhao18, @coder3101, @lyd1992, @markmc, @ashishpatel26, @HumphreySun98, @ByteFlowing1337, @nv-nedelman-1, @JaredforReal, @sammshen, @okorzh-amd, @muhammadfawaz1, @vadiklyutiy, @JasonLi314, @SumanthRH, @Sirius29, @tjtanaa, @zhangshuoming990105, @amanchugh89, @umut-polat, @srajabos, @junkang1991, @pst2154, @WindChimeRan, @Zedong-Liu, @gq112, @sunnweiwei, @athrael-soju, @EazyReal, @Liangliang-Ma, @jinzhen-lin, @V-3604, @aarushjain29, @ZewenShen-Cohere, @Bot1822, @BowenBao, @MichaelCao0, @tanpinsiang, @QwertyJack, @nagisa-kunhah, @Meihan-chen, @robertgshaw2-redhat\r\n"
+            "body": "Higher throughput, lower latency, and better benchmark reproducibility."
           },
           "source": [
             {
               "kind": "watch_repo",
               "value": "vllm-project/vllm"
+            },
+            {
+              "kind": "topic",
+              "value": "llm-inference"
+            },
+            {
+              "kind": "topic",
+              "value": "model-serving"
+            },
+            {
+              "kind": "topic",
+              "value": "benchmark"
             }
           ]
         },
         "score": {
-          "maturityScore": 95,
-          "compatibilityScore": 61,
+          "maturityScore": 80,
+          "compatibilityScore": 77,
           "performancePotentialScore": 42,
           "maintenanceRiskScore": 20,
           "adoptionSignalScore": 100,
-          "finalUpgradeScore": 75,
+          "finalUpgradeScore": 76,
           "estimatedPerformanceGainPct": 37,
           "estimatedCostReductionPct": 19,
           "hardVetoReasons": [],
@@ -552,8 +448,8 @@
             "activeLast30Days": true,
             "hasStableRelease": true,
             "commercialLicense": true,
-            "documentationComplete": true,
-            "compatibilityAtLeast70": false,
+            "documentationComplete": false,
+            "compatibilityAtLeast70": true,
             "projectedPerformanceGainAtLeast15Pct": true,
             "projectedCostReductionAtLeast10Pct": true,
             "avoidsProductionSecurityBoundary": true
@@ -561,8 +457,8 @@
           "qualifyingSignalCount": 7,
           "eligibleForValidation": true,
           "summary": [
-            "Active commits in last 30 days: 100",
-            "Latest release: v0.24.0",
+            "Active commits in last 30 days: 27",
+            "Latest release: v0.8.2",
             "License: Apache-2.0",
             "Projected performance gain: 37%",
             "Projected cost reduction: 19%"
@@ -603,20 +499,12 @@
   ],
   "executionRecords": [
     {
-      "candidateKey": "browser-use/browser-use@0.13.3",
-      "status": "skipped",
-      "branchName": "upgrade/2026-07-10-browser-use",
-      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-07-10-browser-use/UPGRADE_REPORT.md",
-      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
-      "executedAt": "2026-07-10T01:57:40.566Z"
-    },
-    {
-      "candidateKey": "vllm-project/vllm@v0.24.0",
-      "status": "skipped",
-      "branchName": "upgrade/2026-07-10-vllm",
-      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-07-10-vllm/UPGRADE_REPORT.md",
-      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
-      "executedAt": "2026-07-10T01:57:40.566Z"
+      "candidateKey": "vllm-project/vllm@v0.8.2",
+      "status": "dry-run",
+      "branchName": "upgrade/2026-07-11-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-07-11-vllm/UPGRADE_REPORT.md",
+      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-07-11-vllm/PR_BODY.md).",
+      "executedAt": "2026-07-11T01:46:22.847Z"
     }
   ],
   "failures": [],
