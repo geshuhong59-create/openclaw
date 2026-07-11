@@ -12,7 +12,7 @@
 - Validation: passed
 - Apply upgrade: passed
 - Deploy smoke: passed
-- Promotion: not-run
+- Promotion: completed
 
 ## Planning Output
 - Branch: upgrade/2026-07-11-browser-use
@@ -21,8 +21,8 @@
 
 ## Deployment Output
 - Target: staging
-- Promotion synced: no
-- Final commit: n/a
+- Promotion synced: yes
+- Final commit: 9d11d9d66bcd4677f8f5e0afcc2262928b903617
 
 ## Notes
 - Validation script: /home/runner/work/openclaw/openclaw/scripts/test-upgrade.sh
