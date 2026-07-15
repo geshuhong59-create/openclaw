@@ -1,10 +1,10 @@
 {
-  "executedAt": "2026-07-10T01:58:06.442Z",
+  "executedAt": "2026-07-15T01:24:41.343Z",
   "repository": "geshuhong59-create/openclaw",
   "branchPrefix": "upgrade/",
   "dryRun": false,
   "keepCount": 2,
-  "scannedBranches": 78,
+  "scannedBranches": 81,
   "preservedOpenPrBranches": [
     {
       "name": "upgrade/2026-04-01-vllm",
@@ -537,19 +537,40 @@
       "committedAt": "2026-07-02T02:14:50Z",
       "reason": "open-pr",
       "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/97"
+    },
+    {
+      "name": "upgrade/2026-07-12-vllm",
+      "sha": "8fb91d9833c766c447de2d47e7009eb03ab53218",
+      "committedAt": "2026-07-12T01:48:36Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/100"
+    },
+    {
+      "name": "upgrade/2026-07-13-vllm",
+      "sha": "48e925c4a2deeb7ced58ffbe3569d54935b78897",
+      "committedAt": "2026-07-13T01:51:20Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/101"
+    },
+    {
+      "name": "upgrade/2026-07-14-vllm",
+      "sha": "1618bf8adcd74fc56452629544005ef75e991120",
+      "committedAt": "2026-07-14T01:28:05Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/102"
     }
   ],
   "keptRecentBranches": [
     {
-      "name": "upgrade/2026-07-02-vllm",
-      "sha": "24aa4d5099444b278e898fb399d858a798b5f53c",
-      "committedAt": "2026-07-02T02:15:07Z",
+      "name": "upgrade/2026-07-11-browser-use",
+      "sha": "625661b866ddd38a56314130db31dc4a4b33704f",
+      "committedAt": "2026-07-11T01:46:35Z",
       "reason": "recent-retention"
     },
     {
-      "name": "upgrade/2026-06-13-browser-use",
-      "sha": "62cc00fc69df5cc511431905e82cd45d21dd4276",
-      "committedAt": "2026-06-13T02:30:55Z",
+      "name": "upgrade/2026-07-02-vllm",
+      "sha": "24aa4d5099444b278e898fb399d858a798b5f53c",
+      "committedAt": "2026-07-02T02:15:07Z",
       "reason": "recent-retention"
     }
   ],
