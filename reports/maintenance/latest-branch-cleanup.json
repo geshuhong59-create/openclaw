@@ -1,10 +1,10 @@
 {
-  "executedAt": "2026-07-16T01:44:57.804Z",
+  "executedAt": "2026-07-19T01:46:27.532Z",
   "repository": "geshuhong59-create/openclaw",
   "branchPrefix": "upgrade/",
   "dryRun": false,
   "keepCount": 2,
-  "scannedBranches": 81,
+  "scannedBranches": 82,
   "preservedOpenPrBranches": [
     {
       "name": "upgrade/2026-04-01-vllm",
@@ -562,17 +562,24 @@
   ],
   "keptRecentBranches": [
     {
-      "name": "upgrade/2026-07-11-browser-use",
-      "sha": "625661b866ddd38a56314130db31dc4a4b33704f",
-      "committedAt": "2026-07-11T01:46:35Z",
+      "name": "upgrade/2026-07-18-browser-use",
+      "sha": "e327c60ad847015c64b9f183f1127b96f916d18b",
+      "committedAt": "2026-07-18T01:29:21Z",
       "reason": "recent-retention"
     },
     {
-      "name": "upgrade/2026-07-02-vllm",
-      "sha": "24aa4d5099444b278e898fb399d858a798b5f53c",
-      "committedAt": "2026-07-02T02:15:07Z",
+      "name": "upgrade/2026-07-17-browser-use",
+      "sha": "743b31060d230039980d1305ef2d4d29208cf9e0",
+      "committedAt": "2026-07-17T01:48:44Z",
       "reason": "recent-retention"
     }
   ],
-  "deletedBranches": []
+  "deletedBranches": [
+    {
+      "name": "upgrade/2026-07-11-browser-use",
+      "sha": "625661b866ddd38a56314130db31dc4a4b33704f",
+      "committedAt": "2026-07-11T01:46:35Z",
+      "reason": "deleted"
+    }
+  ]
 }
