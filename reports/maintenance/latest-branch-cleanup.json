@@ -1,10 +1,10 @@
 {
-  "executedAt": "2026-07-25T01:48:51.189Z",
+  "executedAt": "2026-07-28T01:42:49.444Z",
   "repository": "geshuhong59-create/openclaw",
   "branchPrefix": "upgrade/",
   "dryRun": false,
   "keepCount": 2,
-  "scannedBranches": 81,
+  "scannedBranches": 85,
   "preservedOpenPrBranches": [
     {
       "name": "upgrade/2026-04-01-vllm",
@@ -558,21 +558,49 @@
       "committedAt": "2026-07-14T01:28:05Z",
       "reason": "open-pr",
       "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/102"
+    },
+    {
+      "name": "upgrade/2026-07-26-vllm",
+      "sha": "71e1f300f3c751dcc29243d52cf410b82fa6019b",
+      "committedAt": "2026-07-26T01:51:39Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/105"
+    },
+    {
+      "name": "upgrade/2026-07-27-vllm",
+      "sha": "1fb9bb7fe96367f066659f1edb3f71d2812df0c3",
+      "committedAt": "2026-07-27T01:59:38Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/106"
+    },
+    {
+      "name": "upgrade/2026-07-28-browser-use",
+      "sha": "9c8f191da44c5fd0d5398860de1823318b45686b",
+      "committedAt": "2026-07-28T01:42:28Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/107"
     }
   ],
   "keptRecentBranches": [
+    {
+      "name": "upgrade/2026-07-28-vllm",
+      "sha": "49b6c38ccd96b6d2de557ae2f76e6ac082a414d2",
+      "committedAt": "2026-07-28T01:42:44Z",
+      "reason": "recent-retention"
+    },
     {
       "name": "upgrade/2026-07-18-browser-use",
       "sha": "e327c60ad847015c64b9f183f1127b96f916d18b",
       "committedAt": "2026-07-18T01:29:21Z",
       "reason": "recent-retention"
-    },
+    }
+  ],
+  "deletedBranches": [
     {
       "name": "upgrade/2026-07-17-browser-use",
       "sha": "743b31060d230039980d1305ef2d4d29208cf9e0",
       "committedAt": "2026-07-17T01:48:44Z",
-      "reason": "recent-retention"
+      "reason": "deleted"
     }
-  ],
-  "deletedBranches": []
+  ]
 }
