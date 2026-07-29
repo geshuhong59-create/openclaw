@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-28T01:42:35.063Z",
+  "updatedAt": "2026-07-29T01:43:33.840Z",
   "candidates": [
     {
       "repo": "vllm-project/vllm",
@@ -46283,6 +46283,857 @@
       "eligibleForValidation": false,
       "hardVetoReasons": [],
       "executedAt": "2026-07-28T01:42:35.063Z"
+    },
+    {
+      "repo": "browser-use/browser-use",
+      "score": 80,
+      "eligibleForValidation": true,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "score": 75,
+      "eligibleForValidation": true,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "langchain-ai/langgraph",
+      "score": 70,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Gitlawb/openclaude",
+      "score": 70,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "benchmark_unverifiable",
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "openai/openai-agents-python",
+      "score": 70,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "breaking_change_high_risk"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "esengine/DeepSeek-Reasonix",
+      "score": 69,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Skyvern-AI/skyvern",
+      "score": 67,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_incompatible",
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "bojieli/ai-agent-book",
+      "score": 65,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "pydantic/pydantic-ai",
+      "score": 63,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "dotnet/BenchmarkDotNet",
+      "score": 61,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "flashinfer-ai/flashinfer",
+      "score": 60,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "vllm-project/vllm-omni",
+      "score": 60,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "hertz-ai/HARTOS",
+      "score": 60,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "web-infra-dev/midscene",
+      "score": 59,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Michael-A-Kuykendall/shimmy",
+      "score": 59,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "openwong2kim/wmux",
+      "score": 59,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "ai-dynamo/dynamo",
+      "score": 58,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "breaking_change_high_risk"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "TIGER-AI-Lab/ClawBench",
+      "score": 58,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "DemonDamon/AgenticX",
+      "score": 58,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "minghinmatthewlam/openbench",
+      "score": 58,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "anthony-chaudhary/fak",
+      "score": 58,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "agentlas-ai/Agentlas-OS",
+      "score": 57,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "alexandriashai/cbrowser",
+      "score": 57,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "manishiitg/coding-agent-loop",
+      "score": 57,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "microsoft/autogen",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_incompatible"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "JKHeadley/instar",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "pixiebrix/agent-browser-shield",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "protostatis/unbrowser",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "metaspartan/cybara",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "zernie/vigiles",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "LeonTing1010/tap",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "pearjelly/cliany.site",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "tomyimkc/sophia-agi",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "matt82198/aesop",
+      "score": 56,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "fcakyon/claude-codex-settings",
+      "score": 55,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "vllm-project/vllm-ascend",
+      "score": 54,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "breaking_change_high_risk"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Nano-Collective/nanocoder",
+      "score": 54,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "cloudrift-ai/emmy",
+      "score": 54,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "HephaestLab/TraderHarness",
+      "score": 54,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "IHUI-INF-AI/IHUI-AI",
+      "score": 54,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "oxyzenQ/cosmostrix",
+      "score": 54,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_incompatible"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "burrow-cloud/burrow",
+      "score": 54,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "xianyu-sheng/SmartBench",
+      "score": 54,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "ajnieves1/Kestrel",
+      "score": 54,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "arbiterForge/codeArbiter",
+      "score": 53,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_incompatible"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "linny006/agent-eval-harness",
+      "score": 53,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "feder-cr/invisible_playwright",
+      "score": 52,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "mlrun/mlrun",
+      "score": 52,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Islamnetz/gmail-account-creator-bot-pro",
+      "score": 52,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "SpectrAI-Initiative/bio-benchmark-atlas",
+      "score": 52,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "aloshai/chainlist-rpc-scorer",
+      "score": 52,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "ryanportfolio/tracebench",
+      "score": 52,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "sytone/botnexus",
+      "score": 51,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "benchmark_unverifiable",
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "MathiasPaulenko/wavexis-mcp",
+      "score": 51,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "NSIETeam/Mira",
+      "score": 51,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "microsoft/magentic-ui",
+      "score": 50,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "xiufengsun/TokenTracker",
+      "score": 50,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "portel-dev/photon",
+      "score": 50,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable",
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "mienetic/glacier-engine",
+      "score": 50,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Tencent/BrowserSkill",
+      "score": 49,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "aqua5230/usage",
+      "score": 49,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_incompatible",
+        "benchmark_unverifiable",
+        "auth_model_changed",
+        "production_secret_impact"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "israriqbal/agent-ecologies",
+      "score": 49,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "agent-team-foundation/first-tree",
+      "score": 49,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "tsouth89/ceiling",
+      "score": 49,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "yolo-maxi/runyard",
+      "score": 49,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "shftwst/faff",
+      "score": 49,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "cody-hutson/pmo-platform",
+      "score": 49,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "matteo-grella/fucina",
+      "score": 48,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "KCNyu/clawock",
+      "score": 48,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Sungmin-Cho/claude-deep-suite",
+      "score": 48,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "breaking_change_high_risk"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "ranotandeallo/spark-ai-assistant-api",
+      "score": 48,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "XAGI-Lab/atlas-mcp",
+      "score": 48,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "dshakes/clickllm",
+      "score": 48,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "WumboLabs/llmgauge",
+      "score": 48,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "ramanan081-hub/basml-cotton-yarn-dashboard",
+      "score": 47,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "ansible-lockdown/github_linux_IaC",
+      "score": 46,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "ansible-lockdown/github_windows_IaC",
+      "score": 46,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "hahalee000000/helen",
+      "score": 46,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "breaking_change_high_risk"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "mbsdeepak/gauntlet",
+      "score": 46,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "MontrealAI/proof-gradient",
+      "score": 45,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "AmirmLotfy/zence",
+      "score": 45,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "dimitrilaouanis-tech/0n1x",
+      "score": 45,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "beogip/code-first-agents-tool",
+      "score": 43,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "breaking_change_high_risk",
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "alfredang/ai-mms",
+      "score": 43,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "realaios/merkaba-geoqode-lattice",
+      "score": 43,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "foo-log-inc/agent-contracts",
+      "score": 43,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "abad75/rune-forge-wizard",
+      "score": 43,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "LeonExists/cc-plugin-pantry",
+      "score": 43,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "gkxvall/Setuper",
+      "score": 43,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "killerwaz/research-overseer",
+      "score": 43,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "111nathanlar/Agent-Worlds",
+      "score": 42,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "aandbcct/dotClaw",
+      "score": 40,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "brettadams0/mcp-surface",
+      "score": 40,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "chenxi750328ai/agent-jianghu",
+      "score": 39,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Dendroculus/Daily-Heartbeats",
+      "score": 39,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "mbsdeepak/cogs",
+      "score": 37,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "di-omics/benchmarks",
+      "score": 35,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Kare0638/Triton-Fused-RMSNorm-Kernel",
+      "score": 34,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "iszgroup/ai-agent-skills-spec",
+      "score": 33,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown",
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "iszgroup/ai-evaluation-playbook",
+      "score": 32,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "license_unknown"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
+    },
+    {
+      "repo": "Marco9442/duna-multi-agents",
+      "score": 27,
+      "eligibleForValidation": false,
+      "hardVetoReasons": [
+        "benchmark_unverifiable"
+      ],
+      "executedAt": "2026-07-29T01:43:33.840Z"
     }
   ]
 }
