@@ -1,32 +1,11 @@
 {
-  "executedAt": "2026-08-19T00:39:32.968Z",
+  "executedAt": "2026-09-03T02:04:57.311Z",
   "repository": "geshuhong59-create/openclaw",
   "branchPrefix": "upgrade/",
   "dryRun": false,
   "keepCount": 2,
   "scannedBranches": 87,
   "preservedOpenPrBranches": [
-    {
-      "name": "upgrade/2026-04-01-vllm",
-      "sha": "7c1e7b9f91c65096b4edbbe5967d54e00d9ff68e",
-      "committedAt": "2026-04-01T01:45:01Z",
-      "reason": "open-pr",
-      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/15"
-    },
-    {
-      "name": "upgrade/2026-04-02-vllm",
-      "sha": "d087e51a43a547dc3e5d208d02ca21e1fc0b6d6b",
-      "committedAt": "2026-04-02T01:21:31Z",
-      "reason": "open-pr",
-      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/16"
-    },
-    {
-      "name": "upgrade/2026-04-03-browser-use",
-      "sha": "9289b838b679b43d1899b39f6d3e3008c05f5aff",
-      "committedAt": "2026-04-03T01:23:28Z",
-      "reason": "open-pr",
-      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/17"
-    },
     {
       "name": "upgrade/2026-04-04-vllm",
       "sha": "8cda35e5e1863a8228949bd83b06a54feaf25f5a",
@@ -600,6 +579,20 @@
       "committedAt": "2026-08-14T01:06:10Z",
       "reason": "open-pr",
       "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/111"
+    },
+    {
+      "name": "upgrade/2026-08-15-vllm",
+      "sha": "67ee74d29abe9bd140b7effe15b02a9b635d6bdf",
+      "committedAt": "2026-08-15T00:39:31Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/112"
+    },
+    {
+      "name": "upgrade/2026-08-16-vllm",
+      "sha": "a6f8385fca5237f144cddf8a9e571c71bc700d8a",
+      "committedAt": "2026-08-16T00:42:01Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/113"
     }
   ],
   "keptRecentBranches": [
@@ -616,5 +609,12 @@
       "reason": "recent-retention"
     }
   ],
-  "deletedBranches": []
+  "deletedBranches": [
+    {
+      "name": "upgrade/2026-04-03-browser-use",
+      "sha": "9289b838b679b43d1899b39f6d3e3008c05f5aff",
+      "committedAt": "2026-04-03T01:23:28Z",
+      "reason": "deleted"
+    }
+  ]
 }
