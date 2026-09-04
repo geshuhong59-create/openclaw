@@ -1,124 +1,34 @@
 {
-  "executedAt": "2026-08-19T00:39:08.997Z",
-  "reportPath": "/home/runner/work/openclaw/openclaw/reports/2026-08-19-ai-radar.md",
-  "discoveredCount": 104,
+  "executedAt": "2026-09-04T02:04:38.760Z",
+  "reportPath": "/home/runner/work/openclaw/openclaw/reports/2026-03-25-ai-radar.md",
+  "discoveredCount": 5,
   "topCandidates": [
-    {
-      "repo": {
-        "fullName": "browser-use/browser-use",
-        "url": "https://github.com/browser-use/browser-use",
-        "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
-        "topics": [
-          "ai-agents",
-          "ai-tools",
-          "browser-automation",
-          "browser-use",
-          "llm",
-          "playwright",
-          "python"
-        ],
-        "stars": 109651,
-        "forks": 12050,
-        "defaultBranch": "main",
-        "updatedAt": "2026-08-19T00:34:48Z",
-        "pushedAt": "2026-08-18T17:07:08Z",
-        "license": "MIT",
-        "readme": "<!-- mcp-name: com.browser-use/browser-use -->\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/774a46d5-27a0-490c-b7d0-e65fcbbfa358\">\n  <img alt=\"Shows a black Browser Use Logo in light color mode and a white one in dark color mode.\" src=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"  width=\"full\">\n</picture>\n\n<div align=\"center\">\n    <picture>\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\">\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6797d09b-8ac3-4cb9-ba07-b289e080765a\">\n    <img alt=\"The AI browser agent.\" src=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"  width=\"400\">\n    </picture>\n</div>\n\n<div align=\"center\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-downloads\"><img src=\"https://media.browser-use.tools/badges/package\" height=\"48\" alt=\"Browser-Use Package Download Statistics\"></a>\n</div>\n\n---\n\n<div align=\"center\">\n<a href=\"#what-can-browser-use-do\"><img src=\"https://media.browser-use.tools/badges/demos\" alt=\"Demos\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://docs.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/docs\" alt=\"Docs\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browser-use.com/posts\"><img src=\"https://media.browser-use.tools/badges/blog\" alt=\"Blog\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browsermerch.com\"><img src=\"https://media.browser-use.tools/badges/merch\" alt=\"Merch\"></a>\n<img width=\"100\" height=\"1\" alt=\"\">\n<a href=\"https://github.com/browser-use/browser-use\"><img src=\"https://media.browser-use.tools/badges/github\" alt=\"Github Stars\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://x.com/intent/user?screen_name=browser_use\"><img src=\"https://media.browser-use.tools/badges/twitter\" alt=\"Twitter\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://link.browser-use.com/discord\"><img src=\"https://media.browser-use.tools/badges/discord\" alt=\"Discord\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-cloud\"><img src=\"https://media.browser-use.tools/badges/cloud\" height=\"48\" alt=\"Browser-Use Cloud\"></a>\n</div>\n\n</br>\n\n# What can Browser Use do?\n\nBrowser Use lets an AI agent use a web browser the same way humans do — it opens pages, clicks buttons, types, and fills in forms. You describe the task, and it completes it. For example, you can have it:\n\n\n### 📋 Fill Forms\n#### Task: \"Fill in this job application with my resume and information.\"\n\n![Job Application Demo](https://github.com/user-attachments/assets/57611d8e-0474-4de6-84b7-37a0c0cd27e7)\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/apply_to_job.py)\n\n\n### 🍎 Extract data\n#### Task: \"Extract structured data about my followers and export it as a CSV.\"\n\nhttps://github.com/user-attachments/assets/485fd3ec-61b9-4afc-9e86-ee9b85acb592\n\n[Browser Use Cloud Docs ↗](https://docs.browser-use.com/cloud/quickstart)\n\n\n<br/>\n\n# Quickstart\n\nIf you want to use Browser Use in your agent (Claude Code, Codex, Cursor, Hermes, OpenClaw, etc.), paste this prompt, and it sets everything up itself:\n\n```text\nInstall or upgrade browser-use to the latest stable version with uv using Python 3.12, run `browser-use skill install` to register the skill, and connect it to my browser. If setup or connection fails, follow https://github.com/browser-use/browser-harness/blob/main/install.md.\n```\n\nThen tell your agent what you want done.\n\n<br/>\n\n# Python library: the easiest way to automate the web\n\nWant to automate the web at scale, from your own code, and with any LLM? Use the Python library:\n\n**1. Install Browser Use (Python >= 3.11):**\n\n```bash\nuv add browser-use\n# or: pip install browser-use\n```\n\n**2. Add your LLM API key to `.env`**. Get one from [Browser Use Cloud](https://cloud.browser-use.com/new-api-key?utm_source=github&utm_medium=readme-quickstart-api-key), or bring your own provider key:\n\n```bash\n# .env\nBROWSER_USE_API_KEY=your-key\n# GOOGLE_API_KEY=your-key\n# ANTHROPIC_API_KEY=your-key\n```\n\n**3. Run your first agent:**\n\n```python\nimport asyncio\n\nfrom browser_use import Agent, ChatBrowserUse\n\nasync def main():\n    agent = Agent(\n        task=\"Find the number of stars of the browser-use repo\",\n        llm=ChatBrowserUse(model='openai/gpt-5.5'),\n        # llm=ChatBrowserUse(model='bu-2-0-mini-preview'),  # Browser Use's optimized model\n        # llm=ChatOpenAI(model='gpt-5.5'),\n        # llm=ChatAnthropic(model='claude-opus-4-8'),  # Sonnet also works well\n    )\n    history = await agent.run()\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nCheck out the [library docs](https://docs.browser-use.com/open-source/introduction) and the [cloud docs](https://docs.cloud.browser-use.com?utm_source=github&utm_medium=readme-cloud-docs) for more!\n\n<br/>\n\n# Open Source vs Cloud\n\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"static/accuracy_by_model_light.png\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/accuracy_by_model_dark.png\">\n  <img alt=\"BU Bench V1 - LLM Success Rates\" src=\"static/accuracy_by_model_light.png\" width=\"100%\">\n</picture>\n\nWe benchmark Browser Use across 100 real-world browser tasks. Full benchmark is open source: **[browser-use/benchmark](https://github.com/browser-use/benchmark)**.\n\nBrowser Use is also **#1 on the [Odysseys leaderboard](https://odysseysbench.com/leaderboard)** with an 87.4% average, ahead of computer-use agents from OpenAI, Anthropic, Google, and Microsoft. Odysseys measures the agent's performance on 200 long-horizon web tasks.\n\n**Use the Open-Source Agent**\n- Free, and runs on your own machine\n- Deep code-level integration and control: pick your LLM, customize the agent's behavior\n- We recommend pairing it with our [cloud browsers](https://docs.browser-use.com/open-source/customize/browser/remote) for leading stealth, proxy rotation, and scaling\n\n**Use the [Fully-Hosted Cloud Agent](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-hosted-agent) (recommended)**\n- Much more powerful agent for complex tasks (see plot above)\n- Easiest way to start and scale\n- Best stealth with proxy rotation and captcha solving\n- 1000+ integrations (Gmail, Slack, Notion, and more)\n- Persistent filesystem and memory\n\n```sh\ncurl -X POST https://api.browser-use.com/api/v4/runs \\\n  -H \"X-Browser-Use-API-Key: $BROWSER_USE_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"task\": \"Your task\"}'\n```\n\n<br/>\n\n## Integrations, hosting, custom tools, MCP, and more on our [Docs ↗](https://docs.browser-use.com)\n\n<br/>\n\n# FAQ\n\n<details>\n<summary><b>Should I use the CLI vs. the Python library?</b></summary>\n\n**Use the CLI** if you already have an agent (Claude Code, Codex, Cursor, Hermes, OpenClaw, etc.) that you want to complete browser tasks for you. The agent installs the skill once (see [Quickstart](#quickstart)) and can then control the browser. Examples:\n- \"Upload this video to YouTube\"\n- \"Compare these three laptops and give me a table with prices\"\n- \"Fill in this job application with my resume\"\n\n**Use the Python library** when you are building software that automates the web. Examples:\n- Run many tasks on a schedule or in parallel (scraping, monitoring, QA)\n- Embed a browser agent into your own product\n- Custom tools, custom system prompts, structured output, fine-grained browser control\n\nRule of thumb: one-off tasks through an agent → CLI. Repeatable automation in code → Python library.\n</details>\n\n<details>\n<summary><b>What's the best model to use?</b></summary>\n\nWe optimized **ChatBrowserUse()** specifically for browser automation tasks. On avg it completes tasks 3-5x faster than other models with SOTA accuracy.\n\nFor pricing and other LLM providers, see our [supported models documentation](https://docs.browser-use.com/supported-models).\n</details>\n\n<details>\n<summary><b>Can I use Claude / GPT / Gemini through ChatBrowserUse?</b></summary>\n\nYes. `ChatBrowserUse` accepts provider-prefixed model ids, so a single `BROWSER_USE_API_KEY` reaches all of them — no separate OpenAI/Anthropic/Google keys required:\n\n```python\nfrom browser_use import Agent, ChatBrowserUse\n\nllm = ChatBrowserUse(model='anthropic/claude-sonnet-4-6')  # or 'openai/gpt-5.5', 'google/gemini-3-pro'\nagent = Agent(task='...', llm=llm)\n```\n\nFor the best speed and cost we still recommend the default `bu-*` models.\n</details>\n\n<details>\n<summary><b>Should I use the Browser Use system prompt with the open-source preview model?</b></summary>\n\nYes. If you use `ChatBrowserUse(model='browser-use/bu-30b-a3b-preview')` with a normal `Agent(...)`, Browser Use still sends its default agent system prompt for you.\n\nYou do **not** need to add a separate custom \"Browser Use system message\" just because you switched to the open-source preview model. Only use `extend_system_message` or `override_system_message` when you intentionally want to customize the default behavior for your task.\n\nIf you want the best default speed/accuracy, we still recommend the newer hosted `bu-*` models. If you want the open-source preview model, the setup stays the same apart from the `model=` value.\n</details>\n\n<details>\n<summary><b>Can I use custom tools with the agent?</b></summary>\n\nYes! You can add custom tools to extend the agent's capabilities:\n\n```python\nfrom browser_use import Tools\n\ntools = Tools()\n\n@tools.action(description='Description of what this tool does.')\ndef custom_tool(param: str) -> str:\n    return f\"Result: {param}\"\n\nagent = Agent(\n    task=\"Your task\",\n    llm=llm,\n    browser=browser,\n    tools=tools,\n)\n```\n\n</details>\n\n<details>\n<summary><b>Can I use this for free?</b></summary>\n\nYes! Browser-Use is open source and free to use. You only need to choose an LLM provider (like OpenAI, Google, ChatBrowserUse, or run local models with Ollama).\n</details>\n\n<details>\n<summary><b>Terms of Service</b></summary>\n\nThis open-source library is licensed under the MIT License. For Browser Use services & data policy, see our [Terms of Service](https://browser-use.com/legal/terms-of-service) and [Privacy Policy](https://browser-use.com/privacy/).\n</details>\n\n<details>\n<summary><b>How do I handle authentication?</b></summary>\n\nCheck out our authentication examples:\n- [Using real browser profiles](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py) - Reuse your existing Chrome profile with saved logins\n- If you want to use temporary accounts with inbox, choose AgentMail\n- To sync your auth profile with a remote browser, install `profile-use` for your platform from the [official releases](https://github.com/browser-use/profile-use-releases/releases/latest), then follow the [profile sync guide](https://github.com/browser-use/browser-harness/blob/main/interaction-skills/profile-sync.md).\n\nThese examples show how to maintain sessions and handle authentication seamlessly.\n</details>\n\n<details>\n<summary><b>How do I solve CAPTCHAs?</b></summary>\n\nFor CAPTCHA handling, you need better browser fingerprinting and proxies. Use [Browser Use Cloud](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-captcha) which provides stealth browsers designed to avoid detection and CAPTCHA challenges.\n</details>\n\n<details>\n<summary><b>How do I go into production?</b></summary>\n\nChrome can consume a lot of memory, and running many agents in parallel can be tricky to manage.\n\nFor production use cases, use our [Browser Use Cloud API](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-production) which handles:\n- Scalable browser infrastructure\n- Memory management\n- Proxy rotation\n- Stealth browser fingerprinting\n- High-performance parallel execution\n</details>\n\n<br/>\n\n## Citation\n\nIf you use Browser Use in your research or project, please cite:\n\n```bibtex\n@software{browser_use2024,\n  author = {Müller, Magnus and Žunič, Gregor},\n  title = {Browser Use: Enable AI to control your browser},\n  year = {2024},\n  publisher = {GitHub},\n  url = {https://github.com/browser-use/browser-use}\n}\n```\n\n<br/>\n\n<div align=\"center\">\n\n**Tell your computer what to do, and it gets it done.**\n\n<img src=\"https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f\" width=\"400\"/>\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)\n&emsp;&emsp;&emsp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)\n\n</div>\n\n<div align=\"center\"> Made with ❤️ in Zurich and San Francisco </div>\n",
-        "recentCommitCount30d": 100,
-        "latestRelease": {
-          "tagName": "0.13.8",
-          "name": "0.13.8",
-          "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
-          "publishedAt": "2026-08-16T18:48:54Z",
-          "prerelease": false,
-          "draft": false,
-          "body": "## What's Changed\n* Update Cerebras model IDs and default by @ryanl-cerebras in https://github.com/browser-use/browser-use/pull/5323\n* Recover Anthropic tool arguments when the model serializes its call as text by @ElayGelbart in https://github.com/browser-use/browser-use/pull/5330\n* docs: replace broken profile sync link by @Hardik180704 in https://github.com/browser-use/browser-use/pull/5332\n* fix(agent): guard last_action() against empty action list by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5103\n* fix(agent): guard _inject_budget_warning against ZeroDivisionError by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5107\n* fix(browser): return Path from validate_user_data_dir when creating temp dir by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5114\n* Use UTF-8 for agent file writes by @Ghraven in https://github.com/browser-use/browser-use/pull/5309\n* fix(dom): clamp final chunk char_end to len(content) for trailing newline by @Diwak4r in https://github.com/browser-use/browser-use/pull/5175\n* fix(registry): do not expose domain-restricted actions on an empty URL by @abhay-codes07 in https://github.com/browser-use/browser-use/pull/5204\n* fix(agent): give each MessageManager its own state (mutable default arg) by @abhay-codes07 in https://github.com/browser-use/browser-use/pull/5205\n* fix(dom): fix stackingContexts access type mismatch by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5104\n* fix: export documented LLM chat models by @Karunasagar12 in https://github.com/browser-use/browser-use/pull/5182\n* Fix variable shadowing in Element.click() error handling by @Gaurav0807 in https://github.com/browser-use/browser-use/pull/5089\n* fix(downloads): fire complete callbacks for remote-browser downloads by @sergioperezcheco in https://github.com/browser-use/browser-use/pull/5264\n* fix(llm): read structured output from tool calls for Groq tool-calling models by @VenkateswarluNagineni in https://github.com/browser-use/browser-use/pull/5240\n* Fix ChatAnthropicBedrock.ainvoke() IndexError on an empty response.content list by @chuenchen309 in https://github.com/browser-use/browser-use/pull/5233\n* fix(async): avoid re-raising task callback errors by @GautamSharma99 in https://github.com/browser-use/browser-use/pull/5285\n* fix(browser): apply storage_state cookies when passed as an in-memory dict by @ayaangazali in https://github.com/browser-use/browser-use/pull/5262\n* fix(tools): restore SearchGoogleAction back-compat alias by @LHMQ878 in https://github.com/browser-use/browser-use/pull/5318\n* Fix Mouse.scroll() silently redirecting an explicit x=0/y=0 to viewport center by @chuenchen309 in https://github.com/browser-use/browser-use/pull/5231\n* Fix DOMTreeSerializer leaking paint-order-occluded text to the LLM by @chuenchen309 in https://github.com/browser-use/browser-use/pull/5225\n* fix(mcp): mark read-only MCP tools with readOnlyHint annotations by @ayaangazali in https://github.com/browser-use/browser-use/pull/5246\n* fix(mcp): surface CallToolResult.isError as a failed ActionResult by @chuenchen309 in https://github.com/browser-use/browser-use/pull/5235\n* fix(agent): close PIL images after GIF creation to prevent resource leak by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5105\n* fix: include exception details in coordinate click and add missing error logs by @shotsan in https://github.com/browser-use/browser-use/pull/5379\n* docs: refresh the Open Source vs Cloud plot with Cloud v4 by @Alezander9 in https://github.com/browser-use/browser-use/pull/5388\n* docs: show the hosted agent API call in the README by @Alezander9 in https://github.com/browser-use/browser-use/pull/5394\n* fix(utils): prevent redact_sensitive_string cascade corruption by @santhreal in https://github.com/browser-use/browser-use/pull/5211\n* Bump aiohttp and pypdf security pins by @sauravpanda in https://github.com/browser-use/browser-use/pull/5326\n* fix(agent): honor zero message compaction threshold by @wesleyzhangwq in https://github.com/browser-use/browser-use/pull/5401\n* fix(mcp): update deprecated Bedrock Claude model identifier by @scemii in https://github.com/browser-use/browser-use/pull/5448\n* docs: trim README demo videos by @MagMueller in https://github.com/browser-use/browser-use/pull/5463\n* docs: restore social video preview by @MagMueller in https://github.com/browser-use/browser-use/pull/5464\n* feat(llm): default ChatBrowserUse to bu-2-0-mini-preview by @sauravpanda in https://github.com/browser-use/browser-use/pull/5465\n* fix(deps): unblock OpenHands with rich 14.3.3 by @MagMueller in https://github.com/browser-use/browser-use/pull/5477\n* feat: add first-party OpenClaw skill support by @MagMueller in https://github.com/browser-use/browser-use/pull/5476\n* Release 0.13.8 with Browser Harness 0.1.9 by @gregpr07 in https://github.com/browser-use/browser-use/pull/5481\n\n## New Contributors\n* @ryanl-cerebras made their first contribution in https://github.com/browser-use/browser-use/pull/5323\n* @ElayGelbart made their first contribution in https://github.com/browser-use/browser-use/pull/5330\n* @Hardik180704 made their first contribution in https://github.com/browser-use/browser-use/pull/5332\n* @itxaiohanglover made their first contribution in https://github.com/browser-use/browser-use/pull/5103\n* @Ghraven made their first contribution in https://github.com/browser-use/browser-use/pull/5309\n* @Diwak4r made their first contribution in https://github.com/browser-use/browser-use/pull/5175\n* @abhay-codes07 made their first contribution in https://github.com/browser-use/browser-use/pull/5204\n* @Karunasagar12 made their first contribution in https://github.com/browser-use/browser-use/pull/5182\n* @Gaurav0807 made their first contribution in https://github.com/browser-use/browser-use/pull/5089\n* @sergioperezcheco made their first contribution in https://github.com/browser-use/browser-use/pull/5264\n* @VenkateswarluNagineni made their first contribution in https://github.com/browser-use/browser-use/pull/5240\n* @chuenchen309 made their first contribution in https://github.com/browser-use/browser-use/pull/5233\n* @GautamSharma99 made their first contribution in https://github.com/browser-use/browser-use/pull/5285\n* @ayaangazali made their first contribution in https://github.com/browser-use/browser-use/pull/5262\n* @LHMQ878 made their first contribution in https://github.com/browser-use/browser-use/pull/5318\n* @shotsan made their first contribution in https://github.com/browser-use/browser-use/pull/5379\n* @santhreal made their first contribution in https://github.com/browser-use/browser-use/pull/5211\n* @wesleyzhangwq made their first contribution in https://github.com/browser-use/browser-use/pull/5401\n* @scemii made their first contribution in https://github.com/browser-use/browser-use/pull/5448\n\n**Full Changelog**: https://github.com/browser-use/browser-use/compare/0.13.7...0.13.8"
-        },
-        "source": [
-          {
-            "kind": "watch_repo",
-            "value": "browser-use/browser-use"
-          },
-          {
-            "kind": "topic",
-            "value": "browser-use"
-          }
-        ]
-      },
-      "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 85,
-        "performancePotentialScore": 32,
-        "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 100,
-        "finalUpgradeScore": 80,
-        "estimatedPerformanceGainPct": 27,
-        "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [],
-        "qualifyingSignals": {
-          "activeLast30Days": true,
-          "hasStableRelease": true,
-          "commercialLicense": true,
-          "documentationComplete": true,
-          "compatibilityAtLeast70": true,
-          "projectedPerformanceGainAtLeast15Pct": true,
-          "projectedCostReductionAtLeast10Pct": false,
-          "avoidsProductionSecurityBoundary": true
-        },
-        "qualifyingSignalCount": 7,
-        "eligibleForValidation": true,
-        "summary": [
-          "Active commits in last 30 days: 100",
-          "Latest release: 0.13.8",
-          "License: MIT",
-          "Projected performance gain: 27%",
-          "Projected cost reduction: 4%"
-        ]
-      }
-    },
     {
       "repo": {
         "fullName": "vllm-project/vllm",
         "url": "https://github.com/vllm-project/vllm",
-        "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+        "description": "High-throughput and memory-efficient inference engine for LLM serving.",
         "topics": [
-          "amd",
-          "blackwell",
-          "cuda",
-          "deepseek",
-          "deepseek-v3",
-          "gpt",
-          "gpt-oss",
-          "inference",
-          "kimi",
-          "llama",
-          "llm",
-          "llm-serving",
+          "llm-inference",
           "model-serving",
-          "moe",
-          "openai",
-          "pytorch",
-          "qwen",
-          "qwen3",
-          "tpu",
-          "transformer"
+          "benchmark"
         ],
-        "stars": 89376,
-        "forks": 20874,
+        "stars": 42000,
+        "forks": 6200,
         "defaultBranch": "main",
-        "updatedAt": "2026-08-19T00:34:46Z",
-        "pushedAt": "2026-08-19T00:03:02Z",
+        "updatedAt": "2026-03-24T08:20:00Z",
+        "pushedAt": "2026-03-24T08:19:00Z",
         "license": "Apache-2.0",
-        "readme": "<!-- markdownlint-disable MD001 MD041 -->\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png\">\n    <img alt=\"vLLM\" src=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-light.png\" width=55%>\n  </picture>\n</p>\n\n<h3 align=\"center\">\nEasy, fast, and cheap LLM serving for everyone\n</h3>\n\n<p align=\"center\">\n| <a href=\"https://docs.vllm.ai\"><b>Documentation</b></a> | <a href=\"https://blog.vllm.ai/\"><b>Blog</b></a> | <a href=\"https://arxiv.org/abs/2309.06180\"><b>Paper</b></a> | <a href=\"https://x.com/vllm_project\"><b>Twitter/X</b></a> | <a href=\"https://discuss.vllm.ai\"><b>User Forum</b></a> | <a href=\"https://slack.vllm.ai\"><b>Developer Slack</b></a> |\n</p>\n\n🔥 We have built a vLLM website to help you get started with vLLM. Please visit [vllm.ai](https://vllm.ai) to learn more.\nFor events, please visit [vllm.ai/events](https://vllm.ai/events) to join us.\n\n---\n\n## About\n\nvLLM is a fast and easy-to-use library for LLM inference and serving.\n\nOriginally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley, vLLM has grown into one of the most active open-source AI projects built and maintained by a diverse community of many dozens of academic institutions and companies from over 2000 contributors.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)\n- Continuous batching of incoming requests, chunked prefill, prefix caching\n- Fast and flexible model execution with piecewise and full CUDA/HIP graphs\n- Quantization: FP8, MXFP8/MXFP4, NVFP4, INT8, INT4, GPTQ/AWQ, GGUF, compressed-tensors, ModelOpt, TorchAO, and [more](https://docs.vllm.ai/en/latest/features/quantization/index.html)\n- Optimized attention kernels including FlashAttention, FlashInfer, TRTLLM-GEN, FlashMLA, and Triton\n- Optimized GEMM/MoE kernels for various precisions using CUTLASS, TRTLLM-GEN, CuTeDSL\n- Speculative decoding including n-gram, suffix, EAGLE, DFlash\n- Automatic kernel generation and graph-level transformations using torch.compile\n- Disaggregated prefill, decode, and encode\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor, pipeline, data, expert, and context parallelism for distributed inference\n- Streaming outputs\n- Generation of structured outputs using xgrammar or guidance\n- Tool calling and reasoning parsers\n- OpenAI-compatible API server, plus Anthropic Messages API and gRPC support\n- Efficient multi-LoRA support for dense and MoE layers\n- Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs. Additionally, diverse hardware plugins such as Google TPUs, Intel Gaudi, IBM Spyre, Huawei Ascend, Rebellions NPU, Apple Silicon, MetaX GPU, and more.\n\nvLLM seamlessly supports 200+ model architectures on Hugging Face, including:\n\n- Decoder-only LLMs (e.g., Llama, Qwen, Gemma)\n- Mixture-of-Expert LLMs (e.g., Mixtral, DeepSeek-V3, Qwen-MoE, GPT-OSS)\n- Hybrid attention and state-space models (e.g., Mamba, Qwen3.5)\n- Multi-modal models (e.g., LLaVA, Qwen-VL, Pixtral)\n- Embedding and retrieval models (e.g., E5-Mistral, GTE, ColBERT)\n- Reward and classification models (e.g., Qwen-Math)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n\n## Getting Started\n\nInstall vLLM with [`uv`](https://docs.astral.sh/uv/) (recommended) or `pip`:\n\n```bash\nuv pip install vllm\n```\n\nOr [build from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source) for development.\n\nVisit our [documentation](https://docs.vllm.ai/en/latest/) to learn more.\n\n- [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)\n- [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)\n- [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)\n\n## Contributing\n\nWe welcome and value any contributions and collaborations.\nPlease check out [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) for how to get involved.\n\n## Citation\n\nIf you use vLLM for your research, please cite our [paper](https://arxiv.org/abs/2309.06180):\n\n```bibtex\n@inproceedings{kwon2023efficient,\n  title={Efficient Memory Management for Large Language Model Serving with PagedAttention},\n  author={Woosuk Kwon and Zhuohan Li and Siyuan Zhuang and Ying Sheng and Lianmin Zheng and Cody Hao Yu and Joseph E. Gonzalez and Hao Zhang and Ion Stoica},\n  booktitle={Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles},\n  year={2023}\n}\n```\n\n## Contact Us\n\n<!-- --8<-- [start:contact-us] -->\n- For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues)\n- For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)\n- For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)\n- For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature\n- For collaborations and partnerships, please contact us at [collaboration@vllm.ai](mailto:collaboration@vllm.ai)\n<!-- --8<-- [end:contact-us] -->\n\n## Media Kit\n\n- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)\n",
-        "recentCommitCount30d": 100,
+        "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
+        "recentCommitCount30d": 27,
         "latestRelease": {
-          "tagName": "v0.27.1",
-          "name": "v0.27.1",
-          "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.27.1",
-          "publishedAt": "2026-08-11T10:47:49Z",
+          "tagName": "v0.8.2",
+          "name": "v0.8.2",
+          "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
+          "publishedAt": "2026-03-19T05:20:00Z",
           "prerelease": false,
           "draft": false,
-          "body": "This is a patch release on top of v0.27.0.\r\n\r\n- Support quantized DSpark Markov heads (#50424)"
+          "body": "Higher throughput, lower latency, and better benchmark reproducibility."
         },
         "source": [
           {
@@ -127,17 +37,25 @@
           },
           {
             "kind": "topic",
+            "value": "llm-inference"
+          },
+          {
+            "kind": "topic",
             "value": "model-serving"
+          },
+          {
+            "kind": "topic",
+            "value": "benchmark"
           }
         ]
       },
       "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 61,
+        "maturityScore": 80,
+        "compatibilityScore": 77,
         "performancePotentialScore": 42,
         "maintenanceRiskScore": 20,
         "adoptionSignalScore": 100,
-        "finalUpgradeScore": 75,
+        "finalUpgradeScore": 76,
         "estimatedPerformanceGainPct": 37,
         "estimatedCostReductionPct": 19,
         "hardVetoReasons": [],
@@ -145,8 +63,8 @@
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": true,
-          "compatibilityAtLeast70": false,
+          "documentationComplete": false,
+          "compatibilityAtLeast70": true,
           "projectedPerformanceGainAtLeast15Pct": true,
           "projectedCostReductionAtLeast10Pct": true,
           "avoidsProductionSecurityBoundary": true
@@ -154,8 +72,8 @@
         "qualifyingSignalCount": 7,
         "eligibleForValidation": true,
         "summary": [
-          "Active commits in last 30 days: 100",
-          "Latest release: v0.27.1",
+          "Active commits in last 30 days: 27",
+          "Latest release: v0.8.2",
           "License: Apache-2.0",
           "Projected performance gain: 37%",
           "Projected cost reduction: 19%"
@@ -164,127 +82,44 @@
     },
     {
       "repo": {
-        "fullName": "mastra-ai/mastra",
-        "url": "https://github.com/mastra-ai/mastra",
-        "description": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
+        "fullName": "langchain-ai/langgraph",
+        "url": "https://github.com/langchain-ai/langgraph",
+        "description": "Graph-based workflow engine for stateful agents.",
         "topics": [
-          "agents",
-          "ai",
-          "chatbots",
-          "evals",
-          "javascript",
-          "llm",
-          "mcp",
-          "nextjs",
-          "nodejs",
-          "reactjs",
-          "tts",
-          "typescript",
-          "workflows"
+          "workflow-automation",
+          "agent-framework",
+          "multi-agent"
         ],
-        "stars": 27285,
-        "forks": 2655,
+        "stars": 21000,
+        "forks": 2400,
         "defaultBranch": "main",
-        "updatedAt": "2026-08-19T00:28:59Z",
-        "pushedAt": "2026-08-19T00:33:50Z",
-        "license": "NOASSERTION",
-        "readme": "# Mastra\n\n[![npm version](https://badge.fury.io/js/@mastra%2Fcore.svg)](https://www.npmjs.com/package/@mastra/core)\n[![CodeQl](https://github.com/mastra-ai/mastra/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mastra-ai/mastra/actions/workflows/github-code-scanning/codeql)\n[![GitHub Repo stars](https://img.shields.io/github/stars/mastra-ai/mastra)](https://github.com/mastra-ai/mastra/stargazers)\n[![Discord](https://img.shields.io/discord/1309558646228779139?logo=discord&label=Discord&labelColor=white&color=7289DA)](https://discord.gg/mastra-ai)\n[![Twitter Follow](https://img.shields.io/twitter/follow/mastra?style=social)](https://x.com/mastra)\n[![NPM Downloads](https://img.shields.io/npm/dm/%40mastra%252Fcore)](https://www.npmjs.com/package/@mastra/core)\n[![Static Badge](https://img.shields.io/badge/Y%20Combinator-W25-orange)](https://www.ycombinator.com/companies?batch=W25)\n\nMastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.\n\nIt includes everything you need to go from early prototypes to production-ready applications. Mastra integrates with frontend and backend frameworks like React, Next.js, and Node, or you can deploy it anywhere as a standalone server. It's the easiest way to build, tune, and scale reliable AI products.\n\n## Why Mastra?\n\nPurpose-built for TypeScript and designed around established AI patterns, Mastra gives you everything you need to build great AI applications out-of-the-box.\n\nSome highlights include:\n\n- [**Model routing**](https://mastra.ai/models) - Connect to 40+ providers through one standard interface. Use models from OpenAI, Anthropic, Gemini, and more.\n\n- [**Agents**](https://mastra.ai/docs/agents/overview) - Build autonomous agents that use LLMs and tools to solve open-ended tasks. Agents reason about goals, decide which tools to use, and iterate internally until the model emits a final answer or an optional stopping condition is met.\n\n- [**Workflows**](https://mastra.ai/docs/workflows/overview) - When you need explicit control over execution, use Mastra's graph-based workflow engine to orchestrate complex multi-step processes. Mastra workflows use an intuitive syntax for control flow (`.then()`, `.branch()`, `.parallel()`).\n\n- [**Human-in-the-loop**](https://mastra.ai/docs/workflows/suspend-and-resume) - Suspend an agent or workflow and await user input or approval before resuming. Mastra uses [storage](https://mastra.ai/docs/server-db/storage) to remember execution state, so you can pause indefinitely and resume where you left off.\n\n- **Context management** - Give your agents the right context at the right time. Provide [conversation history](https://mastra.ai/docs/memory/conversation-history), [retrieve](https://mastra.ai/docs/rag/overview) data from your sources (APIs, databases, files), and add human-like memory with [Observational Memory](https://mastra.ai/docs/memory/observational-memory) so your agents behave coherently.\n\n- **Integrations** - Bundle agents and workflows into existing React, Next.js, or Node.js apps, or ship them as standalone endpoints. When building UIs, integrate with agentic libraries like Vercel's AI SDK UI and CopilotKit to bring your AI assistant to life on the web.\n\n- [**MCP servers**](https://mastra.ai/docs/tools-mcp/mcp-overview) - Author Model Context Protocol servers, exposing agents, tools, and other structured resources via the MCP interface. These can then be accessed by any system or agent that supports the protocol.\n\n- **Production essentials** - Shipping reliable agents takes ongoing insight, evaluation, and iteration. With built-in [evals](https://mastra.ai/docs/evals/overview) and [observability](https://mastra.ai/docs/observability/overview), Mastra gives you the tools to observe, measure, and refine continuously.\n\n## Get started\n\nThe **recommended** way to get started with Mastra is by running the command below:\n\n```shell\nnpm create mastra@latest\n```\n\nFollow the [Installation guide](https://mastra.ai/guides/getting-started/quickstart) for step-by-step setup with the CLI or a manual install.\n\nIf you're new to AI agents, check out our [templates](https://mastra.ai/docs/getting-started/templates), [course](https://mastra.ai/course), and [YouTube videos](https://youtube.com/@mastra-ai) to start building with Mastra today.\n\n<details>\n\n<summary><strong>Alternative:</strong> Use this pre-built prompt to get started</summary>\n\n```md\nCreate a new Mastra project. Mastra is a framework for AI applications and agents on a modern TypeScript stack. Before running the command, ask these questions one at a time and wait for each answer unless it was already provided:\n\nProject name? (default: \"my-mastra-app\")\nProvider? (required; options: \"openai\", \"anthropic\", \"google\", \"xai\")\n\nIf the provider isn't supported, ask again and list the supported values.\n\nRun: npm create mastra@latest <project-name> -- --llm <provider>\n\nThe command creates a default Mastra project, installs Mastra skills for detected coding assistants, and initializes Git when appropriate.\n\nAfter creation, enter the project directory and start the dev server: npx bgproc start -n <project-name> -w -- npm run dev\n\nOpen Mastra Studio at http://localhost:4111. Studio is the interface for building, testing, and managing agents, workflows, and tools.\n\nAlso mention that the Mastra model router provides access to thousands of models: https://mastra.ai/models\n```\n\n</details>\n\n## Documentation\n\nVisit our [official documentation](https://mastra.ai/docs).\n\n## Build with AI\n\nLearn how to make your agent a Mastra expert by following the [Build with AI guide](https://mastra.ai/reference/build-with-ai).\n\n## Contributing\n\nLooking to contribute? All types of help are appreciated, from coding to testing and feature specification. Read [CONTRIBUTING.md](./CONTRIBUTING.md) for more details on how to get involved.\n\nIf you are a developer and would like to contribute with code, please open an issue to discuss before opening a Pull Request.\n\nInformation about the project setup can be found in the [development documentation](./DEVELOPMENT.md)\n\n## Support\n\nWe have an [open community Discord](https://discord.gg/mastra-ai). Come and say hello and let us know if you have any questions or need any help getting things running.\n\nIt's also super helpful if you leave the project a star here, at the [top of the page](https://github.com/mastra-ai/mastra)\n\n## Licensing\n\nThis repository uses a dual-license model:\n\n- **Apache License 2.0** — The core framework and the vast majority of this codebase is open source under Apache-2.0.\n- **Mastra Enterprise License** — Code in any directory named `ee/` (e.g., `packages/core/src/auth/ee/`) is source-available under the Mastra Enterprise License. These features require a valid enterprise license for production use but can be freely used for development and testing.\n\nSee [LICENSE.md](./LICENSE.md) for the full license mapping and [ee/LICENSE](./ee/LICENSE) for the enterprise license terms.\n\n## Security\n\nWe are committed to maintaining the security of this repo and of Mastra as a whole. If you discover a security finding we ask you to please responsibly disclose this to us at [security@mastra.ai](mailto:security@mastra.ai) and we will get back to you.\n",
-        "recentCommitCount30d": 100,
+        "updatedAt": "2026-03-21T16:05:00Z",
+        "pushedAt": "2026-03-21T16:01:00Z",
+        "license": "MIT",
+        "readme": "## Quickstart\nLangGraph provides workflow orchestration for stateful agents, examples, setup, and production guidance.\n\n## Benchmark\nExamples include latency and reliability measurements for graph execution.\n\n## Release\nStable release notes include migration and compatibility details.",
+        "recentCommitCount30d": 18,
         "latestRelease": {
-          "tagName": "@mastra/core@1.59.0",
-          "name": "August 14, 2026",
-          "htmlUrl": "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.59.0",
-          "publishedAt": "2026-08-16T16:01:50Z",
+          "tagName": "v0.3.5",
+          "name": "v0.3.5",
+          "htmlUrl": "https://github.com/langchain-ai/langgraph/releases/tag/v0.3.5",
+          "publishedAt": "2026-03-14T12:15:00Z",
           "prerelease": false,
           "draft": false,
-          "body": "## Highlights\r\n\r\n### TokenCostControl (renamed from CostGuard) with richer budgeting\r\n`CostGuardProcessor` is now `TokenCostControl` (id: `'token-cost-control'`) with better diagnostics/reliability and new budgeting options like `warnAtPercent`, per-request `maxCost` functions, new cost scopes (`user`/`organization`/`session`), and optional per-model/provider breakdowns.\r\n\r\n### Active run introspection for agents/controllers (core, server, client-js)\r\nNew `Agent.listActiveThreadRuns()` / `AgentController.listActiveThreadRuns()` plus corresponding Server + JS client APIs let you cheaply list in-flight runs from in-memory tracking—ideal for polling activity indicators without creating sessions.\r\n\r\n### Observability fixes: external-parent traces now show up as trace roots in Studio\r\nTracing bridges (OTel + Datadog) now mark whether a span’s parent is external vs Mastra, fixing missing traces when runs start under an external parent so they correctly appear as trace roots in Mastra Studio.\r\n\r\n### Safer/more useful redaction with indexed tokens\r\n`SensitiveDataFilter` gains `redactionStyle: 'indexed'`, producing stable per-value tokens (e.g. `[APIKEY_1]`) instead of collapsing all sensitive values to `[REDACTED]`, improving debugging while preserving secrecy.\r\n\r\n### Memory recall continuation for oversized message parts\r\nThe Observational Memory `recall` tool now supports continuation via `nextCharOffset`, allowing large message parts to be retrieved across multiple calls instead of repeatedly returning the same truncated prefix.\r\n\r\n### Breaking Changes\r\n- Factory: automatic agent runs are now opt-in per Factory (`autoRunEnabled` defaults off on upgrade); rules proposing runs now park them as `proposed` decisions until approved.\r\n- `CostGuardProcessor` renamed to `TokenCostControl` (deprecated aliases remain for now, but will be removed in a future major version).\r\n\r\n## Changelog\r\n\r\n### [@mastra/core@1.59.0](https://github.com/mastra-ai/mastra/blob/@mastra/core@1.59.0/packages/core/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Fixed traces that start under an external parent span not appearing in Mastra Studio. Resumed agent and workflow runs keep their link to the suspended run's trace. ([#20499](https://github.com/mastra-ai/mastra/pull/20499))\r\n\r\n- Renamed CostGuardProcessor to TokenCostControl, improved its reliability and diagnostics, and added new budgeting options. ([#21372](https://github.com/mastra-ai/mastra/pull/21372))\r\n\r\n  **Rename**\r\n\r\n  - `CostGuardProcessor` is now `TokenCostControl` with processor id `'token-cost-control'`. The `CostGuardProcessor` export (and the `CostGuardOptions`, `CostGuardUsage`, `CostGuardBreakdownEntry`, `CostGuardTripwireMetadata`, and `CostGuardViolationDetail` types) remains available as a deprecated alias for the same class and will be removed in a future major version.\r\n\r\n  **Improvements**\r\n\r\n  - Each cost check now issues fewer queries against observability storage.\r\n  - Diagnostics now go through the Mastra logger, and failed cost queries now log diagnostics and allow the request to continue instead of failing silently.\r\n  - With the warn strategy, warnings and the onViolation callback now fire at most once per request instead of on every step.\r\n  - Violation messages no longer contain float precision artifacts (e.g. 0.30000000000000004 now renders as 0.3).\r\n\r\n  **New options**\r\n\r\n  - `warnAtPercent`: soft threshold that warns (without blocking) when cost reaches a percentage of the limit.\r\n  - `maxCost` now also accepts a function of RequestContext for per-tier or per-user budgets.\r\n  - New scopes `user`, `organization`, and `session` track cumulative cost per userId, organizationId, and sessionId (read from the matching RequestContext keys; traces must carry the matching span metadata).\r\n  - `includeBreakdown`: attaches a per-provider/model cost breakdown to violations.\r\n\r\n  ```typescript\r\n  const tokenCostControl = new TokenCostControl({\r\n    maxCost: requestContext => (requestContext?.get('tier') === 'pro' ? 10.0 : 1.0),\r\n    scope: 'user',\r\n    warnAtPercent: 80,\r\n    includeBreakdown: true,\r\n  });\r\n  ```\r\n\r\n- Added `Agent.listActiveThreadRuns()` and `AgentController.listActiveThreadRuns()`. They list every run currently in flight across resources and threads, from the same in-process tracking as `getActiveThreadRunId()`. ([#21353](https://github.com/mastra-ai/mastra/pull/21353))\r\n\r\n  ```ts\r\n  const runs = agent.listActiveThreadRuns();\r\n  // [{ runId: 'run-1', resourceId: 'workspace-a', threadId: 'thread-1' }]\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n- Update provider registry and model documentation with latest models and providers ([`088e41e`](https://github.com/mastra-ai/mastra/commit/088e41e434ed05f2c674b254f1034ec46a57a7be))\r\n\r\n- Fixed session-deleted listeners missing their notification when a session teardown failed while releasing its thread lock. The controller deregisters the session either way, so `onSessionDeleted` now always fires and listeners no longer hold on to a dead session. ([#21358](https://github.com/mastra-ai/mastra/pull/21358))\r\n\r\n- Fixed model routing to use rotated gateway API keys. ([#21364](https://github.com/mastra-ai/mastra/pull/21364))\r\n\r\n- Fixed CoreToolBuilder dropping the `~standard.jsonSchema` adapter when injecting background/resume fields onto Zod v4 tool input schemas. Invalid tool calls now return structured validation errors instead of crashing during JSON Schema conversion. ([#21187](https://github.com/mastra-ai/mastra/pull/21187))\r\n\r\n- Fixed workflow watch events re-publishing stale step state, which could grow to megabytes per event. `workflow-step-start` events spread the step's previous result into their payload, so on loops (including durable agent runs) every start event shipped the previous iteration's `output` next to a byte-identical input `payload`. On Cloudflare Workers this made the request streaming a durable agent run exceed the 128 MB isolate memory limit and fail, even though the run itself kept executing. Watch events now only carry the fields describing the current transition: the input (`payload` or `resumePayload`), timestamps, and `status` on start events, plus the fresh result on `workflow-step-result` and `workflow-step-suspended` events. A step's prior `output`, `error`, and suspend state are no longer re-published on later events. Persisted run snapshots are unchanged. ([#20661](https://github.com/mastra-ai/mastra/pull/20661))\r\n\r\n- Fixed memory growth from completed foreground workspace commands retaining process handles and their output. ([#21438](https://github.com/mastra-ai/mastra/pull/21438))\r\n\r\n- Added an option to limit language servers retained by a workspace. Workspaces remain unlimited when the option is omitted. ([#21186](https://github.com/mastra-ai/mastra/pull/21186))\r\n\r\n  ```ts\r\n  const workspace = new Workspace({\r\n    lsp: { maxOpenClients: 4 },\r\n  });\r\n  ```\r\n\r\n  When using `workspace.lsp.prepareQuery()`, call `release()` on the returned query after closing the file.\r\n\r\n- Deprecated `translationQuality` on `LanguageDetector`. The option previously selected prompt-level \"Quality Level\" guidance, but that behavior was removed when the language detection and translation prompts were streamlined. The option currently has no effect. ([#21199](https://github.com/mastra-ai/mastra/pull/21199))\r\n\r\n  Existing configurations keep working and keep type-checking. The option no longer appears in the processor provider's configuration schema, so configuration UIs stop offering a control that does nothing, and the reference docs now mark it as deprecated.\r\n\r\n  For model-specific speed and quality controls, use `providerOptions` when your provider supports them:\r\n\r\n  ```ts\r\n  new LanguageDetector({\r\n    model,\r\n    targetLanguages: ['English'],\r\n    strategy: 'translate',\r\n    providerOptions: { openai: { reasoningEffort: 'low' } },\r\n  });\r\n  ```\r\n\r\n- Send opaque acting-user subjects with Platform sandbox requests, including Factory creation and reattachment flows. ([#20754](https://github.com/mastra-ai/mastra/pull/20754))\r\n\r\n  ```typescript\r\n  import { PlatformSandbox } from '@mastra/platform-workspace';\r\n\r\n  const sandbox = new PlatformSandbox({\r\n    environmentId: 'env_abc',\r\n    actingUserId: auth.user.id,\r\n  });\r\n  ```\r\n\r\n- Corrected the documentation for `observation.blockAfter` on the docs pages and in the editor TSDoc. Above the threshold, buffered activation may overshoot the retention target instead of activating fewer chunks; it does not force a synchronous observation. The docs also give the correct value ranges: values from 1 up to (but not including) 100 are multipliers of `messageTokens`, and values of 100 or more are absolute token counts. No runtime behavior changed. ([#21215](https://github.com/mastra-ai/mastra/pull/21215))\r\n\r\n- Fixed output processors being skipped when the model provider throws an error. Output processors now run on failed streams with finishReason set to 'error', restoring the behavior from 1.55.0, so custom processors can observe and react to error terminals. Message history still avoids saving a user message when the provider fails before producing any output, so failed turns don't leave orphaned input in the conversation history. Cancelled (aborted) streams continue to skip output processors. Fixes #21292. ([#21370](https://github.com/mastra-ai/mastra/pull/21370))\r\n\r\n- Couple the blocking wait in get_process_output to the run's abortSignal: ProcessHandle.wait() now accepts abortSignal and kills the process on abort (the same convention the process manager applies at spawn time), and the workspace tool forwards context.abortSignal, so aborting a run no longer leaves the tool blocking on a background process. ([#21388](https://github.com/mastra-ai/mastra/pull/21388))\r\n\r\n  ```ts\r\n  const controller = new AbortController();\r\n\r\n  const result = await handle.wait({\r\n    abortSignal: controller.signal,\r\n  });\r\n\r\n  // controller.abort() kills the process and wait() resolves with its exit result\r\n  ```\r\n\r\n- Fixed an issue where multiple agents sharing one storage instance would all respond in a subscribed channel thread instead of just the agent that was mentioned. Each agent now tracks its own channel threads and subscriptions. ([#21288](https://github.com/mastra-ai/mastra/pull/21288))\r\n\r\n- Reduced persisted agent-loop snapshot size by no longer storing duplicated provider request data (measured at 24% of all persisted snapshot bytes in production). Resume behavior and step routing data are unchanged. ([#21390](https://github.com/mastra-ai/mastra/pull/21390))\r\n\r\n- Fixed runEvals TypeScript overloads for Workflow targets so they accept gates and threshold-bearing scorer entries, matching what the runtime already supports. Workflow eval runs can now produce a verdict without type errors. Fixes #21290 ([#21380](https://github.com/mastra-ai/mastra/pull/21380))\r\n\r\n- Fixed file-based agents so setting `workspace` to `undefined` disables the default workspace and its automatic file and shell tools. ([#21378](https://github.com/mastra-ai/mastra/pull/21378))\r\n\r\n- **Fixed** legacy Anthropic history that contains a thinking signature without its original thinking text is sanitized before replay, preventing invalid empty signed thinking blocks from being forwarded. ([#17602](https://github.com/mastra-ai/mastra/pull/17602))\r\n\r\n  Fixes #17457.\r\n\r\n- Fixed schedule errors to preserve actionable HTTP statuses and retained structured agent errors after model fallback exhaustion. ([#21449](https://github.com/mastra-ai/mastra/pull/21449))\r\n\r\n- Fixed gateway authentication so empty header objects fall back to API keys and are not reported as valid credentials. ([#21266](https://github.com/mastra-ai/mastra/pull/21266))\r\n\r\n- Fixed missing TypeScript declarations for the `@mastra/core/test-utils/llm-mock` entrypoint. `MastraLanguageModelV2Mock`, `createMockModel`, and `simulateReadableStream` are now fully typed when imported in consumer projects — no need for a local ambient `declare module` shim. ([#21427](https://github.com/mastra-ai/mastra/pull/21427))\r\n\r\n  ```ts\r\n  import { MastraLanguageModelV2Mock } from '@mastra/core/test-utils/llm-mock';\r\n\r\n  const mockModel = new MastraLanguageModelV2Mock({\r\n    doGenerate: async () => ({\r\n      content: [{ type: 'text', text: 'stubbed response' }],\r\n      finishReason: 'stop',\r\n      usage: { inputTokens: 1, outputTokens: 1, totalTokens: 2 },\r\n      warnings: [],\r\n    }),\r\n  });\r\n\r\n  // Spy arrays are typed as LanguageModelV2CallOptions[]\r\n  mockModel.doGenerateCalls;\r\n  ```\r\n\r\n### [@mastra/blaxel@0.6.1](https://github.com/mastra-ai/mastra/blob/@mastra/blaxel@0.6.1/workspaces/blaxel/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed GCS mounts to accept bucket names containing underscores. ([#21391](https://github.com/mastra-ai/mastra/pull/21391))\r\n\r\n### [@mastra/clickhouse@1.15.1](https://github.com/mastra-ai/mastra/blob/@mastra/clickhouse@1.15.1/stores/clickhouse/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed ClickHouse schema operations to avoid socket warnings from unread responses. ([#21363](https://github.com/mastra-ai/mastra/pull/21363))\r\n\r\n### [@mastra/client-js@1.40.0](https://github.com/mastra-ai/mastra/blob/@mastra/client-js@1.40.0/client-sdks/client-js/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added an active-runs listing for agent controllers. It reports every run currently in flight on the controller from in-memory tracking — a cheap read suited to polling activity indicators, with no session created as a side effect. ([#21353](https://github.com/mastra-ai/mastra/pull/21353))\r\n\r\n  ```ts\r\n  const runs = await client.getAgentController('code').listActiveRuns();\r\n  // [{ runId: 'run-1', resourceId: 'workspace-a', threadId: 'thread-1' }]\r\n  ```\r\n\r\n- Declared `bufferingMessages` and `bufferingObservations` on the `display_state_changed` event, which the server has been sending all along. They say which memory budget a background pass is working on, so a client can show that work on the budget it acts on instead of as one shared label. ([#21366](https://github.com/mastra-ai/mastra/pull/21366))\r\n\r\n  ```ts\r\n  client.agentController(id).streamSession(resourceId, event => {\r\n    if (event.type !== 'display_state_changed') return;\r\n    // A buffered observation is running: the message window is being read into memory.\r\n    // A buffered reflection is running: observations are being consolidated.\r\n    const { bufferingMessages, bufferingObservations } = event.displayState;\r\n  });\r\n  ```\r\n\r\n### [@mastra/code-sdk@1.2.1](https://github.com/mastra-ai/mastra/blob/@mastra/code-sdk@1.2.1/mastracode/sdk/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Send opaque acting-user subjects with Platform sandbox requests, including Factory creation and reattachment flows. ([#20754](https://github.com/mastra-ai/mastra/pull/20754))\r\n\r\n  ```typescript\r\n  import { PlatformSandbox } from '@mastra/platform-workspace';\r\n\r\n  const sandbox = new PlatformSandbox({\r\n    environmentId: 'env_abc',\r\n    actingUserId: auth.user.id,\r\n  });\r\n  ```\r\n\r\n- Fixed memory growth from accumulated language servers by limiting retained workspace clients. ([#21186](https://github.com/mastra-ai/mastra/pull/21186))\r\n\r\n### [@mastra/datadog@1.4.0](https://github.com/mastra-ai/mastra/blob/@mastra/datadog@1.4.0/observability/datadog/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Bridges now report whether a created span's parent is a Mastra span or an external one, so runs that start under an external parent are recorded as trace roots in Mastra Studio. ([#20499](https://github.com/mastra-ai/mastra/pull/20499))\r\n\r\n### [@mastra/daytona@0.7.1](https://github.com/mastra-ai/mastra/blob/@mastra/daytona@0.7.1/workspaces/daytona/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed GCS mounts to accept bucket names containing underscores. ([#21391](https://github.com/mastra-ai/mastra/pull/21391))\r\n\r\n### [@mastra/e2b@0.8.2](https://github.com/mastra-ai/mastra/blob/@mastra/e2b@0.8.2/workspaces/e2b/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed GCS mounts to accept bucket names containing underscores. ([#21391](https://github.com/mastra-ai/mastra/pull/21391))\r\n\r\n### [@mastra/factory@0.7.0](https://github.com/mastra-ai/mastra/blob/@mastra/factory@0.7.0/mastracode/factory/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- **Automatic agent runs are now opt-in per Factory** ([#21326](https://github.com/mastra-ai/mastra/pull/21326))\r\n\r\n  Factory rules no longer start agent runs on their own. When a rule wants to start one — reviewing a new pull request, triaging an issue, planning work — it is parked as a `proposed` decision, and clicking the card starts it. Rules that only mirror external facts are untouched: a merged pull request still moves its card to Done, a closed issue still lands in Done or Canceled.\r\n\r\n  Automatic runs are switched on and off from the top of the Work and Review boards, and they start off — including for Factories that exist today, so rules stop starting runs on upgrade until someone turns them back on.\r\n\r\n  A proposal that nobody wants can be turned down from the card menu or the Rules page, and both actions are recorded in the audit log. Through the API:\r\n\r\n  ```ts\r\n  // Turn automatic runs back on for a Factory.\r\n  await fetch(`/web/factory/projects/${factoryProjectId}`, {\r\n    method: 'PATCH',\r\n    headers: { 'content-type': 'application/json' },\r\n    body: JSON.stringify({ autoRunEnabled: true }),\r\n  });\r\n\r\n  // Release a parked run, or drop it for good.\r\n  await fetch(`/web/factory/projects/${factoryProjectId}/decisions/${decisionId}/approve`, { method: 'POST' });\r\n  await fetch(`/web/factory/projects/${factoryProjectId}/decisions/${decisionId}/dismiss`, { method: 'POST' });\r\n  ```\r\n\r\n  **Why:** opening a pull request used to start an agent that checks out and runs its code, with no way to say no. That consent now belongs to the Factory owner, while the board keeps reflecting what happens in GitHub and Linear either way.\r\n\r\n- Added independent GitHub issue and pull request reconciliation controls for Factory, with legacy reconciliation settings preserved as fallbacks. Added Linear issue reconciliation aliases and automatically move linked work cards to Done or Canceled when upstream issues close. ([#21342](https://github.com/mastra-ai/mastra/pull/21342))\r\n\r\n  For example, run GitHub issue reconciliation every minute while leaving pull-request reconciliation at its existing cadence:\r\n\r\n  ```sh\r\n  MASTRACODE_GITHUB_ISSUE_RECONCILE_INTERVAL_MS=60000\r\n  ```\r\n\r\n- Added Slack channel adapter options to `SlackIntegration` and made concise thinking, typing, and working statuses the default. ([#21381](https://github.com/mastra-ai/mastra/pull/21381))\r\n\r\n  ```ts\r\n  new SlackIntegration({\r\n    signingSecret,\r\n    adapterOptions: {\r\n      streaming: true,\r\n      toolDisplay: 'grouped',\r\n    },\r\n  });\r\n  ```\r\n\r\n#### Patch Changes\r\n\r\n- Cleaned up the agent transcript in the Factory web UI. Tool calls, tool groups and skill activations now share one row shape: a leading glyph for the kind of call, the label, the live command, and a disclosure chevron that only shows on hover. A collapsed group keeps its `5 steps` label and stands for what it holds with one glyph per kind of call, instead of a generic `Find files · Read · Run` list. ([#21321](https://github.com/mastra-ai/mastra/pull/21321))\r\n\r\n  A skill now looks the same whether you activated it or the agent called the `skill` tool itself: both render the instructions as Markdown rather than a raw arguments-and-output dump, and a skill call no longer disappears inside a group of steps.\r\n\r\n  Also fixed two artefacts: a message carrying only internal step markers drew an empty chat bubble, and invisible parts split runs of tool calls into unrelated groups.\r\n\r\n- Factory triage now uses `status:` labels so triaged and approval-pending issues remain visible to the Factory workflow. ([#21318](https://github.com/mastra-ai/mastra/pull/21318))\r\n\r\n- Route GitHub issue investigation through Factory rules and the bundled `factory-triage` skill instead of the legacy triage runner. ([#21413](https://github.com/mastra-ai/mastra/pull/21413))\r\n\r\n- Replaced the raw `buffering`/`observing`/`reflecting` phase label in the Factory status line with two rings, one per memory budget: the message window and the accumulated observations. Each ring shows how full its budget is, and a highlight travels around the ring while memory works through it — background work reads as work instead of leaking an internal phase name. A memory pass that actually holds the turn still says so (\"saving memory\", \"consolidating memory\"). Both rings sit in one control, and clicking it opens both budgets in full: an icon each in the budget's own colour, the figures, and a line saying what reaching the threshold sets off. The control speaks both readings to assistive tech, which a button otherwise hides. ([#21366](https://github.com/mastra-ai/mastra/pull/21366))\r\n\r\n  A background pass now shows on the budget it actually acts on, rather than as one word shared by both.\r\n\r\n- Fixed the Mastra client being recreated on every render of MastraClientProvider, which silently reset per-client caches such as endpoint support and capability probes. ([#21326](https://github.com/mastra-ai/mastra/pull/21326))\r\n\r\n- Fixed the Factory error screen rendering its message as a single column of letters down the page when the factories list fails to load. The notice now shows as a centered card with a readable line length. ([#21322](https://github.com/mastra-ai/mastra/pull/21322))\r\n\r\n- Fixed a failed branch push being reported as a token cleanup error. When the push failed and the token cleanup failed too, the cleanup error replaced the push error, so a push blocked by the network was reported with an unrelated error code. The push error is now reported as-is with its own code, and the cleanup error is added to the end of its message. ([#21407](https://github.com/mastra-ai/mastra/pull/21407))\r\n\r\n- Fixed workspace opening failures reporting a confusing `ENOENT` / `The \"cwd\" option is invalid` error instead of the real cause. When a repository clone failed and left no working directory behind, the token cleanup that always runs afterwards crashed on the missing directory and replaced the original error. Blocked egress, bad credentials, or a missing repository now surface as the actual failure. ([#21338](https://github.com/mastra-ai/mastra/pull/21338))\r\n\r\n  Token cleanup is also stricter where it matters: once the access token has been written into the checkout's git settings, a failed cleanup is now always reported — even when the update itself failed, and even when a failed clone left a partial checkout behind — instead of being silently ignored.\r\n\r\n- Factory Overview now measures the Factory, not the connected repo. ([#21333](https://github.com/mastra-ai/mastra/pull/21333))\r\n\r\n  The integrations sync every issue and pull request of a connected repository onto the board, and those cards vastly outnumber the work the Factory actually runs. The Overview counted all of them, so a busy repo reported hundreds of completions, a lead time measured from the moment the poller filed the card, and an automation rate pinned near 100% because the poller stamps itself on every move it makes.\r\n\r\n  **What changed**\r\n\r\n  - Throughput, lead time, in-flight, work intake and stage coverage now cover only cards a Factory run was started on.\r\n  - **In flight** no longer counts the intake inbox, so it covers the same work as the queue-health chart below it, which already excluded it.\r\n  - **Automation coverage** is now **Agent coverage**: the share of each stage's first passes an agent finished, instead of any move no human made. The near-constant automation ratio card is gone.\r\n  - **Agents running** previously read threads under the wrong resource and always showed 0. The work-item listing now reports which of the cards it returns have a run in flight, so the count and the 'agent running' marker in the queue-health drill-down come from one read and can't disagree.\r\n  - Deleting a card whose agent is running clears its running marker with the card, instead of leaving it counted until the next poll.\r\n\r\n  `GET /web/factory/projects/:id/work-items` gains `runningSessionIds` alongside `workItems`. `FactoryMetrics` drops `transitions` and renames `stageAutomation` to `agentCoverage` (`exits` → `passes`, `automated` → `byAgent`).\r\n\r\n- Fixed MASTRACODE_ENV_DIR being resolved against the UI source directory instead of the working directory, which made the dev server silently load no environment variables when a relative path was given. ([#21326](https://github.com/mastra-ai/mastra/pull/21326))\r\n\r\n- Send opaque acting-user subjects with Platform sandbox requests, including Factory creation and reattachment flows. ([#20754](https://github.com/mastra-ai/mastra/pull/20754))\r\n\r\n  ```typescript\r\n  import { PlatformSandbox } from '@mastra/platform-workspace';\r\n\r\n  const sandbox = new PlatformSandbox({\r\n    environmentId: 'env_abc',\r\n    actingUserId: auth.user.id,\r\n  });\r\n  ```\r\n\r\n- Improved Factory issue investigations with effort and impact labels. ([#21401](https://github.com/mastra-ai/mastra/pull/21401))\r\n\r\n- Chat messages now carry the time they were sent and a button that copies their text. Both sit under the message and only appear when you hover (or keyboard-focus) it, so the transcript stays clean. ([#21350](https://github.com/mastra-ai/mastra/pull/21350))\r\n\r\n- - Trigger a fresh review when a push arrives after a pull request review finishes. ([#21356](https://github.com/mastra-ai/mastra/pull/21356))\r\n  - Cancel an in-flight review when a push or Factory bot re-review request supersedes it.\r\n  - Route platform-polled `synchronize` and `review_requested` events through the same review rules as direct webhooks.\r\n  - Revive subscribed sessions with the persisted owner identified by the subscription session ID.\r\n  - Isolate failed subscription deliveries so stale bindings do not replay events or block newer repository activity.\r\n\r\n  A push or bot request that returns a card from `done` to `review` now runs `factory-rereview`. The skill reconciles the previous review against the pushed commits, checks for newly introduced defects, and reviews the whole pull request again before publishing its verdict. A canceled first-time review still restarts with `factory-review` because it has no completed pass to reconcile.\r\n\r\n- Agent replies now fade in word by word as they stream, instead of snapping whole chunks of text into place. Each word appears whole, so the visible text trails the stream by at most one word. A block that changes shape while it grows — a paragraph turning into a list item — fades again. Text that has finished streaming renders as before. ([#21417](https://github.com/mastra-ai/mastra/pull/21417))\r\n\r\n- Fixed workspace completion sounds and activity indicators to remain synchronized when switching threads. Running indicators no longer require an open workspace session, so they stay live on the board and overview pages too. ([#21353](https://github.com/mastra-ai/mastra/pull/21353))\r\n\r\n- Fixed markdown rendering in the Factory chat. Bullet and numbered lists show their markers again instead of collapsing into blankly indented lines, and task lists, tables and blockquotes now render properly. Fenced code blocks go through the design-system code block, so they get syntax highlighting, a copy button and a readable surface, and inline code is legible on every background. ([#21355](https://github.com/mastra-ai/mastra/pull/21355))\r\n\r\n  The chat now uses the same markdown renderer as the Studio rather than its own copy, so both stay in sync from here on.\r\n\r\n- Added a Skills page under the Agent section in Factory settings that shows the pipeline stage skills (Triage, Planning, Review, Re-review) with their playbook content, backed by a new GET /web/factory/skills endpoint. Also fixed a noisy checkpoint warning when the sandbox does not support snapshots. ([#21369](https://github.com/mastra-ai/mastra/pull/21369))\r\n\r\n- Improved Factory issue triage to label confirmed direct @mastra/core bugs. ([#21179](https://github.com/mastra-ai/mastra/pull/21179))\r\n\r\n- Improved work session preparation feedback across light and dark themes. ([#21382](https://github.com/mastra-ai/mastra/pull/21382))\r\n\r\n### [@mastra/memory@1.26.2](https://github.com/mastra-ai/mastra/blob/@mastra/memory@1.26.2/packages/memory/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Corrected the `observation.blockAfter` and `reflection.blockAfter` configuration documentation shown in editors. Crossing `observation.blockAfter` lets buffered activation overshoot the retention target; it does not force a blocking observation. The documented value ranges now match the runtime: values from 1 up to (but not including) 100 multiply the base threshold, and values of 100 or more are absolute token counts that must be greater than the base threshold. ([#21215](https://github.com/mastra-ai/mastra/pull/21215))\r\n\r\n- Added continuation support to the Observational Memory `recall` tool. When a single message part is larger than the result budget, the result now includes `nextCharOffset` and a note explaining how to fetch the next chunk, so oversized parts can be read across multiple calls instead of returning the same truncated prefix every time. ([#19821](https://github.com/mastra-ai/mastra/pull/19821))\r\n\r\n  ```json\r\n  { \"mode\": \"messages\", \"cursor\": \"<message-id>\", \"partIndex\": 0, \"detail\": \"high\", \"charOffset\": 8000 }\r\n  ```\r\n\r\n  Fixes [#19817](https://github.com/mastra-ai/mastra/issues/19817).\r\n\r\n### [@mastra/nestjs@0.2.16](https://github.com/mastra-ai/mastra/blob/@mastra/nestjs@0.2.16/server-adapters/nestjs/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed NestJS auth passing a Web Request to authenticateToken and authorize hooks so cookie-based providers (such as Better Auth) no longer fail with 401 on valid credentials. ([#21258](https://github.com/mastra-ai/mastra/pull/21258))\r\n\r\n  Resolves https://github.com/mastra-ai/mastra/issues/21253\r\n\r\n### [@mastra/observability@1.17.0](https://github.com/mastra-ai/mastra/blob/@mastra/observability@1.17.0/observability/mastra/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added an `indexed` redaction style to `SensitiveDataFilter`. Instead of collapsing every sensitive value to the same `[REDACTED]` string, each unique value gets a stable token derived from the first matched field name, like `[APIKEY_1]`. ([#21328](https://github.com/mastra-ai/mastra/pull/21328))\r\n\r\n  ```ts\r\n  new SensitiveDataFilter({\r\n    redactionStyle: 'indexed',\r\n  });\r\n  ```\r\n\r\n  See [#21313](https://github.com/mastra-ai/mastra/issues/21313)\r\n\r\n- Fixed traces that start under an external parent span not appearing in Mastra Studio. ([#20499](https://github.com/mastra-ai/mastra/pull/20499))\r\n\r\n### [@mastra/otel-bridge@1.5.0](https://github.com/mastra-ai/mastra/blob/@mastra/otel-bridge@1.5.0/observability/otel-bridge/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Bridges now report whether a created span's parent is a Mastra span or an external one, so runs that start under an external parent are recorded as trace roots in Mastra Studio. ([#20499](https://github.com/mastra-ai/mastra/pull/20499))\r\n\r\n### [@mastra/platform-workspace@1.2.1](https://github.com/mastra-ai/mastra/blob/@mastra/platform-workspace@1.2.1/workspaces/platform-workspace/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Send opaque acting-user subjects with Platform sandbox requests, including Factory creation and reattachment flows. ([#20754](https://github.com/mastra-ai/mastra/pull/20754))\r\n\r\n  ```typescript\r\n  import { PlatformSandbox } from '@mastra/platform-workspace';\r\n\r\n  const sandbox = new PlatformSandbox({\r\n    environmentId: 'env_abc',\r\n    actingUserId: auth.user.id,\r\n  });\r\n  ```\r\n\r\n### [@mastra/playground-ui@49.0.0](https://github.com/mastra-ai/mastra/blob/@mastra/playground-ui@49.0.0/packages/playground-ui/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added animated Sankey layout transitions for column changes. Pass a changing perspective key to opt in: ([#20768](https://github.com/mastra-ai/mastra/pull/20768))\r\n\r\n  ```tsx\r\n  <SankeyChart geometryTransitionKey={columns.map(column => column.id).join(':')} />\r\n  ```\r\n\r\n- Made the task list collapsible and moved its scrolling to the design system scroll area. ([#21337](https://github.com/mastra-ai/mastra/pull/21337))\r\n\r\n  Clicking the task list header now collapses it. The collapsed row keeps the completion count and shows the task currently in progress — or the next pending one — with its status icon and color, so the panel can be minimized without losing track of where the agent is. Long lists scroll inside `ScrollArea` (overlay scrollbar, edge fades) instead of a raw `overflow-y` container.\r\n\r\n  Use `defaultOpen` to render it collapsed:\r\n\r\n  ```tsx\r\n  <TaskList tasks={tasks} defaultOpen={false} />\r\n  ```\r\n\r\n- Streamed markdown now renders block by block. A growing reply re-parses only the block still being written instead of the whole message on every chunk, so a long reply no longer costs more per chunk as it gets longer, and a reply that finishes streaming keeps every element it already put on screen instead of remounting. ([#21473](https://github.com/mastra-ai/mastra/pull/21473))\r\n\r\n  Half-written markdown also renders as what it is about to become: `**bold` reads as bold while its closing marker is still in flight, and a link shows its text until the URL lands, instead of flashing raw syntax on screen.\r\n\r\n  One caveat: splitting a text into blocks is deliberately conservative rather than a second full parse. Anything it cannot decide — an unclosed fence, an indented continuation, a link reference or footnote definition — is kept whole, so those replies render exactly as before and simply do not get the speedup.\r\n\r\n- `CopyButton` takes a `showToast` option, so a button whose icon already flips to a checkmark on success can skip the toast on top of it. ([#21350](https://github.com/mastra-ai/mastra/pull/21350))\r\n\r\n  ```tsx\r\n  <CopyButton content={message} showToast={false} />\r\n  ```\r\n\r\n- Added two status-strip pieces so any app showing a chat runtime — Studio, Factory — reads the same way. `TokenBudget` draws a token budget as a ring with its reading beside it, and `TokenBudgetDetail` is that budget in full for a popover or panel: ([#21366](https://github.com/mastra-ai/mastra/pull/21366))\r\n\r\n  ```tsx\r\n  import { TokenBudget, TokenBudgetDetail } from '@mastra/playground-ui/components/TokenBudget';\r\n\r\n  <div className=\"flex items-center gap-1.5\">\r\n    <TokenBudget label=\"Message window\" tokens={14_900} threshold={30_000} working={isObserving} />\r\n    <TokenBudget label=\"Observations\" tokens={5_200} threshold={8_000} tone=\"memory\" />\r\n  </div>;\r\n\r\n  <TokenBudgetDetail\r\n    description=\"Read into memory once full\"\r\n    icon={<MessageSquare />}\r\n    label=\"Messages\"\r\n    projected={6_000}\r\n    tokens={14_900}\r\n    threshold={30_000}\r\n  />;\r\n  ```\r\n\r\n  The two are separate so the app decides how a budget opens — one trigger per budget, or one control for a whole group. `TokenBudgetDetail` hatches the slice a pending pass will free (`projected`) at the end of its bar, so the number and where it goes read together, and takes an `icon` it tints with the budget's own color so a detail row is recognizable as the ring it came from.\r\n\r\n  `working` runs a highlight around the ring, so a pass happening in the background is visible without a word for it. `tone` picks the budget's identity color (`messages`, `memory`, `warning`), which the memory panel's own progress bars now share instead of repeating the palette classes.\r\n\r\n  Fixed those same memory panel bars drawing a budget as completely full when its threshold was zero.\r\n\r\n- Improved process step indicators with theme-aware status colors and a plain embedded style. ([#21382](https://github.com/mastra-ai/mastra/pull/21382))\r\n\r\n  **Step labels now come from `title`.** `ProcessStepListItem` used to build its heading from the step id and ignore the `title` you passed, so display copy had to live in kebab-case ids. Give the step the label you want on screen:\r\n\r\n  ```tsx\r\n  const step = { id: 'clone-repo', title: 'Cloning repository', status: 'running', description: '', isActive: true };\r\n\r\n  <ProcessStepListItem step={step} isActive position={1} />;\r\n  // before: \"Clone repo\"\r\n  // after:  \"Cloning repository\"\r\n  ```\r\n\r\n  The `stepId` prop is now optional and ignored; drop it from your call sites.\r\n\r\n  **Added a `plain` variant to `ProcessStepListItem`** — for step lists that already sit inside a panel, where the boxed active card is one frame too many:\r\n\r\n  ```tsx\r\n  <ProcessStepListItem step={step} isActive={step.status === 'running'} position={1} variant=\"plain\" />\r\n  ```\r\n\r\n- Added a `streaming` prop to `MarkdownRenderer`. A reply marked as still being written fades each word in as it arrives, instead of snapping whole chunks of text into place. ([#21417](https://github.com/mastra-ai/mastra/pull/21417))\r\n\r\n  ```tsx\r\n  <MarkdownRenderer streaming={part.state === 'streaming'}>{part.text}</MarkdownRenderer>\r\n  ```\r\n\r\n  The fade is CSS on words as they land, so the text already on screen stays put while the reply grows. A word fades in once it is whole rather than one character at a time — the word still being typed is held back until its boundary arrives, so the visible text trails the stream by at most one word. One caveat: when a growing block changes shape, a paragraph turning into a list item as the next character lands, that block fades again.\r\n\r\n  Leave the prop off — the default — for text that is already settled: it renders as plain prose, with no extra markup. The animation is disabled under `prefers-reduced-motion`.\r\n\r\n  Markdown no longer sets `text-wrap: pretty`. It re-broke the last lines of a block to avoid orphans, which reran on every chunk of a streaming reply and jumped words that were already on screen onto another line.\r\n\r\n#### Patch Changes\r\n\r\n- Fixed code blocks flickering between colored and plain text while an agent streams a fenced snippet. The part already highlighted now keeps its colors, and only the characters that just landed show uncolored until highlighting catches up. ([#21415](https://github.com/mastra-ai/mastra/pull/21415))\r\n\r\n- Improved chat responsiveness on long conversations. `MarkdownRenderer` is memoized, so a streaming reply no longer re-parses the markdown of every message already on screen on each chunk it receives — only the message actually being written is re-parsed. ([#21416](https://github.com/mastra-ai/mastra/pull/21416))\r\n\r\n- Flattened the step markers in the `plain` variant of `ProcessStepListItem`. A completed step now shows a green check on its own instead of a filled green disc with a glow behind it, and the pending, running and completed markers finally share the same diameter — the dashed pending circle used to be 28px next to an 11px spinner. ([#21414](https://github.com/mastra-ai/mastra/pull/21414))\r\n\r\n- Reworked the markdown renderer's typography. Headings, lists, blockquotes, tables and horizontal rules now follow one consistent rhythm, list markers and task-list checkboxes render as expected, and long tables scroll instead of stretching their container. ([#21355](https://github.com/mastra-ai/mastra/pull/21355))\r\n\r\n  Fenced code blocks now get syntax highlighting, a copy button and a frame of their own, and yaml, diff, css, html, xml and sql joined the highlighted languages, so fences in those languages are no longer plain text.\r\n\r\n- Fixed the composer edge glow so it follows the cursor only when the cursor is actually there. Focusing the composer used to light the moving arc as well, which meant the coloured segment kept sliding around the border while you typed or moved the mouse anywhere on the page. Focus now just brightens the border, and the arc lights on hover. ([#21320](https://github.com/mastra-ai/mastra/pull/21320))\r\n\r\n### [@mastra/react@1.4.3](https://github.com/mastra-ai/mastra/blob/@mastra/react@1.4.3/client-sdks/react/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed the Mastra client being recreated on every render of MastraClientProvider, which silently reset per-client caches such as endpoint support and capability probes. ([#21326](https://github.com/mastra-ai/mastra/pull/21326))\r\n\r\n- Fixed MASTRACODE_ENV_DIR being resolved against the UI source directory instead of the working directory, which made the dev server silently load no environment variables when a relative path was given. ([#21326](https://github.com/mastra-ai/mastra/pull/21326))\r\n\r\n### [@mastra/schema-compat@1.3.7](https://github.com/mastra-ai/mastra/blob/@mastra/schema-compat@1.3.7/packages/schema-compat/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Optional nested JSON Schema properties with multiple types no longer produce exponentially large OpenAI tool payloads. Payload growth now remains linear as these schemas become more deeply nested. ([#21190](https://github.com/mastra-ai/mastra/pull/21190))\r\n\r\n### [@mastra/server@1.59.0](https://github.com/mastra-ai/mastra/blob/@mastra/server@1.59.0/packages/server/CHANGELOG.md)\r\n#### Minor Changes\r\n\r\n- Added an active-runs listing for agent controllers. It reports every run currently in flight on the controller from in-memory tracking — a cheap read suited to polling activity indicators, with no session created as a side effect. ([#21353](https://github.com/mastra-ai/mastra/pull/21353))\r\n\r\n  ```ts\r\n  const runs = await client.getAgentController('code').listActiveRuns();\r\n  // [{ runId: 'run-1', resourceId: 'workspace-a', threadId: 'thread-1' }]\r\n  ```\r\n\r\n### [@mastra/stagehand@0.3.3](https://github.com/mastra-ai/mastra/blob/@mastra/stagehand@0.3.3/browser/stagehand/CHANGELOG.md)\r\n#### Patch Changes\r\n\r\n- Fixed browser close tracking so agent-initiated Stagehand shutdowns are reported accurately. ([#21452](https://github.com/mastra-ai/mastra/pull/21452))\r\n\r\n### Other updated packages\r\n\r\nThe following packages were updated with dependency changes only:\r\n\r\n- [@mastra/agent-builder@1.1.12](https://github.com/mastra-ai/mastra/blob/@mastra/agent-builder@1.1.12/packages/agent-builder/CHANGELOG.md)\r\n- [@mastra/braintrust@1.3.5](https://github.com/mastra-ai/mastra/blob/@mastra/braintrust@1.3.5/observability/braintrust/CHANGELOG.md)\r\n- [@mastra/deepeval@0.1.2](https://github.com/mastra-ai/mastra/blob/@mastra/deepeval@0.1.2/observability/deepeval/CHANGELOG.md)\r\n- [@mastra/deployer@1.59.0](https://github.com/mastra-ai/mastra/blob/@mastra/deployer@1.59.0/packages/deployer/CHANGELOG.md)\r\n- [@mastra/deployer-cloud@1.59.0](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-cloud@1.59.0/deployers/cloud/CHANGELOG.md)\r\n- [@mastra/deployer-cloudflare@1.2.16](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-cloudflare@1.2.16/deployers/cloudflare/CHANGELOG.md)\r\n- [@mastra/deployer-netlify@1.2.16](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-netlify@1.2.16/deployers/netlify/CHANGELOG.md)\r\n- [@mastra/deployer-sandbox@0.3.1](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-sandbox@0.3.1/deployers/sandbox/CHANGELOG.md)\r\n- [@mastra/deployer-vercel@1.2.16](https://github.com/mastra-ai/mastra/blob/@mastra/deployer-vercel@1.2.16/deployers/vercel/CHANGELOG.md)\r\n- [@mastra/editor@0.13.13](https://github.com/mastra-ai/mastra/blob/@mastra/editor@0.13.13/packages/editor/CHANGELOG.md)\r\n- [@mastra/express@1.5.1](https://github.com/mastra-ai/mastra/blob/@mastra/express@1.5.1/server-adapters/express/CHANGELOG.md)\r\n- [@mastra/fastify@1.5.1](https://github.com/mastra-ai/mastra/blob/@mastra/fastify@1.5.1/server-adapters/fastify/CHANGELOG.md)\r\n- [@mastra/hono@1.6.1](https://github.com/mastra-ai/mastra/blob/@mastra/hono@1.6.1/server-adapters/hono/CHANGELOG.md)\r\n- [@mastra/koa@1.7.1](https://github.com/mastra-ai/mastra/blob/@mastra/koa@1.7.1/server-adapters/koa/CHANGELOG.md)\r\n- [@mastra/laminar@1.3.10](https://github.com/mastra-ai/mastra/blob/@mastra/laminar@1.3.10/observability/laminar/CHANGELOG.md)\r\n- [@mastra/langsmith@1.3.10](https://github.com/mastra-ai/mastra/blob/@mastra/langsmith@1.3.10/observability/langsmith/CHANGELOG.md)\r\n- [@mastra/longmemeval@1.1.16](https://github.com/mastra-ai/mastra/blob/@mastra/longmemeval@1.1.16/explorations/longmemeval/CHANGELOG.md)\r\n- [@mastra/mcp-docs-server@1.2.16](https://github.com/mastra-ai/mastra/blob/@mastra/mcp-docs-server@1.2.16/packages/mcp-docs-server/CHANGELOG.md)\r\n- [@mastra/next@0.2.15](https://github.com/mastra-ai/mastra/blob/@mastra/next@0.2.15/server-adapters/next/CHANGELOG.md)\r\n- [@mastra/opencode@0.1.16](https://github.com/mastra-ai/mastra/blob/@mastra/opencode@0.1.16/integrations/opencode/CHANGELOG.md)\r\n- [@mastra/posthog@1.3.2](https://github.com/mastra-ai/mastra/blob/@mastra/posthog@1.3.2/observability/posthog/CHANGELOG.md)\r\n- [@mastra/sentry@1.2.10](https://github.com/mastra-ai/mastra/blob/@mastra/sentry@1.2.10/observability/sentry/CHANGELOG.md)\r\n- [@mastra/tanstack-start@0.2.15](https://github.com/mastra-ai/mastra/blob/@mastra/tanstack-start@0.2.15/server-adapters/tanstack-start/CHANGELOG.md)\r\n- [@mastra/temporal@0.3.1](https://github.com/mastra-ai/mastra/blob/@mastra/temporal@0.3.1/workflows/temporal/CHANGELOG.md)\r\n- [@mastra/voice-google-gemini-live@0.14.7](https://github.com/mastra-ai/mastra/blob/@mastra/voice-google-gemini-live@0.14.7/voice/google-gemini-live-api/CHANGELOG.md)\r\n- [@mastra/voice-openai-realtime@0.13.7](https://github.com/mastra-ai/mastra/blob/@mastra/voice-openai-realtime@0.13.7/voice/openai-realtime-api/CHANGELOG.md)\r\n- [@mastra/voice-xai-realtime@0.2.7](https://github.com/mastra-ai/mastra/blob/@mastra/voice-xai-realtime@0.2.7/voice/xai-realtime-api/CHANGELOG.md)\r\n\r\n"
+          "body": "Better workflow checkpoints and evaluation improvements."
         },
         "source": [
           {
+            "kind": "watch_repo",
+            "value": "langchain-ai/langgraph"
+          },
+          {
             "kind": "topic",
-            "value": "evals"
-          }
-        ]
-      },
-      "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 75,
-        "performancePotentialScore": 42,
-        "maintenanceRiskScore": 40,
-        "adoptionSignalScore": 93,
-        "finalUpgradeScore": 74,
-        "estimatedPerformanceGainPct": 37,
-        "estimatedCostReductionPct": 9,
-        "hardVetoReasons": [
-          "license_unknown",
-          "breaking_change_high_risk"
-        ],
-        "qualifyingSignals": {
-          "activeLast30Days": true,
-          "hasStableRelease": true,
-          "commercialLicense": false,
-          "documentationComplete": true,
-          "compatibilityAtLeast70": true,
-          "projectedPerformanceGainAtLeast15Pct": true,
-          "projectedCostReductionAtLeast10Pct": false,
-          "avoidsProductionSecurityBoundary": true
-        },
-        "qualifyingSignalCount": 6,
-        "eligibleForValidation": false,
-        "summary": [
-          "Active commits in last 30 days: 100",
-          "Latest release: @mastra/core@1.59.0",
-          "License: NOASSERTION",
-          "Projected performance gain: 37%",
-          "Projected cost reduction: 9%"
-        ]
-      }
-    },
-    {
-      "repo": {
-        "fullName": "n8n-io/n8n",
-        "url": "https://github.com/n8n-io/n8n",
-        "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-        "topics": [
-          "ai",
-          "apis",
-          "automation",
-          "cli",
-          "data-flow",
-          "development",
-          "integration-framework",
-          "integrations",
-          "ipaas",
-          "low-code",
-          "low-code-platform",
-          "mcp",
-          "mcp-client",
-          "mcp-server",
-          "n8n",
-          "no-code",
-          "self-hosted",
-          "typescript",
-          "workflow",
-          "workflow-automation"
-        ],
-        "stars": 201121,
-        "forks": 60213,
-        "defaultBranch": "master",
-        "updatedAt": "2026-08-19T00:36:15Z",
-        "pushedAt": "2026-08-19T00:34:50Z",
-        "license": "NOASSERTION",
-        "readme": "![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)\n\n# n8n – The Platform for AI Agents and Workflow Automation\n\nFair-code platform to build and deploy AI agents and workflows. Combine a visual canvas with custom code, run it self-hosted or in the [cloud](https://app.n8n.cloud/login), and connect to 1500+ integrations. AI automation you can trust with real work, from prototype to production.\n\n![n8n.io - Screenshot](https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-screenshot-readme.png)\n\n## Key Capabilities\n\n- **AI-Native Automation Platform**: Build and operationalize AI workflows and multi-step agents using your own data, models, and tools\n- **Model Flexibility, No Lock-In**: Connect to OpenAI, Anthropic, Google, or open-source models and switch providers without changing your architecture\n- **From Prototype to Production**: Design multi-step AI workflows with logic, tool use, human approvals, and full observability\n- **Code When You Need It**: Combine visual building with JavaScript, Python, and npm packages for advanced AI workflows\n- **Enterprise-Ready AI**: Self-host or deploy securely with role-based access, audit trails, and support for sensitive data\n- **Leverage What Already Exists**: 1500+ integrations and 9,000+ workflow [templates](https://n8n.io/workflows) to connect AI with your existing systems\n\n## Quick Start\n\nTry n8n instantly with [npx](https://docs.n8n.io/hosting/installation/npm/) (requires [Node.js](https://nodejs.org/en/)):\n\n```\nnpx n8n\n```\n\nOr deploy with [Docker](https://docs.n8n.io/hosting/installation/docker/):\n\n```\ndocker volume create n8n_data\ndocker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n\n```\n\nAccess the editor at http://localhost:5678\n\n## Resources\n\n- 📚 [Documentation](https://docs.n8n.io)\n- 🔧 [1500+ Integrations](https://n8n.io/integrations)\n- 💡 [Example Workflows](https://n8n.io/workflows)\n- 🤖 [AI & LangChain Guide](https://docs.n8n.io/advanced-ai/)\n- 👥 [Community Forum](https://community.n8n.io)\n- 📖 [Community Tutorials](https://community.n8n.io/c/tutorials/28)\n\n## Support\n\nNeed help? Our community forum is the place to get support and connect with other users:\n[community.n8n.io](https://community.n8n.io)\n\n## License\n\nn8n is [fair-code](https://faircode.io) distributed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md).\n\n- **Source Available**: Always visible source code\n- **Self-Hostable**: Deploy anywhere\n- **Extensible**: Add your own nodes and functionality\n\n[Enterprise Licenses](mailto:license@n8n.io) available for additional features and support.\n\nAdditional information about the license model can be found in the [docs](https://docs.n8n.io/sustainable-use-license/).\n\n## Contributing\n\nFound a bug 🐛 or have a feature idea ✨? Check our [Contributing Guide](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md) for a setup guide & best practices.\n\n## Join the Team\n\nWant to shape the future of automation? Check out our [job posts](https://n8n.io/careers) and join our team!\n\n## What does n8n mean?\n\n**Short answer:** It means \"nodemation\" and is pronounced as n-eight-n.\n\n**Long answer:** \"I get that question quite often (more often than I expected) so I decided it is probably best to answer it here. While looking for a good name for the project with a free domain I realized very quickly that all the good ones I could think of were already taken. So, in the end, I chose nodemation. 'node-' in the sense that it uses a Node-View and that it uses Node.js and '-mation' for 'automation' which is what the project is supposed to help with. However, I did not like how long the name was and I could not imagine writing something that long every time in the CLI. That is when I then ended up on 'n8n'.\" - **Jan Oberhauser, Founder and CEO, n8n.io**\n",
-        "recentCommitCount30d": 100,
-        "latestRelease": {
-          "tagName": "n8n@2.35.3",
-          "name": "n8n@2.35.3",
-          "htmlUrl": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.35.3",
-          "publishedAt": "2026-08-14T10:21:09Z",
-          "prerelease": false,
-          "draft": false,
-          "body": "## [2.35.3](https://github.com/n8n-io/n8n/compare/n8n@2.35.2...n8n@2.35.3) (2026-08-14)\n\n\n### Bug Fixes\n\n* **core:** Allow `details` field in `continueErrorOutput` mode ([#36228](https://github.com/n8n-io/n8n/issues/36228)) ([e58a680](https://github.com/n8n-io/n8n/commit/e58a68016b881f29b2509f6c9d1ba093edf7b83b))\n* **core:** Bound workflow publication outbox record processing with an abort deadline ([#36286](https://github.com/n8n-io/n8n/issues/36286)) ([69140c0](https://github.com/n8n-io/n8n/commit/69140c0610754ef3a8da66d23fb2f8b00e1d256d))\n* **editor:** Update ready-to-run demo templates to a current OpenAI model ([#36201](https://github.com/n8n-io/n8n/issues/36201)) ([66ba995](https://github.com/n8n-io/n8n/commit/66ba995eed583cf0eb782dcba8e0872bc3b270be))\n* **Google Ads Node:** Migrate from sunset v21 API to v25 ([#36259](https://github.com/n8n-io/n8n/issues/36259)) ([75780ec](https://github.com/n8n-io/n8n/commit/75780ec66f08e5de10327cc2bd445dd4fd4ae56c))\n* **Microsoft Teams Node:** Restore Group.ReadWrite.All OAuth2 scope ([#36186](https://github.com/n8n-io/n8n/issues/36186)) ([0eba018](https://github.com/n8n-io/n8n/commit/0eba018529593012d5d21b2723c3a3accc02bac6))\n\n\n### Features\n\n* **core:** Skip update approval for workflows created in the same Instance AI session ([#36106](https://github.com/n8n-io/n8n/issues/36106)) ([a29cabc](https://github.com/n8n-io/n8n/commit/a29cabc2946fcf758b1cc5c2e143bd3d779c620c))\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/n8n-io/n8n/pull/36288?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n"
-        },
-        "source": [
+            "value": "agent-framework"
+          },
+          {
+            "kind": "topic",
+            "value": "multi-agent"
+          },
           {
             "kind": "topic",
             "value": "workflow-automation"
@@ -292,85 +127,11 @@
         ]
       },
       "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 63,
-        "performancePotentialScore": 14,
-        "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 100,
-        "finalUpgradeScore": 71,
-        "estimatedPerformanceGainPct": 9,
-        "estimatedCostReductionPct": 4,
-        "hardVetoReasons": [
-          "license_unknown",
-          "benchmark_unverifiable",
-          "auth_model_changed",
-          "production_secret_impact"
-        ],
-        "qualifyingSignals": {
-          "activeLast30Days": true,
-          "hasStableRelease": true,
-          "commercialLicense": false,
-          "documentationComplete": true,
-          "compatibilityAtLeast70": false,
-          "projectedPerformanceGainAtLeast15Pct": false,
-          "projectedCostReductionAtLeast10Pct": false,
-          "avoidsProductionSecurityBoundary": true
-        },
-        "qualifyingSignalCount": 4,
-        "eligibleForValidation": false,
-        "summary": [
-          "Active commits in last 30 days: 100",
-          "Latest release: n8n@2.35.3",
-          "License: NOASSERTION",
-          "Projected performance gain: 9%",
-          "Projected cost reduction: 4%"
-        ]
-      }
-    },
-    {
-      "repo": {
-        "fullName": "openai/openai-agents-python",
-        "url": "https://github.com/openai/openai-agents-python",
-        "description": "A lightweight, powerful framework for multi-agent workflows",
-        "topics": [
-          "agents",
-          "ai",
-          "framework",
-          "harness",
-          "llm",
-          "openai",
-          "python"
-        ],
-        "stars": 28752,
-        "forks": 4531,
-        "defaultBranch": "main",
-        "updatedAt": "2026-08-19T00:17:01Z",
-        "pushedAt": "2026-08-18T22:31:44Z",
-        "license": "MIT",
-        "readme": "# OpenAI Agents SDK [![PyPI](https://img.shields.io/pypi/v/openai-agents?label=pypi%20package)](https://pypi.org/project/openai-agents/)\n\nThe OpenAI Agents SDK is a lightweight yet powerful framework for building multi-agent workflows. It is provider-agnostic, supporting the OpenAI Responses and Chat Completions APIs, as well as 100+ other LLMs.\n\n<img src=\"https://cdn.openai.com/API/docs/images/orchestration.png\" alt=\"Image of the Agents Tracing UI\" style=\"max-height: 803px;\">\n\n> [!NOTE]\n> Looking for the JavaScript/TypeScript version? Check out [Agents SDK JS/TS](https://github.com/openai/openai-agents-js).\n\n### Core concepts:\n\n1. [**Agents**](https://openai.github.io/openai-agents-python/agents): LLMs configured with instructions, tools, guardrails, and handoffs\n1. [**Sandbox agents**](https://openai.github.io/openai-agents-python/sandbox_agents): Agents preconfigured to work with a container to perform work over long time horizons.\n1. [**Realtime agents**](https://openai.github.io/openai-agents-python/realtime/quickstart/): Build powerful voice agents with `gpt-realtime-2.1` and full agent features\n1. [**Voice agents**](https://openai.github.io/openai-agents-python/voice/quickstart/): Build voice pipelines that combine speech-to-text, an agent workflow, and text-to-speech\n1. **[Agents as tools](https://openai.github.io/openai-agents-python/tools/#agents-as-tools) / [Handoffs](https://openai.github.io/openai-agents-python/handoffs/)**: Delegating to other agents for specific tasks\n1. [**Tools**](https://openai.github.io/openai-agents-python/tools/): Various Tools let agents take actions (functions, MCP, hosted tools)\n1. [**Guardrails**](https://openai.github.io/openai-agents-python/guardrails/): Configurable safety checks for input and output validation\n1. [**Human in the loop**](https://openai.github.io/openai-agents-python/human_in_the_loop/): Built-in mechanisms for involving humans across agent runs\n1. [**Sessions**](https://openai.github.io/openai-agents-python/sessions/): Automatic conversation history management across agent runs\n1. [**Tracing**](https://openai.github.io/openai-agents-python/tracing/): Built-in tracking of agent runs, allowing you to view, debug and optimize your workflows\n\nExplore the [examples](https://github.com/openai/openai-agents-python/tree/main/examples) directory to see the SDK in action, and read our [documentation](https://openai.github.io/openai-agents-python/) for more details.\n\n## Get started\n\nTo get started, set up your Python environment (Python 3.10 or newer required), and then install OpenAI Agents SDK package.\n\n### venv\n\n```bash\npython -m venv .venv\nsource .venv/bin/activate  # On Windows: .venv\\Scripts\\activate\npip install openai-agents\n```\n\nFor voice support, install with the optional `voice` group: `pip install 'openai-agents[voice]'`. For Redis session support, install with the optional `redis` group: `pip install 'openai-agents[redis]'`.\n\n### uv\n\nIf you're familiar with [uv](https://docs.astral.sh/uv/), installing the package would be even easier:\n\n```bash\nuv init\nuv add openai-agents\n```\n\nFor voice support, install with the optional `voice` group: `uv add 'openai-agents[voice]'`. For Redis session support, install with the optional `redis` group: `uv add 'openai-agents[redis]'`.\n\n## Run your first agents\n\nThe SDK supports four primary ways to run agents. Set the `OPENAI_API_KEY` environment variable before running any of these examples.\n\n### Run a text agent\n\nUse a text `Agent` for workflows that do not need a persistent realtime connection or a sandbox workspace.\n\n```python\nfrom agents import Agent, Runner\n\nagent = Agent(name=\"Assistant\", instructions=\"You are a helpful assistant\")\n\nresult = Runner.run_sync(agent, \"Write a haiku about recursion in programming.\")\nprint(result.final_output)\n\n# Code within the code,\n# Functions calling themselves,\n# Infinite loop's dance.\n```\n\n(_For Jupyter notebook users, see [hello_world_jupyter.ipynb](https://github.com/openai/openai-agents-python/blob/main/examples/basic/hello_world_jupyter.ipynb)_)\n\n### Run a sandbox agent\n\nUse a [`SandboxAgent`](https://openai.github.io/openai-agents-python/sandbox_agents) when the agent needs to inspect files, run commands, apply patches, or preserve workspace state across longer tasks.\n\nThis example uses `UnixLocalSandboxClient`, which is supported on macOS and Linux. On Windows, use `DockerSandboxClient` with the `openai-agents[docker]` extra or a hosted sandbox client instead; see [Sandbox clients](https://openai.github.io/openai-agents-python/sandbox/clients/) for setup details.\n\n```python\nfrom agents import Runner\nfrom agents.run import RunConfig\nfrom agents.sandbox import Manifest, SandboxAgent, SandboxRunConfig\nfrom agents.sandbox.entries import GitRepo\nfrom agents.sandbox.sandboxes import UnixLocalSandboxClient\n\nagent = SandboxAgent(\n    name=\"Workspace Assistant\",\n    instructions=\"Inspect the sandbox workspace before answering.\",\n    default_manifest=Manifest(entries={\"repo\": GitRepo(repo=\"openai/openai-agents-python\", ref=\"main\")}),\n)\n\nresult = Runner.run_sync(\n    agent,\n    \"Inspect the repo README and summarize what this project does.\",\n    run_config=RunConfig(sandbox=SandboxRunConfig(client=UnixLocalSandboxClient())),\n)\nprint(result.final_output)\n```\n\n### Run a realtime agent\n\nUse a [`RealtimeAgent`](https://openai.github.io/openai-agents-python/realtime/quickstart/) for low-latency, server-side voice and multimodal experiences over WebSocket.\n\n```python\nimport asyncio\nfrom agents.realtime import RealtimeAgent, RealtimeRunner\n\nasync def main() -> None:\n    agent = RealtimeAgent(name=\"Assistant\", instructions=\"You are a helpful voice assistant. Keep responses short.\")\n    runner = RealtimeRunner(starting_agent=agent)\n    session = await runner.run()\n\n    async with session:\n        await session.send_message(\"Say hello in one short sentence.\")\n        async for event in session:\n            if event.type == \"audio\":\n                # Forward or play event.audio.data.\n                pass\n            elif event.type == \"history_added\":\n                print(event.item)\n            elif event.type == \"agent_end\":\n                break\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\n### Run a voice agent\n\nUse a [`VoicePipeline`](https://openai.github.io/openai-agents-python/voice/quickstart/) to turn audio into text, run an agent workflow, and stream generated speech.\n\n```python\nimport asyncio\n\nimport numpy as np\n\nfrom agents import Agent\nfrom agents.voice import AudioInput, SingleAgentVoiceWorkflow, VoicePipeline\n\n\nasync def main() -> None:\n    agent = Agent(name=\"Assistant\", instructions=\"You are a helpful voice assistant.\")\n    pipeline = VoicePipeline(workflow=SingleAgentVoiceWorkflow(agent))\n    audio_input = AudioInput(buffer=np.zeros(24000 * 3, dtype=np.int16))\n\n    result = await pipeline.run(audio_input)\n    async for event in result.stream():\n        if event.type == \"voice_stream_event_audio\":\n            # Forward or play event.data.\n            pass\n\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nExplore the [examples](https://github.com/openai/openai-agents-python/tree/main/examples) directory to see the SDK in action, and read our [documentation](https://openai.github.io/openai-agents-python/) for more details.\n\n## Acknowledgements\n\nWe'd like to acknowledge the excellent work of the open-source community, especially:\n\n- [Pydantic](https://docs.pydantic.dev/latest/)\n- [Requests](https://github.com/psf/requests)\n- [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)\n- [Griffe](https://github.com/mkdocstrings/griffe)\n\nThis library has these optional dependencies:\n\n- [websockets](https://github.com/python-websockets/websockets)\n- [SQLAlchemy](https://github.com/sqlalchemy/sqlalchemy)\n- [any-llm](https://github.com/mozilla-ai/any-llm) and [LiteLLM](https://github.com/BerriAI/litellm)\n\nWe also rely on the following tools to manage the project:\n\n- [uv](https://github.com/astral-sh/uv) and [ruff](https://github.com/astral-sh/ruff)\n- [mypy](https://github.com/python/mypy) and [Pyright](https://github.com/microsoft/pyright)\n- [pytest](https://github.com/pytest-dev/pytest) and [Coverage.py](https://github.com/coveragepy/coveragepy)\n- [MkDocs](https://github.com/squidfunk/mkdocs-material)\n\nWe're committed to continuing to build the Agents SDK as an open source framework so others in the community can expand on our approach.\n",
-        "recentCommitCount30d": 100,
-        "latestRelease": {
-          "tagName": "v0.21.1",
-          "name": "v0.21.1",
-          "htmlUrl": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1",
-          "publishedAt": "2026-08-16T22:28:55Z",
-          "prerelease": false,
-          "draft": false,
-          "body": "## What's Changed\r\n\r\n* feat(core): add model call timeouts by @seratch in https://github.com/openai/openai-agents-python/pull/4428\r\n* feat(sandbox): add run-scoped sandbox working directories by @seratch in https://github.com/openai/openai-agents-python/pull/4427\r\n* feat(sandbox): allow Docker sandboxes to disable networking by @koadegno in https://github.com/openai/openai-agents-python/pull/4452\r\n* feat(sandbox): add Modal sandbox resource options by @Filimoa in https://github.com/openai/openai-agents-python/pull/4455\r\n* fix(core): honor exact call approval decisions by @seratch in https://github.com/openai/openai-agents-python/pull/4447\r\n* fix(core): count Responses requests without usage by @seratch in https://github.com/openai/openai-agents-python/pull/4453\r\n* fix(core): close all MultiProvider children after failures by @fszcd in https://github.com/openai/openai-agents-python/pull/4438\r\n* fix(core): reject partially matched stacked anchors by @Coiggahou2002 in https://github.com/openai/openai-agents-python/pull/4431\r\n* fix(chat-completions): Chat Completions reasoning replay by @seratch in https://github.com/openai/openai-agents-python/pull/4432\r\n* fix(realtime): truncate audio at zero elapsed time by @Chirag6722 in https://github.com/openai/openai-agents-python/pull/4457\r\n* fix(realtime): end iteration after clean server close by @seratch in https://github.com/openai/openai-agents-python/pull/4461\r\n* fix(sessions): prevent advanced SQLite structure table conflicts by @seratch in https://github.com/openai/openai-agents-python/pull/4454\r\n* fix(sessions): include compaction usage in run totals by @seratch in https://github.com/openai/openai-agents-python/pull/4446\r\n* fix(sandbox): validate view_image raster content by @seratch in https://github.com/openai/openai-agents-python/pull/4462\r\n* fix(sandbox): keep model paths POSIX-normalized by @sylvesterkaczmarek in https://github.com/openai/openai-agents-python/pull/4416\r\n* fix(sandbox): normalize apply_patch paths as POSIX by @sylvesterkaczmarek in https://github.com/openai/openai-agents-python/pull/4437\r\n\r\n### Documentation & Other Changes\r\n\r\n* docs: updates for v0.21.0 release by @seratch in https://github.com/openai/openai-agents-python/pull/4381\r\n* docs: list Tuning Engines tracing integration by @cerebrixos in https://github.com/openai/openai-agents-python/pull/4440\r\n* fix: update cffi lock for Python 3.14 by @seratch in https://github.com/openai/openai-agents-python/pull/4448\r\n* release: 0.21.1 by @seratch in https://github.com/openai/openai-agents-python/pull/4467\r\n\r\n## New Contributors\r\n* @Coiggahou2002 made their first contribution in https://github.com/openai/openai-agents-python/pull/4431\r\n* @fszcd made their first contribution in https://github.com/openai/openai-agents-python/pull/4438\r\n* @cerebrixos made their first contribution in https://github.com/openai/openai-agents-python/pull/4440\r\n* @Filimoa made their first contribution in https://github.com/openai/openai-agents-python/pull/4455\r\n* @koadegno made their first contribution in https://github.com/openai/openai-agents-python/pull/4452\r\n* @Chirag6722 made their first contribution in https://github.com/openai/openai-agents-python/pull/4457\r\n\r\n**Full Changelog**: https://github.com/openai/openai-agents-python/compare/v0.21.0...v0.21.1"
-        },
-        "source": [
-          {
-            "kind": "watch_repo",
-            "value": "openai/openai-agents-python"
-          }
-        ]
-      },
-      "score": {
-        "maturityScore": 95,
-        "compatibilityScore": 53,
+        "maturityScore": 77,
+        "compatibilityScore": 77,
         "performancePotentialScore": 32,
-        "maintenanceRiskScore": 20,
-        "adoptionSignalScore": 100,
+        "maintenanceRiskScore": 23,
+        "adoptionSignalScore": 91,
         "finalUpgradeScore": 71,
         "estimatedPerformanceGainPct": 27,
         "estimatedCostReductionPct": 4,
@@ -379,8 +140,8 @@
           "activeLast30Days": true,
           "hasStableRelease": true,
           "commercialLicense": true,
-          "documentationComplete": true,
-          "compatibilityAtLeast70": false,
+          "documentationComplete": false,
+          "compatibilityAtLeast70": true,
           "projectedPerformanceGainAtLeast15Pct": true,
           "projectedCostReductionAtLeast10Pct": false,
           "avoidsProductionSecurityBoundary": true
@@ -388,9 +149,237 @@
         "qualifyingSignalCount": 6,
         "eligibleForValidation": false,
         "summary": [
-          "Active commits in last 30 days: 100",
-          "Latest release: v0.21.1",
+          "Active commits in last 30 days: 18",
+          "Latest release: v0.3.5",
           "License: MIT",
+          "Projected performance gain: 27%",
+          "Projected cost reduction: 4%"
+        ]
+      }
+    },
+    {
+      "repo": {
+        "fullName": "browser-use/browser-use",
+        "url": "https://github.com/browser-use/browser-use",
+        "description": "Browser automation agent framework for web tasks.",
+        "topics": [
+          "browser-automation",
+          "agent-framework",
+          "tool-use"
+        ],
+        "stars": 15000,
+        "forks": 1600,
+        "defaultBranch": "main",
+        "updatedAt": "2026-03-23T13:40:00Z",
+        "pushedAt": "2026-03-23T13:39:00Z",
+        "license": "MIT",
+        "readme": "## Quickstart\nInstall and launch browser tasks with reproducible examples. Usage, configuration, troubleshooting, and benchmark sections are included. The docs describe latency improvements and safety boundaries for browser control.\n\n## Benchmark\nThe project shows benchmark comparisons for task completion and browsing latency.\n\n## Roadmap\nRelease notes and examples are updated regularly.",
+        "recentCommitCount30d": 31,
+        "latestRelease": {
+          "tagName": "v1.9.0",
+          "name": "v1.9.0",
+          "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/v1.9.0",
+          "publishedAt": "2026-03-18T09:30:00Z",
+          "prerelease": false,
+          "draft": false,
+          "body": "Adds more efficient browser sessions, lower latency task execution, and benchmark dashboards."
+        },
+        "source": [
+          {
+            "kind": "watch_repo",
+            "value": "browser-use/browser-use"
+          },
+          {
+            "kind": "topic",
+            "value": "browser-automation"
+          },
+          {
+            "kind": "topic",
+            "value": "agent-framework"
+          },
+          {
+            "kind": "topic",
+            "value": "tool-use"
+          }
+        ]
+      },
+      "score": {
+        "maturityScore": 80,
+        "compatibilityScore": 77,
+        "performancePotentialScore": 32,
+        "maintenanceRiskScore": 20,
+        "adoptionSignalScore": 72,
+        "finalUpgradeScore": 69,
+        "estimatedPerformanceGainPct": 27,
+        "estimatedCostReductionPct": 4,
+        "hardVetoReasons": [],
+        "qualifyingSignals": {
+          "activeLast30Days": true,
+          "hasStableRelease": true,
+          "commercialLicense": true,
+          "documentationComplete": false,
+          "compatibilityAtLeast70": true,
+          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedCostReductionAtLeast10Pct": false,
+          "avoidsProductionSecurityBoundary": true
+        },
+        "qualifyingSignalCount": 6,
+        "eligibleForValidation": false,
+        "summary": [
+          "Active commits in last 30 days: 31",
+          "Latest release: v1.9.0",
+          "License: MIT",
+          "Projected performance gain: 27%",
+          "Projected cost reduction: 4%"
+        ]
+      }
+    },
+    {
+      "repo": {
+        "fullName": "microsoft/autogen",
+        "url": "https://github.com/microsoft/autogen",
+        "description": "Multi-agent orchestration framework.",
+        "topics": [
+          "multi-agent",
+          "agent-framework",
+          "automation"
+        ],
+        "stars": 39000,
+        "forks": 5400,
+        "defaultBranch": "main",
+        "updatedAt": "2026-03-22T21:00:00Z",
+        "pushedAt": "2026-03-22T20:58:00Z",
+        "license": "MIT",
+        "readme": "## Quickstart\nAutoGen provides multi-agent orchestration, examples, installation instructions, and migration notes.\n\n## Benchmark\nThe repository publishes evaluation notes and performance discussions.\n\n## Release\nReleases include changelog entries and upgrade instructions.",
+        "recentCommitCount30d": 12,
+        "latestRelease": {
+          "tagName": "v0.6.3",
+          "name": "v0.6.3",
+          "htmlUrl": "https://github.com/microsoft/autogen/releases/tag/v0.6.3",
+          "publishedAt": "2026-03-17T07:45:00Z",
+          "prerelease": false,
+          "draft": false,
+          "body": "Improves automation reliability and benchmark coverage."
+        },
+        "source": [
+          {
+            "kind": "watch_repo",
+            "value": "microsoft/autogen"
+          },
+          {
+            "kind": "topic",
+            "value": "agent-framework"
+          },
+          {
+            "kind": "topic",
+            "value": "multi-agent"
+          }
+        ]
+      },
+      "score": {
+        "maturityScore": 66,
+        "compatibilityScore": 69,
+        "performancePotentialScore": 32,
+        "maintenanceRiskScore": 32,
+        "adoptionSignalScore": 94,
+        "finalUpgradeScore": 66,
+        "estimatedPerformanceGainPct": 27,
+        "estimatedCostReductionPct": 4,
+        "hardVetoReasons": [],
+        "qualifyingSignals": {
+          "activeLast30Days": true,
+          "hasStableRelease": true,
+          "commercialLicense": true,
+          "documentationComplete": false,
+          "compatibilityAtLeast70": false,
+          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedCostReductionAtLeast10Pct": false,
+          "avoidsProductionSecurityBoundary": true
+        },
+        "qualifyingSignalCount": 5,
+        "eligibleForValidation": false,
+        "summary": [
+          "Active commits in last 30 days: 12",
+          "Latest release: v0.6.3",
+          "License: MIT",
+          "Projected performance gain: 27%",
+          "Projected cost reduction: 4%"
+        ]
+      }
+    },
+    {
+      "repo": {
+        "fullName": "openai/openai-agents-python",
+        "url": "https://github.com/openai/openai-agents-python",
+        "description": "Python toolkit for building structured agents with tracing and tool orchestration.",
+        "topics": [
+          "agent-framework",
+          "automation",
+          "tool-use",
+          "workflow-automation"
+        ],
+        "stars": 9200,
+        "forks": 1100,
+        "defaultBranch": "main",
+        "updatedAt": "2026-03-24T18:11:00Z",
+        "pushedAt": "2026-03-24T18:10:00Z",
+        "license": "Apache-2.0",
+        "readme": "## Quickstart\nInstall the package, define tools, and run an agent loop with traces. The project ships setup instructions, benchmark notes, release guidance, and examples for tool use, agent orchestration, and model provider switching.\n\n## Benchmark\nThe examples describe latency, reliability, and tracing impact in reproducible local runs.\n\n## Release\nStable releases are published with changelog notes and migration guidance.",
+        "recentCommitCount30d": 24,
+        "latestRelease": {
+          "tagName": "v0.4.1",
+          "name": "v0.4.1",
+          "htmlUrl": "https://github.com/openai/openai-agents-python/releases/tag/v0.4.1",
+          "publishedAt": "2026-03-20T10:00:00Z",
+          "prerelease": false,
+          "draft": false,
+          "body": "Performance improvements for tracing, benchmark updates, and more stable tool execution."
+        },
+        "source": [
+          {
+            "kind": "watch_repo",
+            "value": "openai/openai-agents-python"
+          },
+          {
+            "kind": "topic",
+            "value": "agent-framework"
+          },
+          {
+            "kind": "topic",
+            "value": "tool-use"
+          },
+          {
+            "kind": "topic",
+            "value": "workflow-automation"
+          }
+        ]
+      },
+      "score": {
+        "maturityScore": 80,
+        "compatibilityScore": 77,
+        "performancePotentialScore": 32,
+        "maintenanceRiskScore": 20,
+        "adoptionSignalScore": 51,
+        "finalUpgradeScore": 65,
+        "estimatedPerformanceGainPct": 27,
+        "estimatedCostReductionPct": 4,
+        "hardVetoReasons": [],
+        "qualifyingSignals": {
+          "activeLast30Days": true,
+          "hasStableRelease": true,
+          "commercialLicense": true,
+          "documentationComplete": false,
+          "compatibilityAtLeast70": true,
+          "projectedPerformanceGainAtLeast15Pct": true,
+          "projectedCostReductionAtLeast10Pct": false,
+          "avoidsProductionSecurityBoundary": true
+        },
+        "qualifyingSignalCount": 6,
+        "eligibleForValidation": false,
+        "summary": [
+          "Active commits in last 30 days: 24",
+          "Latest release: v0.4.1",
+          "License: Apache-2.0",
           "Projected performance gain: 27%",
           "Projected cost reduction: 4%"
         ]
@@ -401,150 +390,30 @@
     {
       "candidate": {
         "repo": {
-          "fullName": "browser-use/browser-use",
-          "url": "https://github.com/browser-use/browser-use",
-          "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
-          "topics": [
-            "ai-agents",
-            "ai-tools",
-            "browser-automation",
-            "browser-use",
-            "llm",
-            "playwright",
-            "python"
-          ],
-          "stars": 109651,
-          "forks": 12050,
-          "defaultBranch": "main",
-          "updatedAt": "2026-08-19T00:34:48Z",
-          "pushedAt": "2026-08-18T17:07:08Z",
-          "license": "MIT",
-          "readme": "<!-- mcp-name: com.browser-use/browser-use -->\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/774a46d5-27a0-490c-b7d0-e65fcbbfa358\">\n  <img alt=\"Shows a black Browser Use Logo in light color mode and a white one in dark color mode.\" src=\"https://github.com/user-attachments/assets/2ccdb752-22fb-41c7-8948-857fc1ad7e24\"  width=\"full\">\n</picture>\n\n<div align=\"center\">\n    <picture>\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\">\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6797d09b-8ac3-4cb9-ba07-b289e080765a\">\n    <img alt=\"The AI browser agent.\" src=\"https://github.com/user-attachments/assets/9955dda9-ede3-4971-8ee0-91cbc3850125\"  width=\"400\">\n    </picture>\n</div>\n\n<div align=\"center\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-downloads\"><img src=\"https://media.browser-use.tools/badges/package\" height=\"48\" alt=\"Browser-Use Package Download Statistics\"></a>\n</div>\n\n---\n\n<div align=\"center\">\n<a href=\"#what-can-browser-use-do\"><img src=\"https://media.browser-use.tools/badges/demos\" alt=\"Demos\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://docs.browser-use.com\"><img src=\"https://media.browser-use.tools/badges/docs\" alt=\"Docs\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browser-use.com/posts\"><img src=\"https://media.browser-use.tools/badges/blog\" alt=\"Blog\"></a>\n<img width=\"16\" height=\"1\" alt=\"\">\n<a href=\"https://browsermerch.com\"><img src=\"https://media.browser-use.tools/badges/merch\" alt=\"Merch\"></a>\n<img width=\"100\" height=\"1\" alt=\"\">\n<a href=\"https://github.com/browser-use/browser-use\"><img src=\"https://media.browser-use.tools/badges/github\" alt=\"Github Stars\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://x.com/intent/user?screen_name=browser_use\"><img src=\"https://media.browser-use.tools/badges/twitter\" alt=\"Twitter\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://link.browser-use.com/discord\"><img src=\"https://media.browser-use.tools/badges/discord\" alt=\"Discord\"></a>\n<img width=\"4\" height=\"1\" alt=\"\">\n<a href=\"https://cloud.browser-use.com?utm_source=github&utm_medium=readme-badge-cloud\"><img src=\"https://media.browser-use.tools/badges/cloud\" height=\"48\" alt=\"Browser-Use Cloud\"></a>\n</div>\n\n</br>\n\n# What can Browser Use do?\n\nBrowser Use lets an AI agent use a web browser the same way humans do — it opens pages, clicks buttons, types, and fills in forms. You describe the task, and it completes it. For example, you can have it:\n\n\n### 📋 Fill Forms\n#### Task: \"Fill in this job application with my resume and information.\"\n\n![Job Application Demo](https://github.com/user-attachments/assets/57611d8e-0474-4de6-84b7-37a0c0cd27e7)\n\n[Example code ↗](https://github.com/browser-use/browser-use/blob/main/examples/use-cases/apply_to_job.py)\n\n\n### 🍎 Extract data\n#### Task: \"Extract structured data about my followers and export it as a CSV.\"\n\nhttps://github.com/user-attachments/assets/485fd3ec-61b9-4afc-9e86-ee9b85acb592\n\n[Browser Use Cloud Docs ↗](https://docs.browser-use.com/cloud/quickstart)\n\n\n<br/>\n\n# Quickstart\n\nIf you want to use Browser Use in your agent (Claude Code, Codex, Cursor, Hermes, OpenClaw, etc.), paste this prompt, and it sets everything up itself:\n\n```text\nInstall or upgrade browser-use to the latest stable version with uv using Python 3.12, run `browser-use skill install` to register the skill, and connect it to my browser. If setup or connection fails, follow https://github.com/browser-use/browser-harness/blob/main/install.md.\n```\n\nThen tell your agent what you want done.\n\n<br/>\n\n# Python library: the easiest way to automate the web\n\nWant to automate the web at scale, from your own code, and with any LLM? Use the Python library:\n\n**1. Install Browser Use (Python >= 3.11):**\n\n```bash\nuv add browser-use\n# or: pip install browser-use\n```\n\n**2. Add your LLM API key to `.env`**. Get one from [Browser Use Cloud](https://cloud.browser-use.com/new-api-key?utm_source=github&utm_medium=readme-quickstart-api-key), or bring your own provider key:\n\n```bash\n# .env\nBROWSER_USE_API_KEY=your-key\n# GOOGLE_API_KEY=your-key\n# ANTHROPIC_API_KEY=your-key\n```\n\n**3. Run your first agent:**\n\n```python\nimport asyncio\n\nfrom browser_use import Agent, ChatBrowserUse\n\nasync def main():\n    agent = Agent(\n        task=\"Find the number of stars of the browser-use repo\",\n        llm=ChatBrowserUse(model='openai/gpt-5.5'),\n        # llm=ChatBrowserUse(model='bu-2-0-mini-preview'),  # Browser Use's optimized model\n        # llm=ChatOpenAI(model='gpt-5.5'),\n        # llm=ChatAnthropic(model='claude-opus-4-8'),  # Sonnet also works well\n    )\n    history = await agent.run()\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nCheck out the [library docs](https://docs.browser-use.com/open-source/introduction) and the [cloud docs](https://docs.cloud.browser-use.com?utm_source=github&utm_medium=readme-cloud-docs) for more!\n\n<br/>\n\n# Open Source vs Cloud\n\n<picture>\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"static/accuracy_by_model_light.png\">\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/accuracy_by_model_dark.png\">\n  <img alt=\"BU Bench V1 - LLM Success Rates\" src=\"static/accuracy_by_model_light.png\" width=\"100%\">\n</picture>\n\nWe benchmark Browser Use across 100 real-world browser tasks. Full benchmark is open source: **[browser-use/benchmark](https://github.com/browser-use/benchmark)**.\n\nBrowser Use is also **#1 on the [Odysseys leaderboard](https://odysseysbench.com/leaderboard)** with an 87.4% average, ahead of computer-use agents from OpenAI, Anthropic, Google, and Microsoft. Odysseys measures the agent's performance on 200 long-horizon web tasks.\n\n**Use the Open-Source Agent**\n- Free, and runs on your own machine\n- Deep code-level integration and control: pick your LLM, customize the agent's behavior\n- We recommend pairing it with our [cloud browsers](https://docs.browser-use.com/open-source/customize/browser/remote) for leading stealth, proxy rotation, and scaling\n\n**Use the [Fully-Hosted Cloud Agent](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-hosted-agent) (recommended)**\n- Much more powerful agent for complex tasks (see plot above)\n- Easiest way to start and scale\n- Best stealth with proxy rotation and captcha solving\n- 1000+ integrations (Gmail, Slack, Notion, and more)\n- Persistent filesystem and memory\n\n```sh\ncurl -X POST https://api.browser-use.com/api/v4/runs \\\n  -H \"X-Browser-Use-API-Key: $BROWSER_USE_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"task\": \"Your task\"}'\n```\n\n<br/>\n\n## Integrations, hosting, custom tools, MCP, and more on our [Docs ↗](https://docs.browser-use.com)\n\n<br/>\n\n# FAQ\n\n<details>\n<summary><b>Should I use the CLI vs. the Python library?</b></summary>\n\n**Use the CLI** if you already have an agent (Claude Code, Codex, Cursor, Hermes, OpenClaw, etc.) that you want to complete browser tasks for you. The agent installs the skill once (see [Quickstart](#quickstart)) and can then control the browser. Examples:\n- \"Upload this video to YouTube\"\n- \"Compare these three laptops and give me a table with prices\"\n- \"Fill in this job application with my resume\"\n\n**Use the Python library** when you are building software that automates the web. Examples:\n- Run many tasks on a schedule or in parallel (scraping, monitoring, QA)\n- Embed a browser agent into your own product\n- Custom tools, custom system prompts, structured output, fine-grained browser control\n\nRule of thumb: one-off tasks through an agent → CLI. Repeatable automation in code → Python library.\n</details>\n\n<details>\n<summary><b>What's the best model to use?</b></summary>\n\nWe optimized **ChatBrowserUse()** specifically for browser automation tasks. On avg it completes tasks 3-5x faster than other models with SOTA accuracy.\n\nFor pricing and other LLM providers, see our [supported models documentation](https://docs.browser-use.com/supported-models).\n</details>\n\n<details>\n<summary><b>Can I use Claude / GPT / Gemini through ChatBrowserUse?</b></summary>\n\nYes. `ChatBrowserUse` accepts provider-prefixed model ids, so a single `BROWSER_USE_API_KEY` reaches all of them — no separate OpenAI/Anthropic/Google keys required:\n\n```python\nfrom browser_use import Agent, ChatBrowserUse\n\nllm = ChatBrowserUse(model='anthropic/claude-sonnet-4-6')  # or 'openai/gpt-5.5', 'google/gemini-3-pro'\nagent = Agent(task='...', llm=llm)\n```\n\nFor the best speed and cost we still recommend the default `bu-*` models.\n</details>\n\n<details>\n<summary><b>Should I use the Browser Use system prompt with the open-source preview model?</b></summary>\n\nYes. If you use `ChatBrowserUse(model='browser-use/bu-30b-a3b-preview')` with a normal `Agent(...)`, Browser Use still sends its default agent system prompt for you.\n\nYou do **not** need to add a separate custom \"Browser Use system message\" just because you switched to the open-source preview model. Only use `extend_system_message` or `override_system_message` when you intentionally want to customize the default behavior for your task.\n\nIf you want the best default speed/accuracy, we still recommend the newer hosted `bu-*` models. If you want the open-source preview model, the setup stays the same apart from the `model=` value.\n</details>\n\n<details>\n<summary><b>Can I use custom tools with the agent?</b></summary>\n\nYes! You can add custom tools to extend the agent's capabilities:\n\n```python\nfrom browser_use import Tools\n\ntools = Tools()\n\n@tools.action(description='Description of what this tool does.')\ndef custom_tool(param: str) -> str:\n    return f\"Result: {param}\"\n\nagent = Agent(\n    task=\"Your task\",\n    llm=llm,\n    browser=browser,\n    tools=tools,\n)\n```\n\n</details>\n\n<details>\n<summary><b>Can I use this for free?</b></summary>\n\nYes! Browser-Use is open source and free to use. You only need to choose an LLM provider (like OpenAI, Google, ChatBrowserUse, or run local models with Ollama).\n</details>\n\n<details>\n<summary><b>Terms of Service</b></summary>\n\nThis open-source library is licensed under the MIT License. For Browser Use services & data policy, see our [Terms of Service](https://browser-use.com/legal/terms-of-service) and [Privacy Policy](https://browser-use.com/privacy/).\n</details>\n\n<details>\n<summary><b>How do I handle authentication?</b></summary>\n\nCheck out our authentication examples:\n- [Using real browser profiles](https://github.com/browser-use/browser-use/blob/main/examples/browser/real_browser.py) - Reuse your existing Chrome profile with saved logins\n- If you want to use temporary accounts with inbox, choose AgentMail\n- To sync your auth profile with a remote browser, install `profile-use` for your platform from the [official releases](https://github.com/browser-use/profile-use-releases/releases/latest), then follow the [profile sync guide](https://github.com/browser-use/browser-harness/blob/main/interaction-skills/profile-sync.md).\n\nThese examples show how to maintain sessions and handle authentication seamlessly.\n</details>\n\n<details>\n<summary><b>How do I solve CAPTCHAs?</b></summary>\n\nFor CAPTCHA handling, you need better browser fingerprinting and proxies. Use [Browser Use Cloud](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-captcha) which provides stealth browsers designed to avoid detection and CAPTCHA challenges.\n</details>\n\n<details>\n<summary><b>How do I go into production?</b></summary>\n\nChrome can consume a lot of memory, and running many agents in parallel can be tricky to manage.\n\nFor production use cases, use our [Browser Use Cloud API](https://cloud.browser-use.com?utm_source=github&utm_medium=readme-faq-production) which handles:\n- Scalable browser infrastructure\n- Memory management\n- Proxy rotation\n- Stealth browser fingerprinting\n- High-performance parallel execution\n</details>\n\n<br/>\n\n## Citation\n\nIf you use Browser Use in your research or project, please cite:\n\n```bibtex\n@software{browser_use2024,\n  author = {Müller, Magnus and Žunič, Gregor},\n  title = {Browser Use: Enable AI to control your browser},\n  year = {2024},\n  publisher = {GitHub},\n  url = {https://github.com/browser-use/browser-use}\n}\n```\n\n<br/>\n\n<div align=\"center\">\n\n**Tell your computer what to do, and it gets it done.**\n\n<img src=\"https://github.com/user-attachments/assets/06fa3078-8461-4560-b434-445510c1766f\" width=\"400\"/>\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/intent/user?screen_name=mamagnus00)\n&emsp;&emsp;&emsp;\n[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/intent/user?screen_name=gregpr07)\n\n</div>\n\n<div align=\"center\"> Made with ❤️ in Zurich and San Francisco </div>\n",
-          "recentCommitCount30d": 100,
-          "latestRelease": {
-            "tagName": "0.13.8",
-            "name": "0.13.8",
-            "htmlUrl": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
-            "publishedAt": "2026-08-16T18:48:54Z",
-            "prerelease": false,
-            "draft": false,
-            "body": "## What's Changed\n* Update Cerebras model IDs and default by @ryanl-cerebras in https://github.com/browser-use/browser-use/pull/5323\n* Recover Anthropic tool arguments when the model serializes its call as text by @ElayGelbart in https://github.com/browser-use/browser-use/pull/5330\n* docs: replace broken profile sync link by @Hardik180704 in https://github.com/browser-use/browser-use/pull/5332\n* fix(agent): guard last_action() against empty action list by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5103\n* fix(agent): guard _inject_budget_warning against ZeroDivisionError by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5107\n* fix(browser): return Path from validate_user_data_dir when creating temp dir by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5114\n* Use UTF-8 for agent file writes by @Ghraven in https://github.com/browser-use/browser-use/pull/5309\n* fix(dom): clamp final chunk char_end to len(content) for trailing newline by @Diwak4r in https://github.com/browser-use/browser-use/pull/5175\n* fix(registry): do not expose domain-restricted actions on an empty URL by @abhay-codes07 in https://github.com/browser-use/browser-use/pull/5204\n* fix(agent): give each MessageManager its own state (mutable default arg) by @abhay-codes07 in https://github.com/browser-use/browser-use/pull/5205\n* fix(dom): fix stackingContexts access type mismatch by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5104\n* fix: export documented LLM chat models by @Karunasagar12 in https://github.com/browser-use/browser-use/pull/5182\n* Fix variable shadowing in Element.click() error handling by @Gaurav0807 in https://github.com/browser-use/browser-use/pull/5089\n* fix(downloads): fire complete callbacks for remote-browser downloads by @sergioperezcheco in https://github.com/browser-use/browser-use/pull/5264\n* fix(llm): read structured output from tool calls for Groq tool-calling models by @VenkateswarluNagineni in https://github.com/browser-use/browser-use/pull/5240\n* Fix ChatAnthropicBedrock.ainvoke() IndexError on an empty response.content list by @chuenchen309 in https://github.com/browser-use/browser-use/pull/5233\n* fix(async): avoid re-raising task callback errors by @GautamSharma99 in https://github.com/browser-use/browser-use/pull/5285\n* fix(browser): apply storage_state cookies when passed as an in-memory dict by @ayaangazali in https://github.com/browser-use/browser-use/pull/5262\n* fix(tools): restore SearchGoogleAction back-compat alias by @LHMQ878 in https://github.com/browser-use/browser-use/pull/5318\n* Fix Mouse.scroll() silently redirecting an explicit x=0/y=0 to viewport center by @chuenchen309 in https://github.com/browser-use/browser-use/pull/5231\n* Fix DOMTreeSerializer leaking paint-order-occluded text to the LLM by @chuenchen309 in https://github.com/browser-use/browser-use/pull/5225\n* fix(mcp): mark read-only MCP tools with readOnlyHint annotations by @ayaangazali in https://github.com/browser-use/browser-use/pull/5246\n* fix(mcp): surface CallToolResult.isError as a failed ActionResult by @chuenchen309 in https://github.com/browser-use/browser-use/pull/5235\n* fix(agent): close PIL images after GIF creation to prevent resource leak by @itxaiohanglover in https://github.com/browser-use/browser-use/pull/5105\n* fix: include exception details in coordinate click and add missing error logs by @shotsan in https://github.com/browser-use/browser-use/pull/5379\n* docs: refresh the Open Source vs Cloud plot with Cloud v4 by @Alezander9 in https://github.com/browser-use/browser-use/pull/5388\n* docs: show the hosted agent API call in the README by @Alezander9 in https://github.com/browser-use/browser-use/pull/5394\n* fix(utils): prevent redact_sensitive_string cascade corruption by @santhreal in https://github.com/browser-use/browser-use/pull/5211\n* Bump aiohttp and pypdf security pins by @sauravpanda in https://github.com/browser-use/browser-use/pull/5326\n* fix(agent): honor zero message compaction threshold by @wesleyzhangwq in https://github.com/browser-use/browser-use/pull/5401\n* fix(mcp): update deprecated Bedrock Claude model identifier by @scemii in https://github.com/browser-use/browser-use/pull/5448\n* docs: trim README demo videos by @MagMueller in https://github.com/browser-use/browser-use/pull/5463\n* docs: restore social video preview by @MagMueller in https://github.com/browser-use/browser-use/pull/5464\n* feat(llm): default ChatBrowserUse to bu-2-0-mini-preview by @sauravpanda in https://github.com/browser-use/browser-use/pull/5465\n* fix(deps): unblock OpenHands with rich 14.3.3 by @MagMueller in https://github.com/browser-use/browser-use/pull/5477\n* feat: add first-party OpenClaw skill support by @MagMueller in https://github.com/browser-use/browser-use/pull/5476\n* Release 0.13.8 with Browser Harness 0.1.9 by @gregpr07 in https://github.com/browser-use/browser-use/pull/5481\n\n## New Contributors\n* @ryanl-cerebras made their first contribution in https://github.com/browser-use/browser-use/pull/5323\n* @ElayGelbart made their first contribution in https://github.com/browser-use/browser-use/pull/5330\n* @Hardik180704 made their first contribution in https://github.com/browser-use/browser-use/pull/5332\n* @itxaiohanglover made their first contribution in https://github.com/browser-use/browser-use/pull/5103\n* @Ghraven made their first contribution in https://github.com/browser-use/browser-use/pull/5309\n* @Diwak4r made their first contribution in https://github.com/browser-use/browser-use/pull/5175\n* @abhay-codes07 made their first contribution in https://github.com/browser-use/browser-use/pull/5204\n* @Karunasagar12 made their first contribution in https://github.com/browser-use/browser-use/pull/5182\n* @Gaurav0807 made their first contribution in https://github.com/browser-use/browser-use/pull/5089\n* @sergioperezcheco made their first contribution in https://github.com/browser-use/browser-use/pull/5264\n* @VenkateswarluNagineni made their first contribution in https://github.com/browser-use/browser-use/pull/5240\n* @chuenchen309 made their first contribution in https://github.com/browser-use/browser-use/pull/5233\n* @GautamSharma99 made their first contribution in https://github.com/browser-use/browser-use/pull/5285\n* @ayaangazali made their first contribution in https://github.com/browser-use/browser-use/pull/5262\n* @LHMQ878 made their first contribution in https://github.com/browser-use/browser-use/pull/5318\n* @shotsan made their first contribution in https://github.com/browser-use/browser-use/pull/5379\n* @santhreal made their first contribution in https://github.com/browser-use/browser-use/pull/5211\n* @wesleyzhangwq made their first contribution in https://github.com/browser-use/browser-use/pull/5401\n* @scemii made their first contribution in https://github.com/browser-use/browser-use/pull/5448\n\n**Full Changelog**: https://github.com/browser-use/browser-use/compare/0.13.7...0.13.8"
-          },
-          "source": [
-            {
-              "kind": "watch_repo",
-              "value": "browser-use/browser-use"
-            },
-            {
-              "kind": "topic",
-              "value": "browser-use"
-            }
-          ]
-        },
-        "score": {
-          "maturityScore": 95,
-          "compatibilityScore": 85,
-          "performancePotentialScore": 32,
-          "maintenanceRiskScore": 20,
-          "adoptionSignalScore": 100,
-          "finalUpgradeScore": 80,
-          "estimatedPerformanceGainPct": 27,
-          "estimatedCostReductionPct": 4,
-          "hardVetoReasons": [],
-          "qualifyingSignals": {
-            "activeLast30Days": true,
-            "hasStableRelease": true,
-            "commercialLicense": true,
-            "documentationComplete": true,
-            "compatibilityAtLeast70": true,
-            "projectedPerformanceGainAtLeast15Pct": true,
-            "projectedCostReductionAtLeast10Pct": false,
-            "avoidsProductionSecurityBoundary": true
-          },
-          "qualifyingSignalCount": 7,
-          "eligibleForValidation": true,
-          "summary": [
-            "Active commits in last 30 days: 100",
-            "Latest release: 0.13.8",
-            "License: MIT",
-            "Projected performance gain: 27%",
-            "Projected cost reduction: 4%"
-          ]
-        }
-      },
-      "plan": {
-        "target": "browser-use/browser-use",
-        "changeType": "tool-plugin-integration",
-        "riskLevel": "medium",
-        "filesToChange": [
-          ".openclaw/extensions/github-architecture-radar/index.ts",
-          ".github/workflows/ai-radar-daily.yml"
-        ],
-        "summary": "Evaluate browser-use/browser-use as a tool-plugin-integration candidate on an isolated branch with staging-only validation.",
-        "rollbackPlan": [
-          "Reset the experiment branch to the last successful staging commit.",
-          "Restore the candidate version recorded in state/last_successful_version.json.",
-          "Re-run smoke, regression, and rollback simulation before reopening the PR."
-        ],
-        "validationChecklist": [
-          "Smoke test passes on the isolated branch.",
-          "Integration test passes against the staging profile.",
-          "Regression suite shows no critical diff.",
-          "Benchmark smoke confirms the projected improvement is directionally true.",
-          "Rollback simulation restores the last successful staging version."
-        ],
-        "humanEscalations": [
-          "Escalate if production deployment is requested.",
-          "Escalate if the release notes imply a breaking API migration.",
-          "Escalate if license status is unknown or incompatible.",
-          "Escalate if benchmark outcomes are ambiguous."
-        ]
-      }
-    },
-    {
-      "candidate": {
-        "repo": {
           "fullName": "vllm-project/vllm",
           "url": "https://github.com/vllm-project/vllm",
-          "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+          "description": "High-throughput and memory-efficient inference engine for LLM serving.",
           "topics": [
-            "amd",
-            "blackwell",
-            "cuda",
-            "deepseek",
-            "deepseek-v3",
-            "gpt",
-            "gpt-oss",
-            "inference",
-            "kimi",
-            "llama",
-            "llm",
-            "llm-serving",
+            "llm-inference",
             "model-serving",
-            "moe",
-            "openai",
-            "pytorch",
-            "qwen",
-            "qwen3",
-            "tpu",
-            "transformer"
+            "benchmark"
           ],
-          "stars": 89376,
-          "forks": 20874,
+          "stars": 42000,
+          "forks": 6200,
           "defaultBranch": "main",
-          "updatedAt": "2026-08-19T00:34:46Z",
-          "pushedAt": "2026-08-19T00:03:02Z",
+          "updatedAt": "2026-03-24T08:20:00Z",
+          "pushedAt": "2026-03-24T08:19:00Z",
           "license": "Apache-2.0",
-          "readme": "<!-- markdownlint-disable MD001 MD041 -->\n<p align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-dark.png\">\n    <img alt=\"vLLM\" src=\"https://raw.githubusercontent.com/vllm-project/vllm/main/docs/assets/logos/vllm-logo-text-light.png\" width=55%>\n  </picture>\n</p>\n\n<h3 align=\"center\">\nEasy, fast, and cheap LLM serving for everyone\n</h3>\n\n<p align=\"center\">\n| <a href=\"https://docs.vllm.ai\"><b>Documentation</b></a> | <a href=\"https://blog.vllm.ai/\"><b>Blog</b></a> | <a href=\"https://arxiv.org/abs/2309.06180\"><b>Paper</b></a> | <a href=\"https://x.com/vllm_project\"><b>Twitter/X</b></a> | <a href=\"https://discuss.vllm.ai\"><b>User Forum</b></a> | <a href=\"https://slack.vllm.ai\"><b>Developer Slack</b></a> |\n</p>\n\n🔥 We have built a vLLM website to help you get started with vLLM. Please visit [vllm.ai](https://vllm.ai) to learn more.\nFor events, please visit [vllm.ai/events](https://vllm.ai/events) to join us.\n\n---\n\n## About\n\nvLLM is a fast and easy-to-use library for LLM inference and serving.\n\nOriginally developed in the [Sky Computing Lab](https://sky.cs.berkeley.edu) at UC Berkeley, vLLM has grown into one of the most active open-source AI projects built and maintained by a diverse community of many dozens of academic institutions and companies from over 2000 contributors.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)\n- Continuous batching of incoming requests, chunked prefill, prefix caching\n- Fast and flexible model execution with piecewise and full CUDA/HIP graphs\n- Quantization: FP8, MXFP8/MXFP4, NVFP4, INT8, INT4, GPTQ/AWQ, GGUF, compressed-tensors, ModelOpt, TorchAO, and [more](https://docs.vllm.ai/en/latest/features/quantization/index.html)\n- Optimized attention kernels including FlashAttention, FlashInfer, TRTLLM-GEN, FlashMLA, and Triton\n- Optimized GEMM/MoE kernels for various precisions using CUTLASS, TRTLLM-GEN, CuTeDSL\n- Speculative decoding including n-gram, suffix, EAGLE, DFlash\n- Automatic kernel generation and graph-level transformations using torch.compile\n- Disaggregated prefill, decode, and encode\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor, pipeline, data, expert, and context parallelism for distributed inference\n- Streaming outputs\n- Generation of structured outputs using xgrammar or guidance\n- Tool calling and reasoning parsers\n- OpenAI-compatible API server, plus Anthropic Messages API and gRPC support\n- Efficient multi-LoRA support for dense and MoE layers\n- Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs. Additionally, diverse hardware plugins such as Google TPUs, Intel Gaudi, IBM Spyre, Huawei Ascend, Rebellions NPU, Apple Silicon, MetaX GPU, and more.\n\nvLLM seamlessly supports 200+ model architectures on Hugging Face, including:\n\n- Decoder-only LLMs (e.g., Llama, Qwen, Gemma)\n- Mixture-of-Expert LLMs (e.g., Mixtral, DeepSeek-V3, Qwen-MoE, GPT-OSS)\n- Hybrid attention and state-space models (e.g., Mamba, Qwen3.5)\n- Multi-modal models (e.g., LLaVA, Qwen-VL, Pixtral)\n- Embedding and retrieval models (e.g., E5-Mistral, GTE, ColBERT)\n- Reward and classification models (e.g., Qwen-Math)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n\n## Getting Started\n\nInstall vLLM with [`uv`](https://docs.astral.sh/uv/) (recommended) or `pip`:\n\n```bash\nuv pip install vllm\n```\n\nOr [build from source](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/index.html#build-wheel-from-source) for development.\n\nVisit our [documentation](https://docs.vllm.ai/en/latest/) to learn more.\n\n- [Installation](https://docs.vllm.ai/en/latest/getting_started/installation.html)\n- [Quickstart](https://docs.vllm.ai/en/latest/getting_started/quickstart.html)\n- [List of Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html)\n\n## Contributing\n\nWe welcome and value any contributions and collaborations.\nPlease check out [Contributing to vLLM](https://docs.vllm.ai/en/latest/contributing/index.html) for how to get involved.\n\n## Citation\n\nIf you use vLLM for your research, please cite our [paper](https://arxiv.org/abs/2309.06180):\n\n```bibtex\n@inproceedings{kwon2023efficient,\n  title={Efficient Memory Management for Large Language Model Serving with PagedAttention},\n  author={Woosuk Kwon and Zhuohan Li and Siyuan Zhuang and Ying Sheng and Lianmin Zheng and Cody Hao Yu and Joseph E. Gonzalez and Hao Zhang and Ion Stoica},\n  booktitle={Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles},\n  year={2023}\n}\n```\n\n## Contact Us\n\n<!-- --8<-- [start:contact-us] -->\n- For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues)\n- For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)\n- For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)\n- For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature\n- For collaborations and partnerships, please contact us at [collaboration@vllm.ai](mailto:collaboration@vllm.ai)\n<!-- --8<-- [end:contact-us] -->\n\n## Media Kit\n\n- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)\n",
-          "recentCommitCount30d": 100,
+          "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
+          "recentCommitCount30d": 27,
           "latestRelease": {
-            "tagName": "v0.27.1",
-            "name": "v0.27.1",
-            "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.27.1",
-            "publishedAt": "2026-08-11T10:47:49Z",
+            "tagName": "v0.8.2",
+            "name": "v0.8.2",
+            "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
+            "publishedAt": "2026-03-19T05:20:00Z",
             "prerelease": false,
             "draft": false,
-            "body": "This is a patch release on top of v0.27.0.\r\n\r\n- Support quantized DSpark Markov heads (#50424)"
+            "body": "Higher throughput, lower latency, and better benchmark reproducibility."
           },
           "source": [
             {
@@ -553,17 +422,25 @@
             },
             {
               "kind": "topic",
+              "value": "llm-inference"
+            },
+            {
+              "kind": "topic",
               "value": "model-serving"
+            },
+            {
+              "kind": "topic",
+              "value": "benchmark"
             }
           ]
         },
         "score": {
-          "maturityScore": 95,
-          "compatibilityScore": 61,
+          "maturityScore": 80,
+          "compatibilityScore": 77,
           "performancePotentialScore": 42,
           "maintenanceRiskScore": 20,
           "adoptionSignalScore": 100,
-          "finalUpgradeScore": 75,
+          "finalUpgradeScore": 76,
           "estimatedPerformanceGainPct": 37,
           "estimatedCostReductionPct": 19,
           "hardVetoReasons": [],
@@ -571,8 +448,8 @@
             "activeLast30Days": true,
             "hasStableRelease": true,
             "commercialLicense": true,
-            "documentationComplete": true,
-            "compatibilityAtLeast70": false,
+            "documentationComplete": false,
+            "compatibilityAtLeast70": true,
             "projectedPerformanceGainAtLeast15Pct": true,
             "projectedCostReductionAtLeast10Pct": true,
             "avoidsProductionSecurityBoundary": true
@@ -580,8 +457,8 @@
           "qualifyingSignalCount": 7,
           "eligibleForValidation": true,
           "summary": [
-            "Active commits in last 30 days: 100",
-            "Latest release: v0.27.1",
+            "Active commits in last 30 days: 27",
+            "Latest release: v0.8.2",
             "License: Apache-2.0",
             "Projected performance gain: 37%",
             "Projected cost reduction: 19%"
@@ -622,20 +499,12 @@
   ],
   "executionRecords": [
     {
-      "candidateKey": "browser-use/browser-use@0.13.8",
-      "status": "skipped",
-      "branchName": "upgrade/2026-08-19-browser-use",
-      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-08-19-browser-use/UPGRADE_REPORT.md",
-      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
-      "executedAt": "2026-08-19T00:39:08.997Z"
-    },
-    {
-      "candidateKey": "vllm-project/vllm@v0.27.1",
-      "status": "skipped",
-      "branchName": "upgrade/2026-08-19-vllm",
-      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-08-19-vllm/UPGRADE_REPORT.md",
-      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
-      "executedAt": "2026-08-19T00:39:08.997Z"
+      "candidateKey": "vllm-project/vllm@v0.8.2",
+      "status": "dry-run",
+      "branchName": "upgrade/2026-09-04-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-04-vllm/UPGRADE_REPORT.md",
+      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-04-vllm/PR_BODY.md).",
+      "executedAt": "2026-09-04T02:04:38.760Z"
     }
   ],
   "failures": [],

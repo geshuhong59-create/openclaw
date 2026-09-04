@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19T00:39:08.997Z",
+  "updatedAt": "2026-09-04T02:04:38.760Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1091,6 +1091,34 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-08-19-vllm/UPGRADE_REPORT.md",
       "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
       "executedAt": "2026-08-19T00:39:08.997Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.9",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-09-04-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-04-browser-use/UPGRADE_REPORT.md",
+      "commitSha": "feaecba185e331e8cd391f161feb7b467a5b7242",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/131",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-09-04T02:04:08.470Z"
+    },
+    {
+      "candidateKey": "openai/openai-agents-python@v0.22.0",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-09-04-openai-agents-python",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-04-openai-agents-python/UPGRADE_REPORT.md",
+      "commitSha": "8ca9f7cb25549a4d592553d25591d8d25d81e8c9",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/132",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-09-04T02:04:08.470Z"
+    },
+    {
+      "candidateKey": "vllm-project/vllm@v0.8.2",
+      "status": "dry-run",
+      "branchName": "upgrade/2026-09-04-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-04-vllm/UPGRADE_REPORT.md",
+      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-04-vllm/PR_BODY.md).",
+      "executedAt": "2026-09-04T02:04:38.760Z"
     }
   ]
 }
