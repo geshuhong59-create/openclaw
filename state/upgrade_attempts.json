@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-04T02:04:38.760Z",
+  "updatedAt": "2026-09-05T02:01:38.424Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1119,6 +1119,32 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-04-vllm/UPGRADE_REPORT.md",
       "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-04-vllm/PR_BODY.md).",
       "executedAt": "2026-09-04T02:04:38.760Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.10",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-09-05-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-05-browser-use/UPGRADE_REPORT.md",
+      "commitSha": "4a6a1a6479e3b5ef175e0687c5f163cd340eec15",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/133",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-09-05T02:01:10.252Z"
+    },
+    {
+      "candidateKey": "openai/openai-agents-python@v0.22.0",
+      "status": "skipped",
+      "branchName": "upgrade/2026-09-05-openai-agents-python",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-05-openai-agents-python/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-09-05T02:01:10.252Z"
+    },
+    {
+      "candidateKey": "vllm-project/vllm@v0.8.2",
+      "status": "dry-run",
+      "branchName": "upgrade/2026-09-05-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-05-vllm/UPGRADE_REPORT.md",
+      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-05-vllm/PR_BODY.md).",
+      "executedAt": "2026-09-05T02:01:38.424Z"
     }
   ]
 }
