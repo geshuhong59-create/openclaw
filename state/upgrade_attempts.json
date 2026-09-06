@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-05T02:01:38.424Z",
+  "updatedAt": "2026-09-06T01:56:47.224Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1145,6 +1145,22 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-05-vllm/UPGRADE_REPORT.md",
       "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-05-vllm/PR_BODY.md).",
       "executedAt": "2026-09-05T02:01:38.424Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.10",
+      "status": "skipped",
+      "branchName": "upgrade/2026-09-06-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-06-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-09-06T01:56:47.224Z"
+    },
+    {
+      "candidateKey": "openai/openai-agents-python@v0.22.0",
+      "status": "skipped",
+      "branchName": "upgrade/2026-09-06-openai-agents-python",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-06-openai-agents-python/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-09-06T01:56:47.224Z"
     }
   ]
 }
