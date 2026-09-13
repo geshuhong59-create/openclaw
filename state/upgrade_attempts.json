@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-12T02:09:27.355Z",
+  "updatedAt": "2026-09-13T02:05:56.431Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1225,6 +1225,14 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-12-browser-use/UPGRADE_REPORT.md",
       "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
       "executedAt": "2026-09-12T02:09:27.355Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.10",
+      "status": "skipped",
+      "branchName": "upgrade/2026-09-13-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-09-13-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-09-13T02:05:56.431Z"
     }
   ]
 }
