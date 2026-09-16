@@ -1,17 +1,16 @@
 # AI Radar Branch Cleanup
 
 ## Summary
-- Executed at: 2026-09-15T02:29:14.845Z
+- Executed at: 2026-09-16T02:23:11.951Z
 - Repository: geshuhong59-create/openclaw
 - Branch prefix: upgrade/
 - Dry run: no
 - Scanned upgrade branches: 87
 - Keep newest closed branches: 2
-- Preserved for open PRs: 85
-- Deleted stale branches: 0
+- Preserved for open PRs: 84
+- Deleted stale branches: 1
 
 ## Preserved For Open PRs
-- upgrade/2026-04-05-vllm | https://github.com/geshuhong59-create/openclaw/pull/20
 - upgrade/2026-04-06-vllm | https://github.com/geshuhong59-create/openclaw/pull/21
 - upgrade/2026-04-07-vllm | https://github.com/geshuhong59-create/openclaw/pull/22
 - upgrade/2026-04-08-vllm | https://github.com/geshuhong59-create/openclaw/pull/23
@@ -102,4 +101,4 @@
 - upgrade/2026-07-28-vllm | committedAt=2026-07-28T01:42:49Z
 
 ## Deleted Branches
-- None
+- upgrade/2026-04-05-vllm | committedAt=2026-04-05T01:27:50Z
