@@ -1,7 +1,7 @@
 # AI Radar Branch Cleanup
 
 ## Summary
-- Executed at: 2026-09-15T02:29:14.845Z
+- Executed at: 2026-09-17T02:27:13.382Z
 - Repository: geshuhong59-create/openclaw
 - Branch prefix: upgrade/
 - Dry run: no
@@ -11,7 +11,6 @@
 - Deleted stale branches: 0
 
 ## Preserved For Open PRs
-- upgrade/2026-04-05-vllm | https://github.com/geshuhong59-create/openclaw/pull/20
 - upgrade/2026-04-06-vllm | https://github.com/geshuhong59-create/openclaw/pull/21
 - upgrade/2026-04-07-vllm | https://github.com/geshuhong59-create/openclaw/pull/22
 - upgrade/2026-04-08-vllm | https://github.com/geshuhong59-create/openclaw/pull/23
@@ -96,6 +95,7 @@
 - upgrade/2026-08-16-vllm | https://github.com/geshuhong59-create/openclaw/pull/113
 - upgrade/2026-08-17-browser-use | https://github.com/geshuhong59-create/openclaw/pull/114
 - upgrade/2026-08-20-openai-agents-python | https://github.com/geshuhong59-create/openclaw/pull/116
+- upgrade/2026-08-21-openai-agents-python | https://github.com/geshuhong59-create/openclaw/pull/117
 
 ## Kept Recent Branches
 - upgrade/2026-08-17-vllm | committedAt=2026-08-17T00:40:11Z
