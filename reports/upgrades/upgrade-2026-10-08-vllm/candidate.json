@@ -1,0 +1,77 @@
+{
+  "repo": {
+    "fullName": "vllm-project/vllm",
+    "url": "https://github.com/vllm-project/vllm",
+    "description": "High-throughput and memory-efficient inference engine for LLM serving.",
+    "topics": [
+      "llm-inference",
+      "model-serving",
+      "benchmark"
+    ],
+    "stars": 42000,
+    "forks": 6200,
+    "defaultBranch": "main",
+    "updatedAt": "2026-03-24T08:20:00Z",
+    "pushedAt": "2026-03-24T08:19:00Z",
+    "license": "Apache-2.0",
+    "readme": "## Quickstart\nvLLM documents installation, serving workflows, release notes, and benchmark methodology for latency and throughput.\n\n## Benchmark\nReproducible benchmark guidance covers tokens per second, batching, memory footprint, and deployment tradeoffs.\n\n## Release\nStable releases are published with changelog entries.",
+    "recentCommitCount30d": 27,
+    "latestRelease": {
+      "tagName": "v0.8.2",
+      "name": "v0.8.2",
+      "htmlUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.8.2",
+      "publishedAt": "2026-03-19T05:20:00Z",
+      "prerelease": false,
+      "draft": false,
+      "body": "Higher throughput, lower latency, and better benchmark reproducibility."
+    },
+    "source": [
+      {
+        "kind": "watch_repo",
+        "value": "vllm-project/vllm"
+      },
+      {
+        "kind": "topic",
+        "value": "llm-inference"
+      },
+      {
+        "kind": "topic",
+        "value": "model-serving"
+      },
+      {
+        "kind": "topic",
+        "value": "benchmark"
+      }
+    ]
+  },
+  "score": {
+    "maturityScore": 80,
+    "compatibilityScore": 77,
+    "performancePotentialScore": 42,
+    "maintenanceRiskScore": 20,
+    "adoptionSignalScore": 100,
+    "finalUpgradeScore": 76,
+    "estimatedPerformanceGainPct": 37,
+    "estimatedCostReductionPct": 19,
+    "hardVetoReasons": [],
+    "qualifyingSignals": {
+      "activeLast30Days": true,
+      "hasStableRelease": true,
+      "commercialLicense": true,
+      "documentationComplete": false,
+      "compatibilityAtLeast70": true,
+      "projectedPerformanceGainAtLeast15Pct": true,
+      "projectedCostReductionAtLeast10Pct": true,
+      "avoidsProductionSecurityBoundary": true
+    },
+    "qualifyingSignalCount": 7,
+    "eligibleForValidation": true,
+    "summary": [
+      "Active commits in last 30 days: 27",
+      "Latest release: v0.8.2",
+      "License: Apache-2.0",
+      "Projected performance gain: 37%",
+      "Projected cost reduction: 19%"
+    ]
+  }
+}
