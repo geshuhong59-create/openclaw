@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-08T03:35:49.213Z",
+  "updatedAt": "2026-10-09T03:40:32.869Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1411,6 +1411,14 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-08-vllm/UPGRADE_REPORT.md",
       "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-08-vllm/PR_BODY.md).",
       "executedAt": "2026-10-08T03:35:49.213Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.11",
+      "status": "skipped",
+      "branchName": "upgrade/2026-10-09-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-09-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-10-09T03:40:32.869Z"
     }
   ]
 }
