@@ -1,0 +1,81 @@
+{
+  "appliedAt": "2026-10-16T02:16:34.827Z",
+  "candidate": {
+    "repo": "browser-use/browser-use",
+    "releaseTag": "0.13.13",
+    "changeType": "dependency-upgrade",
+    "appliedAt": "2026-10-16T02:16:34.827Z",
+    "reportPath": "reports/upgrades/upgrade-2026-10-16-browser-use/UPGRADE_REPORT.md",
+    "score": null
+  },
+  "runtime": {
+    "provider": "aggregate",
+    "limit": 15,
+    "requestTimeoutMs": 20000,
+    "xBrowserEnabled": true,
+    "xBrowserWaitMs": 9000,
+    "xSearchMode": "top",
+    "xSearchQuery": "(\"browser-use\" OR \"AI agents\" OR \"LLM\" OR \"AI model\") min_faves:20 lang:en -is:retweet -is:reply",
+    "xFallbackFeeds": [],
+    "aiArticleFeeds": [
+      {
+        "label": "github-release-browser-use-browser-use",
+        "url": "https://github.com/browser-use/browser-use/releases.atom",
+        "tags": [
+          "AI",
+          "GitHub",
+          "Release",
+          "ai-agents",
+          "ai-tools",
+          "browser-automation",
+          "browser-use"
+        ]
+      },
+      {
+        "label": "github-release-vllm-project-vllm",
+        "url": "https://github.com/vllm-project/vllm/releases.atom",
+        "tags": [
+          "AI",
+          "GitHub",
+          "Release",
+          "llm-inference",
+          "model-serving",
+          "benchmark"
+        ]
+      },
+      {
+        "label": "openai-news",
+        "url": "https://openai.com/news/rss.xml",
+        "tags": [
+          "AI",
+          "Article",
+          "OpenAI"
+        ]
+      },
+      {
+        "label": "deepmind-blog",
+        "url": "https://deepmind.google/blog/rss.xml",
+        "tags": [
+          "AI",
+          "Article",
+          "DeepMind"
+        ]
+      },
+      {
+        "label": "microsoft-research-blog",
+        "url": "https://www.microsoft.com/en-us/research/blog/feed/",
+        "tags": [
+          "AI",
+          "Article",
+          "Research",
+          "Microsoft Research"
+        ]
+      }
+    ],
+    "hnStoryType": "topstories"
+  },
+  "notes": [
+    "Applied candidate browser-use/browser-use@0.13.13",
+    "Change type: dependency-upgrade"
+  ]
+}
