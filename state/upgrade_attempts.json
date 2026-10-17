@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-16T02:16:33.893Z",
+  "updatedAt": "2026-10-17T02:08:42.528Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1487,6 +1487,22 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-16-vllm/UPGRADE_REPORT.md",
       "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-16-vllm/PR_BODY.md).",
       "executedAt": "2026-10-16T02:16:33.893Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.13",
+      "status": "skipped",
+      "branchName": "upgrade/2026-10-17-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-17-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-10-17T02:08:42.528Z"
+    },
+    {
+      "candidateKey": "esengine/DeepSeek-Reasonix@studio-v2.42.0",
+      "status": "skipped",
+      "branchName": "upgrade/2026-10-17-deepseek-reasonix",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-17-deepseek-reasonix/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-10-17T02:08:42.528Z"
     }
   ]
 }

@@ -1,42 +1,44 @@
 # AI Architecture Radar Daily Report
 
-- Executed at: 2026-10-16T02:16:33.893Z
-- Discovered candidates: 5
-- Report path: /home/runner/work/openclaw/openclaw/reports/2026-03-25-ai-radar.md
+- Executed at: 2026-10-17T02:08:42.528Z
+- Discovered candidates: 99
+- Report path: /home/runner/work/openclaw/openclaw/reports/2026-10-17-ai-radar.md
 
 ## Executive Summary
-- Winner: vllm-project/vllm@v0.8.2 (score 76)
-- Eligible candidates in today's shortlist: 1/5
-- Planned upgrade executions: 1
+- Winner: browser-use/browser-use@0.13.13 (score 83)
+- Eligible candidates in today's shortlist: 2/5
+- Planned upgrade executions: 2
 - Failed execution records: 0
 - Auto-created upgrade PRs during planning: 0
 
 ## Top Candidate Scoreboard
 | Rank | Repo | Score | Release | Perf Gain | Cost Down | Eligible | Vetoes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | vllm-project/vllm | 76 | v0.8.2 | 37% | 19% | yes | none |
-| 2 | langchain-ai/langgraph | 71 | v0.3.5 | 27% | 4% | no | none |
-| 3 | browser-use/browser-use | 69 | v1.9.0 | 27% | 4% | no | none |
-| 4 | microsoft/autogen | 66 | v0.6.3 | 27% | 4% | no | none |
-| 5 | openai/openai-agents-python | 65 | v0.4.1 | 27% | 4% | no | none |
+| 1 | browser-use/browser-use | 83 | 0.13.13 | 37% | 9% | yes | none |
+| 2 | paperclipai/paperclip | 74 | v2026.1012.0 | 9% | 4% | no | breaking_change_high_risk, auth_model_changed, production_secret_impact |
+| 3 | vllm-project/vllm | 72 | v0.31.0 | 37% | 19% | no | breaking_change_high_risk |
+| 4 | esengine/DeepSeek-Reasonix | 72 | studio-v2.42.0 | 27% | 4% | yes | none |
+| 5 | openai/openai-agents-python | 71 | v0.24.0 | 27% | 4% | no | none |
 
 ## Top Candidates
-1. vllm-project/vllm | score=76 | release=v0.8.2 | vetoes=none
-2. langchain-ai/langgraph | score=71 | release=v0.3.5 | vetoes=none
-3. browser-use/browser-use | score=69 | release=v1.9.0 | vetoes=none
-4. microsoft/autogen | score=66 | release=v0.6.3 | vetoes=none
-5. openai/openai-agents-python | score=65 | release=v0.4.1 | vetoes=none
+1. browser-use/browser-use | score=83 | release=0.13.13 | vetoes=none
+2. paperclipai/paperclip | score=74 | release=v2026.1012.0 | vetoes=breaking_change_high_risk,auth_model_changed,production_secret_impact
+3. vllm-project/vllm | score=72 | release=v0.31.0 | vetoes=breaking_change_high_risk
+4. esengine/DeepSeek-Reasonix | score=72 | release=studio-v2.42.0 | vetoes=none
+5. openai/openai-agents-python | score=71 | release=v0.24.0 | vetoes=none
 
 ## Discovery Notes
-- vllm-project/vllm: Active commits in last 30 days: 27; Latest release: v0.8.2; License: Apache-2.0; Projected performance gain: 37%; Projected cost reduction: 19%
-- langchain-ai/langgraph: Active commits in last 30 days: 18; Latest release: v0.3.5; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
-- browser-use/browser-use: Active commits in last 30 days: 31; Latest release: v1.9.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
-- microsoft/autogen: Active commits in last 30 days: 12; Latest release: v0.6.3; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
-- openai/openai-agents-python: Active commits in last 30 days: 24; Latest release: v0.4.1; License: Apache-2.0; Projected performance gain: 27%; Projected cost reduction: 4%
+- browser-use/browser-use: Active commits in last 30 days: 91; Latest release: 0.13.13; License: MIT; Projected performance gain: 37%; Projected cost reduction: 9%
+- paperclipai/paperclip: Active commits in last 30 days: 100; Latest release: v2026.1012.0; License: MIT; Projected performance gain: 9%; Projected cost reduction: 4%
+- vllm-project/vllm: Active commits in last 30 days: 100; Latest release: v0.31.0; License: Apache-2.0; Projected performance gain: 37%; Projected cost reduction: 19%
+- esengine/DeepSeek-Reasonix: Active commits in last 30 days: 100; Latest release: studio-v2.42.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- openai/openai-agents-python: Active commits in last 30 days: 100; Latest release: v0.24.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
 
 ## Planned Execution
-- vllm-project/vllm@v0.8.2 | status=dry-run | branch=upgrade/2026-10-16-vllm
-  note: Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-16-vllm/PR_BODY.md).
+- browser-use/browser-use@0.13.13 | status=skipped | branch=upgrade/2026-10-17-browser-use
+  note: Skipped because this candidate version already has an upgrade attempt recorded.
+- esengine/DeepSeek-Reasonix@studio-v2.42.0 | status=skipped | branch=upgrade/2026-10-17-deepseek-reasonix
+  note: Skipped because this candidate version already has an upgrade attempt recorded.
 
 ## Failures
 - No failures recorded.
