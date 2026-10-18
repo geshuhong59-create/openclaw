@@ -1,13 +1,13 @@
 # AI Architecture Radar Daily Report
 
-- Executed at: 2026-10-17T02:08:42.528Z
-- Discovered candidates: 99
-- Report path: /home/runner/work/openclaw/openclaw/reports/2026-10-17-ai-radar.md
+- Executed at: 2026-10-18T02:08:30.627Z
+- Discovered candidates: 101
+- Report path: /home/runner/work/openclaw/openclaw/reports/2026-10-18-ai-radar.md
 
 ## Executive Summary
 - Winner: browser-use/browser-use@0.13.13 (score 83)
-- Eligible candidates in today's shortlist: 2/5
-- Planned upgrade executions: 2
+- Eligible candidates in today's shortlist: 1/5
+- Planned upgrade executions: 1
 - Failed execution records: 0
 - Auto-created upgrade PRs during planning: 0
 
@@ -15,29 +15,27 @@
 | Rank | Repo | Score | Release | Perf Gain | Cost Down | Eligible | Vetoes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | browser-use/browser-use | 83 | 0.13.13 | 37% | 9% | yes | none |
-| 2 | paperclipai/paperclip | 74 | v2026.1012.0 | 9% | 4% | no | breaking_change_high_risk, auth_model_changed, production_secret_impact |
+| 2 | mastra-ai/mastra | 75 | @mastra/core@1.78.0 | 37% | 9% | no | license_unknown, breaking_change_high_risk, auth_model_changed, production_secret_impact |
 | 3 | vllm-project/vllm | 72 | v0.31.0 | 37% | 19% | no | breaking_change_high_risk |
-| 4 | esengine/DeepSeek-Reasonix | 72 | studio-v2.42.0 | 27% | 4% | yes | none |
-| 5 | openai/openai-agents-python | 71 | v0.24.0 | 27% | 4% | no | none |
+| 4 | codewhale-hq/Codewhale | 72 | v0.10.1 | 37% | 19% | no | auth_model_changed, production_secret_impact |
+| 5 | esengine/DeepSeek-Reasonix | 71 | studio-v2.44.0 | 19% | 9% | no | none |
 
 ## Top Candidates
 1. browser-use/browser-use | score=83 | release=0.13.13 | vetoes=none
-2. paperclipai/paperclip | score=74 | release=v2026.1012.0 | vetoes=breaking_change_high_risk,auth_model_changed,production_secret_impact
+2. mastra-ai/mastra | score=75 | release=@mastra/core@1.78.0 | vetoes=license_unknown,breaking_change_high_risk,auth_model_changed,production_secret_impact
 3. vllm-project/vllm | score=72 | release=v0.31.0 | vetoes=breaking_change_high_risk
-4. esengine/DeepSeek-Reasonix | score=72 | release=studio-v2.42.0 | vetoes=none
-5. openai/openai-agents-python | score=71 | release=v0.24.0 | vetoes=none
+4. codewhale-hq/Codewhale | score=72 | release=v0.10.1 | vetoes=auth_model_changed,production_secret_impact
+5. esengine/DeepSeek-Reasonix | score=71 | release=studio-v2.44.0 | vetoes=none
 
 ## Discovery Notes
-- browser-use/browser-use: Active commits in last 30 days: 91; Latest release: 0.13.13; License: MIT; Projected performance gain: 37%; Projected cost reduction: 9%
-- paperclipai/paperclip: Active commits in last 30 days: 100; Latest release: v2026.1012.0; License: MIT; Projected performance gain: 9%; Projected cost reduction: 4%
+- browser-use/browser-use: Active commits in last 30 days: 100; Latest release: 0.13.13; License: MIT; Projected performance gain: 37%; Projected cost reduction: 9%
+- mastra-ai/mastra: Active commits in last 30 days: 100; Latest release: @mastra/core@1.78.0; License: NOASSERTION; Projected performance gain: 37%; Projected cost reduction: 9%
 - vllm-project/vllm: Active commits in last 30 days: 100; Latest release: v0.31.0; License: Apache-2.0; Projected performance gain: 37%; Projected cost reduction: 19%
-- esengine/DeepSeek-Reasonix: Active commits in last 30 days: 100; Latest release: studio-v2.42.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
-- openai/openai-agents-python: Active commits in last 30 days: 100; Latest release: v0.24.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- codewhale-hq/Codewhale: Active commits in last 30 days: 100; Latest release: v0.10.1; License: MIT; Projected performance gain: 37%; Projected cost reduction: 19%
+- esengine/DeepSeek-Reasonix: Active commits in last 30 days: 100; Latest release: studio-v2.44.0; License: MIT; Projected performance gain: 19%; Projected cost reduction: 9%
 
 ## Planned Execution
-- browser-use/browser-use@0.13.13 | status=skipped | branch=upgrade/2026-10-17-browser-use
-  note: Skipped because this candidate version already has an upgrade attempt recorded.
-- esengine/DeepSeek-Reasonix@studio-v2.42.0 | status=skipped | branch=upgrade/2026-10-17-deepseek-reasonix
+- browser-use/browser-use@0.13.13 | status=skipped | branch=upgrade/2026-10-18-browser-use
   note: Skipped because this candidate version already has an upgrade attempt recorded.
 
 ## Failures
