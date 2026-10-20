@@ -1,0 +1,24 @@
+{
+  "executedAt": "2026-10-20T02:38:09.042Z",
+  "candidateKey": "browser-use/browser-use@0.13.13",
+  "repo": "browser-use/browser-use",
+  "releaseTag": "0.13.13",
+  "dryRun": false,
+  "validation": {
+    "enabled": true
+  },
+  "applyUpgrade": {
+    "enabled": true
+  },
+  "deploy": {
+    "enabled": true,
+    "target": "staging"
+  },
+  "planExecution": {
+    "status": "skipped",
+    "branchName": "upgrade/2026-10-20-browser-use",
+    "message": "Skipped because this candidate version already has an upgrade attempt recorded."
+  },
+  "status": "no-op",
+  "reason": "Skipped because this candidate version already has an upgrade attempt recorded."
+}
