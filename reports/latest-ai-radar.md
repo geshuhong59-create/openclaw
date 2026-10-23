@@ -1,8 +1,8 @@
 # AI Architecture Radar Daily Report
 
-- Executed at: 2026-10-22T02:28:55.353Z
-- Discovered candidates: 100
-- Report path: /home/runner/work/openclaw/openclaw/reports/2026-10-22-ai-radar.md
+- Executed at: 2026-10-23T02:33:25.582Z
+- Discovered candidates: 99
+- Report path: /home/runner/work/openclaw/openclaw/reports/2026-10-23-ai-radar.md
 
 ## Executive Summary
 - Winner: browser-use/browser-use@0.13.13 (score 83)
@@ -35,7 +35,7 @@
 - langchain-ai/langgraph: Active commits in last 30 days: 100; Latest release: cli==0.4.37; License: MIT; Projected performance gain: 9%; Projected cost reduction: 4%
 
 ## Planned Execution
-- browser-use/browser-use@0.13.13 | status=skipped | branch=upgrade/2026-10-22-browser-use
+- browser-use/browser-use@0.13.13 | status=skipped | branch=upgrade/2026-10-23-browser-use
   note: Skipped because this candidate version already has an upgrade attempt recorded.
 
 ## Failures
