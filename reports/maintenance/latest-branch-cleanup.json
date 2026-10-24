@@ -1,18 +1,11 @@
 {
-  "executedAt": "2026-10-23T02:33:47.615Z",
+  "executedAt": "2026-10-24T02:32:18.495Z",
   "repository": "geshuhong59-create/openclaw",
   "branchPrefix": "upgrade/",
   "dryRun": false,
   "keepCount": 2,
   "scannedBranches": 87,
   "preservedOpenPrBranches": [
-    {
-      "name": "upgrade/2026-04-10-vllm",
-      "sha": "5b3b7f23c720f7ae480dc1e49e1c6b0f7bf481f6",
-      "committedAt": "2026-04-10T01:27:01Z",
-      "reason": "open-pr",
-      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/25"
-    },
     {
       "name": "upgrade/2026-04-11-vllm",
       "sha": "0af6191c5597e9b24d86b8fd6e57173620a816b8",
@@ -616,5 +609,12 @@
       "reason": "recent-retention"
     }
   ],
-  "deletedBranches": []
+  "deletedBranches": [
+    {
+      "name": "upgrade/2026-04-10-vllm",
+      "sha": "5b3b7f23c720f7ae480dc1e49e1c6b0f7bf481f6",
+      "committedAt": "2026-04-10T01:27:01Z",
+      "reason": "deleted"
+    }
+  ]
 }

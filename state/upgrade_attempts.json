@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23T02:33:25.582Z",
+  "updatedAt": "2026-10-24T02:31:53.975Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1551,6 +1551,24 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-23-browser-use/UPGRADE_REPORT.md",
       "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
       "executedAt": "2026-10-23T02:33:25.582Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.13",
+      "status": "skipped",
+      "branchName": "upgrade/2026-10-24-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-24-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-10-24T02:31:53.975Z"
+    },
+    {
+      "candidateKey": "lexmount/moli@v1.1.19",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-10-24-moli",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-24-moli/UPGRADE_REPORT.md",
+      "commitSha": "eb3a61d8864964dfa4702c5076f46b34dc9da834",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/141",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-10-24T02:31:53.975Z"
     }
   ]
 }
