@@ -1,8 +1,8 @@
 # AI Architecture Radar Daily Report
 
-- Executed at: 2026-10-28T03:03:59.119Z
-- Discovered candidates: 103
-- Report path: /home/runner/work/openclaw/openclaw/reports/2026-10-28-ai-radar.md
+- Executed at: 2026-10-29T03:30:48.349Z
+- Discovered candidates: 99
+- Report path: /home/runner/work/openclaw/openclaw/reports/2026-10-29-ai-radar.md
 
 ## Executive Summary
 - Winner: browser-use/browser-use@0.13.14 (score 83)
@@ -35,9 +35,9 @@
 - openai/openai-agents-python: Active commits in last 30 days: 100; Latest release: v0.24.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
 
 ## Planned Execution
-- browser-use/browser-use@0.13.14 | status=skipped | branch=upgrade/2026-10-28-browser-use
+- browser-use/browser-use@0.13.14 | status=skipped | branch=upgrade/2026-10-29-browser-use
   note: Skipped because this candidate version already has an upgrade attempt recorded.
-- langchain-ai/langgraph@1.2.18 | status=skipped | branch=upgrade/2026-10-28-langgraph
+- langchain-ai/langgraph@1.2.18 | status=skipped | branch=upgrade/2026-10-29-langgraph
   note: Skipped because this candidate version already has an upgrade attempt recorded.
 
 ## Failures
