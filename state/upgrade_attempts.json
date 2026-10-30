@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T03:30:48.349Z",
+  "updatedAt": "2026-10-30T03:33:07.213Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1619,6 +1619,22 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-29-langgraph/UPGRADE_REPORT.md",
       "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
       "executedAt": "2026-10-29T03:30:48.349Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.14",
+      "status": "skipped",
+      "branchName": "upgrade/2026-10-30-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-30-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-10-30T03:33:07.213Z"
+    },
+    {
+      "candidateKey": "langchain-ai/langgraph@1.2.18",
+      "status": "skipped",
+      "branchName": "upgrade/2026-10-30-langgraph",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-10-30-langgraph/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-10-30T03:33:07.213Z"
     }
   ]
 }
