@@ -1,32 +1,11 @@
 {
-  "executedAt": "2026-11-06T04:13:26.517Z",
+  "executedAt": "2026-11-08T03:24:12.303Z",
   "repository": "geshuhong59-create/openclaw",
   "branchPrefix": "upgrade/",
   "dryRun": false,
   "keepCount": 2,
   "scannedBranches": 87,
   "preservedOpenPrBranches": [
-    {
-      "name": "upgrade/2026-04-15-vllm",
-      "sha": "56bcebfea46510ce56abd9a181c3208719189e8e",
-      "committedAt": "2026-04-15T01:27:15Z",
-      "reason": "open-pr",
-      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/30"
-    },
-    {
-      "name": "upgrade/2026-04-16-vllm",
-      "sha": "cdab69c0a13251be2d9fd22bc41845ee30af0ab7",
-      "committedAt": "2026-04-16T01:48:26Z",
-      "reason": "open-pr",
-      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/31"
-    },
-    {
-      "name": "upgrade/2026-04-17-vllm",
-      "sha": "b6fad871087c202403678042fdbb321e960d78e4",
-      "committedAt": "2026-04-17T01:30:41Z",
-      "reason": "open-pr",
-      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/32"
-    },
     {
       "name": "upgrade/2026-04-18-vllm",
       "sha": "e89d06cd9d4159eedeb7cd0ffbc6eb812ea45c53",
@@ -600,6 +579,13 @@
       "committedAt": "2026-08-30T02:27:58Z",
       "reason": "open-pr",
       "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/126"
+    },
+    {
+      "name": "upgrade/2026-08-31-openai-agents-python",
+      "sha": "e6b882a255daa209e6efc56152429284871a6580",
+      "committedAt": "2026-08-31T02:22:11Z",
+      "reason": "open-pr",
+      "pullRequestUrl": "https://github.com/geshuhong59-create/openclaw/pull/127"
     }
   ],
   "keptRecentBranches": [
@@ -616,5 +602,18 @@
       "reason": "recent-retention"
     }
   ],
-  "deletedBranches": []
+  "deletedBranches": [
+    {
+      "name": "upgrade/2026-04-17-vllm",
+      "sha": "b6fad871087c202403678042fdbb321e960d78e4",
+      "committedAt": "2026-04-17T01:30:41Z",
+      "reason": "deleted"
+    },
+    {
+      "name": "upgrade/2026-04-16-vllm",
+      "sha": "cdab69c0a13251be2d9fd22bc41845ee30af0ab7",
+      "committedAt": "2026-04-16T01:48:26Z",
+      "reason": "deleted"
+    }
+  ]
 }

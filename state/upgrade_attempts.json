@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06T04:13:00.625Z",
+  "updatedAt": "2026-11-08T03:23:45.300Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1675,6 +1675,34 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-06-browser-use/UPGRADE_REPORT.md",
       "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
       "executedAt": "2026-11-06T04:13:00.625Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@0.13.14",
+      "status": "skipped",
+      "branchName": "upgrade/2026-11-08-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-08-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-11-08T03:23:45.300Z"
+    },
+    {
+      "candidateKey": "esengine/DeepSeek-Reasonix@studio-v2.58.0",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-11-08-deepseek-reasonix",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-08-deepseek-reasonix/UPGRADE_REPORT.md",
+      "commitSha": "1217a98e7ca23cbe210f7576d357f17336f20ecc",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/148",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-11-08T03:23:45.300Z"
+    },
+    {
+      "candidateKey": "lexmount/moli@v1.1.22",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-11-08-moli",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-08-moli/UPGRADE_REPORT.md",
+      "commitSha": "0b4fa8b1d7930882017cfc0cf982578a24c40725",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/149",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-11-08T03:23:45.300Z"
     }
   ]
 }
