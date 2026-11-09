@@ -1,7 +1,7 @@
 # AI Radar Automation Summary
 
 ## Run Snapshot
-- Executed at: 2026-11-06T04:13:00.625Z
+- Executed at: 2026-11-09T03:41:37.135Z
 - Candidate: browser-use/browser-use@0.13.14
 - Repository: browser-use/browser-use
 - Release: 0.13.14
@@ -15,7 +15,7 @@
 - Promotion: not-run
 
 ## Planning Output
-- Branch: upgrade/2026-11-06-browser-use
+- Branch: upgrade/2026-11-09-browser-use
 - PR URL: none
 - Planning note: Skipped because this candidate version already has an upgrade attempt recorded.
 
