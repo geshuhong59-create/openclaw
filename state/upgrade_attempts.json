@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T03:41:37.135Z",
+  "updatedAt": "2026-11-11T03:46:47.659Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1683,6 +1683,34 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-09-browser-use/UPGRADE_REPORT.md",
       "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
       "executedAt": "2026-11-09T03:41:37.135Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@1.0.1",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-11-11-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-11-browser-use/UPGRADE_REPORT.md",
+      "commitSha": "7f0fb6843bc73170d6b510110285d01467011251",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/150",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-11-11T03:46:21.237Z"
+    },
+    {
+      "candidateKey": "esengine/DeepSeek-Reasonix@studio-v2.60.0",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-11-11-deepseek-reasonix",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-11-deepseek-reasonix/UPGRADE_REPORT.md",
+      "commitSha": "5673b52310febd4796ebebef79d26381336ba014",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/151",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-11-11T03:46:21.237Z"
+    },
+    {
+      "candidateKey": "vllm-project/vllm@v0.8.2",
+      "status": "dry-run",
+      "branchName": "upgrade/2026-11-11-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-11-vllm/UPGRADE_REPORT.md",
+      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-11-vllm/PR_BODY.md).",
+      "executedAt": "2026-11-11T03:46:47.659Z"
     }
   ]
 }
