@@ -1,23 +1,23 @@
 # AI Radar Automation Summary
 
 ## Run Snapshot
-- Executed at: 2026-11-09T03:41:37.135Z
-- Candidate: browser-use/browser-use@0.13.14
+- Executed at: 2026-11-11T03:46:21.237Z
+- Candidate: browser-use/browser-use@1.0.1
 - Repository: browser-use/browser-use
-- Release: 0.13.14
+- Release: 1.0.1
 - Dry run: no
 
 ## Step Status
-- Plan execution: skipped
-- Validation: not-run
-- Apply upgrade: not-run
-- Deploy smoke: not-run
+- Plan execution: pr-created
+- Validation: passed
+- Apply upgrade: passed
+- Deploy smoke: passed
 - Promotion: not-run
 
 ## Planning Output
-- Branch: upgrade/2026-11-09-browser-use
-- PR URL: none
-- Planning note: Skipped because this candidate version already has an upgrade attempt recorded.
+- Branch: upgrade/2026-11-11-browser-use
+- PR URL: https://github.com/geshuhong59-create/openclaw/pull/150
+- Planning note: Created PR targeting staging.
 
 ## Deployment Output
 - Target: staging
@@ -25,6 +25,6 @@
 - Final commit: n/a
 
 ## Notes
-- Validation script: n/a
-- Apply script: n/a
-- Deploy script: n/a
+- Validation script: /home/runner/work/openclaw/openclaw/scripts/test-upgrade.sh
+- Apply script: /home/runner/work/openclaw/openclaw/scripts/ai-radar-apply-upgrade.sh
+- Deploy script: /home/runner/work/openclaw/openclaw/scripts/ai-radar-deploy.sh
