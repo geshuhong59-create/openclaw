@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T04:55:25.324Z",
+  "updatedAt": "2026-11-13T04:07:41.586Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1737,6 +1737,34 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-12-vllm/UPGRADE_REPORT.md",
       "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-12-vllm/PR_BODY.md).",
       "executedAt": "2026-11-12T04:55:25.324Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@1.0.3",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-11-13-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-13-browser-use/UPGRADE_REPORT.md",
+      "commitSha": "9c5de31a4c36068b75e6f3ef48912453b4043936",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/153",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-11-13T04:07:08.300Z"
+    },
+    {
+      "candidateKey": "browserbase/stagehand@stagehand-server-v3/v3.7.7",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-11-13-stagehand",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-13-stagehand/UPGRADE_REPORT.md",
+      "commitSha": "1c02edc2c1c82b1c94ac517cc166df10c1244efc",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/154",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-11-13T04:07:08.300Z"
+    },
+    {
+      "candidateKey": "vllm-project/vllm@v0.8.2",
+      "status": "dry-run",
+      "branchName": "upgrade/2026-11-13-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-13-vllm/UPGRADE_REPORT.md",
+      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-13-vllm/PR_BODY.md).",
+      "executedAt": "2026-11-13T04:07:41.586Z"
     }
   ]
 }
