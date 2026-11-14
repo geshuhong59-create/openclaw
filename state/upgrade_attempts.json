@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13T04:07:41.586Z",
+  "updatedAt": "2026-11-14T04:04:19.196Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1765,6 +1765,42 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-13-vllm/UPGRADE_REPORT.md",
       "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-13-vllm/PR_BODY.md).",
       "executedAt": "2026-11-13T04:07:41.586Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@1.0.4",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-11-14-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-14-browser-use/UPGRADE_REPORT.md",
+      "commitSha": "1078525d624fea60ba79068a19bd4516f53e71db",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/155",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-11-14T04:03:52.589Z"
+    },
+    {
+      "candidateKey": "browserbase/stagehand@stagehand-server-v3/v3.7.7",
+      "status": "skipped",
+      "branchName": "upgrade/2026-11-14-stagehand",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-14-stagehand/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-11-14T04:03:52.589Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-harness@v0.1.13",
+      "status": "pr-created",
+      "branchName": "upgrade/2026-11-14-browser-harness",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-14-browser-harness/UPGRADE_REPORT.md",
+      "commitSha": "579db8979faf1ebccaa3688428cba0f250729b66",
+      "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/156",
+      "message": "Created PR targeting staging.",
+      "executedAt": "2026-11-14T04:03:52.589Z"
+    },
+    {
+      "candidateKey": "vllm-project/vllm@v0.8.2",
+      "status": "dry-run",
+      "branchName": "upgrade/2026-11-14-vllm",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-14-vllm/UPGRADE_REPORT.md",
+      "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-14-vllm/PR_BODY.md).",
+      "executedAt": "2026-11-14T04:04:19.196Z"
     }
   ]
 }
