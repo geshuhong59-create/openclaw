@@ -1,26 +1,31 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-14T04:04:19.998Z",
+  "updatedAt": "2026-11-15T03:50:45.635Z",
   "candidate": {
     "repo": "browser-use/browser-use",
-    "releaseTag": "1.0.4",
-    "changeType": "dependency-upgrade",
-    "appliedAt": "2026-11-14T04:04:19.998Z",
-    "reportPath": "reports/upgrades/upgrade-2026-11-14-browser-use/UPGRADE_REPORT.md",
-    "score": null
+    "releaseTag": "1.0.5",
+    "changeType": "tool-plugin-integration",
+    "appliedAt": "2026-11-15T03:50:45.635Z",
+    "reportPath": "reports/upgrades/upgrade-2026-11-15-browser-use/UPGRADE_REPORT.md",
+    "score": 85
   },
   "notes": [
-    "Applied candidate browser-use/browser-use@1.0.4",
-    "Change type: dependency-upgrade"
+    "Applied candidate browser-use/browser-use@1.0.5",
+    "Change type: tool-plugin-integration",
+    "Active commits in last 30 days: 100",
+    "Latest release: 1.0.5",
+    "License: MIT",
+    "Projected performance gain: 37%",
+    "Projected cost reduction: 19%"
   ],
   "runtime": {
     "provider": "aggregate",
     "limit": 15,
-    "requestTimeoutMs": 20000,
+    "requestTimeoutMs": 25000,
     "xBrowserEnabled": true,
-    "xBrowserWaitMs": 9000,
-    "xSearchMode": "top",
-    "xSearchQuery": "(\"browser-use\" OR \"AI agents\" OR \"LLM\" OR \"AI model\") min_faves:20 lang:en -is:retweet -is:reply",
+    "xBrowserWaitMs": 12000,
+    "xSearchMode": "live",
+    "xSearchQuery": "(\"browser-use\" OR \"ai-agents\" OR \"ai-tools\" OR \"browser-agent\" OR \"browser-automation\" OR \"browser automation\" OR \"tool use\" OR \"agent workflow\") min_faves:20 lang:en -is:retweet -is:reply",
     "xFallbackFeeds": [],
     "aiArticleFeeds": [
       {
