@@ -27,7 +27,10 @@
     "target": "staging",
     "status": "passed",
     "stdout": "[deploy] executing configured deployment command\n{\n  \"deployedAt\": \"2026-11-15T03:50:51.524Z\",\n  \"candidateKey\": \"browser-use/browser-use@1.0.5\",\n  \"branchName\": \"upgrade/2026-11-15-browser-use\",\n  \"deployTarget\": \"staging\",\n  \"smokeProvider\": \"mock\",\n  \"trendCount\": 3,\n  \"outputFiles\": [\n    \"/home/runner/work/openclaw/openclaw/output/trends.json\",\n    \"/home/runner/work/openclaw/openclaw/output/trends.md\"\n  ]\n}\n{\n  \"updated\": true,\n  \"target\": \"staging\",\n  \"stateFile\": \"/home/runner/work/openclaw/openclaw/state/last_successful_version.json\"\n}",
-    "stderr": ""
+    "stderr": "",
+    "promoted": true,
+    "promotionStdout": "{\n  \"promoted\": true,\n  \"promotedAt\": \"2026-11-15T03:50:56.303Z\",\n  \"branchName\": \"upgrade/2026-11-15-browser-use\",\n  \"deployTarget\": \"staging\",\n  \"commitSha\": \"6a6536f36b2955482c74ad0609b3868ea34a6ed1\",\n  \"remote\": \"origin\"\n}",
+    "promotionStderr": ""
   },
   "planExecution": {
     "status": "pr-created",
@@ -35,5 +38,10 @@
     "commitSha": "d26e0e3cda560df553a6138303a46ca0d129d10a",
     "prUrl": "https://github.com/geshuhong59-create/openclaw/pull/157",
     "message": "Created PR targeting staging."
+  },
+  "commit": {
+    "committed": true,
+    "branchName": "upgrade/2026-11-15-browser-use",
+    "commitSha": "6a6536f36b2955482c74ad0609b3868ea34a6ed1"
   }
 }
