@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T03:51:00.956Z",
+  "updatedAt": "2026-11-17T05:44:01.193Z",
   "attempts": [
     {
       "candidateKey": "vllm-project/vllm@v0.8.2",
@@ -1853,6 +1853,30 @@
       "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-16-vllm/UPGRADE_REPORT.md",
       "message": "Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-16-vllm/PR_BODY.md).",
       "executedAt": "2026-11-16T03:51:00.956Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-use@1.0.6",
+      "status": "skipped",
+      "branchName": "upgrade/2026-11-17-browser-use",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-17-browser-use/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-11-17T05:44:01.193Z"
+    },
+    {
+      "candidateKey": "browserbase/stagehand@stagehand-server-v3/v3.7.7",
+      "status": "skipped",
+      "branchName": "upgrade/2026-11-17-stagehand",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-17-stagehand/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-11-17T05:44:01.193Z"
+    },
+    {
+      "candidateKey": "browser-use/browser-harness@v0.1.13",
+      "status": "skipped",
+      "branchName": "upgrade/2026-11-17-browser-harness",
+      "reportPath": "/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-17-browser-harness/UPGRADE_REPORT.md",
+      "message": "Skipped because this candidate version already has an upgrade attempt recorded.",
+      "executedAt": "2026-11-17T05:44:01.193Z"
     }
   ]
 }
