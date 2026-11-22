@@ -1,10 +1,10 @@
 # AI Radar Automation Summary
 
 ## Run Snapshot
-- Executed at: 2026-11-18T05:09:08.994Z
-- Candidate: browser-use/browser-use@1.0.6
-- Repository: browser-use/browser-use
-- Release: 1.0.6
+- Executed at: 2026-11-22T04:03:26.881Z
+- Candidate: browser-use/browser-harness@v0.1.13
+- Repository: browser-use/browser-harness
+- Release: v0.1.13
 - Dry run: no
 
 ## Step Status
@@ -15,7 +15,7 @@
 - Promotion: not-run
 
 ## Planning Output
-- Branch: upgrade/2026-11-18-browser-use
+- Branch: upgrade/2026-11-22-browser-harness
 - PR URL: none
 - Planning note: Skipped because this candidate version already has an upgrade attempt recorded.
 

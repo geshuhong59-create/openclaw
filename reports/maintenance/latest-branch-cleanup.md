@@ -1,7 +1,7 @@
 # AI Radar Branch Cleanup
 
 ## Summary
-- Executed at: 2026-11-18T05:09:32.659Z
+- Executed at: 2026-11-22T04:03:50.562Z
 - Repository: geshuhong59-create/openclaw
 - Branch prefix: upgrade/
 - Dry run: no
@@ -11,9 +11,6 @@
 - Deleted stale branches: 0
 
 ## Preserved For Open PRs
-- upgrade/2026-04-21-vllm | https://github.com/geshuhong59-create/openclaw/pull/36
-- upgrade/2026-04-22-vllm | https://github.com/geshuhong59-create/openclaw/pull/37
-- upgrade/2026-04-23-vllm | https://github.com/geshuhong59-create/openclaw/pull/38
 - upgrade/2026-04-24-vllm | https://github.com/geshuhong59-create/openclaw/pull/39
 - upgrade/2026-04-25-vllm | https://github.com/geshuhong59-create/openclaw/pull/40
 - upgrade/2026-04-26-vllm | https://github.com/geshuhong59-create/openclaw/pull/41
@@ -96,6 +93,9 @@
 - upgrade/2026-09-03-openai-agents-python | https://github.com/geshuhong59-create/openclaw/pull/130
 - upgrade/2026-09-04-browser-use | https://github.com/geshuhong59-create/openclaw/pull/131
 - upgrade/2026-09-16-ruflo | https://github.com/geshuhong59-create/openclaw/pull/134
+- upgrade/2026-09-26-repomix | https://github.com/geshuhong59-create/openclaw/pull/135
+- upgrade/2026-09-29-stagehand | https://github.com/geshuhong59-create/openclaw/pull/136
+- upgrade/2026-10-05-ruflo | https://github.com/geshuhong59-create/openclaw/pull/137
 
 ## Kept Recent Branches
 - upgrade/2026-09-05-browser-use | committedAt=2026-09-05T02:01:53Z
