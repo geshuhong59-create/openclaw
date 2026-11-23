@@ -1,24 +1,6 @@
 {
-  "executedAt": "2026-11-22T04:03:26.881Z",
-  "candidateKey": "browser-use/browser-harness@v0.1.13",
-  "repo": "browser-use/browser-harness",
-  "releaseTag": "v0.1.13",
-  "dryRun": false,
-  "validation": {
-    "enabled": true
-  },
-  "applyUpgrade": {
-    "enabled": true
-  },
-  "deploy": {
-    "enabled": true,
-    "target": "staging"
-  },
-  "planExecution": {
-    "status": "skipped",
-    "branchName": "upgrade/2026-11-22-browser-harness",
-    "message": "Skipped because this candidate version already has an upgrade attempt recorded."
-  },
   "status": "no-op",
-  "reason": "Skipped because this candidate version already has an upgrade attempt recorded."
+  "reason": "No candidate crossed the validation threshold.",
+  "executedAt": "2026-11-23T04:45:55.413Z",
+  "reportPath": "/home/runner/work/openclaw/openclaw/reports/2026-11-23-ai-radar.md"
 }
