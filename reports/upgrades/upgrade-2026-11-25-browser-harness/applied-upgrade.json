@@ -1,0 +1,99 @@
+{
+  "appliedAt": "2026-11-25T06:05:59.062Z",
+  "candidate": {
+    "repo": "browser-use/browser-harness",
+    "releaseTag": "v0.1.14",
+    "changeType": "tool-plugin-integration",
+    "appliedAt": "2026-11-25T06:05:59.062Z",
+    "reportPath": "reports/upgrades/upgrade-2026-11-25-browser-harness/UPGRADE_REPORT.md",
+    "score": 73
+  },
+  "runtime": {
+    "provider": "aggregate",
+    "limit": 15,
+    "requestTimeoutMs": 25000,
+    "xBrowserEnabled": true,
+    "xBrowserWaitMs": 12000,
+    "xSearchMode": "live",
+    "xSearchQuery": "(\"browser-use\" OR \"browser-harness\" OR \"ai-agent\" OR \"browser-agent\" OR \"browser-automation\" OR \"browser automation\" OR \"tool use\" OR \"agent workflow\") min_faves:20 lang:en -is:retweet -is:reply",
+    "xFallbackFeeds": [],
+    "aiArticleFeeds": [
+      {
+        "label": "github-release-browser-use-browser-harness",
+        "url": "https://github.com/browser-use/browser-harness/releases.atom",
+        "tags": [
+          "AI",
+          "GitHub",
+          "Release",
+          "ai-agent",
+          "browser-agent",
+          "browser-automation",
+          "browser-use"
+        ]
+      },
+      {
+        "label": "github-release-browser-use-browser-use",
+        "url": "https://github.com/browser-use/browser-use/releases.atom",
+        "tags": [
+          "AI",
+          "GitHub",
+          "Release",
+          "ai-agents",
+          "ai-tools",
+          "browser-automation",
+          "browser-use"
+        ]
+      },
+      {
+        "label": "github-release-vllm-project-vllm",
+        "url": "https://github.com/vllm-project/vllm/releases.atom",
+        "tags": [
+          "AI",
+          "GitHub",
+          "Release",
+          "llm-inference",
+          "model-serving",
+          "benchmark"
+        ]
+      },
+      {
+        "label": "openai-news",
+        "url": "https://openai.com/news/rss.xml",
+        "tags": [
+          "AI",
+          "Article",
+          "OpenAI"
+        ]
+      },
+      {
+        "label": "deepmind-blog",
+        "url": "https://deepmind.google/blog/rss.xml",
+        "tags": [
+          "AI",
+          "Article",
+          "DeepMind"
+        ]
+      },
+      {
+        "label": "microsoft-research-blog",
+        "url": "https://www.microsoft.com/en-us/research/blog/feed/",
+        "tags": [
+          "AI",
+          "Article",
+          "Research",
+          "Microsoft Research"
+        ]
+      }
+    ],
+    "hnStoryType": "topstories"
+  },
+  "notes": [
+    "Applied candidate browser-use/browser-harness@v0.1.14",
+    "Change type: tool-plugin-integration",
+    "Active commits in last 30 days: 100",
+    "Latest release: v0.1.14",
+    "License: MIT",
+    "Projected performance gain: 27%",
+    "Projected cost reduction: 4%"
+  ]
+}

@@ -1,22 +1,22 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T03:51:01.903Z",
+  "updatedAt": "2026-11-25T06:05:59.062Z",
   "candidate": {
-    "repo": "browser-use/browser-use",
-    "releaseTag": "1.0.6",
+    "repo": "browser-use/browser-harness",
+    "releaseTag": "v0.1.14",
     "changeType": "tool-plugin-integration",
-    "appliedAt": "2026-11-16T03:51:01.903Z",
-    "reportPath": "reports/upgrades/upgrade-2026-11-16-browser-use/UPGRADE_REPORT.md",
-    "score": 85
+    "appliedAt": "2026-11-25T06:05:59.062Z",
+    "reportPath": "reports/upgrades/upgrade-2026-11-25-browser-harness/UPGRADE_REPORT.md",
+    "score": 73
   },
   "notes": [
-    "Applied candidate browser-use/browser-use@1.0.6",
+    "Applied candidate browser-use/browser-harness@v0.1.14",
     "Change type: tool-plugin-integration",
     "Active commits in last 30 days: 100",
-    "Latest release: 1.0.6",
+    "Latest release: v0.1.14",
     "License: MIT",
-    "Projected performance gain: 37%",
-    "Projected cost reduction: 19%"
+    "Projected performance gain: 27%",
+    "Projected cost reduction: 4%"
   ],
   "runtime": {
     "provider": "aggregate",
@@ -25,9 +25,22 @@
     "xBrowserEnabled": true,
     "xBrowserWaitMs": 12000,
     "xSearchMode": "live",
-    "xSearchQuery": "(\"browser-use\" OR \"ai-agents\" OR \"ai-tools\" OR \"browser-agent\" OR \"browser-automation\" OR \"browser automation\" OR \"tool use\" OR \"agent workflow\") min_faves:20 lang:en -is:retweet -is:reply",
+    "xSearchQuery": "(\"browser-use\" OR \"browser-harness\" OR \"ai-agent\" OR \"browser-agent\" OR \"browser-automation\" OR \"browser automation\" OR \"tool use\" OR \"agent workflow\") min_faves:20 lang:en -is:retweet -is:reply",
     "xFallbackFeeds": [],
     "aiArticleFeeds": [
+      {
+        "label": "github-release-browser-use-browser-harness",
+        "url": "https://github.com/browser-use/browser-harness/releases.atom",
+        "tags": [
+          "AI",
+          "GitHub",
+          "Release",
+          "ai-agent",
+          "browser-agent",
+          "browser-automation",
+          "browser-use"
+        ]
+      },
       {
         "label": "github-release-browser-use-browser-use",
         "url": "https://github.com/browser-use/browser-use/releases.atom",

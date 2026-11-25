@@ -1,41 +1,42 @@
 # AI Architecture Radar Daily Report
 
-- Executed at: 2026-11-23T04:45:55.413Z
-- Discovered candidates: 106
-- Report path: /home/runner/work/openclaw/openclaw/reports/2026-11-23-ai-radar.md
+- Executed at: 2026-11-25T06:05:57.933Z
+- Discovered candidates: 5
+- Report path: /home/runner/work/openclaw/openclaw/reports/2026-03-25-ai-radar.md
 
 ## Executive Summary
-- Winner: browser-use/browser-use@1.0.8 (score 85)
-- Eligible candidates in today's shortlist: 0/5
-- Planned upgrade executions: 0
+- Winner: vllm-project/vllm@v0.8.2 (score 76)
+- Eligible candidates in today's shortlist: 1/5
+- Planned upgrade executions: 1
 - Failed execution records: 0
 - Auto-created upgrade PRs during planning: 0
 
 ## Top Candidate Scoreboard
 | Rank | Repo | Score | Release | Perf Gain | Cost Down | Eligible | Vetoes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | browser-use/browser-use | 85 | 1.0.8 | 37% | 19% | no | auth_model_changed, production_secret_impact |
-| 2 | vllm-project/vllm | 72 | v0.34.0 | 37% | 19% | no | breaking_change_high_risk |
-| 3 | openai/openai-agents-python | 71 | v0.25.0 | 27% | 4% | no | auth_model_changed, production_secret_impact |
-| 4 | langchain-ai/langgraph | 70 | 1.2.24 | 9% | 4% | no | none |
-| 5 | citrolabs/ego-lite | 66 | v2.2.1 | 27% | 14% | no | none |
+| 1 | vllm-project/vllm | 76 | v0.8.2 | 37% | 19% | yes | none |
+| 2 | langchain-ai/langgraph | 71 | v0.3.5 | 27% | 4% | no | none |
+| 3 | browser-use/browser-use | 69 | v1.9.0 | 27% | 4% | no | none |
+| 4 | microsoft/autogen | 66 | v0.6.3 | 27% | 4% | no | none |
+| 5 | openai/openai-agents-python | 65 | v0.4.1 | 27% | 4% | no | none |
 
 ## Top Candidates
-1. browser-use/browser-use | score=85 | release=1.0.8 | vetoes=auth_model_changed,production_secret_impact
-2. vllm-project/vllm | score=72 | release=v0.34.0 | vetoes=breaking_change_high_risk
-3. openai/openai-agents-python | score=71 | release=v0.25.0 | vetoes=auth_model_changed,production_secret_impact
-4. langchain-ai/langgraph | score=70 | release=1.2.24 | vetoes=none
-5. citrolabs/ego-lite | score=66 | release=v2.2.1 | vetoes=none
+1. vllm-project/vllm | score=76 | release=v0.8.2 | vetoes=none
+2. langchain-ai/langgraph | score=71 | release=v0.3.5 | vetoes=none
+3. browser-use/browser-use | score=69 | release=v1.9.0 | vetoes=none
+4. microsoft/autogen | score=66 | release=v0.6.3 | vetoes=none
+5. openai/openai-agents-python | score=65 | release=v0.4.1 | vetoes=none
 
 ## Discovery Notes
-- browser-use/browser-use: Active commits in last 30 days: 100; Latest release: 1.0.8; License: MIT; Projected performance gain: 37%; Projected cost reduction: 19%
-- vllm-project/vllm: Active commits in last 30 days: 100; Latest release: v0.34.0; License: Apache-2.0; Projected performance gain: 37%; Projected cost reduction: 19%
-- openai/openai-agents-python: Active commits in last 30 days: 93; Latest release: v0.25.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
-- langchain-ai/langgraph: Active commits in last 30 days: 100; Latest release: 1.2.24; License: MIT; Projected performance gain: 9%; Projected cost reduction: 4%
-- citrolabs/ego-lite: Active commits in last 30 days: 100; Latest release: v2.2.1; License: MIT; Projected performance gain: 27%; Projected cost reduction: 14%
+- vllm-project/vllm: Active commits in last 30 days: 27; Latest release: v0.8.2; License: Apache-2.0; Projected performance gain: 37%; Projected cost reduction: 19%
+- langchain-ai/langgraph: Active commits in last 30 days: 18; Latest release: v0.3.5; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- browser-use/browser-use: Active commits in last 30 days: 31; Latest release: v1.9.0; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- microsoft/autogen: Active commits in last 30 days: 12; Latest release: v0.6.3; License: MIT; Projected performance gain: 27%; Projected cost reduction: 4%
+- openai/openai-agents-python: Active commits in last 30 days: 24; Latest release: v0.4.1; License: Apache-2.0; Projected performance gain: 27%; Projected cost reduction: 4%
 
 ## Planned Execution
-- No upgrade plans crossed the execution threshold.
+- vllm-project/vllm@v0.8.2 | status=dry-run | branch=upgrade/2026-11-25-vllm
+  note: Prepared branch, report, and PR artifacts in dry-run mode (/home/runner/work/openclaw/openclaw/reports/upgrades/upgrade-2026-11-25-vllm/PR_BODY.md).
 
 ## Failures
 - No failures recorded.

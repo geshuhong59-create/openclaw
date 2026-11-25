@@ -1,5 +1,6 @@
 {
   "watch_repos": [
+    "browser-use/browser-harness",
     "browser-use/browser-use",
     "vllm-project/vllm",
     "openai/openai-agents-python",
@@ -7,11 +8,12 @@
     "langchain-ai/langgraph"
   ],
   "watch_topics": [
-    "ai-agents",
-    "ai-tools",
+    "ai-agent",
     "browser-agent",
     "browser-automation",
     "browser-use",
+    "ai-agents",
+    "ai-tools",
     "llm-inference",
     "model-serving",
     "benchmark",
