@@ -1,30 +1,30 @@
 # AI Radar Automation Summary
 
 ## Run Snapshot
-- Executed at: 2026-11-23T04:45:55.413Z
-- Candidate: unknown
-- Repository: unknown
-- Release: unknown
+- Executed at: 2026-11-25T06:05:31.624Z
+- Candidate: browser-use/browser-harness@v0.1.14
+- Repository: browser-use/browser-harness
+- Release: v0.1.14
 - Dry run: no
 
 ## Step Status
-- Plan execution: unknown
-- Validation: not-run
-- Apply upgrade: not-run
-- Deploy smoke: not-run
+- Plan execution: pr-created
+- Validation: passed
+- Apply upgrade: passed
+- Deploy smoke: passed
 - Promotion: not-run
 
 ## Planning Output
-- Branch: unknown
-- PR URL: none
-- Planning note: n/a
+- Branch: upgrade/2026-11-25-browser-harness
+- PR URL: https://github.com/geshuhong59-create/openclaw/pull/162
+- Planning note: Created PR targeting staging.
 
 ## Deployment Output
-- Target: n/a
+- Target: staging
 - Promotion synced: no
 - Final commit: n/a
 
 ## Notes
-- Validation script: n/a
-- Apply script: n/a
-- Deploy script: n/a
+- Validation script: /home/runner/work/openclaw/openclaw/scripts/test-upgrade.sh
+- Apply script: /home/runner/work/openclaw/openclaw/scripts/ai-radar-apply-upgrade.sh
+- Deploy script: /home/runner/work/openclaw/openclaw/scripts/ai-radar-deploy.sh
