@@ -12,7 +12,7 @@
 - Validation: passed
 - Apply upgrade: passed
 - Deploy smoke: passed
-- Promotion: not-run
+- Promotion: completed
 
 ## Planning Output
 - Branch: upgrade/2026-11-25-browser-harness
@@ -21,8 +21,8 @@
 
 ## Deployment Output
 - Target: staging
-- Promotion synced: no
-- Final commit: n/a
+- Promotion synced: yes
+- Final commit: 1cb1f87d7ad8f1c8c80917630d069fdcc0ce537d
 
 ## Notes
 - Validation script: /home/runner/work/openclaw/openclaw/scripts/test-upgrade.sh
